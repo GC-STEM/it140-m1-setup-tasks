@@ -1,6 +1,6 @@
-# {{CS 000}} Module {{ModNumber}}: {{Full Activity Title}}
-
 <!-- To see this file in a clean, formatted view, right-click on the filename and choose “Open Preview.” -->
+
+# {{CS 000}} Module {{ModNumber}}: {{Full Activity Title}}
 
 ## ⚠️ Under Construction
 

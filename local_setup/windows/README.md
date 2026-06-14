@@ -1,6 +1,8 @@
+<!-- To see this file in a clean, formatted view, right-click on the filename and choose “Open Preview.” -->
+
 # IT 140 Development Environment Local Setup on Windows
 
-This document provides instructions for setting up a local development environment for IT 140 on Windows. It covers the installation of necessary software and tools to ensure you can work on your projects effectively.
+This document provides instructions for optionally setting up an IT 140 development environment (course IDE) on Windows. It covers the installation of necessary software and tools needed to complete all course activities.
 
 ## 1. Create a Restore Point
 
@@ -11,8 +13,8 @@ Before installing any software, it is best practice to create a restore point us
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./assets/12_system_protection_tab.png" alt="System Protection Tab">
 
-2. If the **Create…** button is selectable, skip to Step 4.
-<br>If the **Create…** button is not selectable, as shown in the above right image, click the **Configure…** button.
+2. If the **Create…** button is selectable, skip to Step 4.<br>
+   If the **Create…** button is not selectable, as shown in the above right image, click the **Configure…** button.
 
 3. Select the **Turn on system protection** radio button and adjust the **Max Usage** slider to 5%.
 Click the **OK** button.  <br>
@@ -20,12 +22,12 @@ Click the **OK** button.  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./assets/14_system_protection_for_drive_on.png" alt="System Protection for Drive On">
 
-4. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***IT140 Course IDE Setup*** and click the **Create** button.  <br>
+1. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***IT140 Course IDE Setup*** and click the **Create** button.  <br>
 <img src="./assets/15_create_restore_point.png" alt="Create a Restore Point">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./assets/16_created_restore_point.png" alt="Created Restore Point">
 
-5. After the restore point is created, click the **Close…** button.
+1. After the restore point is created, click the **Close…** button.
 
 ### Restore System (*if needed*)
 
@@ -55,10 +57,6 @@ The next phase in setting up the course IDE on your local Windows machine is to 
 ## 3. Copy and Paste Commands
 
 1. Copy the entire code block below to your clipboard, including the final blank line.
-
-2. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\Users\USERNAME> <u>here</u>**. Do NOT press **Ctrl** + **V** to paste.
-
-3. Expect the commands to take 15 to 45 minutes, depending on your system and Internet speed.
 
 ```powershell
 Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup_log.txt" -Force
@@ -99,5 +97,12 @@ Stop-Transcript
 
 ```
 
+2. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\Users\USERNAME> <u>here</u>**. Do NOT press **Ctrl** + **V** to paste.
+
+3. Expect the commands to take 15 to 45 minutes, depending on your system and Internet speed.
+
 **⚠️ IMPORTANT**. Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the **Troubleshooting** section of this repository for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
 
+## 4. Configure Local Course IDE
+
+Follow the instructions in the [Configure README.md](../configure/README.md) file to configure your local course IDE. The procedures are the same for both Codio Virtual Desktop (CVD) and your local desktop, regardless of your operating system (OS) platform.
