@@ -1,1 +1,9 @@
+# IT 140 course-wide Python dependencies
+# Install with: python -m pip install -r requirements.txt
+
+# Linter and formatter dependencies
+ruff
+
+# Testing dependencies
 pytest
+pytest-cov
