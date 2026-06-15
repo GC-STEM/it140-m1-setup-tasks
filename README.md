@@ -39,7 +39,7 @@ The course IDE includes the software tools and extensions listed below.
 |  6  | Diagram Support       | hediet.vscode-drawio extension        | Create or edit flowcharts, logic diagrams, and project maps           |
 |  7  | Pseudocode Support    | i2p-hub.i2p-pseudo extension          | Write, preview, and organize pseudocode files                         |
 |  8  | Code Spell Checker    | streetsidesoftware.code-spell-checker | Check spelling in code comments, pseudocode, Markdown, and text files |
-|  9  | File Viewers          | cweijan.vscode-office extension       | View course-provided Office and PDF files inside VS Code              |
+|  9  | File Viewers          | cweijan.vscode-office extension       | View course-provided Office and PDF files inside the code editor      |
 
 *Note*. The software listed above is recommended and supported for this course. You may use other software if it provides the same basic functionality. However, other software may cause compatibility issues, and your instructor or the IT Service Desk may not be able to provide support for it.
 
