@@ -28,19 +28,18 @@ Completing this activity on one platform is required because you will use the co
 
 The course IDE includes the software tools and extensions listed below.
 
-| # | **Software Category**  | **Software Name**                     |
-|:-:|:---------------------- |:------------------------------------- |
-| 0 | Version Control        | Git, GitHub CLI                       |
-| 1 | Programming Language   | Python 3.12                           |
-| 2 | Test Runner            | pytest, pytest-cov                    |
-| 3 | Code Editor / IDE      | Visual Studio Code                    |
-|---| **IDE Extensions**     | ------------------------              |
-| 4 | Language Support       | ms-python.python                      |
-| 5 | Code Linter/Formatter  | charliermarsh.ruff                    |
-| 6 | Diagram Support        | hediet.vscode-drawio                  |
-| 7 | Pseudocode Support     | i2p-hub.i2p-pseudo                    |
-| 8 | Code Spell Checker     | streetsidesoftware.code-spell-checker |
-| 9 | File Viewers           | cweijan.vscode-office                 |
+|**#**| **Software Category** | **Software Name**                     | **Student Use Cases in Course**                                       |
+| :-: | :-------------------- | :------------------------------------ | :-------------------------------------------------------------------- |
+|  0  | Version Control       | Git, GitHub CLI                       | Access course repositories and download assignment materials          |
+|  1  | Programming Language  | Python 3.12                           | Write, run, and troubleshoot course programs                          |
+|  2  | Test Runner           | pytest, pytest-cov                    | Run instructor-provided tests and review test results                 |
+|  3  | Code Editor / IDE     | Visual Studio Code                    | Write, edit, run, organize, and manage course files                   |
+|  4  | Language Support      | ms-python.python extension            | Provide Python editing, running, debugging, and environment support   |
+|  5  | Code Linter/Formatter | charliermarsh.ruff extension          | Identify style issues and apply consistent code formatting            |
+|  6  | Diagram Support       | hediet.vscode-drawio extension        | Create or edit flowcharts, logic diagrams, and project maps           |
+|  7  | Pseudocode Support    | i2p-hub.i2p-pseudo extension          | Write, preview, and organize pseudocode files                         |
+|  8  | Code Spell Checker    | streetsidesoftware.code-spell-checker | Check spelling in code comments, pseudocode, Markdown, and text files |
+|  9  | File Viewers          | cweijan.vscode-office extension       | View course-provided Office and PDF files inside VS Code              |
 
 *Note*. The software listed above is recommended and supported for this course. You may use other software if it provides the same basic functionality. However, other software may cause compatibility issues, and your instructor or the IT Service Desk may not be able to provide support for it.
 

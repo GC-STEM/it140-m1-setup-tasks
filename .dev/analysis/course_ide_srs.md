@@ -145,17 +145,17 @@ Each requirement should be evaluated using the following attributes:
 
 The software stack below is an initial proposed stack that appears to meet the course IDE requirements based on preliminary analysis. It has not yet been fully verified through clean-environment testing across Codio, Windows, macOS, and Debian/Ubuntu-based Linux environments. Final inclusion depends on successful installation, verification, assignment workflow testing, and stakeholder review.
 
-|  #  | Software Category     | Software Name                         | Student Use Cases in Course                                 |
-| :-: | :-------------------- | :------------------------------------ | :---------------------------------------------------------- |
-|  0  | Version Control       | Git, GitHub CLI                       | Access course repos with assignment materials               |
-|  1  | Programming Language  | Python 3.12                           | Develop software for assignments in code editor             |
-|  2  | Test Runner           | pytest, pytest-cov                    | Run provided tests and review results in code editor        |
-|  3  | Code Editor / IDE     | Visual Studio Code                    | Develop software for assignments in code editor             |
-|  4  | Language Support      | ms-python.python extension            | Develop software for assignments in code editor             |
-|  5  | Code Linter/Formatter | charliermarsh.ruff extension          | Identify style issues and apply consistent code formatting  |
-|  6  | Diagram Support       | hediet.vscode-drawio extension        | Read and edit flowcharts and the project map in code editor |
-|  7  | Pseudocode Support    | i2p-hub.i2p-pseudo extension          | Read and edit pseudocode files in code editor               |
-|  8  | Code Spell Checker    | streetsidesoftware.code-spell-checker | Checking spelling in code and text files in code editor     |
-|  9  | File Viewers          | cweijan.vscode-office extension       | View course Office and PDF files in code editor             |
+|**#**| **Software Category** | **Software Name**                     | **Student Use Cases in Course**                                       |
+| :-: | :-------------------- | :------------------------------------ | :-------------------------------------------------------------------- |
+|  0  | Version Control       | Git, GitHub CLI                       | Access course repositories and download assignment materials          |
+|  1  | Programming Language  | Python 3.12                           | Write, run, and troubleshoot course programs                          |
+|  2  | Test Runner           | pytest, pytest-cov                    | Run instructor-provided tests and review test results                 |
+|  3  | Code Editor / IDE     | Visual Studio Code                    | Write, edit, run, organize, and manage course files                   |
+|  4  | Language Support      | ms-python.python extension            | Provide Python editing, running, debugging, and environment support   |
+|  5  | Code Linter/Formatter | charliermarsh.ruff extension          | Identify style issues and apply consistent code formatting            |
+|  6  | Diagram Support       | hediet.vscode-drawio extension        | Create or edit flowcharts, logic diagrams, and project maps           |
+|  7  | Pseudocode Support    | i2p-hub.i2p-pseudo extension          | Write, preview, and organize pseudocode files                         |
+|  8  | Code Spell Checker    | streetsidesoftware.code-spell-checker | Check spelling in code comments, pseudocode, Markdown, and text files |
+|  9  | File Viewers          | cweijan.vscode-office extension       | View course-provided Office and PDF files inside VS Code              |
 
 Students may use other software if it provides the same basic functionality. However, other software may cause compatibility issues, and the instructor or IT Service Desk may not be able to provide support for it.
