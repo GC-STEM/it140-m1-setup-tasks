@@ -28,18 +28,18 @@ Completing this activity on one platform is required because you will use the co
 
 The course IDE includes the software tools and extensions listed below.
 
-| # | **Software Category**  | **Software Name**        |
-|:-:|:---------------------- |:------------------------ |
-| 1 | Version Control        | Git & GitHub CLI         |
-| 2 | Programming Language   | Python 3.12              |
-| 3 | Code Editor / IDE      | Visual Studio Code       |
-|---| **IDE Extensions**     | ------------------------ |
-| 4 | Language Support       | ms-python.python         |
-| 5 | Code Linter/Formatter  | charliermarsh.ruff       |
-| 6 | Diagram Support        | hediet.vscode-drawio     |
-| 7 | Pseudocode Support     | i2p-hub.i2p-pseudo       |
+| # | **Software Category**  | **Software Name**                     |
+|:-:|:---------------------- |:------------------------------------- |
+| 1 | Version Control        | Git & GitHub CLI                      |
+| 2 | Programming Language   | Python 3.12                           |
+| 3 | Code Editor / IDE      | Visual Studio Code                    |
+|---| **IDE Extensions**     | ------------------------              |
+| 4 | Language Support       | ms-python.python                      |
+| 5 | Code Linter/Formatter  | charliermarsh.ruff                    |
+| 6 | Diagram Support        | hediet.vscode-drawio                  |
+| 7 | Pseudocode Support     | i2p-hub.i2p-pseudo                    |
 | 8 | Code Spell Checker     | streetsidesoftware.code-spell-checker |
-| 9 | File Viewers           | cweijan.vscode-office    |
+| 9 | File Viewers           | cweijan.vscode-office                 |
 
 *Note*. The software listed above is recommended and supported for this course. You may use other software if it provides the same basic functionality. However, other software may cause compatibility issues, and your instructor or the IT Service Desk may not be able to provide support for it.
 
@@ -165,7 +165,7 @@ Contact the **IT Service Desk** if you need help with SNHU systems, Codio access
 
 To contact the **IT Service Desk**:
 
-- Log in to the course site at https://learn.snhu.edu/d2l/home.
+- Log in to the [course site](https://learn.snhu.edu/d2l/home).
 - Click the **Help** drop-down menu near the top right of the page.
 - Click **IT Service Desk**.
 - Click **Ask for Technology Help**.
