@@ -2,7 +2,7 @@
 
 # IT 140 Development Environment Local Setup on Windows
 
-This document provides instructions for optionally setting up an IT 140 development environment (course IDE) on Windows. It covers the installation of necessary software and tools needed to complete all course activities.
+This document provides instructions for optionally setting up an IT 140 development environment (course IDE) on the Windows 11 operating system. It covers the installation of necessary software and tools needed to complete all course activities.
 
 ## 1. Create a Restore Point
 
@@ -22,12 +22,12 @@ Click the **OK** button.  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./assets/14_system_protection_for_drive_on.png" alt="System Protection for Drive On">
 
-1. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***IT140 Course IDE Setup*** and click the **Create** button.  <br>
+4. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***IT140 Course IDE Setup*** and click the **Create** button.  <br>
 <img src="./assets/15_create_restore_point.png" alt="Create a Restore Point">
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="./assets/16_created_restore_point.png" alt="Created Restore Point">
 
-1. After the restore point is created, click the **Close…** button.
+5. After the restore point is created, click the **Close…** button.
 
 ### Restore System (*if needed*)
 
@@ -105,4 +105,4 @@ Stop-Transcript
 
 ## 4. Configure Local Course IDE
 
-Follow the instructions in the [Configure README.md](../configure/README.md) file to configure your local course IDE. The procedures are the same for both Codio Virtual Desktop (CVD) and your local desktop, regardless of your operating system (OS) platform.
+Follow the instructions in the [Codio README.md](../codio/README.md) file to configure your local course IDE. The procedures are the same for both Codio Virtual Desktop (CVD) and your local desktop, regardless of your operating system (OS) platform.

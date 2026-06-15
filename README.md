@@ -8,6 +8,8 @@
 
 This repository is incomplete and under active development. Code, documentation, structure, and features may change frequently. Use with caution, and check back for updates.
 
+Note the Linux and macOS local setup guides are still in development and have not been completed. The Windows local setup guide is complete, tested and ready to use.
+
 ---
 
 - **Course**: IT 140 - *Introduction to Scripting*
