@@ -1,0 +1,200 @@
+START course_ide_setup
+
+    DISPLAY setup introduction
+    DISPLAY expected setup time
+    DISPLAY reminder to review messages for errors before continuing
+
+    SET setup_status TO "not started"
+    SET setup_log_status TO "not created"
+
+    BEGIN setup logging
+        CREATE setup log if logging is supported by the operating system
+        RECORD setup start time
+        RECORD operating system name and version
+        RECORD current user context
+        SET setup_log_status TO "created"
+    END setup logging
+
+    SET setup_status TO "in progress"
+
+    DISPLAY "Checking setup environment..."
+
+    IF current environment is Codio Virtual Desktop THEN
+        DISPLAY "Codio Virtual Desktop detected."
+        DISPLAY "The course IDE should already be installed in this environment."
+        GO TO VerifyCourseIDE
+    ENDIF
+
+    IF current environment is local desktop THEN
+        DISPLAY "Local desktop setup selected."
+    ELSE
+        DISPLAY "Unable to identify setup environment."
+        DISPLAY "Use the Codio Virtual Desktop as the supported fallback environment."
+        SET setup_status TO "failed"
+        GO TO EndSetup
+    ENDIF
+
+    DISPLAY "Checking operating system support..."
+
+    IF operating system is not supported THEN
+        DISPLAY "This operating system is not supported for local course IDE setup."
+        DISPLAY "Use the Codio Virtual Desktop as the supported fallback environment."
+        SET setup_status TO "failed"
+        GO TO EndSetup
+    ENDIF
+
+    IF operating system is not receiving security updates THEN
+        DISPLAY "This operating system is not supported because it is not receiving security updates."
+        DISPLAY "Use the Codio Virtual Desktop as the supported fallback environment."
+        SET setup_status TO "failed"
+        GO TO EndSetup
+    ENDIF
+
+    DISPLAY "Checking installation permissions..."
+
+    IF administrator or elevated permissions are required for initial installation THEN
+        IF current session does not have required permissions THEN
+            DISPLAY "Initial installation requires elevated permissions."
+            DISPLAY "Restart setup using the required operating system permissions."
+            SET setup_status TO "failed"
+            GO TO EndSetup
+        ENDIF
+    ENDIF
+
+    DISPLAY "Installing and updating system dependencies..."
+
+    IF required package manager is missing THEN
+        INSTALL required package manager
+    ENDIF
+
+    UPDATE package manager sources or software catalogs
+
+    IF package manager repair is supported THEN
+        REPAIR package manager if needed
+    ENDIF
+
+    DISPLAY "Installing course IDE components..."
+
+    FOR EACH required course IDE application IN required application list
+        IF application is already installed THEN
+            DISPLAY application name + " is already installed."
+        ELSE
+            INSTALL application using supported installer or package manager
+            IF installation fails THEN
+                DISPLAY application name + " installation failed."
+                RECORD failure in setup log if logging is available
+                SET setup_status TO "failed"
+                GO TO SetupFailureGuidance
+            ENDIF
+        ENDIF
+    ENDFOR
+
+    DISPLAY "Updating terminal environment..."
+
+    REFRESH environment variables if supported
+    REFRESH command search path if supported
+
+    DISPLAY "Configuring course IDE components..."
+
+    IF required course programming language package manager is available THEN
+        UPGRADE language package manager if supported
+        INSTALL required course testing tools
+    ELSE
+        DISPLAY "Required programming language package manager was not found."
+        SET setup_status TO "failed"
+        GO TO SetupFailureGuidance
+    ENDIF
+
+    CONFIGURE version control default branch name
+    CONFIGURE version control default editor if code editor command is available
+
+    DISPLAY "Installing code editor extensions..."
+
+    IF code editor command-line interface is available THEN
+        FOR EACH required code editor extension IN required extension list
+            INSTALL or UPDATE extension
+            IF extension installation fails THEN
+                DISPLAY extension name + " installation failed."
+                RECORD failure in setup log if logging is available
+                SET setup_status TO "partial success"
+            ENDIF
+        ENDFOR
+    ELSE
+        DISPLAY "Code editor command-line interface was not found."
+        DISPLAY "Install required extensions manually using the code editor extension interface."
+        SET setup_status TO "partial success"
+    ENDIF
+
+VerifyCourseIDE:
+
+    DISPLAY "Verifying course IDE installation..."
+
+    SET verification_status TO "passed"
+
+    FOR EACH required command IN required command list
+        RUN version or availability check for required command
+        IF command is available THEN
+            DISPLAY command name + " found."
+            DISPLAY detected version if available
+        ELSE
+            DISPLAY command name + " not found."
+            RECORD missing command in setup log if logging is available
+            SET verification_status TO "failed"
+        ENDIF
+    ENDFOR
+
+    FOR EACH required code editor extension IN required extension list
+        CHECK whether extension is installed if extension check is supported
+        IF extension is installed THEN
+            DISPLAY extension name + " found."
+        ELSE
+            DISPLAY extension name + " not found."
+            SET verification_status TO "failed"
+        ENDIF
+    ENDFOR
+
+    IF verification_status is "passed" THEN
+        SET setup_status TO "complete"
+        DISPLAY "Course IDE installation complete."
+        DISPLAY "No required setup failures were detected."
+        GO TO EndSetup
+    ELSE
+        SET setup_status TO "partial success"
+        GO TO SetupFailureGuidance
+    ENDIF
+
+SetupFailureGuidance:
+
+    DISPLAY "Before continuing, review the messages above."
+    DISPLAY "Look for words such as Error, Failed, Exception, Access denied, or not recognized."
+    DISPLAY "Some errors may appear in a different color, but text color can vary."
+    DISPLAY "If you see an error, see the Troubleshooting section of the IDE Guide."
+    DISPLAY "If local setup cannot be completed, use the Codio Virtual Desktop as the supported fallback environment."
+
+    IF setup log was created THEN
+        DISPLAY setup log location
+        DISPLAY "Share the setup log with technical support if help is needed."
+    ENDIF
+
+EndSetup:
+
+    RECORD setup end time if logging is available
+    RECORD final setup status if logging is available
+    STOP setup logging if logging is active
+
+    IF setup_status is "complete" THEN
+        DISPLAY "Setup finished successfully."
+        DISPLAY "Continue to the next course IDE setup step."
+    ELSE IF setup_status is "partial success" THEN
+        DISPLAY "Setup finished with warnings or missing components."
+        DISPLAY "Review troubleshooting guidance before using the course IDE."
+    ELSE
+        DISPLAY "Setup did not complete successfully."
+        DISPLAY "Use the Codio Virtual Desktop or contact support using the setup log and error messages."
+    ENDIF
+
+END course_ide_setup
+```
+
+# === References ===
+# <AI Company Name>. (<Year, Month Day>). *Suggestions during coding* [AI code completion]. <Tool Name (Model, if known)>. <IDE Name>. No URL available.

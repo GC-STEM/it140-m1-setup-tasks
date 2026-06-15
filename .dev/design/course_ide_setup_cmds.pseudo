@@ -1,0 +1,39 @@
+
+# Copy all the commands below, including the final blank line, and paste them into the required elevated terminal prompt for your operating system. Expect the commands to take several minutes to complete, depending on your system and internet connection.
+START_SETUP_LOG at user_desktop/course_ide_setup_log
+# Installing and updating system dependencies...
+INSTALL_OR_UPDATE system_package_provider
+INSTALL_OR_UPDATE system_package_manager_client
+REPAIR system_package_manager if supported
+UPDATE system_package_manager_sources
+# Installing course IDE components...
+INSTALL version_control_tool using system_package_manager with noninteractive_options
+INSTALL repository_command_line_tool using system_package_manager with noninteractive_options
+INSTALL required_course_programming_language_version using system_package_manager with noninteractive_options
+INSTALL code_editor using system_package_manager with noninteractive_options
+# Updating the terminal environment...
+REFRESH terminal_environment_variables
+REFRESH terminal_command_search_path
+# Configuring course IDE components...
+UPGRADE required_course_programming_language_package_manager
+INSTALL required_course_test_runner using required_course_programming_language_package_manager
+CONFIGURE version_control_default_branch TO main
+CONFIGURE version_control_default_editor TO code_editor_wait_command
+# Installing code editor extensions...
+SUPPRESS noncritical_runtime_warnings if supported
+INSTALL code_editor_language_support_extension
+INSTALL code_editor_linter_formatter_extension
+INSTALL code_editor_diagram_support_extension
+INSTALL code_editor_spell_checker_extension
+INSTALL code_editor_pseudocode_support_extension
+INSTALL code_editor_file_viewer_extension
+RESTORE noncritical_runtime_warning_settings if changed
+# ===== Course IDE installation complete. =====
+# Before continuing, review the messages above.
+# Look for words like Error, Failed, Exception, Access denied, or not recognized.
+# Some errors may appear in red text, but text color can vary.
+# If you do not see an error message, continue to the next step.
+# If you see an error, see the Troubleshooting section of the IDE Guide.
+# A setup log was saved to your desktop.
+# Detailed package manager logs may also be available if technical support needs them.
+STOP_SETUP_LOG
