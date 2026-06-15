@@ -20,9 +20,9 @@ Note the Linux and macOS local setup guides are still in development and have no
 
 In this activity, you will prepare the IT 140 development environment, also called the course IDE. An integrated development environment (IDE) is software that helps you design, write, run, test, and manage code in one place.
 
-You may complete this activity using the Codio Virtual Desktop (CVD), your local machine, or both. The CVD already includes the required software, so you will only need to complete a few configuration steps. Local setup is optional and allows you to work on your own computer.
+You may complete this activity using the Codio Virtual Desktop (CVD), your local machine, or both (recommended). The CVD already includes the required software, so you will only need to complete a few configuration steps. Local setup is optional and allows you to work on your own computer. If you are short on time or have technical issues, use the CVD to complete course assignments until you can complete the local setup.
 
-Completing this activity is required because you will use the course IDE to complete all later course assignments and projects. You will use it for software design (flowcharts and pseudocode), construction (writing and building programs), and testing (checking that programs work correctly). This activity also supports the course competency: Develop a fully functional program using industry-relevant tools.
+Completing this activity on one platform is required because you will use the course IDE to complete all later course assignments and projects. You will use it for software design (flowcharts and pseudocode), construction (writing and building programs), and testing (checking that programs work correctly). This activity also supports the course competency: Develop a fully functional program using industry-relevant tools. The course IDE includes common software development tools, as listed in a recent [StackOverflow Developer Survey](https://survey.stackoverflow.co/2025/).
 
 ### Course IDE Software
 
@@ -45,22 +45,22 @@ The course IDE includes the software tools and extensions listed below.
 
 ### Activity Repository
 
-This repository is organized by setup topic. Each main folder contains files related to one part of the course IDE setup process, such as Codio, GitHub, or local setup.
+This repository is organized by setup topic. Each main folder contains files related to one part of the course IDE setup process, such as GitHub, Codio, or local setup.
 
-A repository usually includes at least one README.md file. A README file explains the purpose, contents, and important details of a repository or folder. In GitHub, the main README.md file is usually the best place to start because it gives you an overview before you open the other files and folders.
+A repository usually includes at least one README.md file. A README file explains the purpose, contents, and important details of a repository or folder. In any GitHub repository, the main README.md file is usually the best place to start because it gives you an overview before you open the other files and folders.
 
 ```text
 it140_m1_ide_setup/
 │
-├── codio/                      # Configure the course IDE (CVD or local)
+├── codio/                      # 2. Configure the course IDE on Codio
 │   ├── assets/                 # Screenshots for configuring the course IDE
 │   └── README.md               # Instructions for configuring the course IDE
 │
-├── github/                     # Create and configure a GitHub account
-│   ├── assets/                 # Screenshots for configuring GitHub
-│   └── README.md               # Instructions for configuring GitHub
+├── github/                     # 1. Setup a GitHub account (optional)
+│   ├── assets/                 # Screenshots for setting up a GitHub account
+│   └── README.md               # Instructions for setting up a GitHub account
 │
-├── local_setup/                # Setup the course IDE on your local machine
+├── local_setup/                # 3. Setup the course IDE on your local machine
 │   ├── linux/                  # Linux local setup: Debian/Ubuntu by default
 │   │   ├── assets/             # Screenshots for Debian/Ubuntu local setup
 │   │   ├── distros/            # Setup guides for other Linux distributions
@@ -74,7 +74,7 @@ it140_m1_ide_setup/
 │       ├── assets/             # Screenshots for Windows local setup
 │       └── README.md           # Instructions for Windows local setup
 │
-└── README.md                   # Start here: IDE setup activity overview
+└── README.md                   # 0. Start here: IDE setup activity overview
 ```
 
 *Note*. This repository includes additional folders and files that are not shown in the main structure above. These files help maintain the repository, support settings, or organize development work. They are not part of your setup tasks, and you should not modify them.
@@ -86,8 +86,8 @@ Follow the instructions in this repository to complete the course IDE setup befo
 ### 1. Create and configure a GitHub account (optional)
 
 - [ ] 1.1. Open the [`github/README.md`](github/README.md) file.
-- [ ] 1.2. Follow the instructions to create a new account.
-- [ ] 1.3. Follow the instructions to configure your new or existing account.
+- [ ] 1.2. Follow the instructions to create a new GitHub account.
+- [ ] 1.3. Follow the instructions to configure your new or existing GitHub account.
 
 ### 2. Configure the course IDE on Codio
 
