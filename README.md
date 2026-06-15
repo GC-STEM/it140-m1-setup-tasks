@@ -30,8 +30,9 @@ The course IDE includes the software tools and extensions listed below.
 
 | # | **Software Category**  | **Software Name**                     |
 |:-:|:---------------------- |:------------------------------------- |
-| 1 | Version Control        | Git & GitHub CLI                      |
-| 2 | Programming Language   | Python 3.12                           |
+| 0 | Version Control        | Git, GitHub CLI                       |
+| 1 | Programming Language   | Python 3.12                           |
+| 2 | Test Runner            | pytest, pytest-cov                    |
 | 3 | Code Editor / IDE      | Visual Studio Code                    |
 |---| **IDE Extensions**     | ------------------------              |
 | 4 | Language Support       | ms-python.python                      |

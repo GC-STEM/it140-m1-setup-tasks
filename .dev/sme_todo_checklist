@@ -1,0 +1,45 @@
+# IT 140 Module One: Setup Tasks Project Checklist
+
+## Project Information
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks
+- **Activity Type**: Required, non-graded, no submission
+- **Project Purpose**: Develop, test, and document the setup process for the course IDE in Codio (Ubuntu 24.04 LTS) and local environments (Linux, Windows, MacOS). This includes creating a comprehensive command set, testing it across platforms, and providing clear student-facing instructions in the README.md file.
+
+### Project Requirements
+
+- [ ] Course IDE requirements
+- [ ] Course IDE acceptance criteria
+- [ ] Student-facing instructions requirements
+
+### Project Design
+
+- [ ] Course IDE setup design
+- [ ] Course IDE setup flowchart
+- [ ] Course IDE setup pseudocode
+
+### Linux (Debian) Codio & Local Setup Resources
+
+- [ ] Linux (Debian) command set development
+- [ ] Linux (Debian) command set testing
+- [ ] Linux (Debian) command set screenshots
+- [ ] Linux (Debian) instructions in README.md### Windows Local Setup Resources
+
+- [ ] Windows command set development
+- [ ] Windows command set testing
+- [ ] Windows command set screenshots
+- [ ] Windows instructions in README.md
+
+### MacOS Local Setup Resources
+
+- [ ] MacOS command set development
+- [ ] MacOS command set testing
+- [ ] MacOS command set screenshots
+- [ ] MacOS instructions in README.md
+
+## Codio & Local Configuration Resources
+
+- [ ] Codio README.md: Codio Overview
+- [ ] Codio README.md: Accessing course IDE in Codio
+- [ ] Codio README.md: Configuring course IDE (Codio & Local)
