@@ -8,3 +8,17 @@
 
 {{TODO: Add a brief assignment-specific overview for the to-do list here.}}
 
+## 1. zyBooks (Required)
+
+- [ ]
+
+## 2. GitHub Account (Optional)
+
+- [ ]
+
+## 3. Course IDE (Required)
+
+### 3.1. Configure Course IDE on CVD
+
+### 3.2. Setup Course IDE on Local Machine
+

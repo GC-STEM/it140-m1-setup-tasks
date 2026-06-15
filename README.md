@@ -16,51 +16,49 @@ This repository is incomplete and under active development. Code, documentation,
 
 ## Overview
 
-{{TODO: Add an overview of the activity or project scenario here.}}
+In this activity, you will prepare the IT 140 development environment, also called the course IDE. An integrated development environment (IDE) is software that helps you design, write, run, test, and manage code in one place.
 
-This activity provides instructions for preparing, learning, and troubleshooting zyBooks and the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD), your local machine, or both. This activity is required to meet the course competency: Develop a fully functional program using industry-relevant tools.
+You may complete this activity using the Codio Virtual Desktop (CVD), your local machine, or both. The CVD already includes the required software, so you will only need to complete a few configuration steps. Local setup is optional and allows you to work on your own computer.
 
-Follow the instructions in this repository to complete the course IDE setup process before starting the Module Two software development assignment.
+Completing this activity is required because you will use the course IDE to complete all later course assignments and projects. You will use it for software design (flowcharts and pseudocode), construction (writing and building programs), and testing (checking that programs work correctly). This activity also supports the course competency: Develop a fully functional program using industry-relevant tools.
 
-## Prompt
+### Course IDE Software
 
-Setup your zyBooks account and at least one IT 140 Development Environment (course IDE) in which to complete future graded assignments and projects.
+The course IDE includes the software tools and extensions listed below.
 
-- Follow the guidelines in this repository to complete your work.
-- This activity is required but will not be graded.
+| # | **Software Category**  | **Software Name**        |
+|:-:| ---------------------- | ------------------------ |
+| 1 | Version Control        | Git & GitHub CLI         |
+| 2 | Programming Language   | Python 3.12              |
+| 3 | Code Editor / IDE      | Visual Studio Code       |
+|---| **IDE Extensions**     | ------------------------ |
+| 4 | Language Support       | ms-python.python         |
+| 5 | Code Linter/Formatter  | charliermarsh.ruff       |
+| 6 | Diagram Support        | hediet.vscode-drawio     |
+| 7 | Pseudocode Support     | i2p-hub.i2p-pseudo       |
+| 8 | Code Spell Checker     | streetsidesoftware.code-spell-checker |
+| 9 | File Viewers           | cweijan.vscode-office    |
 
-### zyBooks (Required)
-
-### GitHub Account (Optional)
-
-{{TODO: Brief intro to GH and what it is; popularity based on https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools. Tie to course competency on industry standard tools.}}
-
-{{TODO: Benefit to students now (easier to download, upload, and share code with instructor/learning support specialists), through later courses (CS, DAT, and GAM students will need a GH account in later courses). When applying for technical jobs. Tie in SNHU-standard language.}}
-
-{{TODO: Add instructions for creating a GitHub account in github/README.md, if desired.}}
-
-### Course IDE (Required)
-
-
-
-## Supporting Materials
-
-The following external resources may help support your work on the project:
-
--
+*Note*. The software listed above is recommended and supported for this course. You may use other software if it provides the same basic functionality. However, other software may cause compatibility issues, and your instructor or the IT Service Desk may not be able to provide support for it.
 
 ### Activity Repository
 
-The activity repository is organized to match the course Software Development Life Cycle (SDLC). This structure will help you organize your work and ensure that you are following the SDLC process effectively. Each folder contains specific files related to that phase of the SDLC, as outlined below:
+This repository is organized by setup topic. Each main folder contains files related to one part of the course IDE setup process, such as Codio, GitHub, or local setup.
+
+A repository usually includes at least one README.md file. A README file explains the purpose, contents, and important details of a repository or folder. In GitHub, the main README.md file is usually the best place to start because it gives you an overview before you open the other files and folders.
 
 ```text
 it140_m1_ide_setup/
 │
-├── configure/                  # Configure the course IDE (CVD or local)
+├── codio/                      # Configure the course IDE (CVD or local)
 │   ├── assets/                 # Screenshots for configuring the course IDE
 │   └── README.md               # Instructions for configuring the course IDE
 │
-├── local_setup/                # Setup the course IDE on your local machine (optional)
+├── github/                     # Create and configure a GitHub account
+│   ├── assets/                 # Screenshots for configuring GitHub
+│   └── README.md               # Instructions for configuring GitHub
+│
+├── local_setup/                # Setup the course IDE on your local machine
 │   ├── linux/                  # Linux local setup: Debian/Ubuntu by default
 │   │   ├── assets/             # Screenshots for Debian/Ubuntu local setup
 │   │   ├── distros/            # Setup guides for other Linux distributions
@@ -74,40 +72,110 @@ it140_m1_ide_setup/
 │       ├── assets/             # Screenshots for Windows local setup
 │       └── README.md           # Instructions for Windows local setup
 │
-├── working/                    # Your working files: notes and to-do list
-│   ├── ide_setup_notes.md      # Notes and scratch work during development
-│   └── ide_setup_todo.md       # Step-by-step checklist for this activity
-│
-├── zyBooks/                    # zyBooks resources folder
-│   ├── assets/                 # Screenshots for zyBooks resources
-│   └── README.md            # Instructions for zyBooks resources
-│
 └── README.md                   # Start here: IDE setup activity overview
 ```
 
-*Note*. This repository may include additional files not listed in the main repository structure. These folders and files are essential for maintaining a well-organized and high-quality codebase, but they are not part of the Software Development Life Cycle (SDLC) and are not meant to be modified by students. Just ignore these as you work on the activity, and focus on the main repository files listed above.
+*Note*. This repository includes additional folders and files that are not shown in the main structure above. These files help maintain the repository, support settings, or organize development work. They are not part of your setup tasks, and you should not modify them.
 
-### Additional Resources
+## Directions
 
-- [Kaggle Notebook]({{Add link or delete}})    <-
-- [YouTube Video]({{Add link or delete}})      <-
-- [Zotero Collection]({{Add link or delete}})  <-
+Follow the instructions in this repository to complete the course IDE setup before starting the Module Two software development assignment.
 
-## Activity Development Environment
+### 1. Create and configure a GitHub account (optional)
 
-| # | **Software Purpose**   | **Software Name**        |
-|:-:| ---------------------- | ------------------------ |
-| 1 | Version Control        | Git & GitHub CLI         |
-| 2 | Programming Language   | PL Runtime               |
-| 3 | Code Editor or IDE     | Visual Studio Code       |
-|---| **CE/IDE Extensions**  | ------------------------ |
-| 4 | Language Support       | {{PL Extension}}         |
-| 5 | Code Linter/Formatter  | {{L/F Extension}}        |
-| 6 | Diagram Support        | hediet.vscode-drawio     |
-| 7 | Pseudocode Support     | i2p-hub.i2p-pseudo       |
-| 8 | Code Spell Checker     | streetsidesoftware.code-spell-checker |
-| 9 | Dependencies           | See {{requirements.txt}} |
+- [ ] 1.1. Open the [`github/README.md`](github/README.md) file.
+- [ ] 1.2. Follow the instructions to create a new account.
+- [ ] 1.3. Follow the instructions to configure your new or existing account.
 
-## AI Usage
+### 2. Configure the course IDE on Codio
 
-If you use gen AI tools to support your work on this activity, be sure to follow these [AI usage guidelines](https://snhu.ink/StudentGenAIGuide). You must acknowledge your use of these tools in your work. Guidelines on how to cite AI tools can be found in [this Shapiro Library guide](https://snhu.ink/CitationAndAI).
+- [ ] 2.1. Open the [`codio/README.md`](codio/README.md) file.
+- [ ] 2.2. Follow the Configure Course IDE instructions to configure the course IDE in the Codio Virtual Desktop (CVD).
+
+### 3. Setup the course IDE on your local machine
+
+- [ ] 3.1. Open the [`local_setup/README.md`](local_setup/README.md) file.
+- [ ] 3.2. Follow the instructions for your operating system (OS) to setup the course IDE on your local machine.
+- [ ] 3.3. Follow the Configure Course IDE instructions in the [`codio/README.md`](codio/README.md) file to configure the course IDE on your local machine.
+
+## Supporting Materials
+
+The following external resources may help support your work on the project:
+
+- {{TODO: Add SNHU and external resources here}}
+
+## Technical Support
+
+Software setup can be frustrating, especially if you have not used command line interface (CLI) tools before. If something does not work, pause and collect information before asking for help. Clear details make it much easier for others to understand the problem and help you solve it.
+
+When asking for technical support, include as much of the following information as possible:
+
+- Your operating system, such as Windows 11, macOS, or Linux
+- The step number or section where the problem happened
+- What you were trying to do
+- What you expected to happen
+- What actually happened
+- The exact command you entered, if you were using the CLI
+- Any error messages you saw
+- A screenshot, if the issue happened in a graphical user interface (GUI)
+- Any setup log files created during the process
+
+A command line interface (CLI) is a text-based way to use your computer by typing commands. Windows PowerShell, macOS Terminal, and Linux Bash are examples of CLI tools. A graphical user interface (GUI) is the more familiar point-and-click type of interface, such as a settings window or installer screen.
+
+Some setup commands create transcript or log files. These files record what happened during setup and can help technical support troubleshoot the issue. If a log file was created, include it when asking for help.
+
+### Artificial Intelligence (AI)
+
+You may use an AI assistant to help troubleshoot technical issues. AI can help explain error messages, suggest next steps, or help you understand what a command is doing.
+
+When using AI for technical support, provide clear details. Do not only say, “It does not work.” Include the task, the step where the issue happened, the command you entered, the error message, and what you already tried.
+
+You can use this prompt template:
+
+```text
+I am a beginner programming student. I am trying to [describe the task], but I am having trouble at [step number or section name].
+
+My operating system is [Windows 11 / macOS / Linux].
+
+Here is the command I entered, if any:
+[paste the command]
+
+Here is the message or error I received:
+[paste the full message or error]
+
+Here is what I expected to happen:
+[describe the expected result]
+
+Here is what actually happened:
+[describe the result]
+
+Here is what I have already tried:
+[list any steps you already tried]
+
+Please explain what might be causing the issue in beginner-friendly language. Give me one suggestion at a time, and explain how to try it before moving to the next suggestion.
+```
+
+Review AI suggestions carefully before running commands. If a suggestion asks you to delete files, change security settings, download unknown software, or run a command you do not understand, ask your instructor or the IT Service Desk before continuing.
+
+### IT Service Desk
+
+Contact the **IT Service Desk** if you need help with SNHU systems, Codio access, account access, software installation, or technical problems you cannot resolve.
+
+To contact the **IT Service Desk**:
+
+- Log in to the course site at https://learn.snhu.edu/d2l/home.
+- Click the **Help** drop-down menu near the top right of the page.
+- Click **IT Service Desk**.
+- Click **Ask for Technology Help**.
+- If the issue is time sensitive, click **Chat Now** or call the listed phone number.
+- If the issue is not time sensitive, submit a support ticket.
+
+When you contact the **IT Service Desk**, include the details listed at the start of this section. If a setup log file was created, attach it to your ticket or mention that it is available.
+
+### Instructor and Classmates
+
+Post technical support questions in the **General Questions** course discussion forum. This allows the whole class to benefit from the question and answer. If you had the problem, another student may have the same problem too.
+
+When posting, include the same information listed at the start of this section: the step where the issue happened, what you tried, and any error message you received. Do not post private information such as passwords, personal access tokens, or security codes.
+
+If you solve a problem, consider posting the solution in the forum. Sharing what worked can help your classmates and build good troubleshooting habits.
