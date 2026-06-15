@@ -9,27 +9,31 @@
 
 ### Project Requirements
 
-- [ ] Course IDE requirements
-- [ ] Course IDE acceptance criteria
-- [ ] Student-facing instructions requirements
+- [x] Course IDE requirements
+- [x] Course IDE acceptance criteria
+- [x] Student-facing instructions requirements
 
 ### Project Design
 
-- [ ] Course IDE setup design
-- [ ] Course IDE setup flowchart
-- [ ] Course IDE setup pseudocode
+- [x] Course IDE setup design
+- [ ] Course IDE setup flowchart manual
+- [ ] Course IDE setup flowchart script
+- [x] Course IDE setup pseudocode command set
+- [x] Course IDE setup pseudocode script
+
+### Windows Local Setup Resources
+
+- [x] Windows command set development
+- [x] Windows command set testing
+- [x] Windows command set screenshots
+- [x] Windows instructions in README.md
 
 ### Linux (Debian) Codio & Local Setup Resources
 
 - [ ] Linux (Debian) command set development
 - [ ] Linux (Debian) command set testing
 - [ ] Linux (Debian) command set screenshots
-- [ ] Linux (Debian) instructions in README.md### Windows Local Setup Resources
-
-- [ ] Windows command set development
-- [ ] Windows command set testing
-- [ ] Windows command set screenshots
-- [ ] Windows instructions in README.md
+- [ ] Linux (Debian) instructions in README.md
 
 ### MacOS Local Setup Resources
 
@@ -38,7 +42,7 @@
 - [ ] MacOS command set screenshots
 - [ ] MacOS instructions in README.md
 
-## Codio & Local Configuration Resources
+## Configuration Resources (Codio & Local)
 
 - [ ] Codio README.md: Codio Overview
 - [ ] Codio README.md: Accessing course IDE in Codio
