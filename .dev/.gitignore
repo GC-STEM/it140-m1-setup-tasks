@@ -323,6 +323,3 @@ http-client.private.env.json
 .guides/
 .project-setup/
 .tmp/
-
-# Development Folders
-# .dev/
