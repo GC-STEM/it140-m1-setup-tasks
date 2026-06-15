@@ -52,29 +52,29 @@ A repository usually includes at least one README.md file. A README file explain
 ```text
 it140_m1_ide_setup/
 │
-├── codio/                      # 2. Configure the course IDE on Codio
-│   ├── assets/                 # Screenshots for configuring the course IDE
-│   └── README.md               # Instructions for configuring the course IDE
+├── codio/               # 2. Configure the course IDE on Codio
+│   ├── assets/          # Screenshots for configuring the course IDE
+│   └── README.md        # Instructions for configuring the course IDE
 │
-├── github/                     # 1. Setup a GitHub account (optional)
-│   ├── assets/                 # Screenshots for setting up a GitHub account
-│   └── README.md               # Instructions for setting up a GitHub account
+├── github/              # 1. Setup a GitHub account (optional)
+│   ├── assets/          # Screenshots for setting up a GitHub account
+│   └── README.md        # Instructions for setting up a GitHub account
 │
-├── local_setup/                # 3. Setup the course IDE on your local machine
-│   ├── linux/                  # Linux local setup: Debian/Ubuntu by default
-│   │   ├── assets/             # Screenshots for Debian/Ubuntu local setup
-│   │   ├── distros/            # Setup guides for other Linux distributions
-│   │   └── README.md           # Instructions for Debian/Ubuntu local setup
+├── local_setup/         # 3. Setup the course IDE on your local machine
+│   ├── linux/           # Linux local setup: Debian/Ubuntu by default
+│   │   ├── assets/      # Screenshots for Debian/Ubuntu local setup
+│   │   ├── distros/     # Setup guides for other Linux distributions
+│   │   └── README.md    # Instructions for Debian/Ubuntu local setup
 │   │
-│   ├── macOS/                  # macOS local setup folder
-│   │   ├── assets/             # Screenshots for macOS local setup
-│   │   └── README.md           # Instructions for macOS local setup
+│   ├── macOS/           # macOS local setup folder
+│   │   ├── assets/      # Screenshots for macOS local setup
+│   │   └── README.md    # Instructions for macOS local setup
 │   │
-│   └── windows/                # Windows local setup folder
-│       ├── assets/             # Screenshots for Windows local setup
-│       └── README.md           # Instructions for Windows local setup
+│   └── windows/         # Windows local setup folder
+│       ├── assets/      # Screenshots for Windows local setup
+│       └── README.md    # Instructions for Windows local setup
 │
-└── README.md                   # 0. Start here: IDE setup activity overview
+└── README.md            # 0. Start here: IDE setup activity overview
 ```
 
 *Note*. This repository includes additional folders and files that are not shown in the main structure above. These files help maintain the repository, support settings, or organize development work. They are not part of your setup tasks, and you should not modify them.
