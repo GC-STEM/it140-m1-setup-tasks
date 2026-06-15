@@ -27,7 +27,7 @@ Completing this activity is required because you will use the course IDE to comp
 The course IDE includes the software tools and extensions listed below.
 
 | # | **Software Category**  | **Software Name**        |
-|:-:| ---------------------- | ------------------------ |
+|:-:|:---------------------- |:------------------------ |
 | 1 | Version Control        | Git & GitHub CLI         |
 | 2 | Programming Language   | Python 3.12              |
 | 3 | Code Editor / IDE      | Visual Studio Code       |
