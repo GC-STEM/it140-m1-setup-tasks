@@ -63,7 +63,6 @@ it140_m1_ide_setup/
 ├── local_setup/         # 3. Setup the course IDE on your local machine
 │   ├── linux/           # Linux local setup: Debian/Ubuntu by default
 │   │   ├── assets/      # Screenshots for Debian/Ubuntu local setup
-│   │   ├── distros/     # Setup guides for other Linux distributions
 │   │   └── README.md    # Instructions for Debian/Ubuntu local setup
 │   │
 │   ├── macOS/           # macOS local setup folder
