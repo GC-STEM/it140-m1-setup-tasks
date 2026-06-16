@@ -341,7 +341,7 @@ The software stack below is an initial proposed stack that appears to meet the I
 |  0  | Version Control       | Git, GitHub CLI                       | Access course repositories and download assignment materials          |
 |  1  | Programming Language  | Python 3.12                           | Write, run, and troubleshoot course programs                          |
 |  2  | Test Runner           | pytest, pytest-cov                    | Run instructor-provided tests and review test results                 |
-|  3  | Code Editor / IDE     | Visual Studio Code                    | Write, edit, run, organize, and manage course files                   |
+|  3  | Code Editor / IDE     | Visual Studio Code                    | Design, write, test, debug, and manage course files                   |
 |  4  | Language Support      | ms-python.python extension            | Provide Python editing, running, debugging, and environment support   |
 |  5  | Code Linter/Formatter | charliermarsh.ruff extension          | Identify style issues and apply consistent code formatting            |
 |  6  | Diagram Support       | hediet.vscode-drawio extension        | Create or edit flowcharts, logic diagrams, and project maps           |
