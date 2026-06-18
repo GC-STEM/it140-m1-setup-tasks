@@ -2,8 +2,8 @@
 # Copy all the commands below, including the final blank line, and paste them into the required elevated terminal prompt for your operating system. Expect the commands to take several minutes to complete, depending on your system and internet connection.
 START_SETUP_LOG at user_desktop/course_ide_setup_log
 # Installing and updating system dependencies...
-INSTALL_OR_UPDATE system_package_provider
-INSTALL_OR_UPDATE system_package_manager_client
+INSTALL OR UPDATE system_package_provider
+INSTALL OR UPDATE system_package_manager_client
 REPAIR system_package_manager if supported
 UPDATE system_package_manager_sources
 # Installing course IDE components...
