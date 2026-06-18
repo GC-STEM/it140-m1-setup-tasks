@@ -4,19 +4,23 @@
         "*.markdown": "default",
         "README.md": "vscode.markdown.preview.editor",
         "*_srs.md": "vscode.markdown.preview.editor",
-        "*_sdd.md": "vscode.markdown.preview.editor",
+        "*_sdd.md": "vscode.markdown.preview.editor"
     },
-        "files.autoSave": "afterDelay",
-        "search.exclude": {
-            "**/.vscode": true,
-            "**/.vscodeedu": true,
-            "**/*.code-workspace": true
-        },
-        "files.exclude": {
-            "**/.vscode": true,
-            "**/.vscodeedu": true,
-            "**/*.code-workspace": true
-        },
+    "files.autoSave": "afterDelay",
+    "files.eol": "\n",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": false,
+    "files.trimTrailingWhitespace": false,
+    "search.exclude": {
+        "**/.vscode": true,
+        "**/.vscodeedu": true,
+        "**/*.code-workspace": true
+    },
+    "files.exclude": {
+        "**/.vscode": true,
+        "**/.vscodeedu": true,
+        "**/*.code-workspace": true
+    }
     "cSpell.words": [
         "abstra",
         "Adafruit",
