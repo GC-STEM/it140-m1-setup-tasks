@@ -1,4 +1,4 @@
-<!-- To see this file in a clean, formatted view, right-click on the filename and choose “Open Preview.” -->
+<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
 
 # IT 140 Module One: Setup Tasks
 
@@ -6,9 +6,9 @@
 
 ## ⚠️ Under Construction
 
-This repository is incomplete and under active development. Code, documentation, structure, and features may change frequently. Use with caution, and check back for updates.
+This repository is under active development. Code, documentation, structure, and features may change before the course begins. Check back periodically for updates.
 
-Note the Linux and macOS local setup guides are still in development and have not been completed. The Windows local setup guide is complete, tested and ready to use.
+The Linux and macOS local setup guides are still in development. The Windows local setup guide is complete, tested, and ready to use.
 
 ---
 
@@ -18,95 +18,99 @@ Note the Linux and macOS local setup guides are still in development and have no
 
 ## Overview
 
-In this activity, you will prepare the IT 140 development environment, also called the course IDE. An integrated development environment (IDE) is software that helps you design, write, run, test, and manage code and related files in one place.
+In this activity, you will prepare your software development environment, also called the **course IDE**. An integrated development environment (IDE) is software that helps you design, write, run, test, debug, and manage programs and related files in one place.
 
-You may complete this activity using the Codio Virtual Desktop (CVD), your local machine, or both. The CVD already includes the required software, so you will only need to complete a few configuration steps. Local setup is optional and allows you to work on your own computer. If you are short on time or have technical issues, use the CVD to complete course assignments until you can install the course IDE locally.
+You may complete this activity using the Codio Virtual Desktop (CVD), your local computer, or both. The CVD already includes the required software, so you only need to complete a few configuration steps. A local installation is optional and allows you to work on your own computer. If you are short on time or experience technical issues, use the CVD to complete course assignments until you can configure the course IDE locally.
 
-Completing this activity on one platform is required because you will use the course IDE to complete all later course assignments and projects. You will use it for software design (flowcharts and pseudocode), construction (writing and debugging programs), and testing (checking that programs work correctly). This activity also supports the course competency: *Develop a fully functional program using industry-relevant tools*. The course IDE includes common software development tools, as listed in a recent [StackOverflow Developer Survey](https://survey.stackoverflow.co/2025/).
+You must complete this activity on at least one platform because you will use the course IDE throughout the course. You will use it to create software designs, including flowcharts and pseudocode; write and debug Python programs; run automated tests; and manage assignment files. This activity also supports the course competency: *Develop a fully functional program using industry-relevant tools*. The recommended course IDE includes software commonly used by professional developers, including tools identified in the recent [Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/).
 
 ### Course IDE Software
 
-The course IDE includes the software tools and extensions listed below.
+The recommended course IDE includes the software and extensions listed below.
 
-|**#**| **Software Category** | **Software Name**                     | **Student Use Cases in Course**                                    |
-| :-: | :-------------------- | :------------------------------------ | :----------------------------------------------------------------- |
-|  0  | Version Control       | Git and GitHub CLI                    | Download assignment materials; optional upload portfolio artifacts |
-|  1  | Programming Language  | Python 3.12                           | Write, run, and troubleshoot course programs                       |
-|  2  | Test Runner           | pytest, pytest-cov                    | Run provided tests and review test results                         |
-|  3  | Code Editor / IDE     | Visual Studio Code (VS Code)          | Design, write, test, debug, and manage assignment files            |
-|  4  | Language Support      | ms-python.python extension            | Provide Python support in course IDE                               |
-|  5  | Code Linter/Formatter | charliermarsh.ruff extension          | Identify style issues and apply consistent code formatting         |
-|  6  | Diagram Support       | hediet.vscode-drawio extension        | View, create, and edit flowcharts and game world maps              |
-|  7  | Pseudocode Support    | i2p-hub.i2p-pseudo extension          | View, create, and edit pseudocode files; syntax highlighting       |
-|  8  | Code Spell Checker    | streetsidesoftware.code-spell-checker | Check spelling in assignment files                                 |
-|  9  | File Viewers          | cweijan.vscode-office extension       | View course-provided Office and PDF files inside the code editor   |
+| **#** | **Software Category** | **Software** | **Student Use in IT 140** |
+| :-: | ---------------------- | ------------------------------- | --------------------------------------------- |
+| 0 | Version Control | Git and GitHub CLI | Download assignment materials; optionally publish portfolio artifacts |
+| 1 | Programming Language | Python 3.12 | Write, run, and debug Python programs |
+| 2 | Test Runner | pytest, pytest-cov | Run provided tests and review results |
+| 3 | Code Editor / IDE | Visual Studio Code (VS Code) | Design, write, test, debug, and manage assignment files |
+| 4 | Language Support | ms-python.python | Provide Python language support in VS Code |
+| 5 | Code Linter / Formatter | charliermarsh.ruff | Identify style issues and format code consistently |
+| 6 | Diagram Support | hediet.vscode-drawio | View, create, and edit flowcharts and game world maps |
+| 7 | Pseudocode Support | i2p-hub.i2p-pseudo | View, create, and edit pseudocode files with syntax highlighting |
+| 8 | Code Spell Checker | streetsidesoftware.code-spell-checker | Check spelling in source code and documentation |
+| 9 | File Viewers | cweijan.vscode-office | View course-provided Office and PDF files within VS Code |
 
-*Note*. The software listed above is recommended and supported for this course. Students may use other software if it provides the same file formats and basic functionality. However, other software may cause compatibility issues, and your instructor and the IT Service Desk may not be able to provide support.
+> [!NOTE]
+> The software listed above is recommended and fully supported for this course. You may use other software if it provides the required file formats and equivalent functionality. However, other software may cause compatibility issues, and your instructor and the IT Service Desk may be unable to provide technical support for it.
 
 ### Activity Repository
 
-This repository is organized by setup topic. Each main folder contains files related to one part of the course IDE setup process, such as GitHub, Codio, or local setup.
+This repository is organized by setup topic. Each main folder contains the files needed to complete one part of the course IDE setup process, such as GitHub, Codio, or local setup.
 
-A repository usually includes at least one README.md file. A README file explains the purpose, contents, and important details of a repository or folder. In any GitHub repository, the main README.md file is usually the best place to start because it gives you an overview before you open the other files and folders.
+Most GitHub repositories include one or more `README.md` files. A README explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working in a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
 
 ```text
 it140_m1_ide_setup/
 │
-├── README.md          # 0. Start here: IDE setup activity overview
+├── README.md        # 0. Start here: IDE setup activity overview
 │
-├── github/            # 1. Setup a GitHub account (optional)
-│   ├── assets/        # Screenshots for setting up a GitHub account
-│   └── README.md      # Instructions for setting up a GitHub account
+├── github/          # Set up and configure a GitHub account (optional)
+│   ├── assets/      # Screenshots for setting up a GitHub account
+│   └── README.md    # Instructions for setting up a GitHub account
 │
-├── codio/             # 2. Configure the course IDE on Codio
-│   ├── assets/        # Screenshots for configuring the course IDE
-│   └── README.md      # Instructions for configuring the course IDE
+├── codio/           # Configure the course IDE on Codio (already installed)
+│   ├── assets/      # Screenshots for configuring the course IDE
+│   └── README.md    # Instructions for configuring the course IDE
 │
-└── local_setup/       # 3. Setup the course IDE on your local machine (optional)
-    ├── linux/         # Linux local setup: Debian/Ubuntu by default
-    │   ├── assets/    # Screenshots for Debian/Ubuntu local setup
-    │   └── README.md  # Instructions for Debian/Ubuntu local setup
-    │
-    ├── macOS/         # macOS local setup folder
-    │   ├── assets/    # Screenshots for macOS local setup
-    │   └── README.md  # Instructions for macOS local setup
-    │
-    └── windows/       # Windows local setup folder
-        ├── assets/    # Screenshots for Windows local setup
-        └── README.md  # Instructions for Windows local setup
+├── linux/           # Set up course IDE on your Linux local computer
+│   ├── assets/      # Screenshots for Debian/Ubuntu local setup
+│   ├── distros/     # Instructions for other Linux distributions
+│   └── README.md    # Instructions for Debian/Ubuntu local setup
+│
+├── macOS/           # Set up course IDE on your macOS local computer
+│   ├── assets/      # Screenshots for macOS local setup
+│   └── README.md    # Instructions for macOS local setup
+│
+└── windows/         # Set up course IDE on your Windows local computer
+    ├── assets/      # Screenshots for Windows local setup
+    └── README.md    # Instructions for Windows local setup
 ```
 
-*Note*. This repository includes additional folders and files that are not shown in the main structure above. These files help maintain the repository, support settings, or organize development work. They are not part of your setup tasks, and you should not modify them.
+> [!NOTE]
+> This repository also contains folders and files that are not shown above. These files support repository maintenance, configuration, and development. They are not part of this activity, so you can safely ignore them.
 
 ## Directions
 
-Follow the instructions in this repository to complete the course IDE setup before starting the Module Two software development assignment.
+Before starting the Module Two software development assignment, choose and configure a development environment that provides the required file formats and basic functionality. The recommended course IDE may be used either on the Codio Virtual Desktop (CVD) or your local computer. You are not required to use the recommended course IDE, but it is the environment supported by the course and highly recommended.
 
-### 1. Create and configure a GitHub account (optional)
+<!-- 
+### Configure a GitHub Account (optional) 
 
-This step is optional for all IT 140 students. It is recommended for students in Computer Science (CS), Game Design & Development (GAM), and other students wishing to use GitHub to host their program portfolio. 
+This step is optional for all IT 140 students. It is recommended for students in Computer Science (CS), Game Design & Development (GAM), and other students who want to use GitHub to build a professional programming portfolio. 
 
-- [ ] TODO: Open the [`github/README.md`](github/README.md) file and follow the instructions.
+- [ ] Open the [`github/README.md`](github/README.md) file and follow the instructions. 
+  -->
 
-### 2. Configure the course IDE on Codio (required if not using local setup)
+### Choose a Development Platform
 
-This step is recommended for all IT 140 students to provide a primary or backup development environment. It is highly recommended for students who are unable or unwilling to use their local machine for development. It is required for students who are not using local setup.
 
-- [ ] TODO: Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
+### Set Up the Course IDE
 
-### 3. Setup the course IDE on your local machine (required if not using Codio)
+- [ ] **TODO**: Set up the course IDE on at least one of the following platforms.
+  - [ ] **Codio**: Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
+  - [ ] **Windows**: Open the [`windows/README.md`](windows/README.md) file and follow the instructions.
+  - [ ] **macOS**: Open the [`macOS/README.md`](macOS/README.md) file and follow the instructions.
+  - [ ] **Linux**: Open the [`linux/README.md`](linux/README.md) file and follow the instructions.
 
-This step is recommended for all IT 140 students as their primary development environment. It is required for students who are not using Codio.
-
-- [ ] TODO: Open the [`local_setup/README.md`](local_setup/README.md) file and follow the instructions for your operating system (OS).
-
-*Note*. The course software stack is recommended and supported for this course. Students may use other software if it provides the same file formats and basic functionality. However, other software may cause compatibility issues, and your instructor and the IT Service Desk may not be able to provide support.
+[!NOTE]
+The recommended course software stack is fully supported for IT 140. If you choose a different software stack, it must provide the required file formats and equivalent functionality. Your instructor and the IT Service Desk may be unable to provide technical support for software outside the recommended environment.
 
 ## Supporting Materials
 
-The following external resources may help support your work on the project:
+The following resources may help you complete this activity:
 
-- {{TODO: Add SNHU and external resources here}}
+{{TODO: Add SNHU and external resources here}}
 
 ## Technical Support
 
