@@ -55,11 +55,9 @@ code --install-extension cweijan.vscode-office --force
 echo "Creating VS Code desktop shortcut for course IDE..."
 DESKTOP_DIR="$(xdg-user-dir DESKTOP)"
 mkdir -p "$DESKTOP_DIR"
-
 ln -s \
     /usr/share/applications/code.desktop \
     "$DESKTOP_DIR/visual-studio-code.desktop"
-
 xfdesktop --reload 2>/dev/null || true
 echo "===== Course IDE installation complete. ====="
 echo "Before continuing, review the messages above."
