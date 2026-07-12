@@ -2,11 +2,11 @@
 
 # IT 140 Development Environment Setup on Codio Virtual Desktop (CVD)
 
-This document provides instructions for optionally setting up an IT 140 development environment, also called the course IDE, on the Linux-based Codio Virtual Desktop (CVD). It covers the installation of necessary software and tools needed to complete all course activities.
+This folder is for Codio administrators. It is not for faculty or students. The instructions in this folder are for setting up the IT 140 development environment on the master Codio Virtual Desktop (CVD).
 
 ## 1. Open a Terminal Window
 
-The next phase in setting up the course IDE on your local Linux machine is to open a **Terminal** window. You can do this by following these steps:
+The next phase in setting up the course IDE on the master CVD is to open a **Terminal** window. You can do this by following these steps:
 
 1. Press the **Super** key on your keyboard. The **Super** key is usually the Windows key or Command key, depending on your keyboard.
 
