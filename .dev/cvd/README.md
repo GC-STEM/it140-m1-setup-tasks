@@ -22,11 +22,11 @@ The next phase in setting up the course IDE on the master CVD is to open a **Ter
 1. Copy the entire code block below to your clipboard, including the final blank line.
 
 ```bash
-mkdir -p "$HOME/Documents"
-exec > >(tee "$HOME/Documents/it140_setup_log.txt") 2>&1
+mkdir -p "$HOME/Documents/it140/logs"
+exec > >(tee "$HOME/Documents/it140/logs/it140_setup_log.txt") 2>&1
 echo "Installing and updating system dependencies..."
 sudo apt update
-sudo apt install -y curl wget gpg ca-certificates apt-transport-https software-properties-common
+sudo apt install -y curl wget gpg ca-certificates apt-transport-https software-properties-common 
 echo "Adding package repositories..."
 sudo mkdir -p -m 755 /etc/apt/keyrings
 wget -qO- https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg >/dev/null
@@ -37,7 +37,7 @@ sudo chmod go+r /etc/apt/keyrings/packages.microsoft.gpg
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" | sudo tee /etc/apt/sources.list.d/vscode.list >/dev/null
 sudo apt update
 echo "Installing course IDE components..."
-sudo apt install -y git gh python3 python3-pip python3-venv code
+sudo apt install -y build-essential direnv git gh tree python3 python3-pip python3-venv code
 echo "Configuring course IDE components..."
 python3 -m pip install --user --upgrade --break-system-packages pip pytest pytest-cov ruff || python3 -m pip install --user --upgrade pip pytest pytest-cov ruff
 mkdir -p "$HOME/.local/bin"
@@ -59,6 +59,11 @@ ln -s \
     /usr/share/applications/code.desktop \
     "$DESKTOP_DIR/visual-studio-code.desktop"
 xfdesktop --reload 2>/dev/null || true
+echo "Making VS Code the default editor..."
+xdg-mime default code.desktop text/plain
+xdg-mime default code.desktop text/markdown
+xdg-mime default code.desktop text/x-python
+xdg-mime default code.desktop text/x-shellscript
 echo "===== Course IDE installation complete. ====="
 echo "Before continuing, review the messages above."
 echo "Look for words like Error, Failed, Exception, Permission denied, or command not found."

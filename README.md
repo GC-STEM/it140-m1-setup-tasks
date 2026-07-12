@@ -55,10 +55,6 @@ it140_m1_ide_setup/
 │
 ├── README.md        # 0. Start here: IDE setup activity overview
 │
-├── github/          # Set up and configure a GitHub account (optional)
-│   ├── assets/      # Screenshots for setting up a GitHub account
-│   └── README.md    # Instructions for setting up a GitHub account
-│
 ├── codio/           # Configure the course IDE on Codio (already installed)
 │   ├── assets/      # Screenshots for configuring the course IDE
 │   └── README.md    # Instructions for configuring the course IDE
@@ -92,12 +88,9 @@ This step is optional for all IT 140 students. It is recommended for students in
 - [ ] Open the [`github/README.md`](github/README.md) file and follow the instructions. 
   -->
 
-### Choose a Development Platform
-
-
 ### Set Up the Course IDE
 
-- [ ] **TODO**: Set up the course IDE on at least one of the following platforms.
+- [ ] **TODO**: Set up the course IDE on at least one of the following platforms, preferably on Codio and one local computer.
   - [ ] **Codio**: Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
   - [ ] **Windows**: Open the [`windows/README.md`](windows/README.md) file and follow the instructions.
   - [ ] **macOS**: Open the [`macOS/README.md`](macOS/README.md) file and follow the instructions.
