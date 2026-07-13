@@ -6,7 +6,17 @@ This folder is for Codio administrators. It is not for faculty or student use. T
 
 ## Set up the IT 140 Master CVD
 
-Run the [`it140_cvd_setup.sh`](./it140_setup.sh) script or copy the code block below into a terminal window on a fresh CVD instance.
+To set up the IT 140 master CVD, you can either:
+
+- Run the [`it140_cvd_setup.sh`](./it140_setup.sh) script
+
+```bash
+chmod +x it140_cvd_setup.sh
+./it140_cvd_setup.sh
+
+```
+
+- Copy the code block below into a terminal window on a fresh CVD instance.
 
 ```bash
 bash <<'IT140_SETUP'
