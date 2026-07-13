@@ -1,28 +1,3 @@
-<!-- To see this file in a clean, formatted view, right-click on the filename and choose “Open Preview.” -->
-
-# IT 140 Development Environment Setup on Codio Virtual Desktop (CVD)
-
-This folder is for Codio administrators. It is not for faculty or students. The instructions in this folder are for setting up the IT 140 development environment on the master Codio Virtual Desktop (CVD).
-
-## 1. Open a Terminal Window
-
-The next phase in setting up the course IDE on the master CVD is to open a **Terminal** window. You can do this by following these steps:
-
-1. Press the **Super** key on your keyboard. The **Super** key is usually the Windows key or Command key, depending on your keyboard.
-
-2. In the search box, start typing ***Terminal***. Select the **Terminal** app from the results when it appears.
-
-<img src="./assets/11_search_for_terminal.png" alt="Search for Terminal">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<img src="./assets/12_terminal_window.png" alt="Terminal Window">
-
-**⚠️ IMPORTANT**. Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
-
-## 2. Copy and Paste Commands
-
-1. Copy the entire code block below to your clipboard, including the final blank line.
-
-```bash
 bash <<'IT140_SETUP'
 set -Eeuo pipefail
 
@@ -185,31 +160,3 @@ trap - ERR
 echo "===== Codio course IDE provisioning completed successfully. ====="
 echo "Setup log: $LOG_FILE"
 IT140_SETUP
-
-```
-
-2. Paste the clipboard contents into the **Terminal** window at the command prompt.
-
-3. Press **Enter** if the commands do not start automatically.
-
-4. If prompted for your Linux password, type your password and press **Enter**. Your password may not appear on the screen while you type, which is normal.
-
-5. Expect the commands to take 15–45 minutes, depending on your system and Internet speed.
-
-6. If the script says the `code` command was not found, close Terminal, open a new Terminal window, and copy and paste the commands below:
-
-```bash
-code --install-extension ms-python.python --force
-code --install-extension charliermarsh.ruff --force
-code --install-extension hediet.vscode-drawio --force
-code --install-extension streetsidesoftware.code-spell-checker --force
-code --install-extension i2p-hub.i2p-pseudo --force
-code --install-extension cweijan.vscode-office --force
-
-```
-
-**⚠️ IMPORTANT**. Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the **Troubleshooting** section of this repository for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
-
-## 3. Configure Local Course IDE
-
-Follow the instructions in the [Codio README.md](../codio/README.md) file to configure your local course IDE. The procedures are the same for both Codio Virtual Desktop (CVD) and your local desktop, regardless of your operating system (OS) platform.
