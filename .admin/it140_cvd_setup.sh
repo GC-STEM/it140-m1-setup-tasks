@@ -85,6 +85,7 @@ fi
 
 # Apply course-standard Git defaults for the Codio user account.
 git config --global init.defaultBranch main
+git config --global core.longpaths true
 git config --global core.editor "code --wait"
 
 echo "Installing required VS Code extensions..."
@@ -174,6 +175,127 @@ for mime_type in \
 do
     xdg-mime default code.desktop "$mime_type"
 done
+
+echo "Configuring IT 140 Google Chrome bookmarks..."
+
+# Create the Google Chrome managed-policy directory.
+sudo install -d -m 0755 /etc/opt/chrome/policies/managed
+
+# Create a managed bookmarks folder on Chrome's bookmarks bar containing
+# course repositories, Python learning resources, and SNHU support links.
+sudo tee /etc/opt/chrome/policies/managed/it140_bookmarks.json > /dev/null <<'JSON_CHROME_BOOKMARKS'
+{
+  "BookmarkBarEnabled": true,
+  "ManagedBookmarks": [
+    {
+      "toplevel_name": "IT 140 Resources"
+    },
+    {
+      "name": "GitHub Repositories",
+      "children": [
+        {
+          "name": "Module 1 - Setup",
+          "url": "https://github.com/GC-STEM/it140-m1-setup-tasks"
+        },
+        {
+          "name": "Module 2",
+          "url": "https://github.com/GC-STEM/it140-m2-assignment"
+        },
+        {
+          "name": "Module 3",
+          "url": "https://github.com/GC-STEM/it140-m3-assignment"
+        },
+        {
+          "name": "Module 4",
+          "url": "https://github.com/GC-STEM/it140-m4-assignment"
+        },
+        {
+          "name": "Projects",
+          "url": "https://github.com/GC-STEM/it140-projects"
+        }
+      ]
+    },
+    {
+      "name": "Learn Python",
+      "children": [
+        {
+          "name": "Python Video Tutorials",
+          "url": "https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU"
+        },
+        {
+          "name": "Microsoft Learn Course",
+          "url": "https://learn.microsoft.com/en-us/shows/intro-to-python-development/"
+        },
+        {
+          "name": "VS Code for EDU Course",
+          "url": "https://vscodeedu.com/courses/intro-to-python"
+        }
+      ]
+    },
+    {
+      "name": "Python Resources",
+      "children": [
+        {
+          "name": "Python Visualizer",
+          "url": "https://pythontutor.com/visualize.html#mode=edit"
+        },
+        {
+          "name": "Python Docs v3.12",
+          "url": "https://docs.python.org/3.12/contents.html"
+        },
+        {
+          "name": "PEP 8 - Style Guide for Python",
+          "url": "https://peps.python.org/pep-0008/"
+        },
+        {
+          "name": "PEP 257 - Docstring Conventions",
+          "url": "https://peps.python.org/pep-0257/"
+        },
+        {
+          "name": "Google Python Style Guide",
+          "url": "https://google.github.io/styleguide/pyguide.html"
+        }
+      ]
+    },
+    {
+      "name": "Course Resources",
+      "children": [
+        {
+          "name": "IT 140 - Intro to Python Workshop",
+          "url": "https://snhuacademicresourcecenter.screenstepslive.com/a/1834032-group-sessions-schedule-workshops-office-hours-and-peer-groups#workshops"
+        },
+        {
+          "name": "IT Basics Office Hours",
+          "url": "https://snhuacademicresourcecenter.screenstepslive.com/a/1834032-group-sessions-schedule-workshops-office-hours-and-peer-groups#office-hours"
+        },
+        {
+          "name": "Academic Resource Center",
+          "url": "https://snhuacademicresourcecenter.screenstepslive.com/m/138398"
+        },
+        {
+          "name": "Shapiro Library",
+          "url": "https://libguides.snhu.edu/c.php?g=708165&p=9774924"
+        },
+        {
+          "name": "Zotero Group Library",
+          "url": "https://www.zotero.org/groups/6612597/it140/library"
+        }
+      ]
+    }
+  ]
+}
+JSON_CHROME_BOOKMARKS
+
+# Apply standard system-policy ownership and permissions.
+sudo chown root:root /etc/opt/chrome/policies/managed/it140_bookmarks.json
+sudo chmod 0644 /etc/opt/chrome/policies/managed/it140_bookmarks.json
+
+# Validate the policy JSON before the CVD master is published.
+python3 -m json.tool \
+    /etc/opt/chrome/policies/managed/it140_bookmarks.json \
+    > /dev/null
+
+echo "IT 140 Google Chrome bookmarks configured successfully."
 
 echo "Removing unneeded packages and cleaning package caches..."
 sudo DEBIAN_FRONTEND=noninteractive apt-get autoremove -y
