@@ -80,17 +80,17 @@ it140_m1_ide_setup/
 
 Before starting the Module Two software development assignment, choose and configure a development environment that provides the required file formats and basic functionality. The recommended course IDE may be used either on the Codio Virtual Desktop (CVD) or your local computer. You are not required to use the recommended course IDE, but it is the environment supported by the course and highly recommended.
 
-<!-- 
-### Configure a GitHub Account (optional) 
+<!--
+### Configure a GitHub Account (optional)
 
-This step is optional for all IT 140 students. It is recommended for students in Computer Science (CS), Game Design & Development (GAM), and other students who want to use GitHub to build a professional programming portfolio. 
+This step is optional for all IT 140 students. It is recommended for students in Computer Science (CS), Game Design & Development (GAM), and other students who want to use GitHub to build a professional programming portfolio.
 
-- [ ] Open the [`github/README.md`](github/README.md) file and follow the instructions. 
+- [ ] Open the [`github/README.md`](github/README.md) file and follow the instructions.
   -->
 
 ### Set Up the Course IDE
 
-- [ ] **TODO**: Set up the course IDE on at least one of the following platforms, preferably on Codio and one local computer.
+- [ ] **TODO**: Set up the course IDE on at least one of the following platforms, preferably on Codio and your local computer.
   - [ ] **Codio**: Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
   - [ ] **Windows**: Open the [`windows/README.md`](windows/README.md) file and follow the instructions.
   - [ ] **macOS**: Open the [`macOS/README.md`](macOS/README.md) file and follow the instructions.

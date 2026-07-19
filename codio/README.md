@@ -18,13 +18,13 @@ This repository is under active development. Code, documentation, structure, and
 
 {{TODO: Explain why students may want to use the CVD for course assignments.}}
 
-## 1. Launch the Codio Virtual Desktop (CVD)
+## 0. Launch the Codio Virtual Desktop (CVD)
 
 {{TODO: Add instructions and screenshots for launching the CVD from within D2L Brightspace and from codio.com.}}
 
 The course IDE is already installed on the master Codio Virtual Desktop (CVD) image. You do not need to install it yourself.
 
-## 2. Sign into SNHU OneDrive
+## 1. Sign into SNHU OneDrive
 
 {{TODO: Explain why students should sign into OneDrive and how to use it as persistent storage for their work in the CVD.}}
 
