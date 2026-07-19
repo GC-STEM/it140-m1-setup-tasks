@@ -320,7 +320,7 @@ http-client.private.env.json
 
 # Codio Configuration
 .codio
-.guides/
+# .guides/
 .project-setup/
 .tmp/
 
