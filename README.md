@@ -81,15 +81,15 @@ Before starting the Module Two software development assignment, follow the instr
 
 ### 1. Set Up a GitHub Account
 
-- [ ] **TODO**: Open the [`github/README.md`](github/README.md) file and follow the instructions.
+- [ ] Open the [`github/README.md`](github/README.md) file and follow the instructions.
 
 ### 2. Set Up the Course IDE on Codio
 
-- [ ] **TODO**: Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
+- [ ] Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
-- [ ] **TODO**: Set up the course IDE on your local computer. Select the README.md file for your operating system and follow the instructions.
+- [ ] Set up the course IDE on your local computer. Select the README.md file for your operating system and follow the instructions.
   - [Windows](windows/README.md)
   - [macOS](macOS/README.md)
   - [Linux](linux/README.md)
