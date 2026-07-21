@@ -77,7 +77,7 @@ it140-m1-setup-tasks/
 
 ## Directions
 
-Before starting the Module Two software development assignment, follow the instructions below to set up the course IDE. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
+Before starting the Module Two software development assignment, follow the instructions below to set up the course IDE on at least one platform–the Codio Virtual Desktop (CVD) or your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
 
 ### 1. Set Up a GitHub Account
 
@@ -89,10 +89,10 @@ Before starting the Module Two software development assignment, follow the instr
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
-- [ ] Set up the course IDE on your local computer. Select the README.md file for your operating system and follow the instructions.
-  - [Windows](windows/README.md)
-  - [macOS](macOS/README.md)
-  - [Linux](linux/README.md)
+- [ ] Set up the course IDE on your local computer. Click on your operating system and follow the instructions.
+  - [Linux](local/linux/README.md)
+  - [macOS](local/macOS/README.md)
+  - [Windows](local/windows/README.md)
 
 ## Supporting Materials
 
