@@ -75,7 +75,7 @@ it140-m1-setup-tasks/
 > [!NOTE]
 > This repository also contains folders and files that are not shown above. These files support repository maintenance, configuration, and development. They are not part of this activity, so you can safely ignore them.
 
-## Directions
+## Set Up the Course IDE
 
 Before starting the Module Two software development assignment, follow the instructions below to set up the course IDE on at least one platform–the Codio Virtual Desktop (CVD) or your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
 
