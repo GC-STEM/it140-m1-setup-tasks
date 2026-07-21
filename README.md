@@ -24,7 +24,7 @@ You must complete this activity on at least one platform because you will use th
 
 ### Course IDE Software
 
-The recommended course IDE includes the software and extensions listed below.
+The official course IDE includes the software and extensions listed below.
 
 | **#** | **Software Category** | **Software** | **Student Use in IT 140** |
 | :-: | ---------------------- | ------------------------------- | --------------------------------------------- |
@@ -40,7 +40,7 @@ The recommended course IDE includes the software and extensions listed below.
 | 9 | File Viewers | cweijan.vscode-office | View course-provided Office and PDF files within VS Code |
 
 >[!NOTE]
-> This recommended software stack is fully supported for the course. If you choose a different software stack, it must provide the required file formats and equivalent functionality. Your instructor and the IT Service Desk may be unable to support software outside this recommended environment.
+> This recommended software stack is fully supported for the course. If you choose a different software stack, it must provide the required file formats and equivalent functionality for each activity. Your instructor and the IT Service Desk may be unable to support software outside this recommended environment.
 
 ### Activity Repository
 
@@ -77,7 +77,7 @@ it140-m1-setup-tasks/
 
 ## Set Up the Course IDE
 
-Before starting the Module Two software development assignment, follow the instructions below to set up the course IDE on at least one platform–the Codio Virtual Desktop (CVD) or your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
+Before starting the Module Two assignment, follow the instructions below to set up the course IDE on at least one platform–the Codio Virtual Desktop (CVD) or your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
 
 ### 1. Set Up a GitHub Account
 
