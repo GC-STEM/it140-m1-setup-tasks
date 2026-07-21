@@ -6,9 +6,7 @@
 
 ## ⚠️ Under Construction
 
-This repository is under active development. Code, documentation, structure, and features may change before the course begins. Check back periodically for updates.
-
-The Linux and macOS local setup guides are still in development. The Windows local setup guide is complete, tested, and ready to use.
+This repository is under active development. Code, documentation, structure, and features may change before the course begins. Check after August 9, 2026.
 
 ---
 
@@ -41,17 +39,17 @@ The recommended course IDE includes the software and extensions listed below.
 | 8 | Code Spell Checker | streetsidesoftware.code-spell-checker | Check spelling in source code and documentation |
 | 9 | File Viewers | cweijan.vscode-office | View course-provided Office and PDF files within VS Code |
 
-> [!NOTE]
-> The software listed above is recommended and fully supported for this course. You may use other software if it provides the required file formats and equivalent functionality. However, other software may cause compatibility issues, and your instructor and the IT Service Desk may be unable to provide technical support for it.
+>[!NOTE]
+> This recommended software stack is fully supported for the course. If you choose a different software stack, it must provide the required file formats and equivalent functionality. Your instructor and the IT Service Desk may be unable to support software outside this recommended environment.
 
 ### Activity Repository
 
-This repository is organized by setup topic. Each main folder contains the files needed to complete one part of the course IDE setup process, such as GitHub, Codio, or local setup.
+This repository is organized by setup topic. Each main folder contains the files needed to complete one part of the course IDE setup process—GitHub, Codio, and local setup.
 
-Most GitHub repositories include one or more `README.md` files. A README explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
+Most GitHub repositories include one or more `README.md` files. A README file explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
 
 ```text
-it140_m1_ide_setup/
+it140-m1-setup-tasks/
 │
 ├── README.md          0. Start here: IDE setup activity overview
 │
@@ -79,11 +77,9 @@ it140_m1_ide_setup/
 
 ## Directions
 
-Before starting the Module Two software development assignment, choose and configure a development environment that provides the required file formats and basic functionality. The recommended course IDE may be used either on the Codio Virtual Desktop (CVD) or your local computer. You are not required to use the recommended course IDE, but it is the environment supported by the course and highly recommended.
+Before starting the Module Two software development assignment, follow the instructions below to set up the course IDE. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
 
 ### 1. Set Up a GitHub Account
-
-This step is optional for all IT 140 students. It is recommended for students in Computer Science (CS), Game Design & Development (GAM), and other students who want to use GitHub to build a professional programming portfolio.
 
 - [ ] **TODO**: Open the [`github/README.md`](github/README.md) file and follow the instructions.
 
@@ -93,13 +89,10 @@ This step is optional for all IT 140 students. It is recommended for students in
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
-- [ ] **TODO**: Set up the course IDE on your local computer.
-  - **Windows**: Open the [`windows/README.md`](windows/README.md) file and follow the instructions.
-  - **macOS**: Open the [`macOS/README.md`](macOS/README.md) file and follow the instructions.
-  - **Linux**: Open the [`linux/README.md`](linux/README.md) file and follow the instructions.
-
->[!NOTE]
-> The recommended course software stack is fully supported for IT 140. If you choose a different software stack, it must provide the required file formats and equivalent functionality. Your instructor and the IT Service Desk may be unable to provide technical support for software outside the recommended environment.
+- [ ] **TODO**: Set up the course IDE on your local computer. Select the README.md file for your operating system and follow the instructions.
+  - [Windows](windows/README.md)
+  - [macOS](macOS/README.md)
+  - [Linux](linux/README.md)
 
 ## Supporting Materials
 
