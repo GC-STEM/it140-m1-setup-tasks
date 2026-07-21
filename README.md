@@ -48,29 +48,30 @@ The recommended course IDE includes the software and extensions listed below.
 
 This repository is organized by setup topic. Each main folder contains the files needed to complete one part of the course IDE setup process, such as GitHub, Codio, or local setup.
 
-Most GitHub repositories include one or more `README.md` files. A README explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working in a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
+Most GitHub repositories include one or more `README.md` files. A README explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
 
 ```text
 it140_m1_ide_setup/
 │
-├── README.md        # 0. Start here: IDE setup activity overview
+├── README.md          0. Start here: IDE setup activity overview
 │
-├── codio/           # Configure the course IDE on Codio (already installed)
-│   ├── assets/      # Screenshots for configuring the course IDE
-│   └── README.md    # Instructions for configuring the course IDE
+├── github/            1. Set up a GitHub account
+│   └── README.md         Instructions for setting up a GitHub account
 │
-├── linux/           # Set up course IDE on your Linux local computer
-│   ├── assets/      # Screenshots for Debian/Ubuntu local setup
-│   ├── distros/     # Instructions for other Linux distributions
-│   └── README.md    # Instructions for Debian/Ubuntu local setup
+├── codio/             2. Set up the course IDE on Codio
+│   └── README.md         Instructions for setting up the course IDE
 │
-├── macOS/           # Set up course IDE on your macOS local computer
-│   ├── assets/      # Screenshots for macOS local setup
-│   └── README.md    # Instructions for macOS local setup
-│
-└── windows/         # Set up course IDE on your Windows local computer
-    ├── assets/      # Screenshots for Windows local setup
-    └── README.md    # Instructions for Windows local setup
+└── local/             3. Set up the course IDE on your local computer
+    │
+    ├── linux/            Set up course IDE on your Linux computer
+    │   ├── distros/      Set up course IDE on other Linux distributions
+    │   └── README.md     Instructions for Debian/Ubuntu local setup
+    │
+    ├── macOS/            Set up course IDE on your macOS computer
+    │   └── README.md     Instructions for macOS local setup
+    │
+    └── windows/          Set up course IDE on your Windows computer
+        └── README.md     Instructions for Windows local setup
 ```
 
 > [!NOTE]
@@ -80,24 +81,25 @@ it140_m1_ide_setup/
 
 Before starting the Module Two software development assignment, choose and configure a development environment that provides the required file formats and basic functionality. The recommended course IDE may be used either on the Codio Virtual Desktop (CVD) or your local computer. You are not required to use the recommended course IDE, but it is the environment supported by the course and highly recommended.
 
-<!--
-### Configure a GitHub Account (optional)
+### 1. Set Up a GitHub Account
 
 This step is optional for all IT 140 students. It is recommended for students in Computer Science (CS), Game Design & Development (GAM), and other students who want to use GitHub to build a professional programming portfolio.
 
-- [ ] Open the [`github/README.md`](github/README.md) file and follow the instructions.
-  -->
+- [ ] **TODO**: Open the [`github/README.md`](github/README.md) file and follow the instructions.
 
-### Set Up the Course IDE
+### 2. Set Up the Course IDE on Codio
 
-- [ ] **TODO**: Set up the course IDE on at least one of the following platforms, preferably on Codio and your local computer.
-  - [ ] **Codio**: Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
-  - [ ] **Windows**: Open the [`windows/README.md`](windows/README.md) file and follow the instructions.
-  - [ ] **macOS**: Open the [`macOS/README.md`](macOS/README.md) file and follow the instructions.
-  - [ ] **Linux**: Open the [`linux/README.md`](linux/README.md) file and follow the instructions.
+- [ ] **TODO**: Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
 
-[!NOTE]
-The recommended course software stack is fully supported for IT 140. If you choose a different software stack, it must provide the required file formats and equivalent functionality. Your instructor and the IT Service Desk may be unable to provide technical support for software outside the recommended environment.
+### 3. Set Up the Course IDE on Your Local Computer
+
+- [ ] **TODO**: Set up the course IDE on your local computer.
+  - **Windows**: Open the [`windows/README.md`](windows/README.md) file and follow the instructions.
+  - **macOS**: Open the [`macOS/README.md`](macOS/README.md) file and follow the instructions.
+  - **Linux**: Open the [`linux/README.md`](linux/README.md) file and follow the instructions.
+
+>[!NOTE]
+> The recommended course software stack is fully supported for IT 140. If you choose a different software stack, it must provide the required file formats and equivalent functionality. Your instructor and the IT Service Desk may be unable to provide technical support for software outside the recommended environment.
 
 ## Supporting Materials
 
