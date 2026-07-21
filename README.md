@@ -89,7 +89,7 @@ Before starting the Module Two software development assignment, follow the instr
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
-- [ ] Set up the course IDE on your local computer. Click on your operating system and follow the instructions.
+- [ ] Click on your operating system and follow the instructions.
   - [Linux](local/linux/README.md)
   - [macOS](local/macOS/README.md)
   - [Windows](local/windows/README.md)
