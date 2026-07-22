@@ -46,27 +46,95 @@ To complete these setup tasks, you will need the following:
 
 {{TODO: Explain why students should sign into OneDrive and how to use it as persistent storage for their work in the CVD.}}
 
-1. Double-click on the "OneDrive" icon on the desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the page to load.
-2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
-3. Sign into OneDrive using your SNHU credentials.
+1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the page to load.
+2. Optional: Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
+3. Optional: Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+   1. Enter your SNHU email address and click **Next**.
+   2. Enter your SNHU password and click **Sign in**.
+   3. If prompted, click **Allow** to allow OneDrive to access resources on the CVD.
+4. Close the browser window in the CVD when done signing into OneDrive and/or Chrome.
 
+## 3. Sign into GitHub from the CVD
 
-## 3. Configure Visual Studio Code
+1. Double-click on the **GitHub** icon on the CVD desktop to open the GitHub login page in Chrome. Be patient, as it may take a few seconds for the page to load.
+2. Sign into GitHub using the same method you used to [Set Up A GitHub Account](../github/README.md). You may use your GitHub username and password, or sign in with Google or Apple if you linked those accounts to your GitHub account.
+3. Follow the prompts to authorize the CVD to access your GitHub account.
+4. Close the browser window in the CVD when done signing into GitHub.
 
-1. Launch VS Code by double-clicking the **Visual Studio Code** icon on the CVD desktop.
+## 4. Configure Visual Studio Code
+
+1. Double-click on the **Visual Studio Code** icon on the CVD desktop.
 2. Sign into VS Code using one of the following methods:
    - **Continue with GitHub** (recommended)
    - **Sign in with Google** (click on **G** icon)
    - **Sign in with Apple** (click on Apple icon)
    - **Continue without Signing in**
 3. If prompted, authorize VS Code to access your linked account.
-4. Select your color theme. Course screenshots show the "Solarized Dark" theme, but you may choose the theme you prefer.
+4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open**.
+5. If prompted, select your color theme. Course screenshots show the "Solarized Dark" theme, but you may choose the theme you prefer.
+6. If you see an **Update** button in the top VS Code menu bar, ignore it for now.
 
-## 6. Download Course Assignment Materials
+## 5. Clone the Main Course Repository
+
+{{TODO: Explain what these commands do and why students need to run them.}}
+
+1. In **Visual Studio Code** on the CVD desktop, open a terminal by pressing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
+2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+
+```bash
+mkdir -p "$HOME/it140"
+temp_dir="$(mktemp -d)"
+git clone --depth 1 \
+  "https://github.com/GC-STEM/it140.git" \
+  "$temp_dir/it140"
+rm -rf "$temp_dir/it140/.git"
+cp -a "$temp_dir/it140/." "$HOME/it140/"
+rm -rf "$HOME/it140/.git"
+rm -rf "$temp_dir"
+chmod +x "$HOME/it140/scripts/"*.sh
+echo 'export PATH="$HOME/it140/scripts:$PATH"' >> "$HOME/.bashrc"
+source "$HOME/.bashrc"
+```
+
+3. In the open **Visual Studio Code** terminal, right-click and select **Paste**. Do NOT use keyboard shortcuts.
+4.  Press **Enter** to run to run the commands. You should see output similar to the following:
+
+```text
+ubuntu@i-0a3c06bbb19d0d7db:~$ mkdir -p "$HOME/it140"
+temp_dir="$(mktemp -d)"
+git clone --depth 1 \
+  "https://github.com/GC-STEM/it140.git" \
+  "$temp_dir/it140"
+rm -rf "$temp_dir/it140/.git"
+cp -a "$temp_dir/it140/." "$HOME/it140/"
+rm -rf "$HOME/it140/.git"
+rm -rf "$temp_dir"
+chmod +x "$HOME/it140/scripts/"*.sh
+echo 'export PATH="$HOME/it140/scripts:$PATH"' >> "$HOME/.bashrc"
+source "$HOME/.bashrc"
+```
+
+## 6. Configure Git in the CVD
+
+1. Click the **Open Folder** icon in the VS Code Explorer bar on the left side of the VS Code window.
+2. Click the **it140** folder and then the **Select** button
+3. If you see a message bar starting with "Restricted Mode"
+   1. Click the **Manage** link
+   2. Click **Trust** to run scripts in the it140 folder
+   3. Close the **Workspace Trust** window.
+4. From VS Code main menu bar, select **File > New File**.
+5. Name the file `gitconfig.sh` 
+6. in your home directory (e.g., `/home/codio/gitconfig.txt`) and copy and paste the following commands into the file, replacing `<your-github-username>` and `<your-github-noreply-email>` with your GitHub username and public noreply email address that you configured in [Set Up A GitHub Account](../github/README.md):
+
+```bash
+2. Open a terminal in VS Code by pressing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
+3. 
+
+Clone the Main Course Repository
 
 ### GitHub
 
-1. Open a terminal in VS Code by pressing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
+1. Open a terminal in VS Code by prelick it to update VS Code to the latest version. Close any browser windows that popped up. Youssing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
 2. Copy and paste the following commands into the terminal to create a working directory for your course assignments, log into GitHub, and fork and clone the course assignment repositories:
 
 ```bash
