@@ -1,101 +1,107 @@
-# Create and configure a GitHub account (optional)
+# Set Up a GitHub Account
 
-In IT 140, the easiest way to download assignment materials to your Codio Virtual Desktop (CVD) or local machine is from the assignment repository on GitHub. You do NOT need a GitHub account to just "clone the repo" (i.e., download assignment materials).
+## Table of Contents
 
-However, there are some optional use cases for having a GitHub account.
+- [Set Up a GitHub Account](#set-up-a-github-account)
+  - [Table of Contents](#table-of-contents)
+  - [What Are Git and GitHub?](#what-are-git-and-github)
+  - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
+  - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
+  - [2. Secure Your GitHub Account](#2-secure-your-github-account)
+  - [3. Configure Your GitHub Profile (Optional)](#3-configure-your-github-profile-optional)
+  - [4. Join GitHub Education (Optional)](#4-join-github-education-optional)
+  - [Next Step](#next-step)
+  - [Troubleshooting](#troubleshooting)
 
-- Fork assignment repositories to your own GitHub account so you can work on them in the cloud and save your work to GitHub.
-- Easier to save your work to the cloud when using the Codio Virtual Desktop
-- that you in the makes it easier to upload your work for review prior to submitting it for grading in Brightspace. You can also use GitHub to share your work with learning support specialists or tutors.
+## What Are Git and GitHub?
 
-Optional for IT 140, but makes it easier to download, upload, and share code with instructor, learning support specialists, or tutors. Eventually required for Computer Science and Game Development students. Recommended for Cybersecurity, Data Analysis, and Information Technology students.
+**[Git](https://git-scm.com/)** is a version control system included in the course integrated development environment (IDE). Git allows developers to track changes to project files, restore earlier versions, and maintain a history of their work. It also supports multiple developers working on the same project without overwriting each other’s changes. Employers consider Git a foundational skill for entry-level software developers [[1](https://doi.org/10.1109/ESEM64174.2025.00055)].
 
-1. Point your browser to [https://github.com](https://github.com) and click the **Sign up** button in the upper right corner of the page.
+**[GitHub](https://github.com/)**, which is owned by Microsoft, is a widely used web-based platform for storing and sharing Git repositories, reviewing changes, and collaborating on software projects. A repository, or repo, is a folder that stores project files and their change history. In a recent survey, developers ranked GitHub as the most admired community platform and the most desired code documentation and collaboration tool [[2](https://survey.stackoverflow.co/2025/technology#2-community-platforms), [3](https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools)]. This course uses GitHub to host its code repositories.
 
-## 1. Select a Professional GitHub Username
+National job-posting data identifies both Git and GitHub as in-demand technologies for software-development positions [[4](https://www.onetonline.org/link/demand/15-1252.00)]. IT 140 introduces these tools so students can learn to organize, track, and manage programming projects. These skills support both course work and future professional use.
 
-Your **GitHub username** is your public identity on GitHub. Choose it carefully because changing it later can be inconvenient.
+## 0. Sign Up for a New GitHub Account
 
-Your username becomes part of your GitHub profile, repository URLs, Git clone URLs, and other places where you use Git and GitHub. You may also include it on your résumé, CV, LinkedIn profile, personal website, and job applications. For many software development employers, your GitHub profile serves as part of your professional portfolio.
+If you already have a GitHub account that you want to use for this course, skip to [Step 1](#1-configure-your-github-email-addresses).  
+Otherwise, follow the instructions below to create a new GitHub account.
 
-For example, if your GitHub username is `peteypenmen`, then:
+1. Go to [https://github.com/signup](https://github.com/signup)
+2. Select a sign-up method
+   - Continue with Google
+   - Continue with Apple
+   - Manually enter your information
+     - Use a personal email address. Do **not** use your SNHU account credentials here
+     - Select a [professional username](github_username.md)
+3. Leave optional checkboxes unchecked for increased privacy and security.
+4. Review GitHub’s *Terms of Service* and *Privacy Statement*
+5. Click the **Create account** button
+6. Check your email for a verification message from GitHub
+7. Follow the instructions in the email to complete the sign-up process
 
-| Use Case       | Example                                             |
-|----------------|-----------------------------------------------------|
-| GitHub profile | `https://github.com/peteypenmen`                    |
-| Repository URL | `https://github.com/peteypenmen/it140-projects`     |
-| Git clone URL  | `https://github.com/peteypenmen/it140-projects.git` |
+## 1. Configure Your GitHub Email Addresses
 
-### Your Username Is Public
+1. Go to [https://github.com/settings/emails](https://github.com/settings/emails)
+2. Sign in using the method you configured when creating your account
+3. In the **Add email address** field, enter your SNHU email address and click **Add**
+   - Optional: Add another personal email address as a backup
+4. Check your SNHU email for a verification message from GitHub
+5. Follow the instructions in the email to verify the address
+6. Confirm that your SNHU email address is listed as verified
+7. Scroll down and turn on **Keep my email addresses private**
+8. Note your GitHub-provided public email address. It will look similar to:<br>
+   `302326151+peteypenmen@users.noreply.github.com`<br>
+   You will need this address later when configuring Git.
+9. Turn on **Block command line pushes that expose my email**
 
-Your GitHub username is **public**. Anyone can see it when they:
+## 2. Secure Your GitHub Account
 
-- Visit your GitHub profile.
-- View your public repositories.
-- View your public Git commit history.
-- Contribute to an open-source project.
-- Share a repository with an instructor, classmate, or employer.
-- Include your GitHub profile on your résumé, CV, LinkedIn profile, personal website, or job application.
+GitHub requires users who contribute code to configure [two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/about-mandatory-two-factor-authentication) (2FA). Two-factor authentication requires an additional form of verification when you sign in and helps protect your account if someone obtains your password.
 
-Choose a username that you will be comfortable sharing professionally for many years.
+You may use the same 2FA method that you use for your SNHU account, such as an authenticator app, if GitHub supports it. Your GitHub and SNHU accounts remain separate; do not use your SNHU password for GitHub.
 
-### Characteristics of a Good GitHub Username
+1. Go to [https://github.com/settings/security](https://github.com/settings/security)
+2. Under **Two-factor authentication**, click **Enable two-factor authentication**
+3. Follow GitHub’s on-screen instructions to configure an authentication method
+4. Download or copy your recovery codes when prompted
+5. Store your recovery codes in a secure location separate from the device you normally use to sign in
+6. Do not share your password, authentication codes, passkeys, or recovery codes with anyone
+7. Optional: Add a passkey if your device supports one
 
-A good GitHub username is:
+> [!IMPORTANT]
+> Recovery codes can help you regain access to your account if you lose access to your normal authentication method. Store them securely. Do not save your only copy on a device that could be lost or damaged.
 
-- **Professional.** Use your real name or a variation of it whenever possible.
-- **Simple.** Make it easy to read, spell, and remember.
-- **Short.** Keep it reasonably brief.
-- **Timeless.** Choose a name that will still look professional after graduation.
-- **Unique.** Select something that distinguishes you from other GitHub users.
+## 3. Configure Your GitHub Profile (Optional)
 
-Examples:
+If desired, you can make your GitHub profile private or add an avatar, bio, and other information. You can always change your profile settings later. To configure your GitHub profile, follow the instructions below.
 
-| Good Examples  | Why They Work                   |
-|----------------|---------------------------------|
-| `peteypenmen`  | Real name, simple, professional |
-| `petey-penmen` | Easy to read                    |
-| `ppenmen`      | Short and professional          |
+1. Go to [https://github.com/settings/profile](https://github.com/settings/profile)
+2. Sign in, if not already
+3. Make your profile private, if desired
+   1. Scroll down to **Contributions & activity**
+   2. Check the **Make profile private and hide activity** option
+   3. Click the **Update preferences** button to save your changes
+4. Add or change other profile information as desired
+5. Click the **Update profile** button when done to save your changes
 
-### Avoid Usernames Like These
+## 4. Join GitHub Education (Optional)
 
-Avoid usernames that include:
+[GitHub Education](https://education.github.com/) provides eligible students with free access to GitHub benefits and professional development tools. These tools are not required for IT 140 but may be useful if you take additional programming or technical courses. You may skip this section and apply later.
 
-- Birth years or graduation years (for example, `petey2007` or `petey2029`)
-- Random numbers unless required
-- Nicknames that could appear unprofessional
-- Slang, jokes, or internet memes
-- Offensive language
-- Temporary interests that you may outgrow
-- Personal information such as your birth date, phone number, or street address
+1. Go to https://github.com/settings/education/benefits
+2. Sign in, if needed
+3. Click **Learn more** to review the available benefits
+4. Click **Start an application**
+5. Complete and submit the **Education Benefits Application**
+6. Check your email for follow-up messages from GitHub Education
+   - GitHub may request additional information to verify your student status
 
-Examples to avoid:
+## Next Step
 
-- `peteypenmen2007`
-- `coolguy99`
-- `xXPeteyMasterXx`
-- `gamergal123`
+Once your GitHub account is created, your SNHU email address is verified, and you have recorded your GitHub username and public noreply email address, you are ready to configure the course IDE on the Codio Virtual Desktop (CVD).
 
-### GitHub Username vs. Git Identity
+- [Set Up the Course IDE on Codio](../codio/README.md)
 
-Your GitHub username and Git author name serve different purposes.
+## Troubleshooting
 
-- Your GitHub username identifies your account, such as `peteypenmen`.
-- Your Git author name identifies you as the person who created a commit, such as `Petey Penmen`.
-- Your Git author email helps GitHub associate your commits with your GitHub account.
-
-You should normally use your real or preferred professional name—not your GitHub username—as your Git author name. For example:
-
-GitHub username: `peteypenmen`
-Git author name: `Petey Penmen`
-
-Using a professional name for your Git author name makes your commit history easier for instructors, collaborators, and prospective employers to understand. A hiring manager reviewing a repository can clearly connect the work to the name on your résumé or job application.
-
-Using your GitHub username as your Git author name is acceptable when the username is already a clear version of your name, but it does not provide an advantage when GitHub links commits to your account. GitHub uses the commit email address—not an exact match between the author name and username—to associate commits with a GitHub profile.
-
-Later, you will configure Git with a professional author name and an email address associated with your GitHub account. For Petey Penmen, the Git author name should be:
-
-
-### Recommendation
-
-If your preferred username is available, choose a professional version of your name. For example, if your name is **Petey Penmen**, a username such as **`peteypenmen`** is an excellent choice because it is easy to remember, looks professional, and can be used throughout your academic program and your career.
+{{SME TODO: Add troubleshooting information for GitHub account creation and configuration.}}
