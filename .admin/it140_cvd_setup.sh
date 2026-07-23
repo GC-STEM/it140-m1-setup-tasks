@@ -61,6 +61,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     git \
     gh \
     tree \
+    xclip \
     python3 \
     python3-pip \
     python3-venv \
@@ -188,11 +189,15 @@ sudo tee /etc/opt/chrome/policies/managed/it140_bookmarks.json > /dev/null <<'JS
   "BookmarkBarEnabled": true,
   "ManagedBookmarks": [
     {
-      "toplevel_name": "IT 140 Resources"
+      "toplevel_name": "IT 140"
     },
     {
       "name": "GitHub Repositories",
       "children": [
+        {
+          "name": "Main Course Repository",
+          "url": "https://github.com/GC-STEM/it140"
+        },
         {
           "name": "Module 1 - Setup",
           "url": "https://github.com/GC-STEM/it140-m1-setup-tasks"
