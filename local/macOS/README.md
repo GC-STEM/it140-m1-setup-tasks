@@ -37,42 +37,30 @@ The next phase in setting up the course IDE on your local macOS machine is to op
 1. Copy the entire code block below to your clipboard, including the final blank line.
 
 ```bash
-#!/usr/bin/env bash
-
 set -Eeuo pipefail
-
 COURSE_DIR="$HOME/it140"
 VENV_DIR="$COURSE_DIR/.venv"
 LOG_DIR="$HOME/Desktop"
 LOG_FILE="$LOG_DIR/it140_setup_log.txt"
-
 mkdir -p "$LOG_DIR"
 mkdir -p "$COURSE_DIR"
-
 exec > >(tee "$LOG_FILE") 2>&1
-
 trap 'status=$?; echo "ERROR: Setup failed near line $LINENO with exit status $status."; exit "$status"' ERR
-
 echo "===== IT 140 Course IDE Setup ====="
 echo "Started: $(date)"
 echo
-
 echo "Checking computer architecture and macOS version..."
 echo "Architecture: $(uname -m)"
 echo "macOS version: $(sw_vers -productVersion)"
 echo
-
 echo "Installing and updating system dependencies..."
-
 if ! command -v brew >/dev/null 2>&1; then
     echo "Homebrew was not found."
     echo "The Homebrew installer may request your macOS password."
     echo
-
     /bin/bash -c \
         "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-
 # Locate Homebrew on Apple silicon or Intel Macs.
 if [[ -x "/opt/homebrew/bin/brew" ]]; then
     BREW_BIN="/opt/homebrew/bin/brew"
@@ -84,47 +72,30 @@ else
     echo "ERROR: Homebrew was not found after installation."
     exit 1
 fi
-
-# Make Homebrew available during this script.
 eval "$("$BREW_BIN" shellenv)"
-
-# Make Homebrew available in future Terminal sessions.
 touch "$HOME/.zprofile"
-
 if ! grep -Fqx "$BREW_INIT" "$HOME/.zprofile"; then
     printf '\n%s\n' "$BREW_INIT" >> "$HOME/.zprofile"
 fi
-
 brew update
-
 echo
 echo "Installing course IDE components..."
-
 brew install git gh python@3.12
 brew install --cask visual-studio-code
-
-# Refresh the shell's command lookup after installing applications.
 hash -r
-
 echo
 echo "Creating the IT 140 Python 3.12 environment..."
-
 python3.12 -m venv "$VENV_DIR"
-
 "$VENV_DIR/bin/python" -m pip install --upgrade pip
 "$VENV_DIR/bin/python" -m pip install pytest pytest-cov ruff
-
 echo
 echo "Configuring Git..."
-
 git config --global init.defaultBranch main
 git config --global core.autocrlf input
 git config --global push.autoSetupRemote true
 git config --global core.editor "code --wait"
-
 echo
 echo "Installing Visual Studio Code extensions..."
-
 EXTENSIONS=(
     "ms-python.python"
     "charliermarsh.ruff"
@@ -133,7 +104,6 @@ EXTENSIONS=(
     "streetsidesoftware.code-spell-checker"
     "cweijan.vscode-office"
 )
-
 if ! command -v code >/dev/null 2>&1; then
     echo "ERROR: The 'code' command was not found."
     echo
@@ -143,15 +113,12 @@ if ! command -v code >/dev/null 2>&1; then
     echo "Then reopen Terminal and run this script again."
     exit 1
 fi
-
 for extension in "${EXTENSIONS[@]}"; do
     echo "Installing extension: $extension"
     code --install-extension "$extension"
 done
-
 echo
 echo "Verifying installed software..."
-
 echo
 brew --version | head -n 1
 git --version
@@ -161,12 +128,9 @@ python3.12 --version
 "$VENV_DIR/bin/python" -m pytest --version
 "$VENV_DIR/bin/ruff" --version
 code --version | head -n 1
-
 echo
 echo "Verifying Visual Studio Code extensions..."
-
 INSTALLED_EXTENSIONS="$(code --list-extensions)"
-
 for extension in "${EXTENSIONS[@]}"; do
     if grep -Fqix "$extension" <<< "$INSTALLED_EXTENSIONS"; then
         echo "Installed: $extension"
@@ -175,7 +139,6 @@ for extension in "${EXTENSIONS[@]}"; do
         exit 1
     fi
 done
-
 echo
 echo "===== Course IDE installation complete. ====="
 echo
