@@ -6,13 +6,18 @@
 - **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD)
 - **Activity Type**: Required, non-graded, no submission
 
----
+## Table of Contents
 
-## ⚠️ Under Construction
-
-This repository is under active development. Code, documentation, structure, and features may change before the course begins. Check back periodically for updates.
-
----
+- [IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)](#it-140-module-one-setup-tasks--codio-virtual-desktop-cvd)
+  - [Table of Contents](#table-of-contents)
+  - [Overview](#overview)
+  - [0. Prerequisites](#0-prerequisites)
+  - [1. Launch the Codio Virtual Desktop (CVD)](#1-launch-the-codio-virtual-desktop-cvd)
+  - [2. Clone the Main Course Repository to the CVD](#2-clone-the-main-course-repository-to-the-cvd)
+  - [3. Update the CVD](#3-update-the-cvd)
+  - [4. Configure the CVD](#4-configure-the-cvd)
+  - [5. Sign into Cloud Storage Services (Optional)](#5-sign-into-cloud-storage-services-optional)
+  - [6. Configure Visual Studio Code in the CVD](#6-configure-visual-studio-code-in-the-cvd)
 
 ## Overview
 
@@ -24,9 +29,11 @@ To complete these setup tasks, you will need the following:
 
 - [ ] Access to an IT 140 course in D2L Brightspace
 
-- [ ] SNHU credentials (username and password)
+- [ ] GitHub credentials (username, password)
 
-- [ ] GitHub credentials (username, password, and public noreply email address that you configured in [Set Up A GitHub Account](../github/README.md))
+- [ ] SNHU credentials (username, password), if using OneDrive for persistent storage in the CVD
+
+- [ ] Google credentials (username, password), if using G-Drive for persistent storage in the CVD
 
 > [!TIP]
 > You can find your GitHub username at [https://github.com/settings/profile](https://github.com/settings/profile).  
@@ -53,62 +60,9 @@ To complete these setup tasks, you will need the following:
 
 9. Consider bookmarking the Codio Virtual Desktop (CVD) page in your local browser for direct access later.
 
-## 2. Sign into Cloud Storage Services (Optional)
+## 2. Clone the Main Course Repository to the CVD
 
-1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the page to load.
-
-2. Optional: Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
-
-3. Optional: Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
-   1. Enter your SNHU email address and click **Next**.
-   2. Enter your SNHU password and click **Sign in**.
-   3. If prompted, click **Allow** to allow OneDrive to access resources on the CVD.
-
-4. Close the browser window in the CVD when done signing into OneDrive and/or Chrome.
-
-## 3. Sign into GitHub from the CVD
-
-```bash
-gh auth login --clipboard
-```
-
-1. Double-click on the **GitHub** icon on the CVD desktop to open the GitHub login page in Chrome. Be patient, as it may take a few seconds for the page to load.
-
-2. Sign into GitHub using the same method you used to [Set Up A GitHub Account](../github/README.md). You may use your GitHub username and password, or sign in with Google or Apple if you linked those accounts to your GitHub account.
-
-3. Follow the prompts to authorize the CVD to access your GitHub account.
-
-4. If prompted, to "Authenticate Git with your GitHub credentials? (Y/n)", type `Y`.
-
-   1. Copy your one-time code: HHHH-HHHH (your code will be different)You will need it to complete the authentication process.
-   2. Press **Enter** to open https://github.com/login/device in your browser.
-   3. Press **Enter** to open the GitHub login page in the default browser.
-
-5. Follow the prompts to activate GitHub on this device.
-
-6. Close the browser window in the CVD when done signing into GitHub.
-
-## 4. Configure Visual Studio Code in the CVD
-
-1. Double-click on the **Visual Studio Code** icon on the CVD desktop.
-
-2. Sign into VS Code using one of the following methods:
-   - **Continue with GitHub** (recommended)
-   - **Sign in with Google** (click on **G** icon)
-   - **Sign in with Apple** (click on Apple icon)
-   - **Continue without Signing in**
-
-3. If prompted, authorize VS Code to access your linked account.
-
-4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open**.
-
-5. If prompted, select your color theme. Course screenshots show the "Solarized Dark" theme, but you may choose the theme you prefer.
-
-6. If you see an **Update** button in the top VS Code menu bar, ignore it for now.
-
-## 5. Clone the Main Course Repository in the CVD
-
-1. In **Visual Studio Code** on the CVD desktop, open a terminal by pressing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
+1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
 
 2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
@@ -127,58 +81,83 @@ gh auth login --clipboard
    source "$HOME/.bashrc"
    ```
 
-3. In the **VS Code** terminal, right-click and select **Paste**. Do NOT use keyboard shortcuts.
+3. In the terminal window, right-click and select **Paste**. Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., `Ctrl+V`), you will introduce unwanted characters into the command and it will not work.
 
 4. Press **Enter** to run the pasted commands.
 
-5. Verify your `~/it140` directory now contains a `scripts/` folder.
+5. Close the terminal window by typing `exit` and pressing **Enter**.
 
-6. If continuing with the next step, do not close the VS Code terminal. Otherwise, you may close the terminal and VS Code when done.
+## 3. Update the CVD
 
-## 6. Configure Git in the CVD
+> [!IMPORTANT]
+> If you update the CVD after starting work on course activities, save your work on another platform (e.g., GitHub, OneDrive, your local machine) before running the update script, just in case the update fails and we need to reset your VM. You do not need to backup if you have not save any work in the CVD yet.
 
-1. If at anytime during this process you see a message bar towards the top of the VS Code window starting with "Restricted Mode"
-   1. Click the **Manage** link
-   2. Click **Trust** to run scripts in the `it140/` folder
-   3. Close the **Workspace Trust** window.
-2. If a VS Code terminal is not already open, open a terminal by pressing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
+1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
 
+2. Type or copy the following command into the terminal window to update the CVD. Be patient, as this may take several minutes to complete.
 
-2. Click the **it140** folder and then the **Select** button
+   ```bash
+   bash update_cvd.sh
+   ```
 
-3. If you see a message bar starting with "Restricted Mode"
-   1. Click the **Manage** link
-   2. Click **Trust** to run scripts in the it140 folder
-   3. Close the **Workspace Trust** window.
+3. Review the **Update Summary** notices to see if a VM restart is required.
 
-4. From VS Code main menu bar, select **File > New File**.
+4. Close the terminal window by typing `exit`.
 
-5. Name the file `gitconfig.sh` 
+5. If a VM restart is required,
+   1. Save any open work and close all windows in the CVD.
+   2. Click on **RESTART VM** on the VM tab menu bar
+   3. Wait for the CVD to restart and reconnect. It will take a few minutes.
 
-6. In your home directory (e.g., `/home/codio/gitconfig.sh`) and copy and paste the following commands into the file, replacing `<your-github-username>` and `<your-github-noreply-email>` with your GitHub username and public noreply email address that you configured in [Set Up A GitHub Account](../github/README.md):
+## 4. Configure the CVD
 
-```bash
-2. Open a terminal in VS Code by pressing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
-3. 
+1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
 
-Clone the Main Course Repository
+2. Type or copy the following command into the terminal window to run an automated update script.
 
-### GitHub
+   ```bash
+   bash config_cvd.sh
+   ```
 
-1. Open a terminal in VS Code by prelick it to update VS Code to the latest version. Close any browser windows that popped up. Youssing **Ctrl** + **`** (backtick key--to the left of the **1** key) or selecting **View > Terminal** from the menu bar.
-2. Copy and paste the following commands into the terminal to create a working directory for your course assignments, log into GitHub, and fork and clone the course assignment repositories:
+3. Close the terminal window by typing `exit` and pressing **Enter**.
 
-```bash
-gh auth login --hostname github.com --git-protocol https --web --clipboard
+## 5. Sign into Cloud Storage Services (Optional)
 
-```
+1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
 
-3. If prompted, to "Authenticate Git with your GitHub credentials? (Y/n)", type `Y`.
+2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
 
-If prompted...
-> First copy your one-time code: HHHH-HHHH (your code will be different)
-> Press **Enter** to open https://github.com/login/device in your browser.
+3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+   1. Enter your SNHU email address and click **Next**.
+   2. Enter your SNHU password and click **Sign in**.
+   3. If you see an **Install** button on the browser address bar, click it to install the OneDrive desktop app. If you do not see an **Install** button, skip this step.
+   4. If prompted, click **Allow** to allow OneDrive to access resources on the CVD.
 
-4. Remember the one-time code. You will need it to complete the authentication process.
-5. Press **Enter** to open the GitHub login page in the default browser.
-6. Follow the prompts to activate GitHub on this device.
+4. Close the browser window in the CVD when done signing into OneDrive and/or Chrome.
+
+> [!NOTE]
+> The first time you double-click on the OneDrive icon, you may see an **Untrusted Application** warning. If you see this message, click **OK**.
+
+## 6. Configure Visual Studio Code in the CVD
+
+1. Double-click on the **Visual Studio Code** icon on the CVD desktop.
+
+2. Sign into VS Code using one of the following methods:
+   - **Continue with GitHub** (highly recommended)
+   - **Sign in with Google** (click on **G** icon)
+   - **Sign in with Apple** (click on Apple icon)
+   - **Continue without Signing in**
+
+   > [!NOTE]
+   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
+
+3. If prompted, authorize VS Code to access GitHub or another linked account.
+
+4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open**.
+
+5. If prompted, select your color theme. Course screenshots show the "Dark High Contrast" theme, but you may choose the theme you prefer.
+
+6. Click the **Get Started** button on the Welcome page to dismiss it.
+
+   > [!IMPORTANT]
+   > If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `bash update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.

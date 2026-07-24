@@ -37,47 +37,162 @@ The next phase in setting up the course IDE on your local macOS machine is to op
 1. Copy the entire code block below to your clipboard, including the final blank line.
 
 ```bash
-exec > >(tee "$HOME/Desktop/it140_setup_log.txt") 2>&1
+#!/usr/bin/env bash
+
+set -Eeuo pipefail
+
+COURSE_DIR="$HOME/it140"
+VENV_DIR="$COURSE_DIR/.venv"
+LOG_DIR="$HOME/Desktop"
+LOG_FILE="$LOG_DIR/it140_setup_log.txt"
+
+mkdir -p "$LOG_DIR"
+mkdir -p "$COURSE_DIR"
+
+exec > >(tee "$LOG_FILE") 2>&1
+
+trap 'status=$?; echo "ERROR: Setup failed near line $LINENO with exit status $status."; exit "$status"' ERR
+
+echo "===== IT 140 Course IDE Setup ====="
+echo "Started: $(date)"
+echo
+
+echo "Checking computer architecture and macOS version..."
+echo "Architecture: $(uname -m)"
+echo "macOS version: $(sw_vers -productVersion)"
+echo
+
 echo "Installing and updating system dependencies..."
+
 if ! command -v brew >/dev/null 2>&1; then
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    echo "Homebrew was not found."
+    echo "The Homebrew installer may request your macOS password."
+    echo
+
+    /bin/bash -c \
+        "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-if [ -x "/opt/homebrew/bin/brew" ]; then
-eval "$(/opt/homebrew/bin/brew shellenv)"
-elif [ -x "/usr/local/bin/brew" ]; then
-eval "$(/usr/local/bin/brew shellenv)"
-fi
-brew update
-echo "Installing course IDE components..."
-brew install git
-brew install gh
-brew install python@3.12
-brew install --cask visual-studio-code
-echo "Configuring course IDE components..."
-python3.12 -m pip install --upgrade pip pytest pytest-cov ruff
-git config --global init.defaultBranch main
-git config --global core.editor "code --wait"
-echo "Installing code editor extensions..."
-if ! command -v code >/dev/null 2>&1; then
-echo "The 'code' command was not found."
-echo "Open VS Code, press Command+Shift+P, type: shell command"
-echo "Select: Shell Command: Install 'code' command in PATH"
-echo "Then close Terminal, open a new Terminal window, and run the extension commands listed below."
+
+# Locate Homebrew on Apple silicon or Intel Macs.
+if [[ -x "/opt/homebrew/bin/brew" ]]; then
+    BREW_BIN="/opt/homebrew/bin/brew"
+    BREW_INIT='eval "$(/opt/homebrew/bin/brew shellenv)"'
+elif [[ -x "/usr/local/bin/brew" ]]; then
+    BREW_BIN="/usr/local/bin/brew"
+    BREW_INIT='eval "$(/usr/local/bin/brew shellenv)"'
 else
-code --install-extension ms-python.python --force
-code --install-extension charliermarsh.ruff --force
-code --install-extension hediet.vscode-drawio --force
-code --install-extension streetsidesoftware.code-spell-checker --force
-code --install-extension i2p-hub.i2p-pseudo --force
-code --install-extension cweijan.vscode-office --force
+    echo "ERROR: Homebrew was not found after installation."
+    exit 1
 fi
+
+# Make Homebrew available during this script.
+eval "$("$BREW_BIN" shellenv)"
+
+# Make Homebrew available in future Terminal sessions.
+touch "$HOME/.zprofile"
+
+if ! grep -Fqx "$BREW_INIT" "$HOME/.zprofile"; then
+    printf '\n%s\n' "$BREW_INIT" >> "$HOME/.zprofile"
+fi
+
+brew update
+
+echo
+echo "Installing course IDE components..."
+
+brew install git gh python@3.12
+brew install --cask visual-studio-code
+
+# Refresh the shell's command lookup after installing applications.
+hash -r
+
+echo
+echo "Creating the IT 140 Python 3.12 environment..."
+
+python3.12 -m venv "$VENV_DIR"
+
+"$VENV_DIR/bin/python" -m pip install --upgrade pip
+"$VENV_DIR/bin/python" -m pip install pytest pytest-cov ruff
+
+echo
+echo "Configuring Git..."
+
+git config --global init.defaultBranch main
+git config --global core.autocrlf input
+git config --global push.autoSetupRemote true
+git config --global core.editor "code --wait"
+
+echo
+echo "Installing Visual Studio Code extensions..."
+
+EXTENSIONS=(
+    "ms-python.python"
+    "charliermarsh.ruff"
+    "hediet.vscode-drawio"
+    "i2p-hub.i2p-pseudo"
+    "streetsidesoftware.code-spell-checker"
+    "cweijan.vscode-office"
+)
+
+if ! command -v code >/dev/null 2>&1; then
+    echo "ERROR: The 'code' command was not found."
+    echo
+    echo "Open Visual Studio Code."
+    echo "Press Command+Shift+P."
+    echo "Run: Shell Command: Install 'code' command in PATH"
+    echo "Then reopen Terminal and run this script again."
+    exit 1
+fi
+
+for extension in "${EXTENSIONS[@]}"; do
+    echo "Installing extension: $extension"
+    code --install-extension "$extension"
+done
+
+echo
+echo "Verifying installed software..."
+
+echo
+brew --version | head -n 1
+git --version
+gh --version | head -n 1
+python3.12 --version
+"$VENV_DIR/bin/python" -m pip --version
+"$VENV_DIR/bin/python" -m pytest --version
+"$VENV_DIR/bin/ruff" --version
+code --version | head -n 1
+
+echo
+echo "Verifying Visual Studio Code extensions..."
+
+INSTALLED_EXTENSIONS="$(code --list-extensions)"
+
+for extension in "${EXTENSIONS[@]}"; do
+    if grep -Fqix "$extension" <<< "$INSTALLED_EXTENSIONS"; then
+        echo "Installed: $extension"
+    else
+        echo "ERROR: Extension was not found after installation: $extension"
+        exit 1
+    fi
+done
+
+echo
 echo "===== Course IDE installation complete. ====="
+echo
+echo "Python environment:"
+echo "  $VENV_DIR"
+echo
+echo "To activate it manually, run:"
+echo "  source \"$VENV_DIR/bin/activate\""
+echo
 echo "Before continuing, review the messages above."
-echo "Look for words like Error, Failed, Exception, Permission denied, or command not found."
-echo "Some errors may appear in red text, but text color can vary."
-echo "If you do not see an error message, continue to the next step."
-echo "If you see an error, see the Troubleshooting section of the setup repo."
-echo "A setup log was saved to your Desktop as: it140_setup_log.txt."
+echo "Look for words such as ERROR, Failed, Exception, Permission denied,"
+echo "or command not found."
+echo
+echo "A setup log was saved to:"
+echo "  $LOG_FILE"
+echo
+echo "Completed: $(date)"
 
 ```
 
