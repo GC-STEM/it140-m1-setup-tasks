@@ -60,6 +60,7 @@ sudo DEBIAN_FRONTEND=noninteractive apt-get install -y \
     direnv \
     git \
     gh \
+    numlockx \
     tree \
     xclip \
     python3 \
@@ -125,7 +126,19 @@ do
         --set false
 done
 
-echo "Creating trusted course desktop icons..."
+echo "Configuring the course desktop..."
+
+# Enable Num Lock when the Xfce desktop session starts.
+sudo tee /etc/xdg/autostart/numlockx.desktop > /dev/null <<'EOF_NUMLOCK'
+[Desktop Entry]
+Type=Application
+Name=Enable Num Lock
+Comment=Enable Num Lock when the desktop session starts
+Exec=/usr/bin/numlockx on
+OnlyShowIn=XFCE;
+NoDisplay=true
+X-GNOME-Autostart-enabled=true
+EOF_NUMLOCK
 
 # Create an IT 140 folder launcher owned by the Codio user.
 cat > "$DESKTOP_DIR/it140.desktop" <<EOF_IT140_LAUNCHER
@@ -165,7 +178,182 @@ do
         "$launcher_checksum"
 done
 
+echo "Configuring the course panel..."
+PANEL_CHANNEL="xfce4-panel"
+PANEL_CONFIG_DIR="$HOME/.config/xfce4/panel"
+mkdir -p "$PANEL_CONFIG_DIR"
+
+set_xfconf_string() {
+    local property="$1"
+    local value="$2"
+
+    if xfconf-query \
+        --channel "$PANEL_CHANNEL" \
+        --property "$property" > /dev/null 2>&1
+    then
+        xfconf-query \
+            --channel "$PANEL_CHANNEL" \
+            --property "$property" \
+            --set "$value"
+    else
+        xfconf-query \
+            --channel "$PANEL_CHANNEL" \
+            --property "$property" \
+            --create \
+            --type string \
+            --set "$value"
+    fi
+}
+
+# Find the existing folder-shaped Directory Menu plugin.
+DIRECTORY_PLUGIN_ID="$(
+    xfconf-query \
+        --channel "$PANEL_CHANNEL" \
+        --property /plugins \
+        --list \
+        --verbose 2>/dev/null \
+    | awk '$NF == "directorymenu" {
+        sub(/^.*plugin-/, "", $1)
+        print $1
+        exit
+    }'
+)"
+
+if [[ -z "$DIRECTORY_PLUGIN_ID" ]]; then
+    echo "ERROR: Could not find the Xfce Directory Menu plugin." >&2
+    exit 1
+fi
+
+# Make the existing folder menu start at the IT 140 course directory.
+set_xfconf_string \
+    "/plugins/plugin-$DIRECTORY_PLUGIN_ID/base-directory" \
+    "$HOME/it140"
+
+# Find the panel that contains the Directory Menu plugin.
+COURSE_PANEL_ID=""
+mapfile -t PANEL_IDS < <(
+    xfconf-query \
+        --channel "$PANEL_CHANNEL" \
+        --property /panels 2>/dev/null \
+    | awk '$1 ~ /^[0-9]+$/ { print $1 }'
+)
+
+for panel_id in "${PANEL_IDS[@]}"; do
+    mapfile -t panel_plugin_ids < <(
+        xfconf-query \
+            --channel "$PANEL_CHANNEL" \
+            --property "/panels/panel-$panel_id/plugin-ids" 2>/dev/null \
+        | awk '$1 ~ /^[0-9]+$/ { print $1 }'
+    )
+
+    if printf '%s\n' "${panel_plugin_ids[@]}" \
+        | grep --fixed-strings --line-regexp --quiet "$DIRECTORY_PLUGIN_ID"
+    then
+        COURSE_PANEL_ID="$panel_id"
+        break
+    fi
+done
+
+if [[ -z "$COURSE_PANEL_ID" ]]; then
+    echo "ERROR: Could not identify the panel containing the Directory Menu." >&2
+    exit 1
+fi
+
+# Reuse the prior VS Code launcher plugin on repeated runs, or allocate a new ID.
+VSCODE_PLUGIN_MARKER="$PANEL_CONFIG_DIR/it140-vscode-plugin-id"
+VSCODE_PLUGIN_ID=""
+
+if [[ -s "$VSCODE_PLUGIN_MARKER" ]]; then
+    candidate_id="$(<"$VSCODE_PLUGIN_MARKER")"
+
+    if [[ "$candidate_id" =~ ^[0-9]+$ ]]; then
+        candidate_type="$(
+            xfconf-query \
+                --channel "$PANEL_CHANNEL" \
+                --property "/plugins/plugin-$candidate_id" 2>/dev/null \
+            || true
+        )"
+
+        if [[ "$candidate_type" == "launcher" ]]; then
+            VSCODE_PLUGIN_ID="$candidate_id"
+        fi
+    fi
+fi
+
+if [[ -z "$VSCODE_PLUGIN_ID" ]]; then
+    LAST_PLUGIN_ID="$(
+        xfconf-query \
+            --channel "$PANEL_CHANNEL" \
+            --property /plugins \
+            --list 2>/dev/null \
+        | sed -n 's#^/plugins/plugin-\([0-9][0-9]*\).*#\1#p' \
+        | sort --numeric-sort \
+        | tail --lines=1
+    )"
+
+    VSCODE_PLUGIN_ID="$(( ${LAST_PLUGIN_ID:-0} + 1 ))"
+    printf '%s\n' "$VSCODE_PLUGIN_ID" > "$VSCODE_PLUGIN_MARKER"
+fi
+
+VSCODE_LAUNCHER_NAME="it140-vscode.desktop"
+VSCODE_LAUNCHER_DIR="$PANEL_CONFIG_DIR/launcher-$VSCODE_PLUGIN_ID"
+mkdir -p "$VSCODE_LAUNCHER_DIR"
+install -m 0644 \
+    /usr/share/applications/code.desktop \
+    "$VSCODE_LAUNCHER_DIR/$VSCODE_LAUNCHER_NAME"
+
+set_xfconf_string "/plugins/plugin-$VSCODE_PLUGIN_ID" "launcher"
+
+# Configure the launcher plugin with VS Code as its only item.
+VSCODE_ITEMS_PROPERTY="/plugins/plugin-$VSCODE_PLUGIN_ID/items"
+xfconf-query \
+    --channel "$PANEL_CHANNEL" \
+    --property "$VSCODE_ITEMS_PROPERTY" \
+    --reset 2>/dev/null || true
+xfconf-query \
+    --channel "$PANEL_CHANNEL" \
+    --property "$VSCODE_ITEMS_PROPERTY" \
+    --create \
+    --force-array \
+    --type string \
+    --set "$VSCODE_LAUNCHER_NAME"
+
+# Remove any prior occurrence, then append VS Code as the far-right panel item.
+PANEL_PLUGIN_PROPERTY="/panels/panel-$COURSE_PANEL_ID/plugin-ids"
+mapfile -t panel_plugin_ids < <(
+    xfconf-query \
+        --channel "$PANEL_CHANNEL" \
+        --property "$PANEL_PLUGIN_PROPERTY" 2>/dev/null \
+    | awk '$1 ~ /^[0-9]+$/ { print $1 }'
+)
+
+updated_plugin_ids=()
+for plugin_id in "${panel_plugin_ids[@]}"; do
+    if [[ "$plugin_id" != "$VSCODE_PLUGIN_ID" ]]; then
+        updated_plugin_ids+=("$plugin_id")
+    fi
+done
+updated_plugin_ids+=("$VSCODE_PLUGIN_ID")
+
+xfconf-query \
+    --channel "$PANEL_CHANNEL" \
+    --property "$PANEL_PLUGIN_PROPERTY" \
+    --reset
+
+panel_plugin_args=()
+for plugin_id in "${updated_plugin_ids[@]}"; do
+    panel_plugin_args+=(--type int --set "$plugin_id")
+done
+
+xfconf-query \
+    --channel "$PANEL_CHANNEL" \
+    --property "$PANEL_PLUGIN_PROPERTY" \
+    --create \
+    --force-array \
+    "${panel_plugin_args[@]}"
+
 xfdesktop --reload 2>/dev/null || true
+xfce4-panel -r 2>/dev/null || true
 
 echo "Making VS Code the default editor for course file types..."
 for mime_type in \
@@ -215,7 +403,7 @@ sudo tee /etc/opt/chrome/policies/managed/it140_bookmarks.json > /dev/null <<'JS
           "url": "https://github.com/GC-STEM/it140-m4-assignment"
         },
         {
-          "name": "Projects",
+          "name": "TAG Projects",
           "url": "https://github.com/GC-STEM/it140-projects"
         }
       ]

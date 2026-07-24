@@ -1,26 +1,24 @@
 # WARNING: Do NOT modify this file.
 # If there is a problem with it, submit a GitHub issue or pull request to fix it.
 
-# Auto-detect text files and normalize line endings in the repo
-* text=auto
+# Auto-detect text files and use LF line endings
+* text=auto eol=lf
 
-# Python and plain-text files should use LF line endings
+# Python and plain-text files use LF line endings
 *.py text eol=lf
 *.md text eol=lf
 *.txt text eol=lf
 *.pseudo text eol=lf
 *.csv text eol=lf
 
-# Linux/macOS scripts should use LF line endings
+# Scripts use LF line endings
 *.sh text eol=lf
 *.bash text eol=lf
 *.zsh text eol=lf
 *.command text eol=lf
-
-# Windows scripts should use CRLF line endings
-*.ps1 text eol=crlf
-*.bat text eol=crlf
-*.cmd text eol=crlf
+*.ps1 text eol=lf
+*.bat text eol=lf
+*.cmd text eol=lf
 
 # Treat common binary files as binary
 *.png binary
