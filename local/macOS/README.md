@@ -61,7 +61,6 @@ if ! command -v brew >/dev/null 2>&1; then
     /bin/bash -c \
         "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 fi
-# Locate Homebrew on Apple silicon or Intel Macs.
 if [[ -x "/opt/homebrew/bin/brew" ]]; then
     BREW_BIN="/opt/homebrew/bin/brew"
     BREW_INIT='eval "$(/opt/homebrew/bin/brew shellenv)"'
