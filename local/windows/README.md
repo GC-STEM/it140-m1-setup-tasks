@@ -63,7 +63,7 @@ The next phase in setting up the course IDE on your local Windows machine is to 
 1. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
    ```powershell
-   Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup_log.txt" -Force
+   Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup.log" -Force
    # Installing and updating system dependencies...
    Install-PackageProvider -Name NuGet -Force | Out-Null
    Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
@@ -95,7 +95,7 @@ The next phase in setting up the course IDE on your local Windows machine is to 
    # Some errors may appear in red text, but text color can vary.
    # If you do not see an error message, continue to the next step.
    # If you see an error, see the Troubleshooting section of the setup repo.
-   # A setup log was saved to your Desktop as: it140_setup_log.txt.
+   # A setup log was saved to your Desktop as: it140_setup.log.
    # Detailed WinGet logs are available if tech support needs them; run: winget --logs.
    Stop-Transcript
 
