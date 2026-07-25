@@ -91,7 +91,7 @@ Before starting the Module Two assignment, follow the instructions below to set 
 
 - [ ] Click on your operating system and follow the instructions.
   - [Linux](local/linux/README.md)
-  - [macOS](local/macOS/README.md)
+  - [macOS](local/macos/README.md)
   - [Windows](local/windows/README.md)
 
 ## Supporting Materials

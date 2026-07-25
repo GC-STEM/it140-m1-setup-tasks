@@ -18,27 +18,36 @@
   - [4. Configure the CVD](#4-configure-the-cvd)
   - [5. Sign into Cloud Storage Services (Optional)](#5-sign-into-cloud-storage-services-optional)
   - [6. Configure Visual Studio Code in the CVD](#6-configure-visual-studio-code-in-the-cvd)
+  - [7. Verify Your CVD Configuration](#7-verify-your-cvd-configuration)
+  - [Next Step](#next-step)
+  - [Troubleshooting](#troubleshooting)
 
 ## What is a Codio Virtual Desktop (CVD)?
 
-{{TODO: Add a brief description of the CVD and its purpose in the course, along with why all students should use it at least as a backup environment.}}
+A Codio Virtual Desktop (CVD) is a cloud-based Linux desktop that you access through your web browser. It includes the IT 140 development environment (course IDE), so you can begin working on course assignments without installing software on your own computer.
+
+The CVD is the course's reference development environment. Assignment instructions, screenshots, and instructional videos use the CVD, and instructors and technical support staff can most easily help you when you are using it.
+
+Even if you plan to complete most of your work on your own computer, launch and configure the CVD at least once. If your local course IDE stops working or you need to use another computer, you can switch to the CVD and continue working with little or no interruption.
 
 ## 0. Prerequisites
 
-To complete these setup tasks, you will need the following:
+To complete CVD configuration, you will need the following:
 
 - [ ] Access to an IT 140 course in D2L Brightspace
 
 - [ ] GitHub credentials (username, password)
 
-- [ ] SNHU credentials (username, password), if using OneDrive for persistent storage in the CVD
+- [ ] SNHU credentials (email, password), if using OneDrive for persistent storage
 
-- [ ] Google credentials (username, password), if using G-Drive for persistent storage in the CVD
+- [ ] Google credentials (email, password), if using Google Workspace for account sync and persistent storage
 
 > [!TIP]
-> You can find your GitHub username at [https://github.com/settings/profile](https://github.com/settings/profile).  
->  
-> You can find your GitHub public noreply email address on [https://github.com/settings/emails](https://github.com/settings/emails) under the **Keep my email addresses private** section. It will look similar to: `302326151+petey-penmen@users.noreply.github.com`
+> You can find your GitHub username at [https://github.com/settings/profile](https://github.com/settings/profile)
+>
+> You can find your GitHub public noreply email address on [https://github.com/settings/emails](https://github.com/settings/emails) under the **Keep my email addresses private** section.
+>
+> It will look similar to `302326151+petey-penmen@users.noreply.github.com` but with your GitHub user ID and username.
 
 ## 1. Launch the Codio Virtual Desktop (CVD)
 
@@ -81,7 +90,7 @@ To complete these setup tasks, you will need the following:
    source "$HOME/.bashrc"
    ```
 
-3. In the terminal window, right-click and select **Paste**. Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., `Ctrl+V`), you will introduce unwanted characters into the command and it will not work.
+3. In the terminal window, right-click and select **Paste**. Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., **Ctrl** + **V**), you will introduce unwanted characters into the command and it will not work.
 
 4. Press **Enter** to run the pasted commands.
 
@@ -94,15 +103,11 @@ To complete these setup tasks, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
 
-2. Type or copy the following command into the terminal window to update the CVD. Be patient, as this may take several minutes to complete.
-
-   ```bash
-   bash update_cvd.sh
-   ```
+2. Type `update_cvd.sh` into the terminal window and press **Enter**to run the automated CVD update script. Be patient, as this may take several minutes to complete.
 
 3. Review the **Update Summary** notices to see if a VM restart is required.
 
-4. Close the terminal window by typing `exit`.
+4. Close the terminal window by typing `exit` and pressing **Enter**.
 
 5. If a VM restart is required,
    1. Save any open work and close all windows in the CVD.
@@ -113,11 +118,7 @@ To complete these setup tasks, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
 
-2. Type or copy the following command into the terminal window to run an automated update script.
-
-   ```bash
-   bash config_cvd.sh
-   ```
+2. Type `config_cvd.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script.
 
 3. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -151,13 +152,32 @@ To complete these setup tasks, you will need the following:
    > [!NOTE]
    > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
 
-3. If prompted, authorize VS Code to access GitHub or another linked account.
+3. If prompted, authorize VS Code to access GitHub or other linked account(s).
 
-4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open**.
+4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open** button.
 
-5. If prompted, select your color theme. Course screenshots show the "Dark High Contrast" theme, but you may choose the theme you prefer.
+5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer.
 
-6. Click the **Get Started** button on the Welcome page to dismiss it.
+6. Click the **Get Started** button on the **Welcome** page to dismiss it.
 
    > [!IMPORTANT]
-   > If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `bash update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
+   > If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
+
+## 7. Verify Your CVD Configuration
+
+{{SME TODO: Develop CVD verification script and add verification instructions for CVD configuration.}}
+
+## Next Step
+
+Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop here. You may complete all course activities from web-based learning platforms–Brightspace, zyBooks, and Codio.
+
+However, we recommend you set up the course IDE on at least one local computer, if possible. Doing so provides an alternative development environment in case the CVD is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the CVD and your local course IDE, so you can continue working on assignments from either environment.
+
+- **Set Up the Course IDE on Your Local Computer(s)**
+  - [Windows](../local/windows/README.md)
+  - [MacOS](../local/macos/README.md)
+  - [Linux](../local/linux/README.md)
+
+## Troubleshooting
+
+{{SME TODO: Add troubleshooting information for CVD configuration.}}
