@@ -10,7 +10,7 @@
 
 - [IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)](#it-140-module-one-setup-tasks--codio-virtual-desktop-cvd)
   - [Table of Contents](#table-of-contents)
-  - [Overview](#overview)
+  - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
   - [1. Launch the Codio Virtual Desktop (CVD)](#1-launch-the-codio-virtual-desktop-cvd)
   - [2. Clone the Main Course Repository to the CVD](#2-clone-the-main-course-repository-to-the-cvd)
@@ -19,9 +19,9 @@
   - [5. Sign into Cloud Storage Services (Optional)](#5-sign-into-cloud-storage-services-optional)
   - [6. Configure Visual Studio Code in the CVD](#6-configure-visual-studio-code-in-the-cvd)
 
-## Overview
+## What is a Codio Virtual Desktop (CVD)?
 
-{{TODO: Explain why students may want to use the CVD for course assignments.}}
+{{TODO: Add a brief description of the CVD and its purpose in the course, along with why all students should use it at least as a backup environment.}}
 
 ## 0. Prerequisites
 
