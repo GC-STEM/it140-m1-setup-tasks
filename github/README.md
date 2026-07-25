@@ -50,7 +50,7 @@ Otherwise, follow the instructions below to create a new GitHub account.
 6. Confirm that your SNHU email address is listed as verified
 7. Scroll down and turn on **Keep my email addresses private**
 8. Note your GitHub-provided public email address. It will look similar to:<br>
-   `302326151+peteypenmen@users.noreply.github.com`<br>
+   `302326151+petey-penmen@users.noreply.github.com`<br>
    You will need this address later when configuring Git.
 9. Turn on **Block command line pushes that expose my email**
 

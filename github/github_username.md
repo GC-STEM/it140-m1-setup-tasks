@@ -31,7 +31,7 @@ A good username is:
 
 | Good Example   | Why It Works                                            |
 | -------------- | ------------------------------------------------------- |
-| `peteypenmen`  | Uses a full name and is easy to remember                |
+| `petey-penmen`  | Uses a full name and is easy to remember                |
 | `petey-penmen` | Separates the names for readability                     |
 | `ppenmen`      | Uses an initial and last name                           |
 | `peteyjpenmen` | Adds a middle initial without using private information |
@@ -46,7 +46,7 @@ Your first choice may already belong to another GitHub user. Try professional va
 4. Reverse the order of your first and last names
 5. Add a brief professional term only if it reflects a long-term interest or identity
 
-For example, if `peteypenmen` is unavailable, Petey could try:
+For example, if `petey-penmen` is unavailable, Petey could try:
 
 * `peteyjpenmen`
 * `petey-j-penmen`
@@ -73,7 +73,7 @@ Avoid usernames that include:
 
 Examples to avoid:
 
-* `peteypenmen2007`
+* `petey-penmen2007`
 * `coolguy99`
 * `xXPeteyMasterXx`
 * `gamergal123`

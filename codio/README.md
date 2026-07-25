@@ -38,7 +38,7 @@ To complete these setup tasks, you will need the following:
 > [!TIP]
 > You can find your GitHub username at [https://github.com/settings/profile](https://github.com/settings/profile).  
 >  
-> You can find your GitHub public noreply email address on [https://github.com/settings/emails](https://github.com/settings/emails) under the **Keep my email addresses private** section. It will look similar to: `302326151+peteypenmen@users.noreply.github.com`
+> You can find your GitHub public noreply email address on [https://github.com/settings/emails](https://github.com/settings/emails) under the **Keep my email addresses private** section. It will look similar to: `302326151+petey-penmen@users.noreply.github.com`
 
 ## 1. Launch the Codio Virtual Desktop (CVD)
 
