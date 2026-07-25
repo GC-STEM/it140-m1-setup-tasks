@@ -3,7 +3,7 @@ paste them into an 'Administrator: Windows PowerShell' terminal command
 prompt. Expect the commands to take 15 to 45 minutes to complete,
 depending on your system and . #>
 
-Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup_log.txt" -Force
+Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup.log" -Force
 # Installing and updating system dependencies...
 Install-PackageProvider -Name NuGet -Force | Out-Null
 Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
@@ -35,6 +35,6 @@ Remove-Item Env:NODE_NO_WARNINGS -ErrorAction SilentlyContinue
 # Some errors may appear in red text, but text color can vary.
 # If you do not see an error message, continue to the next step.
 # If you see an error, see the Troubleshooting section of the IDE Guide.
-# A setup log was saved to your Desktop as: it140_setup_log.txt.
+# A setup log was saved to your Desktop as: it140_setup.log.
 # Detailed WinGet logs are available if tech support needs them; run: winget --logs.
 Stop-Transcript

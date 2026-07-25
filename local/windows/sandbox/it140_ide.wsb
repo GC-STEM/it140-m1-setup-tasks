@@ -1,0 +1,16 @@
+<Configuration>
+  <Networking>Enable</Networking>
+  <ClipboardRedirection>Enable</ClipboardRedirection>
+
+  <MappedFolders>
+    <MappedFolder>
+      <HostFolder>{{REPO_PATH}}</HostFolder>
+      <SandboxFolder>C:\SandboxSetup</SandboxFolder>
+      <ReadOnly>false</ReadOnly>
+    </MappedFolder>
+  </MappedFolders>
+
+  <LogonCommand>
+    <Command>powershell -ExecutionPolicy Bypass -File C:\SandboxSetup\it140_setup_script.ps1</Command>
+  </LogonCommand>
+</Configuration>
