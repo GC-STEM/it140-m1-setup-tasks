@@ -18,7 +18,6 @@
   - [4. Configure the CVD](#4-configure-the-cvd)
   - [5. Sign into Cloud Storage Services (Optional)](#5-sign-into-cloud-storage-services-optional)
   - [6. Configure Visual Studio Code in the CVD](#6-configure-visual-studio-code-in-the-cvd)
-  - [7. Verify Your CVD Configuration](#7-verify-your-cvd-configuration)
   - [Next Step](#next-step)
   - [Troubleshooting](#troubleshooting)
 
@@ -71,35 +70,35 @@ To complete CVD configuration, you will need the following:
 
 ## 2. Clone the Main Course Repository to the CVD
 
-1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
+1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
 2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
-```bash
-platform="cvd"
-mkdir -p "$HOME/it140"
-temp_dir="$(mktemp -d)"
-git clone --depth 1 \
-"https://github.com/GC-STEM/it140.git" \
-"$temp_dir/it140"
-rm -rf "$temp_dir/it140/.git"
-cp -a "$temp_dir/it140/." "$HOME/it140/"
-rm -rf "$HOME/it140/.git"
-rm -rf "$temp_dir"
-scripts_dir="$HOME/it140/scripts/$platform"
-chmod +x "$scripts_dir/"*.sh
-path_line="export PATH=\"\$HOME/it140/scripts/$platform:\$PATH\""
-grep -qxF "$path_line" "$HOME/.bashrc" || printf '\n%s\n' "$path_line" >> "$HOME/.bashrc"
-case ":$PATH:" in
-    *":$scripts_dir:"*) ;;
-    *) export PATH="$scripts_dir:$PATH" ;;
-esac
-hash -r
-```
+   ```bash
+   platform="cvd"
+   mkdir -p "$HOME/it140"
+   temp_dir="$(mktemp -d)"
+   git clone --depth 1 \
+   "https://github.com/GC-STEM/it140.git" \
+   "$temp_dir/it140"
+   rm -rf "$temp_dir/it140/.git"
+   cp -a "$temp_dir/it140/." "$HOME/it140/"
+   rm -rf "$HOME/it140/.git"
+   rm -rf "$temp_dir"
+   scripts_dir="$HOME/it140/scripts/$platform"
+   chmod +x "$scripts_dir/"*.sh
+   path_line="export PATH=\"\$HOME/it140/scripts/$platform:\$PATH\""
+   grep -qxF "$path_line" "$HOME/.bashrc" || printf '\n%s\n' "$path_line" >> "$HOME/.bashrc"
+   case ":$PATH:" in
+      *":$scripts_dir:"*) ;;
+      *) export PATH="$scripts_dir:$PATH" ;;
+   esac
+   hash -r
+   ```
 
-3. In the terminal window, right-click at the end of the command prompt and select **Paste**.
+3. In the CVD terminal window, right-click at the end of the command prompt and select **Paste** from the popup menu.
    - Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., **Ctrl** + **V**), you will introduce unwanted characters into the command and it will not work.
-   - If you receive a pop-up message warning of potentially unsafe paster, click **Paste**.
+   - If you receive a pop-up message warning of potentially unsafe paste, click **Paste**.
 
 4. Press **Enter** to run the pasted commands.
 
@@ -110,7 +109,7 @@ hash -r
 > [!IMPORTANT]
 > If you update the CVD after starting work on course activities, save your work on another platform, such as GitHub, OneDrive, or your local computer, before running the update script. This protects your work in case the update fails and the VM must be reset. You do not need to create a backup if you have not saved any work in the CVD yet.
 
-1. Click once on the **Terminal** icon in the CVD taskbar to open a terminal window.
+1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
 2. Type `update_cvd.sh` in the terminal window and press **Enter** to run the automated CVD update script. Be patient. The update may take several minutes to complete.
 
@@ -119,8 +118,7 @@ hash -r
    - Confirm that **Failures** is `0`.
    - Check the notices to determine whether a VM restart is required.
 
-   > [!NOTE]
-   > On a new CVD or after using **RESET VM**, the summary may include expected warnings about items that have not been configured yet, such as the course virtual environment or desktop launcher. Continue if the summary shows **Result: PASS** and **Failures: 0**. The next section, **Configure the CVD**, will complete these settings.
+   {{SME TODO: Add what to do if Result is not PASS or Failures is not 0.}}
 
 4. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -130,11 +128,14 @@ hash -r
    2. Click **RESTART VM** on the VM tab menu bar.
    3. Wait for the CVD to restart and reconnect. This may take a few minutes.
 
-6. Continue to the next section, **Configure the CVD**.
+   > [!TIP]
+   > If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes. 
+
+6. Continue to the next section, **[Configure the CVD](#4-configure-the-cvd)**.
 
 ## 4. Configure the CVD
 
-1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
+1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
 2. Type `config_cvd.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script.
 
@@ -149,13 +150,13 @@ hash -r
 3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
    1. Enter your SNHU email address and click **Next**.
    2. Enter your SNHU password and click **Sign in**.
-   3. If you see an **Install** button on the browser address bar, click it to install the OneDrive desktop app. If you do not see an **Install** button, skip this step.
-   4. If prompted, click **Allow** to allow OneDrive to access resources on the CVD.
+   3. If you see an **Install** button on the browser address bar, click it to install the OneDrive desktop app. It makes it easier to access your OneDrive files in the CVD. If you do not see an **Install** button, you can skip this step.
+   4. If prompted to Keep OneDrive fully optimized, click **Allow** to allow OneDrive to local devices.
 
-4. Close the browser window in the CVD when done signing into OneDrive and/or Chrome.
+4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
 
 > [!NOTE]
-> The first time you double-click on the OneDrive icon, you may see an **Untrusted Application** warning. If you see this message, click **OK**.
+> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this message, click **Launch Anyway**.
 
 ## 6. Configure Visual Studio Code in the CVD
 
@@ -168,28 +169,42 @@ hash -r
    - **Continue without Signing in**
 
    > [!NOTE]
-   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
+   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar. If there is no **Sign in** button, you are likely already signed in.
 
-3. If prompted, authorize VS Code to access GitHub or other linked account(s).
+3. If prompted to "Authorize Visual Studio Code", click **Continue**.
 
 4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open** button.
 
-5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer.
+5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer. Just keep in mind that screenshots and videos may look different than your VS Code environment if you choose a different theme.
 
-6. Click the **Get Started** button on the **Welcome** page to dismiss it.
+6. Click the **Get Started** button.
 
-   > [!IMPORTANT]
+7. Open the `it140` course repository by folder. 
+   1. Click the **Open Folder...** link. If you do not see the **Open Folder...** link, click **File** > **Open Folder...** from the VS Code menu bar.
+   2. In the **Open Folder** popup window, click once on the `it140` folder. Click the **Select** button to open the folder in VS Code.
+   3. Wait for the `it140` folder to open in VS Code. You should see the folder name in the Explorer pane on the left side of the VS Code window.
+   4. Look for a popup message just below the VS Code main menu that says something about "Restricted Model" and click the **Manage** button.
+   5. In the popup message, click the **Trust** button or press **Ctrl** + **Enter**.
+   6. Close the **Workspace Trust** popup message by clicking the **X** in the upper-right corner of the message.
+
+8. Optional: If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
+   1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
+   2. De-select any settings you do not want to synchronize between the CVD and your local course IDE. We recommend synchronizing all settings, but you may choose to exclude some if you prefer different settings in the CVD and your local course IDE.
+   3. Click the **Sign in** button and select **Sign in with GitHub**.
+   4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
+
+9. Optional: If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
+
+   > [!TIP]
    > If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 
-## 7. Verify Your CVD Configuration
+10. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
 
-{{SME TODO: Develop CVD verification script and add verification instructions for CVD configuration.}}
+11. When you are done configuring the CVD, close the CVD browser tab. DO NOT use the **Shut Down** option within the Ubuntu desktop. Codio will keep trying to reconnect to the CVD, which will prevent you from accessing it again until you log out of Codio and log back in.
 
 ## Next Step
 
-Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop here. You may complete all course activities from web-based learning platforms–Brightspace, zyBooks, and Codio.
-
-However, we recommend you set up the course IDE on at least one local computer, if possible. Doing so provides an alternative development environment in case the CVD is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the CVD and your local course IDE, so you can continue working on assignments from either environment.
+Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you set up the course IDE on at least one local computer, if possible. Doing so provides an alternative development environment in case the CVD is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the CVD and your local course IDE, so you can continue working on assignments from either environment.
 
 - **Set Up the Course IDE on Your Local Computer(s)**
   - [Windows](../local/windows/README.md)

@@ -111,7 +111,7 @@ Stop-Transcript
 
 ## 4. Clone the Main Course Repository to Windows
 
-1. Click once on the **Terminal** icon in the Windows task bar to open a terminal window.
+1. Click once on the **Terminal** icon in the Windows taskbar to open a terminal window.
 
 2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
@@ -162,7 +162,7 @@ $Shortcut.Save()
 > [!IMPORTANT]
 > If you update the Windows after starting work on course activities, save your work on another platform (e.g., GitHub, OneDrive, your local machine) before running the update script, just in case the update fails and we need to reset your VM. You do not need to backup if you have not save any work in the Windows yet.
 
-1. Click once on the **Terminal** icon in the Windows task bar to open a terminal window.
+1. Click once on the **Terminal** icon in the Windows taskbar to open a terminal window.
 
 2. Type `update_cvd.sh` into the terminal window and press **Enter**to run the automated Windows update script. Be patient, as this may take several minutes to complete.
 
@@ -177,7 +177,7 @@ $Shortcut.Save()
 
 ## 6. Configure the Windows
 
-1. Click once on the **Terminal** icon in the Windows task bar to open a terminal window.
+1. Click once on the **Terminal** icon in the Windows taskbar to open a terminal window.
 
 2. Type `config_cvd.sh` in the terminal window and press **Enter** to configure the Windows with an interactive script.
 
