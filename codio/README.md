@@ -75,26 +75,35 @@ To complete CVD configuration, you will need the following:
 
 2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
-   ```bash
-   mkdir -p "$HOME/it140"
-   temp_dir="$(mktemp -d)"
-   git clone --depth 1 \
-   "https://github.com/GC-STEM/it140.git" \
-   "$temp_dir/it140"
-   rm -rf "$temp_dir/it140/.git"
-   cp -a "$temp_dir/it140/." "$HOME/it140/"
-   rm -rf "$HOME/it140/.git"
-   rm -rf "$temp_dir"
-   chmod +x "$HOME/it140/scripts/"*.sh
-   echo 'export PATH="$HOME/it140/scripts:$PATH"' >> "$HOME/.bashrc"
-   source "$HOME/.bashrc"
-   ```
+```bash
+platform="cvd"
+mkdir -p "$HOME/it140"
+temp_dir="$(mktemp -d)"
+git clone --depth 1 \
+"https://github.com/GC-STEM/it140.git" \
+"$temp_dir/it140"
+rm -rf "$temp_dir/it140/.git"
+cp -a "$temp_dir/it140/." "$HOME/it140/"
+rm -rf "$HOME/it140/.git"
+rm -rf "$temp_dir"
+scripts_dir="$HOME/it140/scripts/$platform"
+chmod +x "$scripts_dir/"*.sh
+path_line="export PATH=\"\$HOME/it140/scripts/$platform:\$PATH\""
+grep -qxF "$path_line" "$HOME/.bashrc" || printf '\n%s\n' "$path_line" >> "$HOME/.bashrc"
+case ":$PATH:" in
+    *":$scripts_dir:"*) ;;
+    *) export PATH="$scripts_dir:$PATH" ;;
+esac
+hash -r
+```
 
-3. In the terminal window, right-click and select **Paste**. Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., **Ctrl** + **V**), you will introduce unwanted characters into the command and it will not work.
+3. In the terminal window, right-click at the end of the command prompt and select **Paste**.
+   - Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., **Ctrl** + **V**), you will introduce unwanted characters into the command and it will not work.
+   - If you receive a pop-up message warning of potentially unsafe paster, click **Paste**.
 
 4. Press **Enter** to run the pasted commands.
 
-5. Close the terminal window by typing `exit` and pressing **Enter**.
+5. Close the terminal window by typing `exit` and pressing **Enter**. You must close the terminal window and open a new one before running the update script in the next step.
 
 ## 3. Update the CVD
 

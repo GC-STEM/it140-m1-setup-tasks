@@ -56,7 +56,7 @@ The next phase in setting up the course IDE on your local Windows machine is to 
    > The colors of your terminal window and prompt path (C:\Users\USERNAME) may be different than those shown in the screenshots, which is fine. Just make sure the window title bar shows **Administrator: Windows PowerShell**
 
 > [!IMPORTANT]
-> Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
+> Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (Windows) to complete assignments until you get your local course IDE working.
 
 ## 3. Install the Course IDE on Windows
 
@@ -107,8 +107,138 @@ Stop-Transcript
 3. Expect the commands to take 15 to 45 minutes, depending on your system and Internet speed.
 
 > [!IMPORTANT]
-> Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the **Troubleshooting** section of this repository for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
+> Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the **Troubleshooting** section of this repository for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (Windows) to complete assignments until you get your local course IDE working.
 
-## 4. Configure Local Course IDE
+## 4. Clone the Main Course Repository to Windows
 
-Follow the instructions in the [Codio README.md](../codio/README.md) file to configure your local course IDE. The procedures are the same for both Codio Virtual Desktop (CVD) and your local desktop, regardless of your operating system (OS) platform.
+1. Click once on the **Terminal** icon in the Windows task bar to open a terminal window.
+
+2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+
+```powershell
+$Platform = 'win'
+$CourseDir = Join-Path $HOME 'it140'
+$TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ([System.IO.Path]::GetRandomFileName())
+$CloneDir = Join-Path $TempDir 'it140'
+$ScriptsDir = Join-Path $CourseDir "scripts\$Platform"
+New-Item -ItemType Directory -Path $CourseDir -Force | Out-Null
+New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
+try {
+    git clone --depth 1 'https://github.com/GC-STEM/it140.git' $CloneDir
+    Remove-Item -Path (Join-Path $CloneDir '.git') -Recurse -Force -ErrorAction SilentlyContinue
+    Get-ChildItem -Path $CloneDir -Force | Copy-Item -Destination $CourseDir -Recurse -Force
+    Remove-Item -Path (Join-Path $CourseDir '.git') -Recurse -Force -ErrorAction SilentlyContinue
+}
+finally {
+    Remove-Item -Path $TempDir -Recurse -Force -ErrorAction SilentlyContinue
+}
+$UserPath = [Environment]::GetEnvironmentVariable('Path', 'User')
+$PathEntries = @($UserPath -split ';' | Where-Object { $_ })
+if ($ScriptsDir -notin $PathEntries) {
+    $NewUserPath = (@($PathEntries) + $ScriptsDir) -join ';'
+    [Environment]::SetEnvironmentVariable('Path', $NewUserPath, 'User')
+}
+if ($ScriptsDir -notin ($env:Path -split ';')) {
+    $env:Path = "$ScriptsDir;$env:Path"
+}
+$DesktopDir = [Environment]::GetFolderPath('Desktop')
+$ShortcutPath = Join-Path $DesktopDir 'IT 140.lnk'
+$Shell = New-Object -ComObject WScript.Shell
+$Shortcut = $Shell.CreateShortcut($ShortcutPath)
+$Shortcut.TargetPath = $CourseDir
+$Shortcut.WorkingDirectory = $CourseDir
+$Shortcut.IconLocation = '%SystemRoot%\System32\shell32.dll,3'
+$Shortcut.Save()
+```
+
+3. In the terminal window, right-click and select **Paste**. Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., **Ctrl** + **V**), you will introduce unwanted characters into the command and it will not work.
+
+4. Press **Enter** to run the pasted commands.
+
+5. Close the terminal window by typing `exit` and pressing **Enter**.
+
+## 5. Update the Windows
+
+> [!IMPORTANT]
+> If you update the Windows after starting work on course activities, save your work on another platform (e.g., GitHub, OneDrive, your local machine) before running the update script, just in case the update fails and we need to reset your VM. You do not need to backup if you have not save any work in the Windows yet.
+
+1. Click once on the **Terminal** icon in the Windows task bar to open a terminal window.
+
+2. Type `update_cvd.sh` into the terminal window and press **Enter**to run the automated Windows update script. Be patient, as this may take several minutes to complete.
+
+3. Review the **Update Summary** notices to see if a VM restart is required.
+
+4. Close the terminal window by typing `exit` and pressing **Enter**.
+
+5. If a VM restart is required,
+   1. Save any open work and close all windows in the Windows.
+   2. Click on **RESTART VM** on the VM tab menu bar
+   3. Wait for the Windows to restart and reconnect. It will take a few minutes.
+
+## 6. Configure the Windows
+
+1. Click once on the **Terminal** icon in the Windows task bar to open a terminal window.
+
+2. Type `config_cvd.sh` in the terminal window and press **Enter** to configure the Windows with an interactive script.
+
+3. Close the terminal window by typing `exit` and pressing **Enter**.
+
+## 7. Sign into Cloud Storage Services (Optional)
+
+1. Double-click on the "OneDrive" icon on the Windows desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
+
+2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the Windows, or use G-Drive as persistent storage. Otherwise, you may skip this step.
+
+3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the Windows. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+   1. Enter your SNHU email address and click **Next**.
+   2. Enter your SNHU password and click **Sign in**.
+   3. If you see an **Install** button on the browser address bar, click it to install the OneDrive desktop app. If you do not see an **Install** button, skip this step.
+   4. If prompted, click **Allow** to allow OneDrive to access resources on the Windows.
+
+4. Close the browser window in the Windows when done signing into OneDrive and/or Chrome.
+
+> [!NOTE]
+> The first time you double-click on the OneDrive icon, you may see an **Untrusted Application** warning. If you see this message, click **OK**.
+
+## 8. Configure Visual Studio Code in the Windows
+
+1. Double-click on the **Visual Studio Code** icon on the Windows desktop.
+
+2. Sign into VS Code using one of the following methods:
+   - **Continue with GitHub** (highly recommended)
+   - **Sign in with Google** (click on **G** icon)
+   - **Sign in with Apple** (click on Apple icon)
+   - **Continue without Signing in**
+
+   > [!NOTE]
+   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
+
+3. If prompted, authorize VS Code to access GitHub or other linked account(s).
+
+4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open** button.
+
+5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer.
+
+6. Click the **Get Started** button on the **Welcome** page to dismiss it.
+
+   > [!IMPORTANT]
+   > If you ever see an **Update** button on the VS Code menu bar in the Windows, don't press it. You can ignore it or update the Windows by re-running `update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the Windows, just in case the update fails and we need to reset your VM.
+
+## 9. Verify Your Windows Configuration
+
+{{SME TODO: Develop Windows verification script and add verification instructions for Windows configuration.}}
+
+## Next Step
+
+Once you have completed Codio Virtual Desktop (Windows) configuration, you may stop here. You may complete all course activities from web-based learning platforms–Brightspace, zyBooks, and Codio.
+
+However, we recommend you set up the course IDE on at least one local computer, if possible. Doing so provides an alternative development environment in case the Windows is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the Windows and your local course IDE, so you can continue working on assignments from either environment.
+
+- **Set Up the Course IDE on Your Local Computer(s)**
+  - [Windows](../local/windows/README.md)
+  - [MacOS](../local/macos/README.md)
+  - [Linux](../local/linux/README.md)
+
+## Troubleshooting
+
+{{SME TODO: Add troubleshooting information for Windows configuration.}}

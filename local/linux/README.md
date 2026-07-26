@@ -17,7 +17,7 @@ The next phase in setting up the course IDE on your local Linux machine is to op
 
 **⚠️ IMPORTANT**. Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
 
-## 2. Copy and Paste Commands
+## 2. Install the Course IDE on Your Local Linux Machine
 
 1. Copy the entire code block below to your clipboard, including the final blank line.
 
