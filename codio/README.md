@@ -108,20 +108,29 @@ hash -r
 ## 3. Update the CVD
 
 > [!IMPORTANT]
-> If you update the CVD after starting work on course activities, save your work on another platform (e.g., GitHub, OneDrive, your local machine) before running the update script, just in case the update fails and we need to reset your VM. You do not need to backup if you have not save any work in the CVD yet.
+> If you update the CVD after starting work on course activities, save your work on another platform, such as GitHub, OneDrive, or your local computer, before running the update script. This protects your work in case the update fails and the VM must be reset. You do not need to create a backup if you have not saved any work in the CVD yet.
 
-1. Click once on the **Terminal** icon in the CVD task bar to open a terminal window.
+1. Click once on the **Terminal** icon in the CVD taskbar to open a terminal window.
 
-2. Type `update_cvd.sh` into the terminal window and press **Enter**to run the automated CVD update script. Be patient, as this may take several minutes to complete.
+2. Type `update_cvd.sh` in the terminal window and press **Enter** to run the automated CVD update script. Be patient. The update may take several minutes to complete.
 
-3. Review the **Update Summary** notices to see if a VM restart is required.
+3. Review the **Update Summary**:
+   - Confirm that **Result** is `PASS`.
+   - Confirm that **Failures** is `0`.
+   - Check the notices to determine whether a VM restart is required.
+
+   > [!NOTE]
+   > On a new CVD or after using **RESET VM**, the summary may include expected warnings about items that have not been configured yet, such as the course virtual environment or desktop launcher. Continue if the summary shows **Result: PASS** and **Failures: 0**. The next section, **Configure the CVD**, will complete these settings.
 
 4. Close the terminal window by typing `exit` and pressing **Enter**.
 
-5. If a VM restart is required,
+5. If a VM restart is required:
+
    1. Save any open work and close all windows in the CVD.
-   2. Click on **RESTART VM** on the VM tab menu bar
-   3. Wait for the CVD to restart and reconnect. It will take a few minutes.
+   2. Click **RESTART VM** on the VM tab menu bar.
+   3. Wait for the CVD to restart and reconnect. This may take a few minutes.
+
+6. Continue to the next section, **Configure the CVD**.
 
 ## 4. Configure the CVD
 
