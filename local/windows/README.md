@@ -64,7 +64,7 @@ Click the **OK** button.
 
 ## 2. Update Windows
 
-SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating Windows.
+{{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating Windows.}}
 
 ## 3. Run Bootstrap Commands
 
@@ -85,6 +85,8 @@ SME TODO: Add instructions and screenshots for the most reliable and novice-frie
    > The colors of your terminal window and prompt path (C:\Users\USERNAME) may be different than those shown in the screenshots, which is fine. Just make sure the window title bar shows **Administrator: Windows PowerShell**
 
 4. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+
+   {{SME TODO: Replace with the current actual code block for the bootstrap commands. The following is functional but outdated.}}
 
    ```powershell
    Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup.log" -Force
