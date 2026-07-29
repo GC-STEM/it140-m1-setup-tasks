@@ -147,7 +147,7 @@ Click the **OK** button.
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\setup_cvd.ps1
+   .\setup_win.ps1
 
    ```
 
@@ -171,7 +171,7 @@ Click the **OK** button.
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\config_cvd.ps1
+   .\config_win.ps1
 
    ```
 
@@ -195,7 +195,7 @@ Click the **OK** button.
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\verify_cvd.ps1
+   .\verify_win.ps1
 
    ```
 
@@ -233,7 +233,7 @@ Click the **OK** button.
 6. Click the **Get Started** button on the **Welcome** page to dismiss it.
 
    > [!IMPORTANT]
-   > If you ever see an **Update** button on the VS Code menu bar in the Windows, don't press it. You can ignore it or update the Windows by re-running `update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the Windows, just in case the update fails and we need to reset your VM.
+   > If you ever see an **Update** button on the VS Code menu bar in the Windows, don't press it. You can ignore it or update the Windows by re-running `update_win.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the Windows, just in case the update fails and we need to reset your VM.
 
 ## 8. Periodic Updates to Course IDE
 

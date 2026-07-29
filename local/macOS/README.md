@@ -2,230 +2,217 @@
 
 # IT 140 Development Environment Local Setup on macOS
 
-This document provides instructions for optionally setting up an IT 140 development environment, also called the course IDE, on modern Mac operating systems (macOS). It covers the installation of necessary software and tools needed to complete all course activities.
-
-## 1. Back Up Your Mac
-
-Before installing software, it is best practice to back up your Mac using **Time Machine** if you already have Time Machine configured. That way, you can recover your files and settings if something goes wrong during setup.
-
-1. On your keyboard, hold down the **Command** (⌘) key and press the **Space** key to open **Spotlight** search.
-
-2. In the search box, start typing ***Time Machine***. Select **Time Machine Settings** from the results when it appears.
-
-   <img src="./assets/11_search_for_time_machine.png" alt="Search for Time Machine">
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   <img src="./assets/12_time_machine_settings.png" alt="Time Machine Settings">
-
-3. If Time Machine is already configured, select **Back Up Now**.
-
-4. If Time Machine is not configured, you may skip this step and continue. Time Machine usually requires an external drive or network backup location.
-
-## 2. Open a Terminal Window
-
-The next phase in setting up the course IDE on your local macOS machine is to open a **Terminal** window. You can do this by following these steps:
-
-1. Hold down the **Command** (⌘) key on your keyboard and press the **Space** key to open **Spotlight** search.
-
-2. In the search box, start typing ***Terminal***. Select the **Terminal** app from the results when it appears.
-
-   <img src="./assets/21_search_for_terminal.png" alt="Search for Terminal">
-   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   <img src="./assets/22_terminal_window.png" alt="Terminal Window">
-
-   > [!IMPORTANT]
-   > Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
-
-## 3. Install the Course IDE on macOS
-
-1. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below.
-
-   ```bash
-   /bin/bash -c "$(cat <<'IT140_SETUP'
-   set -Eeuo pipefail
-   COURSE_DIR="$HOME/it140"
-   VENV_DIR="$COURSE_DIR/.venv"
-   LOG_DIR="$HOME/Desktop"
-   LOG_FILE="$LOG_DIR/it140_setup_log.txt"
-   mkdir -p "$LOG_DIR" "$COURSE_DIR"
-   exec > >(tee "$LOG_FILE") 2>&1
-   handle_error() {
-      local status="$1"
-      local failed_command="$2"
-      trap - ERR
-      printf '\n============================================================\n'
-      printf 'IT 140 setup stopped before it finished.\n'
-      printf '============================================================\n'
-      printf '\nThe command that reported the problem was:\n'
-      printf '  %s\n' "$failed_command"
-      printf '\nDo not worry—your computer has not been reset or erased.\n'
-      printf 'Review the messages immediately above this notice.\n'
-      printf '\nA setup log was saved to:\n'
-      printf '  %s\n' "$LOG_FILE"
-      printf '\nUse the Troubleshooting section of the setup activity for help.\n'
-      exit "$status"
-   }
-   trap 'handle_error "$?" "$BASH_COMMAND"' ERR
-   show_step() {
-      printf '\n------------------------------------------------------------\n'
-      printf 'Step %s of 7: %s\n' "$1" "$2"
-      printf '%s\n' '------------------------------------------------------------'
-   }
-   printf '============================================================\n'
-   printf 'IT 140 Course IDE Setup for macOS\n'
-   printf '============================================================\n'
-   printf '\nThis command set installs and configures the software used in\n'
-   printf 'IT 140. Some steps may take several minutes.\n'
-   printf '\nSetup started: %s\n' "$(date)"
-   printf 'Setup log: %s\n' "$LOG_FILE"
-   show_step 1 "Checking your Mac"
-   printf 'Computer architecture: %s\n' "$(uname -m)"
-   printf 'macOS version: %s\n' "$(sw_vers -productVersion)"
-   show_step 2 "Preparing Homebrew"
-   if ! command -v brew >/dev/null 2>&1; then
-      printf 'Homebrew is not installed. Its installer will open now.\n'
-      printf '\nYou may be asked for your Mac login password.\n'
-      printf 'When you type the password, Terminal will not display dots,\n'
-      printf 'asterisks, or other characters. This is normal.\n'
-      printf '\nFollow the instructions displayed by the Homebrew installer.\n'
-      printf 'The installation may take several minutes.\n'
-      /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-   else
-      printf 'Homebrew is already installed.\n'
-   fi
-   if [[ -x "/opt/homebrew/bin/brew" ]]; then
-      BREW_BIN="/opt/homebrew/bin/brew"
-   elif [[ -x "/usr/local/bin/brew" ]]; then
-      BREW_BIN="/usr/local/bin/brew"
-   else
-      printf 'ERROR: Homebrew could not be found after installation.\n'
-      exit 1
-   fi
-   eval "$("$BREW_BIN" shellenv)"
-   BREW_INIT="eval \"\$($BREW_BIN shellenv)\""
-   touch "$HOME/.zprofile"
-   if ! grep -Fqx "$BREW_INIT" "$HOME/.zprofile"; then
-      printf '\n%s\n' "$BREW_INIT" >> "$HOME/.zprofile"
-      printf 'Homebrew was added to your Terminal configuration.\n'
-   else
-      printf 'Homebrew is already in your Terminal configuration.\n'
-   fi
-   printf 'Checking for current Homebrew software information...\n'
-   brew update
-   show_step 3 "Installing the course software"
-   printf 'Installing Git, GitHub CLI, and Python 3.12...\n'
-   brew install git gh python@3.12
-   printf '\nInstalling Visual Studio Code...\n'
-   brew install --cask visual-studio-code
-   hash -r
-   show_step 4 "Creating the course Python environment"
-   if [[ -x "$VENV_DIR/bin/python" ]]; then
-      printf 'An IT 140 Python environment already exists.\n'
-      printf 'Its course packages will be checked and updated.\n'
-   else
-      printf 'Creating an isolated Python environment for IT 140...\n'
-      python3.12 -m venv "$VENV_DIR"
-   fi
-   printf 'Installing the Python testing and code-quality tools...\n'
-   "$VENV_DIR/bin/python" -m pip install --upgrade pip pytest pytest-cov ruff
-   show_step 5 "Configuring Git"
-   git config --global init.defaultBranch main
-   git config --global core.autocrlf input
-   git config --global push.autoSetupRemote true
-   if command -v code >/dev/null 2>&1; then
-      CODE_BIN="$(command -v code)"
-   elif [[ -x "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ]]; then
-      CODE_BIN="/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code"
-   else
-      printf 'ERROR: Visual Studio Code was installed, but its command-line tool could not be found.\n'
-      exit 1
-   fi
-   git config --global core.editor "\"$CODE_BIN\" --wait"
-   printf 'Git was configured with course-friendly default settings.\n'
-   show_step 6 "Installing Visual Studio Code extensions"
-   EXTENSIONS=(
-      "Python language support|ms-python.python"
-      "Ruff code linter and formatter|charliermarsh.ruff"
-      "Draw.io diagram support|hediet.vscode-drawio"
-      "I2P pseudocode support|i2p-hub.i2p-pseudo"
-      "Code Spell Checker|streetsidesoftware.code-spell-checker"
-      "Office and PDF file viewers|cweijan.vscode-office"
-   )
-   for extension_entry in "${EXTENSIONS[@]}"; do
-      extension_name="${extension_entry%%|*}"
-      extension_id="${extension_entry#*|}"
-      printf '\nInstalling: %s\n' "$extension_name"
-      "$CODE_BIN" --install-extension "$extension_id"
-   done
-   show_step 7 "Verifying the installation"
-   printf '\nInstalled software versions:\n\n'
-   brew --version | sed -n '1p'
-   git --version
-   gh --version | sed -n '1p'
-   python3.12 --version
-   "$VENV_DIR/bin/python" -m pip --version
-   "$VENV_DIR/bin/python" -m pytest --version
-   "$VENV_DIR/bin/ruff" --version
-   "$CODE_BIN" --version | sed -n '1p'
-   printf '\nChecking Visual Studio Code extensions:\n\n'
-   INSTALLED_EXTENSIONS="$("$CODE_BIN" --list-extensions)"
-   for extension_entry in "${EXTENSIONS[@]}"; do
-      extension_name="${extension_entry%%|*}"
-      extension_id="${extension_entry#*|}"
-      if grep -Fqix -- "$extension_id" <<< "$INSTALLED_EXTENSIONS"; then
-         printf 'Installed: %s\n' "$extension_name"
-      else
-         printf 'ERROR: The following extension was not found: %s\n' "$extension_name"
-         exit 1
-      fi
-   done
-   printf '\n============================================================\n'
-   printf 'IT 140 course IDE setup completed successfully.\n'
-   printf '============================================================\n'
-   printf '\nNo installation errors were detected.\n'
-   printf '\nYour IT 140 course folder is:\n'
-   printf '  %s\n' "$COURSE_DIR"
-   printf '\nYour Python 3.12 environment is:\n'
-   printf '  %s\n' "$VENV_DIR"
-   printf '\nThe setup log was saved to:\n'
-   printf '  %s\n' "$LOG_FILE"
-   printf '\nGitHub CLI is installed, but this setup does not sign you in\n'
-   printf 'to GitHub. Complete the GitHub sign-in step when instructed.\n'
-   printf '\nSetup completed: %s\n' "$(date)"
-   IT140_SETUP
-   )"
-   ```
-
-2. Paste the clipboard contents into the **Terminal** window at the command prompt.
-
-3. Press **Return** if the commands do not start automatically.
-
-4. If prompted for your Mac password, type your password and press **Return**. Your password may not appear on the screen while you type, which is normal.
-
-5. Expect the commands to take 15-45 minutes, depending on your system and Internet speed.
-
-6. If the script says the `code` command was not found, complete these steps:
-
-   1. Open **Visual Studio Code**.
-   2. Press **Command** (⌘) + **Shift** + **P**.
-   3. Type ***shell command***.
-   4. Select **Shell Command: Install 'code' command in PATH**.
-   5. Close Terminal.
-   6. Open a new Terminal window.
-   7. Copy and paste the commands below:
-
-```bash
-code --install-extension ms-python.python --force
-code --install-extension charliermarsh.ruff --force
-code --install-extension hediet.vscode-drawio --force
-code --install-extension streetsidesoftware.code-spell-checker --force
-code --install-extension i2p-hub.i2p-pseudo --force
-code --install-extension cweijan.vscode-office --force
-
-```
+This document provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a [publisher-supported version of macOS](TODO: Find Link to Apple page). These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
 
 > [!IMPORTANT]
-> Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the **Troubleshooting** section of this repository for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
+> The following setup phases are sequential. Do NOT proceed with the next phase of the installation until you have fully completed the preceding phases. Refer to the [Troubleshooting](#troubleshooting) section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
 
-## 4. Configure Local Course IDE
+## 0. Run the System Compatibility Check
 
-Follow the instructions in the [Codio README.md](../codio/README.md) file to configure your local course IDE. The procedures are the same for both Codio Virtual Desktop (CVD) and your local desktop, regardless of your operating system (OS) platform.
+Before setting up the course IDE on macOS, we must verify that your computer's security permissions allow you to run software developer tools. It is common for users of computers owned by others to have restricted account privileges. Another restriction can come from manufacturer default settings, such as [macOS S Mode](https://support.microsoft.com/en-us/windows/experience/platform-variants/windows-10-and-windows-11-in-s-mode-faq). This simple 5-second test will determine if your machine can support local setup of the course IDE, or if you should bypass it and use just the Codio Virtual Desktop (CVD) option.
+
+1. On your keyboard, press the **macOS** (⊞) + **R** keys at the same time to open the **Run** dialog box.
+
+2. Type `cmd` into the box and press **Enter**.
+
+3. Observe what happens on your screen:
+
+   - **GO**: A terminal window opens and shows a blinking cursor after the command prompt. Your computer's operating system likely allows local command-line tools.
+   **Recommendation**: Continue with local setup of the course IDE.
+
+   <!--SME TODO: Add screenshots for GO.-->
+
+   - **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.  
+   **Recommendation**: Use just the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
+
+   <!--SME TODO: Add screenshots for NOGO.-->
+
+   <!--SME TODO: Add link(s) to remedial instructions for NOGO when they are developed. For example, disable macOS S Mode, -->
+
+## 1. Create a Restore Point
+
+Before installing any software, it is best practice to enable system protection and create a restore point using **macOS System Protection**. That way, you can undo system changes if something goes wrong during setup.
+
+1. On your keyboard, hold down the **macOS** (⊞) key and press the **S** key to open the **Search** application. In the search box, start typing ***Create a restore point***. Select the **Create a restore point** app from the results when it appears.
+
+   ![Create a restore point](./assets/11_search_for_restore_point.png)
+   ![System Protection Tab](./assets/12_system_protection_tab.png)
+
+2. If the **Create…** button is selectable in the preceding image, skip to Step 4. If the **Create…** button is not selectable, as shown in the above second image, click the **Configure…** button.
+
+3. Select the **Turn on system protection** radio button and adjust the **Max Usage** slider to 5%.
+Click the **OK** button.
+
+   ![System Protection for Drive Off](./assets/13_system_protection_for_drive_off.png)
+   ![System Protection for Drive On](./assets/14_system_protection_for_drive_on.png)
+
+4. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***Before General Update*** and click the **Create** button.
+
+   ![System Protection Create Restore Point](./assets/15_create_restore_point.png)
+   ![System Protection Created Restore Point](./assets/16_created_restore_point.png)
+
+5. After the restore point is created, click the **Close…** button.
+
+### Restore System (*if needed*)
+
+> [!NOTE]
+> If you ever want to restore your system to the state before you created a restore point without affecting your personal files, repeat Step 1 and click the System Restore button and then the **Next>** button. Select the desired restore point from the list and click the second **Next>** button. Then, click the **Finish** button.
+>
+> ![System Restore Step 1: Information](./assets/17_system_restore_1.png)
+> ![System Restore Step 2: Select Restore Point](./assets/18_system_restore_2.png)
+> ![System Restore Step 3: Finish Restore](./assets/19_system_restore_3.png)
+
+## 2. Update the Operating System
+
+{{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating macOS.}}
+
+9. Create another restore point after updating macOS, as described in Step 1.4. A good name for this restore point is ***Before IT140 Course IDE Setup***. This way, if these is a problem with the course IDE setup, you can restore your system to the state it was in after updating macOS.
+
+## 3. Clone the Main Course Repository
+
+<!--SME TODO: Add brief explanation of what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
+
+1. Hold down the **macOS** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
+
+2. In the **Run** dialog box, type ***powershell*** and press **Ctrl** + **Shift** + **Enter** to open with administrator privileges, regardless of which version of Run you see.
+
+   ![Run Dialog: Open PowerShell](./assets/21_run_powershell_user.png)
+   ![Run Dialog: Open PowerShell as User](./assets/21_run_powershell_user.png)
+
+3. Verify the PowerShell terminal window title bar shows **Administrator: macOS PowerShell**, as shown in the image below. If it does not, close the window and repeat Steps 1–2.
+
+   ![PowerShell Terminal: Administrator Privileges](./assets/23_powershell_admin.png)
+
+   >[!NOTE]
+   > The colors of your terminal window and prompt path (C:\Users\USERNAME) may be different than those shown in the screenshots, which is fine. Just make sure the window title bar shows **Administrator: macOS PowerShell**
+
+4. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+
+   ```zsh
+   {{SME TODO: Replace with the current actual code block for the bootstrap commands. The following is functional but outdated.}}
+   ```
+
+5. Paste clipboard contents into the **Administrator: macOS PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**.
+
+6. Press **Enter** once to ensure all the commands run.
+
+7. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
+
+8. Type `exit` and press **Enter** to close the PowerShell terminal window.
+
+## 4. Install the Course IDE
+
+1. Open a new PowerShell terminal window with administrator privileges, as you did in Steps 3.1 to 3.3.
+
+2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+
+   ```zsh
+   cd "C:\Users\$env:USERNAME\it140\scripts\mac\"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   .\setup_mac.sh
+
+   ```
+
+3. Paste clipboard contents into the **Administrator: macOS PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+
+4. If the script did not start, press **Enter** to run it.
+
+5. Wait for the script to complete as evidenced by the return of the command prompt. This may take several minutes.
+
+6. Close the terminal window by typing `exit` and pressing **Enter**.
+
+## 5. Configure the Course IDE
+
+1. Open a new PowerShell terminal window as a **regular user**.
+   1. Hold down the **macOS** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
+   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
+   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 5.1.1–5.1.2.
+
+2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+
+   ```zsh
+   cd "C:\Users\$env:USERNAME\it140\scripts\mac\"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   .\config_mac.sh
+
+   ```
+
+3. Paste clipboard contents into the **macOS PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+
+4. If the script did not start, press **Enter** to run it.
+
+5. Follow the on-screen prompts to complete the configuration script.
+
+6. Close the terminal window by typing `exit` and pressing **Enter**.
+
+## 6. Verify the Course IDE
+
+1. Open a new PowerShell terminal window as a **regular user**.
+   1. Hold down the **macOS** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
+   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
+   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 6.1.1–6.1.2.
+
+2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+
+   ```zsh
+   cd "C:\Users\$env:USERNAME\it140\scripts\mac\"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   .\verify_mac.sh
+
+   ```
+
+3. Paste clipboard contents into the **macOS PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+
+4. If the script did not start, press **Enter** to run it.
+
+5. Review the verification summary and follow any instructions provided to resolve issues, if any.
+
+6. Close the terminal window by typing `exit` and pressing **Enter**.
+
+7. Create
+
+## 7. Configure Visual Studio Code
+
+<!--SME TODO: Check what is needed after configure VS Code on one platform. -->
+
+1. Double-click on the **Visual Studio Code** icon on the macOS desktop.
+
+2. Sign into VS Code using one of the following methods:
+   - **Continue with GitHub** (highly recommended)
+   - **Sign in with Google** (click on **G** icon)
+   - **Sign in with Apple** (click on Apple icon)
+   - **Continue without Signing in**
+
+   > [!NOTE]
+   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
+
+3. If prompted, authorize VS Code to access GitHub or other linked account(s).
+
+4. If prompted, check the "Always allow" box and click **Open** button.
+
+5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer.
+
+6. Click the **Get Started** button on the **Welcome** page to dismiss it.
+
+   > [!IMPORTANT]
+   > If you ever see an **Update** button on the VS Code menu bar in the macOS, don't press it. You can ignore it or update the macOS by re-running `update_mac.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the macOS, just in case the update fails and we need to reset your VM.
+
+## 8. Periodic Updates to Course IDE
+
+{{SME TODO: Add instructions for updating the course IDE on macOS. Note that VS Code releases updates weekly.}}
+
+## Next Step
+
+Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you also configure the course IDE on Codio, if you have not do so already.
+
+- **[Configure the course IDE on Codio](../local/codio/README.md)**
+
+Optionally, if you have another local computer, you can also set up the course IDE on that machine. See the following links for instructions:
+
+- **Set up the course IDE on another local computer**
+  - [macOS](../local/windows/README.md)
+  - [Linux](../local/linux/README.md)
+
+## Troubleshooting
+
+<!--SME TODO: Add troubleshooting information for macOS configuration.-->
