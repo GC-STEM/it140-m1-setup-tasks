@@ -2,216 +2,218 @@
 
 # IT 140 Development Environment Local Setup on macOS
 
-This document provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a [publisher-supported version of macOS](TODO: Find Link to Apple page). These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
+This document provides instructions for optionally setting up the IT 140 development environment (course IDE) on a supported Apple silicon Mac. The local setup is intended for students who can authorize software installation with an administrator account. It installs and configures the programming software and developer tools needed to complete IT 140 course activities.
 
 > [!IMPORTANT]
-> The following setup phases are sequential. Do NOT proceed with the next phase of the installation until you have fully completed the preceding phases. Refer to the [Troubleshooting](#troubleshooting) section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
+> Installing the course IDE on your Mac is optional. The following setup phases are sequential, so do **not** proceed to the next phase until the current phase is complete. Refer to the [Troubleshooting](#troubleshooting) section for additional help. If you get stuck, you can use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until your local course IDE is working.
 
 ## 0. Run the System Compatibility Check
 
-Before setting up the course IDE on macOS, we must verify that your computer's security permissions allow you to run software developer tools. It is common for users of computers owned by others to have restricted account privileges. Another restriction can come from manufacturer default settings, such as [macOS S Mode](https://support.microsoft.com/en-us/windows/experience/platform-variants/windows-10-and-windows-11-in-s-mode-faq). This simple 5-second test will determine if your machine can support local setup of the course IDE, or if you should bypass it and use just the Codio Virtual Desktop (CVD) option.
+Before setting up the course IDE, confirm that your Mac uses Apple silicon and that your account can authorize software installation. A Mac owned or managed by an employer, school, or another person may restrict these actions.
 
-1. On your keyboard, press the **macOS** (⊞) + **R** keys at the same time to open the **Run** dialog box.
+1. Click the **Apple menu** in the upper-left corner of the screen and select **About This Mac**.
 
-2. Type `cmd` into the box and press **Enter**.
+2. Find the **Chip** entry.
 
-3. Observe what happens on your screen:
-
-   - **GO**: A terminal window opens and shows a blinking cursor after the command prompt. Your computer's operating system likely allows local command-line tools.
-   **Recommendation**: Continue with local setup of the course IDE.
+   - **GO**: The chip name begins with **Apple M**, such as Apple M1, M2, M3, M4, or a later Apple chip. Continue to Step 3.
 
    <!--SME TODO: Add screenshots for GO.-->
 
-   - **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.  
-   **Recommendation**: Use just the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
+   - **NO GO**: The chip entry identifies an Intel processor. The current IT 140 macOS automation does not support Intel-based Macs.
+
+   **Recommendation**: Use the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
 
    <!--SME TODO: Add screenshots for NOGO.-->
 
-   <!--SME TODO: Add link(s) to remedial instructions for NOGO when they are developed. For example, disable macOS S Mode, -->
+   <!--SME TODO: Add link(s) to remedial instructions for NOGO when they are developed.  -->
 
-## 1. Create a Restore Point
+3. Open **System Settings**, select **Users & Groups**, and find your account.
 
-Before installing any software, it is best practice to enable system protection and create a restore point using **macOS System Protection**. That way, you can undo system changes if something goes wrong during setup.
+   - **GO**: Your account is identified as an **Admin** or **Administrator** account. Continue with the local setup.
+   - **NO GO**: Your account is a **Standard** account, or your Mac is managed and does not allow software installation.
 
-1. On your keyboard, hold down the **macOS** (⊞) key and press the **S** key to open the **Search** application. In the search box, start typing ***Create a restore point***. Select the **Create a restore point** app from the results when it appears.
+   **Recommendation**: Ask the Mac owner or administrator whether they can authorize the required installations. Otherwise, use the CVD.
 
-   ![Create a restore point](./assets/11_search_for_restore_point.png)
-   ![System Protection Tab](./assets/12_system_protection_tab.png)
+4. Confirm that the Mac is connected to the internet and has at least 5 GB of available storage.
 
-2. If the **Create…** button is selectable in the preceding image, skip to Step 4. If the **Create…** button is not selectable, as shown in the above second image, click the **Configure…** button.
+   To check storage, open **System Settings**, select **General**, and then select **Storage**.
 
-3. Select the **Turn on system protection** radio button and adjust the **Max Usage** slider to 5%.
-Click the **OK** button.
+## 1. Back Up Your Mac
 
-   ![System Protection for Drive Off](./assets/13_system_protection_for_drive_off.png)
-   ![System Protection for Drive On](./assets/14_system_protection_for_drive_on.png)
+This step is optional, but highly recommended. Before installing software, make sure important personal files are backed up. **Time Machine** is the backup feature included with macOS.
 
-4. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***Before General Update*** and click the **Create** button.
+1. Connect an external storage device that you can use for backups.
 
-   ![System Protection Create Restore Point](./assets/15_create_restore_point.png)
-   ![System Protection Created Restore Point](./assets/16_created_restore_point.png)
+2. Open **System Settings**, select **General**, and then select **Time Machine**.
 
-5. After the restore point is created, click the **Close…** button.
+3. Select **Add Backup Disk**, choose the external storage device, and follow the on-screen instructions.
 
-### Restore System (*if needed*)
+4. Allow the initial backup to finish before continuing.
 
 > [!NOTE]
-> If you ever want to restore your system to the state before you created a restore point without affecting your personal files, repeat Step 1 and click the System Restore button and then the **Next>** button. Select the desired restore point from the list and click the second **Next>** button. Then, click the **Finish** button.
->
-> ![System Restore Step 1: Information](./assets/17_system_restore_1.png)
-> ![System Restore Step 2: Select Restore Point](./assets/18_system_restore_2.png)
-> ![System Restore Step 3: Finish Restore](./assets/19_system_restore_3.png)
+> If you already use Time Machine or another reliable backup service, confirm that a recent backup completed successfully. Apple provides additional guidance in [Back up your Mac with Time Machine](https://support.apple.com/en-us/104984).
+
+### Restore Your Mac (*if needed*)
+
+> [!NOTE]
+> If you need to recover files or restore your Mac later, follow Apple's [Time Machine recovery instructions](https://support.apple.com/en-us/102551).
 
 ## 2. Update the Operating System
 
 {{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating macOS.}}
 
-9. Create another restore point after updating macOS, as described in Step 1.4. A good name for this restore point is ***Before IT140 Course IDE Setup***. This way, if these is a problem with the course IDE setup, you can restore your system to the state it was in after updating macOS.
+After updating macOS, restart the Mac if prompted. Sign back in to the account that you will use for IT 140 before continuing.
 
 ## 3. Clone the Main Course Repository
 
 <!--SME TODO: Add brief explanation of what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
 
-1. Hold down the **macOS** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
+1. Press **Command (⌘)** + **Space bar** to open Spotlight Search.
 
-2. In the **Run** dialog box, type ***powershell*** and press **Ctrl** + **Shift** + **Enter** to open with administrator privileges, regardless of which version of Run you see.
+2. Type ***Terminal*** and press **Return**.
 
-   ![Run Dialog: Open PowerShell](./assets/21_run_powershell_user.png)
-   ![Run Dialog: Open PowerShell as User](./assets/21_run_powershell_user.png)
+3. Verify that a Terminal window opens and displays a command prompt. The prompt and Terminal colors may look different from examples in this guide.
 
-3. Verify the PowerShell terminal window title bar shows **Administrator: macOS PowerShell**, as shown in the image below. If it does not, close the window and repeat Steps 1–2.
-
-   ![PowerShell Terminal: Administrator Privileges](./assets/23_powershell_admin.png)
-
-   >[!NOTE]
-   > The colors of your terminal window and prompt path (C:\Users\USERNAME) may be different than those shown in the screenshots, which is fine. Just make sure the window title bar shows **Administrator: macOS PowerShell**
-
-4. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+4. Using your pointing device, click the **Copy** button in the top-right corner of the code block below.
 
    ```zsh
    {{SME TODO: Replace with the current actual code block for the bootstrap commands. The following is functional but outdated.}}
    ```
 
-5. Paste clipboard contents into the **Administrator: macOS PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**.
+5. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
 
-6. Press **Enter** once to ensure all the commands run.
+6. Press **Return** once to ensure that all pasted commands run.
 
-7. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
+7. Wait for the commands to finish and for the command prompt to return. This may take several minutes.
 
-8. Type `exit` and press **Enter** to close the PowerShell terminal window.
+8. Type `exit` and press **Return** to close the Terminal window.
 
 ## 4. Install the Course IDE
 
-1. Open a new PowerShell terminal window with administrator privileges, as you did in Steps 3.1 to 3.3.
+1. Open a new Terminal window using Spotlight Search, as described in Steps 3.1–3.2.
 
-2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+   > [!IMPORTANT]
+   > Run the setup script from your regular macOS account. Do **not** add `sudo` before the script command. The script will request administrator authorization only when it is required.
+
+2. Copy the following commands.
 
    ```zsh
-   cd "C:\Users\$env:USERNAME\it140\scripts\mac\"
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\setup_mac.sh
-
+   cd "$HOME/it140/scripts/mac"
+   ./setup_mac.sh
    ```
 
-3. Paste clipboard contents into the **Administrator: macOS PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+3. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
 
-4. If the script did not start, press **Enter** to run it.
+4. Press **Return** if the setup script does not start automatically.
 
-5. Wait for the script to complete as evidenced by the return of the command prompt. This may take several minutes.
+5. Follow the on-screen instructions. If Terminal requests your password, type the password that you use to sign in to your Mac and press **Return**.
 
-6. Close the terminal window by typing `exit` and pressing **Enter**.
+   > [!NOTE]
+   > Terminal does not display dots, asterisks, or other characters while you type a password. This is normal.
+
+6. Keep the Terminal window open until the script displays its final setup summary. Review any warnings or errors and follow the script's stated next step.
+
+7. The script saves its log in `~/it140/logs/`.
+
+8. Type `exit` and press **Return** to close the Terminal window.
 
 ## 5. Configure the Course IDE
 
-1. Open a new PowerShell terminal window as a **regular user**.
-   1. Hold down the **macOS** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
-   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
-   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 5.1.1–5.1.2.
+1. Open a **new** Terminal window using Spotlight Search.
 
-2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+   > [!IMPORTANT]
+   > Run the configuration script from the macOS account that you will use for course work. Do **not** run it with `sudo`.
+
+2. Copy the following commands.
 
    ```zsh
-   cd "C:\Users\$env:USERNAME\it140\scripts\mac\"
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\config_mac.sh
-
+   cd "$HOME/it140/scripts/mac"
+   ./config_mac.sh
    ```
 
-3. Paste clipboard contents into the **macOS PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
 
-4. If the script did not start, press **Enter** to run it.
+4. Follow the on-screen prompts. The script may open a browser so that you can sign in to GitHub.
 
-5. Follow the on-screen prompts to complete the configuration script.
+5. Keep the Terminal window open until the script displays its final configuration summary. Review any warnings or errors and follow the script's stated next step.
 
-6. Close the terminal window by typing `exit` and pressing **Enter**.
+6. The script saves its log in `~/it140/logs/`.
+
+7. Type `exit` and press **Return** to close the Terminal window.
 
 ## 6. Verify the Course IDE
 
-1. Open a new PowerShell terminal window as a **regular user**.
-   1. Hold down the **macOS** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
-   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
-   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 6.1.1–6.1.2.
+1. Open a **new** Terminal window using Spotlight Search.
 
-2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+   > [!IMPORTANT]
+   > Run the verification script as your regular macOS user. Do **not** run it with `sudo`.
+
+2. Copy the following commands.
 
    ```zsh
-   cd "C:\Users\$env:USERNAME\it140\scripts\mac\"
-   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\verify_mac.sh
-
+   cd "$HOME/it140/scripts/mac"
+   ./verify_mac.sh
    ```
 
-3. Paste clipboard contents into the **macOS PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
 
-4. If the script did not start, press **Enter** to run it.
+4. Wait for the script to finish.
 
-5. Review the verification summary and follow any instructions provided to resolve issues, if any.
+5. Review the verification summary.
 
-6. Close the terminal window by typing `exit` and pressing **Enter**.
+   - **PASS**: Continue to Step 7.
+   - **PASS WITH WARNINGS**: Review each warning and any recommended action before continuing.
+   - **FAIL**: Follow the remediation instructions in the summary, and then run `verify_mac.sh` again.
 
-7. Create
+6. The script saves its log in `~/it140/logs/`.
+
+7. Type `exit` and press **Return** to close the Terminal window.
 
 ## 7. Configure Visual Studio Code
 
 <!--SME TODO: Check what is needed after configure VS Code on one platform. -->
 
-1. Double-click on the **Visual Studio Code** icon on the macOS desktop.
+1. Open Visual Studio Code using either method:
 
-2. Sign into VS Code using one of the following methods:
-   - **Continue with GitHub** (highly recommended)
-   - **Sign in with Google** (click on **G** icon)
-   - **Sign in with Apple** (click on Apple icon)
-   - **Continue without Signing in**
+   - Press **Command (⌘)** + **Space bar**, type ***Visual Studio Code***, and press **Return**.
+   - Open **Finder**, select **Applications**, and double-click **Visual Studio Code**.
+
+2. Sign in with GitHub if you want to synchronize supported VS Code settings across computers. You may also continue without signing in.
 
    > [!NOTE]
-   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
+   > If you do not see the Welcome page, select the **Accounts** icon in the lower-left corner of the Visual Studio Code window to access sign-in options.
 
-3. If prompted, authorize VS Code to access GitHub or other linked account(s).
+3. If prompted, authorize Visual Studio Code to access GitHub.
 
-4. If prompted, check the "Always allow" box and click **Open** button.
+4. If macOS asks whether to open Visual Studio Code from the browser, select **Open**.
 
-5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer.
+5. If prompted, select a color theme. Course screenshots and videos show the **Dark High Contrast** theme, but you may choose the theme you prefer.
 
-6. Click the **Get Started** button on the **Welcome** page to dismiss it.
+6. Complete or dismiss the remaining Welcome page items.
 
-   > [!IMPORTANT]
-   > If you ever see an **Update** button on the VS Code menu bar in the macOS, don't press it. You can ignore it or update the macOS by re-running `update_mac.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the macOS, just in case the update fails and we need to reset your VM.
+7. Optionally, keep Visual Studio Code in the Dock:
 
-## 8. Periodic Updates to Course IDE
+   1. Control-click the Visual Studio Code icon in the Dock.
+   2. Select **Options**.
+   3. Select **Keep in Dock**.
+
+> [!IMPORTANT]
+> Use `update_mac.sh` for periodic maintenance of the course IDE instead of updating its managed components individually. Save current course work to GitHub or another backup location before running an update.
+
+## 8. Periodic Updates to the Course IDE
 
 {{SME TODO: Add instructions for updating the course IDE on macOS. Note that VS Code releases updates weekly.}}
 
 ## Next Step
 
-Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you also configure the course IDE on Codio, if you have not do so already.
+Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start the Module Two assignment. However, we recommend that you also configure the course IDE in Codio, if you have not done so already.
 
-- **[Configure the course IDE on Codio](../local/codio/README.md)**
+- **[Configure the course IDE in Codio](../../codio/README.md)**
 
-Optionally, if you have another local computer, you can also set up the course IDE on that machine. See the following links for instructions:
+Optionally, if you have another local computer, you can also set up the course IDE on that machine:
 
-- **Set up the course IDE on another local computer**
-  - [Windows](../local/windows/README.md)
-  - [Linux](../local/linux/README.md)
+- [Windows](../windows/README.md)
+- [Linux](../linux/README.md)
 
 ## Troubleshooting
 
