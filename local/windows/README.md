@@ -46,7 +46,7 @@ Click the **OK** button.
    ![System Protection for Drive Off](./assets/13_system_protection_for_drive_off.png)
    ![System Protection for Drive On](./assets/14_system_protection_for_drive_on.png)
 
-4. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***IT140 Course IDE Setup*** and click the **Create** button.
+4. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***Before General Update*** and click the **Create** button.
 
    ![System Protection Create Restore Point](./assets/15_create_restore_point.png)
    ![System Protection Created Restore Point](./assets/16_created_restore_point.png)
@@ -66,7 +66,9 @@ Click the **OK** button.
 
 {{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating Windows.}}
 
-## 3. Run Bootstrap Commands
+9. Create another restore point after updating Windows, as described in Step 1.4. A good name for this restore point is ***Before IT140 Course IDE Setup***. This way, if these is a problem with the course IDE setup, you can restore your system to the state it was in after updating Windows.
+
+## 3. Clone the Main Course Repository to Windows
 
 <!--SME TODO: Add brief explanation of how what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
 
@@ -128,102 +130,86 @@ Click the **OK** button.
 
    ```
 
-2. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**. Do NOT press **Ctrl** + **V** to paste.
+2. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**.
 
-3. Expect the commands to take 15 to 45 minutes, depending on your system and Internet speed.
+3. Press **Enter** once to ensure all the commands run.
 
-## 4. Clone the Main Course Repository to Windows
+4. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
 
-1. Click once on the **Terminal** icon in the Windows taskbar to open a terminal window.
+5. Type `exit` and press **Enter** to close the PowerShell terminal window.
+
+## 4. Install the Course IDE on Windows
+
+1. Open a new PowerShell terminal window with administrator privileges, as you did in Steps 3.1 to 3.3.
 
 2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
-```powershell
-$Platform = 'win'
-$CourseDir = Join-Path $HOME 'it140'
-$TempDir = Join-Path ([System.IO.Path]::GetTempPath()) ([System.IO.Path]::GetRandomFileName())
-$CloneDir = Join-Path $TempDir 'it140'
-$ScriptsDir = Join-Path $CourseDir "scripts\$Platform"
-New-Item -ItemType Directory -Path $CourseDir -Force | Out-Null
-New-Item -ItemType Directory -Path $TempDir -Force | Out-Null
-try {
-    git clone --depth 1 'https://github.com/GC-STEM/it140.git' $CloneDir
-    Remove-Item -Path (Join-Path $CloneDir '.git') -Recurse -Force -ErrorAction SilentlyContinue
-    Get-ChildItem -Path $CloneDir -Force | Copy-Item -Destination $CourseDir -Recurse -Force
-    Remove-Item -Path (Join-Path $CourseDir '.git') -Recurse -Force -ErrorAction SilentlyContinue
-}
-finally {
-    Remove-Item -Path $TempDir -Recurse -Force -ErrorAction SilentlyContinue
-}
-$UserPath = [Environment]::GetEnvironmentVariable('Path', 'User')
-$PathEntries = @($UserPath -split ';' | Where-Object { $_ })
-if ($ScriptsDir -notin $PathEntries) {
-    $NewUserPath = (@($PathEntries) + $ScriptsDir) -join ';'
-    [Environment]::SetEnvironmentVariable('Path', $NewUserPath, 'User')
-}
-if ($ScriptsDir -notin ($env:Path -split ';')) {
-    $env:Path = "$ScriptsDir;$env:Path"
-}
-$DesktopDir = [Environment]::GetFolderPath('Desktop')
-$ShortcutPath = Join-Path $DesktopDir 'IT 140.lnk'
-$Shell = New-Object -ComObject WScript.Shell
-$Shortcut = $Shell.CreateShortcut($ShortcutPath)
-$Shortcut.TargetPath = $CourseDir
-$Shortcut.WorkingDirectory = $CourseDir
-$Shortcut.IconLocation = '%SystemRoot%\System32\shell32.dll,3'
-$Shortcut.Save()
-```
+   ```powershell
+   cd "C:\Users\$env:USERNAME\it140\scripts\win\"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   .\setup_cvd.ps1
 
-3. In the terminal window, right-click and select **Paste**. Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., **Ctrl** + **V**), you will introduce unwanted characters into the command and it will not work.
+   ```
 
-4. Press **Enter** to run the pasted commands.
+3. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
 
-5. Close the terminal window by typing `exit` and pressing **Enter**.
+4. If the script did not start, press **Enter** to run it.
 
-## 5. Update the Windows
+5. Wait for the script to complete as evidenced by the return of the command prompt. This may take several minutes.
 
-> [!IMPORTANT]
-> If you update the Windows after starting work on course activities, save your work on another platform (e.g., GitHub, OneDrive, your local machine) before running the update script, just in case the update fails and we need to reset your VM. You do not need to backup if you have not save any work in the Windows yet.
+6. Close the terminal window by typing `exit` and pressing **Enter**.
 
-1. Click once on the **Terminal** icon in the Windows taskbar to open a terminal window.
+## 5. Configure the Course IDE on Windows
 
-2. Type `update_cvd.sh` into the terminal window and press **Enter**to run the automated Windows update script. Be patient, as this may take several minutes to complete.
+1. Open a new PowerShell terminal window as a **regular user**.
+   1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
+   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
+   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 5.1.1–5.1.2.
 
-3. Review the **Update Summary** notices to see if a VM restart is required.
+2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
-4. Close the terminal window by typing `exit` and pressing **Enter**.
+   ```powershell
+   cd "C:\Users\$env:USERNAME\it140\scripts\win\"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   .\config_cvd.ps1
 
-5. If a VM restart is required,
-   1. Save any open work and close all windows in the Windows.
-   2. Click on **RESTART VM** on the VM tab menu bar
-   3. Wait for the Windows to restart and reconnect. It will take a few minutes.
+   ```
 
-## 6. Configure the Windows
+3. Paste clipboard contents into the **Windows PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
 
-1. Click once on the **Terminal** icon in the Windows taskbar to open a terminal window.
+4. If the script did not start, press **Enter** to run it.
 
-2. Type `config_cvd.sh` in the terminal window and press **Enter** to configure the Windows with an interactive script.
+5. Follow the on-screen prompts to complete the configuration script.
 
-3. Close the terminal window by typing `exit` and pressing **Enter**.
+6. Close the terminal window by typing `exit` and pressing **Enter**.
 
-## 7. Sign into Cloud Storage Services (Optional)
+## 6. Verify the Course IDE on Windows
 
-1. Double-click on the "OneDrive" icon on the Windows desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
+1. Open a new PowerShell terminal window as a **regular user**.
+   1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
+   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
+   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 6.1.1–6.1.2.
 
-2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the Windows, or use G-Drive as persistent storage. Otherwise, you may skip this step.
+2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
-3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the Windows. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
-   1. Enter your SNHU email address and click **Next**.
-   2. Enter your SNHU password and click **Sign in**.
-   3. If you see an **Install** button on the browser address bar, click it to install the OneDrive desktop app. If you do not see an **Install** button, skip this step.
-   4. If prompted, click **Allow** to allow OneDrive to access resources on the Windows.
+   ```powershell
+   cd "C:\Users\$env:USERNAME\it140\scripts\win\"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   .\verify_cvd.ps1
 
-4. Close the browser window in the Windows when done signing into OneDrive and/or Chrome.
+   ```
 
-> [!NOTE]
-> The first time you double-click on the OneDrive icon, you may see an **Untrusted Application** warning. If you see this message, click **OK**.
+3. Paste clipboard contents into the **Windows PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
 
-## 8. Configure Visual Studio Code in the Windows
+4. If the script did not start, press **Enter** to run it.
+
+5. Review the verification summary and follow any instructions provided to resolve issues, if any.
+
+6. Close the terminal window by typing `exit` and pressing **Enter**.
+
+7. Create
+
+## 7. Configure Visual Studio Code in the Windows
 
 1. Double-click on the **Visual Studio Code** icon on the Windows desktop.
 
@@ -238,7 +224,7 @@ $Shortcut.Save()
 
 3. If prompted, authorize VS Code to access GitHub or other linked account(s).
 
-4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open** button.
+4. If prompted, check the "Always allow" box and click **Open** button.
 
 5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer.
 
@@ -246,10 +232,6 @@ $Shortcut.Save()
 
    > [!IMPORTANT]
    > If you ever see an **Update** button on the VS Code menu bar in the Windows, don't press it. You can ignore it or update the Windows by re-running `update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the Windows, just in case the update fails and we need to reset your VM.
-
-## 9. Verify Your Windows Configuration
-
-<!--SME TODO: Develop Windows verification script and add verification instructions for Windows configuration.-->
 
 ## Next Step
 
