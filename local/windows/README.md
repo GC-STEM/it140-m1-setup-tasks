@@ -4,6 +4,9 @@
 
 This document provides instructions for optionally setting up the IT 140 development environment (course IDE) on a modern Windows operating system. It covers the software and tools needed to complete all course activities.
 
+> [!IMPORTANT]
+> The following setup phases are sequential. Do NOT proceed with the next phase of the installation until you have fully completed the preceding phases. Refer to the [Troubleshooting](#troubleshooting) section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
+
 ## 0. Run the System Compatibility Check
 
 Before setting up the course IDE on Windows, we must verify that your computer's security permissions allow you to run software developer tools. It is common for users of computers owned by others to have restricted account privileges or (such as a parental controls or [Windows S Mode](https://support.microsoft.com/en-us/windows/experience/platform-variants/windows-10-and-windows-11-in-s-mode-faq)) to block local programming commands entirely. This simple 5-second test will determine if your machine can support local setup of the course IDE, or if you should bypass it and use just the Codio Virtual Desktop (CVD) option.
@@ -61,12 +64,11 @@ Click the **OK** button.
 
 ## 2. Update Windows
 
-SME TODO: Add instructions for the most reliable and novice-friendly way of updating Windows.
-
-> [!IMPORTANT]
-> Do NOT proceed with the next phase of the installation until you have fully updated Windows. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
+SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating Windows.
 
 ## 3. Run Bootstrap Commands
+
+<!--SME TODO: Add brief explanation of how what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
 
 1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
 
@@ -84,52 +86,49 @@ SME TODO: Add instructions for the most reliable and novice-friendly way of upda
 
 4. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
-```powershell
-Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup.log" -Force
-# Installing and updating system dependencies...
-Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
-Install-PackageProvider -Name NuGet -Force | Out-Null
-Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
-Repair-WinGetPackageManager -AllUsers
-winget source update
-# Installing course IDE components...
-winget install --id Git.Git -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-winget install --id GitHub.cli -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-winget install --id Python.Python.3.12 -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-winget install --id Microsoft.VisualStudioCode -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-# Updating the terminal environment...
-[System.Environment]::GetEnvironmentVariables('Machine').GetEnumerator() | ForEach-Object { Set-Item -Path "Env:\$($_.Key)" -Value $_.Value }; [System.Environment]::GetEnvironmentVariables('User').GetEnumerator() | ForEach-Object { Set-Item -Path "Env:\$($_.Key)" -Value $_.Value }; $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')
-# Configuring course IDE components...
-python.exe -m pip install --upgrade pip pytest pytest-cov ruff
-git config --global init.defaultBranch main
-git config --global core.editor "code --wait"
-# Installing code editor extensions...
-$env:NODE_NO_WARNINGS = "1"
-code --install-extension ms-python.python --force
-code --install-extension charliermarsh.ruff --force
-code --install-extension hediet.vscode-drawio --force
-code --install-extension streetsidesoftware.code-spell-checker --force
-code --install-extension i2p-hub.i2p-pseudo --force
-code --install-extension cweijan.vscode-office --force
-Remove-Item Env:NODE_NO_WARNINGS -ErrorAction SilentlyContinue
-# ===== Course IDE installation complete. =====
-# Before continuing, review the messages above.
-# Look for words like Error, Failed, Exception, Access denied, or not recognized.
-# Some errors may appear in red text, but text color can vary.
-# If you do not see an error message, continue to the next step.
-# If you see an error, see the Troubleshooting section of the setup repo.
-# A setup log was saved to your Desktop as: it140_setup.log.
-# Detailed WinGet logs are available if tech support needs them; run: winget --logs.
-Stop-Transcript
+   ```powershell
+   Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup.log" -Force
+   # Installing and updating system dependencies...
+   Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
+   Install-PackageProvider -Name NuGet -Force | Out-Null
+   Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
+   Repair-WinGetPackageManager -AllUsers
+   winget source update
+   # Installing course IDE components...
+   winget install --id Git.Git -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
+   winget install --id GitHub.cli -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
+   winget install --id Python.Python.3.12 -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
+   winget install --id Microsoft.VisualStudioCode -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
+   # Updating the terminal environment...
+   [System.Environment]::GetEnvironmentVariables('Machine').GetEnumerator() | ForEach-Object { Set-Item -Path "Env:\$($_.Key)" -Value $_.Value }; [System.Environment]::GetEnvironmentVariables('User').GetEnumerator() | ForEach-Object { Set-Item -Path "Env:\$($_.Key)" -Value $_.Value }; $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')
+   # Configuring course IDE components...
+   python.exe -m pip install --upgrade pip pytest pytest-cov ruff
+   git config --global init.defaultBranch main
+   git config --global core.editor "code --wait"
+   # Installing code editor extensions...
+   $env:NODE_NO_WARNINGS = "1"
+   code --install-extension ms-python.python --force
+   code --install-extension charliermarsh.ruff --force
+   code --install-extension hediet.vscode-drawio --force
+   code --install-extension streetsidesoftware.code-spell-checker --force
+   code --install-extension i2p-hub.i2p-pseudo --force
+   code --install-extension cweijan.vscode-office --force
+   Remove-Item Env:NODE_NO_WARNINGS -ErrorAction SilentlyContinue
+   # ===== Course IDE installation complete. =====
+   # Before continuing, review the messages above.
+   # Look for words like Error, Failed, Exception, Access denied, or not recognized.
+   # Some errors may appear in red text, but text color can vary.
+   # If you do not see an error message, continue to the next step.
+   # If you see an error, see the Troubleshooting section of the setup repo.
+   # A setup log was saved to your Desktop as: it140_setup.log.
+   # Detailed WinGet logs are available if tech support needs them; run: winget --logs.
+   Stop-Transcript
 
-```
+   ```
 
 2. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**. Do NOT press **Ctrl** + **V** to paste.
 
 3. Expect the commands to take 15 to 45 minutes, depending on your system and Internet speed.
-
-> [!IMPORTANT]
-> Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the **Troubleshooting** section of this repository for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (Windows) to complete assignments until you get your local course IDE working.
 
 ## 4. Clone the Main Course Repository to Windows
 
