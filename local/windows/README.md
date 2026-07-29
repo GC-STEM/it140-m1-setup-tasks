@@ -2,18 +2,40 @@
 
 # IT 140 Development Environment Local Setup on Windows
 
-This document provides instructions for optionally setting up the IT 140 development environment (course IDE) on the Windows 11 operating system. It covers the installation of necessary software and tools needed to complete all course activities.
+This document provides instructions for optionally setting up the IT 140 development environment (course IDE) on a modern Windows operating system. It covers the software and tools needed to complete all course activities.
+
+## 0. Run the System Compatibility Check
+
+Before setting up the course IDE on Windows, we must verify that your computer's security permissions allow you to run software developer tools. It is common for users of computers owned by others to have restricted account privileges or (such as a parental controls or [Windows S Mode](https://support.microsoft.com/en-us/windows/experience/platform-variants/windows-10-and-windows-11-in-s-mode-faq)) to block local programming commands entirely. This simple 5-second test will determine if your machine can support local setup of the course IDE, or if you should bypass it and use just the Codio Virtual Desktop (CVD) option.
+
+1. On your keyboard, press the **Windows** (⊞) + **R** keys at the same time to open the **Run** dialog box.
+
+2. Type `cmd` into the box and press **Enter**.
+
+3. Observe what happens on your screen:
+
+   - **GO**: A terminal window opens and shows a blinking cursor after the command prompt. Your computer's operating system likely allows local command-line tools.
+   **Recommendation**: Continue with local setup of the course IDE.
+
+   <!--SME TODO: Add screenshots for GO.-->
+
+   - **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.  
+   **Recommendation**: Use just the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
+
+   <!--SME TODO: Add screenshots for NOGO.-->
+
+   <!--SME TODO: Add link(s) to remedial instructions for NOGO when they are developed. For example, disable Windows S Mode, -->
 
 ## 1. Create a Restore Point
 
-Before installing any software, it is best practice to create a restore point using **Windows System Protection** recovery feature. That way, you can undo system changes if something goes wrong during setup.
+Before installing any software, it is best practice to enable system protection and create a restore point using **Windows System Protection**. That way, you can undo system changes if something goes wrong during setup.
 
 1. On your keyboard, hold down the **Windows** (⊞) key and press the **S** key to open the **Search** application. In the search box, start typing ***Create a restore point***. Select the **Create a restore point** app from the results when it appears.
 
    ![Create a restore point](./assets/11_search_for_restore_point.png)
    ![System Protection Tab](./assets/12_system_protection_tab.png)
 
-2. If the **Create…** button is selectable in the preceding image, skip to Step 4. If the **Create…** button is not selectable, as shown in the above right image, click the **Configure…** button.
+2. If the **Create…** button is selectable in the preceding image, skip to Step 4. If the **Create…** button is not selectable, as shown in the above second image, click the **Configure…** button.
 
 3. Select the **Turn on system protection** radio button and adjust the **Max Usage** slider to 5%.
 Click the **OK** button.
@@ -37,9 +59,14 @@ Click the **OK** button.
 > ![System Restore Step 2: Select Restore Point](./assets/18_system_restore_2.png)
 > ![System Restore Step 3: Finish Restore](./assets/19_system_restore_3.png)
 
-## 2. Open a Terminal Window with Administrator Privileges
+## 2. Update Windows
 
-The next phase in setting up the course IDE on your local Windows machine is to open a PowerShell terminal window with administrator privileges. You can do this by following these steps:
+SME TODO: Add instructions for the most reliable and novice-friendly way of updating Windows.
+
+> [!IMPORTANT]
+> Do NOT proceed with the next phase of the installation until you have fully updated Windows. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
+
+## 3. Run Bootstrap Commands
 
 1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
 
@@ -55,12 +82,7 @@ The next phase in setting up the course IDE on your local Windows machine is to 
    >[!NOTE]
    > The colors of your terminal window and prompt path (C:\Users\USERNAME) may be different than those shown in the screenshots, which is fine. Just make sure the window title bar shows **Administrator: Windows PowerShell**
 
-> [!IMPORTANT]
-> Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (Windows) to complete assignments until you get your local course IDE working.
-
-## 3. Install the Course IDE on Windows
-
-1. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+4. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
 ```powershell
 Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup.log" -Force
@@ -226,7 +248,7 @@ $Shortcut.Save()
 
 ## 9. Verify Your Windows Configuration
 
-{{SME TODO: Develop Windows verification script and add verification instructions for Windows configuration.}}
+<!--SME TODO: Develop Windows verification script and add verification instructions for Windows configuration.-->
 
 ## Next Step
 
@@ -241,4 +263,4 @@ However, we recommend you set up the course IDE on at least one local computer, 
 
 ## Troubleshooting
 
-{{SME TODO: Add troubleshooting information for Windows configuration.}}
+<!--SME TODO: Add troubleshooting information for Windows configuration.-->

@@ -5,7 +5,7 @@ $templatePath = Join-Path $repoPath "it140_ide_template.wsb"
 $generatedPath = Join-Path $repoPath "it140_ide_generated.wsb"
 
 $template = Get-Content $templatePath -Raw
-$wsb = $template.Replace("{{REPO_PATH}}", $repoPath)
+$wsb = $template.Replace("<!--REPO_PATH-->", $repoPath)
 
 Set-Content -Path $generatedPath -Value $wsb -Encoding UTF8
 

@@ -118,7 +118,7 @@ To complete CVD configuration, you will need the following:
    - Confirm that **Failures** is `0`.
    - Check the notices to determine whether a VM restart is required.
 
-   {{SME TODO: Add what to do if Result is not PASS or Failures is not 0.}}
+   <!--SME TODO: Add what to do if Result is not PASS or Failures is not 0.-->
 
 4. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -213,4 +213,4 @@ Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop 
 
 ## Troubleshooting
 
-{{SME TODO: Add troubleshooting information for CVD configuration.}}
+<!--SME TODO: Add troubleshooting information for CVD configuration.-->

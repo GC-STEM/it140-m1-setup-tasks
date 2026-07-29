@@ -126,4 +126,4 @@ Once your GitHub account is set up, your SNHU email address is verified, and you
 
 ## Troubleshooting
 
-{{SME TODO: Add troubleshooting information for GitHub account creation and configuration.}}
+<!--SME TODO: Add troubleshooting information for GitHub account creation and configuration.-->

@@ -1,8 +1,8 @@
 # Set Up the Course IDE on Windows Using CLI
 
-These instructions will guide you through the process of setting up the course IDE on your local Windows machine using a command line interface (CLI). The setup process will install and configure all necessary components, including Git, Python, Visual Studio Code, and required extensions. {{TODO: Add advantages of using the CLI setup method and disadvantages for students new to the CLI.}}
+These instructions will guide you through the process of setting up the course IDE on your local Windows machine using a command line interface (CLI). The setup process will install and configure all necessary components, including Git, Python, Visual Studio Code, and required extensions. <!--TODO: Add advantages of using the CLI setup method and disadvantages for students new to the CLI.-->
 
-{{TODO: Add that GUI setup instructions are available in a separate guide (e.g., `./gui_setup.md`) if the student prefers that method.}}
+<!--TODO: Add that GUI setup instructions are available in a separate guide (e.g., `./gui_setup.md`) if the student prefers that method.-->
 
 ## 1. Open a Terminal Window with Administrator Privileges
 

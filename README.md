@@ -98,7 +98,7 @@ Before starting the Module Two assignment, follow the instructions below to set 
 
 The following resources may help you complete this activity:
 
-{{TODO: Add SNHU and external resources here}}
+<!--TODO: Add SNHU and external resources here-->
 
 ## Technical Support
 
