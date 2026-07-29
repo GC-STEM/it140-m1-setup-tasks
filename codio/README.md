@@ -129,7 +129,7 @@ To complete CVD configuration, you will need the following:
    3. Wait for the CVD to restart and reconnect. This may take a few minutes.
 
    > [!TIP]
-   > If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes. 
+   > If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes.
 
 6. Continue to the next section, **[Configure the CVD](#4-configure-the-cvd)**.
 
@@ -179,7 +179,7 @@ To complete CVD configuration, you will need the following:
 
 6. Click the **Get Started** button.
 
-7. Open the `it140` course repository by folder. 
+7. Open the `it140` course repository by folder.
    1. Click the **Open Folder...** link. If you do not see the **Open Folder...** link, click **File** > **Open Folder...** from the VS Code menu bar.
    2. In the **Open Folder** popup window, click once on the `it140` folder. Click the **Select** button to open the folder in VS Code.
    3. Wait for the `it140` folder to open in VS Code. You should see the folder name in the Explorer pane on the left side of the VS Code window.

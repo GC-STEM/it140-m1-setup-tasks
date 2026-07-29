@@ -2,14 +2,14 @@
 
 # IT 140 Development Environment Local Setup on Windows
 
-This document provides instructions for optionally setting up the IT 140 development environment (course IDE) on a modern Windows operating system. It covers the software and tools needed to complete all course activities.
+This document provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a [publisher-supported version of Windows](https://learn.microsoft.com/en-us/windows/release-health/supported-versions-windows-client). These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
 
 > [!IMPORTANT]
 > The following setup phases are sequential. Do NOT proceed with the next phase of the installation until you have fully completed the preceding phases. Refer to the [Troubleshooting](#troubleshooting) section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
 
 ## 0. Run the System Compatibility Check
 
-Before setting up the course IDE on Windows, we must verify that your computer's security permissions allow you to run software developer tools. It is common for users of computers owned by others to have restricted account privileges or (such as a parental controls or [Windows S Mode](https://support.microsoft.com/en-us/windows/experience/platform-variants/windows-10-and-windows-11-in-s-mode-faq)) to block local programming commands entirely. This simple 5-second test will determine if your machine can support local setup of the course IDE, or if you should bypass it and use just the Codio Virtual Desktop (CVD) option.
+Before setting up the course IDE on Windows, we must verify that your computer's security permissions allow you to run software developer tools. It is common for users of computers owned by others to have restricted account privileges. Another restriction can come from manufacturer default settings, such as [Windows S Mode](https://support.microsoft.com/en-us/windows/experience/platform-variants/windows-10-and-windows-11-in-s-mode-faq). This simple 5-second test will determine if your machine can support local setup of the course IDE, or if you should bypass it and use just the Codio Virtual Desktop (CVD) option.
 
 1. On your keyboard, press the **Windows** (⊞) + **R** keys at the same time to open the **Run** dialog box.
 
@@ -62,15 +62,15 @@ Click the **OK** button.
 > ![System Restore Step 2: Select Restore Point](./assets/18_system_restore_2.png)
 > ![System Restore Step 3: Finish Restore](./assets/19_system_restore_3.png)
 
-## 2. Update Windows
+## 2. Update the Operating System
 
 {{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating Windows.}}
 
 9. Create another restore point after updating Windows, as described in Step 1.4. A good name for this restore point is ***Before IT140 Course IDE Setup***. This way, if these is a problem with the course IDE setup, you can restore your system to the state it was in after updating Windows.
 
-## 3. Clone the Main Course Repository to Windows
+## 3. Clone the Main Course Repository
 
-<!--SME TODO: Add brief explanation of how what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
+<!--SME TODO: Add brief explanation of what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
 
 1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
 
@@ -130,15 +130,15 @@ Click the **OK** button.
 
    ```
 
-2. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**.
+5. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**.
 
-3. Press **Enter** once to ensure all the commands run.
+6. Press **Enter** once to ensure all the commands run.
 
-4. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
+7. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
 
-5. Type `exit` and press **Enter** to close the PowerShell terminal window.
+8. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
-## 4. Install the Course IDE on Windows
+## 4. Install the Course IDE
 
 1. Open a new PowerShell terminal window with administrator privileges, as you did in Steps 3.1 to 3.3.
 
@@ -159,7 +159,7 @@ Click the **OK** button.
 
 6. Close the terminal window by typing `exit` and pressing **Enter**.
 
-## 5. Configure the Course IDE on Windows
+## 5. Configure the Course IDE
 
 1. Open a new PowerShell terminal window as a **regular user**.
    1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
@@ -183,7 +183,7 @@ Click the **OK** button.
 
 6. Close the terminal window by typing `exit` and pressing **Enter**.
 
-## 6. Verify the Course IDE on Windows
+## 6. Verify the Course IDE
 
 1. Open a new PowerShell terminal window as a **regular user**.
    1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
@@ -209,7 +209,9 @@ Click the **OK** button.
 
 7. Create
 
-## 7. Configure Visual Studio Code in the Windows
+## 7. Configure Visual Studio Code
+
+<!--SME TODO: Check what is needed after configure VS Code on one platform. -->
 
 1. Double-click on the **Visual Studio Code** icon on the Windows desktop.
 
@@ -233,15 +235,20 @@ Click the **OK** button.
    > [!IMPORTANT]
    > If you ever see an **Update** button on the VS Code menu bar in the Windows, don't press it. You can ignore it or update the Windows by re-running `update_cvd.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the Windows, just in case the update fails and we need to reset your VM.
 
+## 8. Periodic Updates to Course IDE
+
+{{SME TODO: Add instructions for updating the course IDE on Windows. Note that VS Code releases updates weekly.}}
+
 ## Next Step
 
-Once you have completed Codio Virtual Desktop (Windows) configuration, you may stop here. You may complete all course activities from web-based learning platforms–Brightspace, zyBooks, and Codio.
+Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you also configure the course IDE on Codio, if you have not do so already.
 
-However, we recommend you set up the course IDE on at least one local computer, if possible. Doing so provides an alternative development environment in case the Windows is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the Windows and your local course IDE, so you can continue working on assignments from either environment.
+- **[Configure the course IDE on Codio](../local/codio/README.md)**
 
-- **Set Up the Course IDE on Your Local Computer(s)**
-  - [Windows](../local/windows/README.md)
-  - [MacOS](../local/macos/README.md)
+Optionally, if you have another local computer, you can also set up the course IDE on that machine. See the following links for instructions:
+
+- **Set up the course IDE on another local computer**
+  - [macOS](../local/macos/README.md)
   - [Linux](../local/linux/README.md)
 
 ## Troubleshooting
