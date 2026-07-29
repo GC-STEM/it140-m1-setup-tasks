@@ -1,7 +1,0 @@
-<Configuration>
-  <Networking>Enable</Networking>
-
-  <LogonCommand>
-    <Command>powershell -ExecutionPolicy Bypass -Command "New-Item -ItemType Directory -Path 'C:\Users\Student','C:\Users\Student\Documents','C:\Users\Student\Downloads','C:\Users\Student\Desktop' -Force; New-Item -ItemType Directory -Path 'C:\Users\WDAGUtilityAccount\Documents\WindowsPowerShell','C:\Users\WDAGUtilityAccount\Documents\PowerShell' -Force; 'Set-Location C:\Users\Student' | Set-Content -Path 'C:\Users\WDAGUtilityAccount\Documents\WindowsPowerShell\profile.ps1' -Encoding UTF8; 'Set-Location C:\Users\Student' | Set-Content -Path 'C:\Users\WDAGUtilityAccount\Documents\PowerShell\profile.ps1' -Encoding UTF8; Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned -Force"</Command>
-  </LogonCommand>
-</Configuration>

@@ -210,7 +210,7 @@ Once you have completed setting up the course IDE on one local computer, you may
 Optionally, if you have another local computer, you can also set up the course IDE on that machine. See the following links for instructions:
 
 - **Set up the course IDE on another local computer**
-  - [macOS](../local/windows/README.md)
+  - [Windows](../local/windows/README.md)
   - [Linux](../local/linux/README.md)
 
 ## Troubleshooting
