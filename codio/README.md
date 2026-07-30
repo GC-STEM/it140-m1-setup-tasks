@@ -18,7 +18,8 @@
   - [4. Configure the CVD](#4-configure-the-cvd)
   - [5. Sign into Cloud Storage Services (Optional)](#5-sign-into-cloud-storage-services-optional)
   - [6. Configure Visual Studio Code in the CVD](#6-configure-visual-studio-code-in-the-cvd)
-  - [Next Step](#next-step)
+  - [7. Verify the CVD](#7-verify-the-cvd)
+  - [Next Steps](#next-steps)
   - [Troubleshooting](#troubleshooting)
 
 ## What is a Codio Virtual Desktop (CVD)?
@@ -27,7 +28,7 @@ A Codio Virtual Desktop (CVD) is a cloud-based Linux desktop that you access thr
 
 The CVD is the course's reference development environment. Assignment instructions, screenshots, and instructional videos use the CVD, and instructors and technical support staff can most easily help you when you are using it.
 
-Even if you plan to complete most of your work on your own computer, launch and configure the CVD at least once. If your local course IDE stops working or you need to use another computer, you can switch to the CVD and continue working with little or no interruption.
+Even if you plan to complete most of your work on your own computer, launch and configure the CVD at least once. If your local course IDE stops working or you need to use another computer, you can switch to the CVD and continue working with little interruption.
 
 ## 0. Prerequisites
 
@@ -35,7 +36,7 @@ To complete CVD configuration, you will need the following:
 
 - [ ] Access to an IT 140 course in D2L Brightspace
 
-- [ ] GitHub credentials (username, password)
+- [ ] GitHub credentials (username, password, noreply email address)
 
 - [ ] SNHU credentials (email, password), if using OneDrive for persistent storage
 
@@ -66,11 +67,11 @@ To complete CVD configuration, you will need the following:
 
 8. Click the **Collapse** button when done reading to hide the guide. You can always expand the guide again later if you need to reference it.
 
-9. Consider bookmarking the Codio Virtual Desktop (CVD) page in your local browser for direct access later.
+9. Bookmark the Codio Virtual Desktop (CVD) page in your local browser for direct access later.
 
 ## 2. Clone the Main Course Repository to the CVD
 
-1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
+1. From the CVD desktop, click once on the **Terminal** icon in the taskbar to open a new terminal.
 
 2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
@@ -101,6 +102,8 @@ To complete CVD configuration, you will need the following:
    - If you receive a pop-up message warning of potentially unsafe paste, click **Paste**.
 
 4. Press **Enter** to run the pasted commands.
+
+   > 🎉 Congratulations! You just ran your first command set. The command set cloned the main course repository to your CVD and configured your environment so you can run course automation scripts with just one command. You will do this in the very near future.
 
 5. Close the terminal window by typing `exit` and pressing **Enter**. You must close the terminal window and open a new one before running the update script in the next step.
 
@@ -137,7 +140,7 @@ To complete CVD configuration, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
-2. Type `config_cvd.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script.
+2. Type `config_cvd.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script. *Interactive* means you will be prompted to provide input to the script during the configuration process.
 
 3. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -200,9 +203,21 @@ To complete CVD configuration, you will need the following:
 
 10. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
 
-11. When you are done configuring the CVD, close the CVD browser tab. DO NOT use the **Shut Down** option within the Ubuntu desktop. Codio will keep trying to reconnect to the CVD, which will prevent you from accessing it again until you log out of Codio and log back in.
+## 7. Verify the CVD
 
-## Next Step
+1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
+
+2. Type `verify_cvd.sh` in the terminal window and press **Enter** to verify the CVD with an automated script.
+
+3. Review the output of the verification script to ensure that all checks passed successfully.
+
+4. Address any issues reported by the verification script. The script may provide instructions for resolving specific issues. Re-running the setup and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
+
+5. Close the terminal window by typing `exit` and pressing **Enter**.
+
+## Next Steps
+
+When you are done configuring the CVD, close the CVD browser tab. DO NOT use the **Shut Down** option within the Ubuntu desktop. Codio will keep trying to reconnect to the CVD, which will prevent you from accessing it again until you log out of Codio and log back in.
 
 Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you set up the course IDE on at least one local computer, if possible. Doing so provides an alternative development environment in case the CVD is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the CVD and your local course IDE, so you can continue working on assignments from either environment.
 
@@ -213,4 +228,4 @@ Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop 
 
 ## Troubleshooting
 
-<!--SME TODO: Add troubleshooting information for CVD configuration.-->
+{{< SME TODO: Add troubleshooting information for CVD configuration. >}}
