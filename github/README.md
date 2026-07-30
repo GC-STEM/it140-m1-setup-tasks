@@ -30,7 +30,7 @@ If you already have a GitHub account that you want to use for this course, skip 
    - Continue with Google
    - Continue with Apple
    - Manually enter your information:
-     - Use a personal email address. Do **not** use your SNHU account credentials here.
+     - Use a personal email address. Do **NOT** use your SNHU account credentials here.
      - Select a [professional username](github_username.md).
 
 3. Leave optional checkboxes unchecked for increased privacy and security.
@@ -85,7 +85,7 @@ You may use the same 2FA method that you use for your SNHU account, such as an a
 
 6. Do not share your password, authentication codes, or recovery codes with anyone.
 
-7. Optional: Add a passkey if your device supports one.
+7. Optional: Add a passkey if your device and browser support one.
 
 ## 3. Configure Your GitHub Profile (Optional)
 
