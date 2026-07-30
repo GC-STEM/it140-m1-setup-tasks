@@ -9,7 +9,6 @@
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
   - [3. Configure Your GitHub Profile (Optional)](#3-configure-your-github-profile-optional)
-  - [4. Join GitHub Education (Optional)](#4-join-github-education-optional)
   - [Next Step](#next-step)
   - [Troubleshooting](#troubleshooting)
 
@@ -23,48 +22,47 @@ National job-posting data identifies both Git and GitHub as in-demand technologi
 
 ## 0. Sign Up for a New GitHub Account
 
-If you already have a GitHub account that you want to use for this course, skip to [Step 1](#1-configure-your-github-email-addresses).  
-Otherwise, follow the instructions below to create a new GitHub account.
+If you already have a GitHub account that you want to use for this course, skip to [Step 1](#1-configure-your-github-email-addresses). Otherwise, follow the instructions below to create a new GitHub account.
 
-1. Go to [https://github.com/signup](https://github.com/signup)
+1. Go to [https://github.com/signup](https://github.com/signup).
 
-2. Select a sign-up method
+2. Select a sign-up method:
    - Continue with Google
    - Continue with Apple
-   - Manually enter your information
-     - Use a personal email address. Do **not** use your SNHU account credentials here
-     - Select a [professional username](github_username.md)
+   - Manually enter your information:
+     - Use a personal email address. Do **not** use your SNHU account credentials here.
+     - Select a [professional username](github_username.md).
 
 3. Leave optional checkboxes unchecked for increased privacy and security.
 
-4. Review GitHub’s *Terms of Service* and *Privacy Statement*
+4. Review GitHub’s *Terms of Service* and *Privacy Statement*, if desired.
 
-5. Click the **Create account** button
+5. Click the **Create account** button.
 
-6. Check your email for a verification message from GitHub
+6. Check your email for a verification message from GitHub.
 
-7. Follow the instructions in the email to complete the sign-up process
+7. Follow the instructions in the email to complete the sign-up process.
 
 ## 1. Configure Your GitHub Email Addresses
 
-1. Go to [https://github.com/settings/emails](https://github.com/settings/emails)
+1. Go to [https://github.com/settings/emails](https://github.com/settings/emails).
 
-2. Sign in using the method you configured when creating your account
+2. Sign in using the method you configured when creating your account.
 
-3. In the **Add email address** field, enter your SNHU email address and click **Add**
-   - Optional: Add another personal email address as a backup
+3. In the **Add email address** field, enter your SNHU email address and click **Add**.
+   - Optional: Add another personal email address as a backup.
 
-4. Check your SNHU email for a verification message from GitHub
+4. Check your SNHU email for a verification message from GitHub.
 
-5. Follow the instructions in the email to verify the address
+5. Follow the instructions in the email to verify the address.
 
-6. Confirm that your SNHU email address is listed as verified
+6. Confirm that your SNHU email address is listed as verified.
 
-7. Scroll down and turn on **Keep my email addresses private**
+7. Scroll down and turn on **Keep my email addresses private**.
 
-8. Note your GitHub-provided public email address. It will look similar to `302326151+petey-penmen@users.noreply.github.com`
+8. Note your GitHub-provided public email address. It will look similar to `302346351+petey-penmen@users.noreply.github.com`.
 
-9. Turn on **Block command line pushes that expose my email**
+9. Turn on **Block command line pushes that expose my email**.
 
 ## 2. Secure Your GitHub Account
 
@@ -72,51 +70,53 @@ GitHub requires users who contribute code to configure [two-factor authenticatio
 
 You may use the same 2FA method that you use for your SNHU account, such as an authenticator app, if GitHub supports it. Your GitHub and SNHU accounts remain separate; do not use your SNHU password for GitHub.
 
-1. Go to [https://github.com/settings/security](https://github.com/settings/security)
+1. Go to [https://github.com/settings/security](https://github.com/settings/security).
 
-2. Under **Two-factor authentication**, click **Enable two-factor authentication**
+2. Under **Two-factor authentication**, click **Enable two-factor authentication**.
 
-3. Follow GitHub’s on-screen instructions to configure an authentication method
+3. Follow GitHub’s on-screen instructions to configure an authentication method.
 
-4. Download or copy your recovery codes when prompted
+4. Download or copy your recovery codes when prompted.
 
-5. Store your recovery codes in a secure location separate from the device you normally use to sign in
+5. Store your recovery codes in a secure location separate from the device you normally use to sign in.
 
    > [!IMPORTANT]
    > Recovery codes can help you regain access to your account if you lose access to your normal authentication method. Store them securely. Do not save your only copy on a device that could be lost or damaged.
 
-6. Do not share your password, authentication codes, or recovery codes with anyone
+6. Do not share your password, authentication codes, or recovery codes with anyone.
 
-7. Optional: Add a passkey if your device supports one
+7. Optional: Add a passkey if your device supports one.
 
 ## 3. Configure Your GitHub Profile (Optional)
 
 If desired, you can make your GitHub profile private or add an avatar, bio, and other information. You can always change your profile settings later. To configure your GitHub profile, follow the instructions below.
 
-1. Go to [https://github.com/settings/profile](https://github.com/settings/profile)
+1. Go to [https://github.com/settings/profile](https://github.com/settings/profile).
 
-2. Sign in, if not already
+2. Sign in, if not already.
 
-3. Make your profile private, if desired
-   1. Scroll down to **Contributions & activity**
-   2. Check the **Make profile private and hide activity** option
-   3. Click the **Update preferences** button to save your changes
+3. Make your profile private, if desired.
+   1. Scroll down to **Contributions & activity**.
+   2. Check the **Make profile private and hide activity** option.
+   3. Click the **Update preferences** button to save your changes.
 
-4. Add or change other profile information as desired
+4. Add or change other profile information as desired.
 
-5. Click the **Update profile** button when done to save your changes
+5. Click the **Update profile** button when done to save your changes.
 
+<!-- GitHub has suspended new GitHub Education applications
 ## 4. Join GitHub Education (Optional)
 
 [GitHub Education](https://education.github.com/) provides eligible students with free access to GitHub benefits and professional development tools. These tools are not required for IT 140 but may be useful if you take additional programming or technical courses. You may skip this section and apply later.
 
-1. Go to [https://github.com/settings/education/benefits](https://github.com/settings/education/benefits)
-2. Sign in, if needed
-3. Click **Learn more** to review the available benefits
-4. Click **Start an application**
-5. Complete and submit the **Education Benefits Application**
-6. Check your email for follow-up messages from GitHub Education
-   - GitHub may request additional information to verify your student status
+1. Go to [https://github.com/settings/education/benefits](https://github.com/settings/education/benefits).
+2. Sign in, if needed.
+3. Click **Learn more** to review the available benefits.
+4. Click **Start an application**.
+5. Complete and submit the **Education Benefits Application**.
+6. Check your email for follow-up messages from GitHub Education.
+   - GitHub may request additional information to verify your student status.
+ -->
 
 ## Next Step
 
@@ -126,4 +126,4 @@ Once your GitHub account is set up, your SNHU email address is verified, and you
 
 ## Troubleshooting
 
-<!--SME TODO: Add troubleshooting information for GitHub account creation and configuration.-->
+{{< SME TODO: Add troubleshooting information for GitHub account creation and configuration. >}}

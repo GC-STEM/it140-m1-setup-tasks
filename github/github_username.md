@@ -31,7 +31,7 @@ A good username is:
 
 | Good Example   | Why It Works                                            |
 | -------------- | ------------------------------------------------------- |
-| `petey-penmen`  | Uses a full name and is easy to remember                |
+| `petey-penmen` | Uses a full name and is easy to remember                |
 | `petey-penmen` | Separates the names for readability                     |
 | `ppenmen`      | Uses an initial and last name                           |
 | `peteyjpenmen` | Adds a middle initial without using private information |
