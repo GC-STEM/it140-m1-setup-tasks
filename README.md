@@ -176,7 +176,7 @@ To contact the **IT Service Desk**:
 - If the issue is time sensitive, click **Chat Now** or call the listed phone number.
 - If the issue is not time sensitive, submit a support ticket.
 
-When you contact the **IT Service Desk**, include the details listed at the start of this section. If a setup log file was created, attach it to your ticket or mention that it is available.
+When you contact the **IT Service Desk**, include the details listed at the start of this section. If a log file was created, attach it to your ticket or mention that it is available.
 
 ### Instructor and Classmates
 
