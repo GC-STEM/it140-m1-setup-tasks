@@ -18,11 +18,11 @@ This repository is under active development. Code, documentation, structure, and
 
 In this activity, you will prepare your software development environment, also called the **course IDE**. An integrated development environment (IDE) is software that helps you design, write, run, test, debug, and manage programs and related files in one place.
 
-You may complete this activity using the Codio Virtual Desktop (CVD), your local computer, or both. The CVD already includes the required software, so you only need to complete a few configuration steps. A local installation is optional and allows you to work on your own computer. If you are short on time or experience technical issues, use the CVD to complete course assignments until you can configure the course IDE locally.
+You may complete this activity using the Codio Virtual Desktop (CVD), your local computer, or both. The course IDE is already installed on the CVD, so you only need to configure and verify it. A local installation is optional and allows you to work on your own computer. If you are short on time or experience technical issues, use the CVD to complete course assignments until you can configure the course IDE locally.
 
-You must complete this activity on at least one platform because you will use the course IDE throughout the course. You will use it to create software designs, including flowcharts and pseudocode; write and debug Python programs; run automated tests; and manage assignment files. This activity also supports the course competency: *Develop a fully functional program using industry-relevant tools*. The recommended course IDE includes software commonly used by professional developers, including tools identified in the recent [Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/).
+You must complete this activity on at least one platform because you will use the course IDE throughout the course. You will use it to design software using flowcharts and pseudocode; write and debug Python programs; run automated tests; and manage assignment files. This activity also supports the course competency: *Develop a fully functional program using industry-relevant tools*. The recommended course IDE includes software commonly used by professional developers, including tools identified in the [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/).
 
-### Course IDE Software
+### Course IDE Manifest
 
 The official course IDE includes the software and extensions listed below.
 
@@ -46,7 +46,9 @@ The official course IDE includes the software and extensions listed below.
 
 This repository is organized by setup topic. Each main folder contains the files needed to complete one part of the course IDE setup process—GitHub, Codio, and local setup.
 
-Most GitHub repositories include one or more `README.md` files. A README file explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
+Most GitHub repositories include one or more `README.md` files in Markdown (`.md`) format. A README file explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
+
+Markdown is a lightweight markup language that allows you to format text using plain text syntax. Markdown files are widely used for documentation, including GitHub repositories, because they are easy to read and write. You can view Markdown files in a web browser or in a code editor that supports Markdown rendering.
 
 ```text
 it140-m1-setup-tasks/
@@ -54,10 +56,10 @@ it140-m1-setup-tasks/
 ├── README.md          0. Start here: IDE setup activity overview
 │
 ├── github/            1. Set up a GitHub account
-│   └── README.md         Instructions for setting up a GitHub account
+│   └── README.md         Instructions for creating and configuring a GH account
 │
 ├── codio/             2. Set up the course IDE on Codio
-│   └── README.md         Instructions for setting up the course IDE
+│   └── README.md         Instructions for configuring the course IDE
 │
 └── local/             3. Set up the course IDE on your local computer
     │
@@ -77,28 +79,30 @@ it140-m1-setup-tasks/
 
 ## Set Up the Course IDE
 
-Before starting the Module Two assignment, follow the instructions below to set up the course IDE on at least one platform–the Codio Virtual Desktop (CVD) or your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
+Before starting the Module Two Assignment, follow the instructions below to set up the course IDE on at least one platform–the Codio Virtual Desktop (CVD) or your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
 
 ### 1. Set Up a GitHub Account
 
-- [ ] Open the [`github/README.md`](github/README.md) file and follow the instructions.
+- [ ] Open the [`github/README.md`](github/README.md) file.
+- [ ] Follow the instructions.
+- [ ] Return to this file and continue to the next step.
 
 ### 2. Set Up the Course IDE on Codio
 
-- [ ] Open the [`codio/README.md`](codio/README.md) file and follow the instructions.
+- [ ] Open the [`codio/README.md`](codio/README.md) file.
+- [ ] Follow the instructions.
+- [ ] Return to this file and continue to the next step.
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
-- [ ] Click on your operating system and follow the instructions.
-  - [Linux](local/linux/README.md)
-  - [macOS](local/macos/README.md)
+This step is optional. If you are short on time or experience technical issues, use the Codio Virtual Desktop (CVD) to complete course assignments until you can configure the course IDE locally.
+
+- [ ] Open the README.md file for your operating system.
   - [Windows](local/windows/README.md)
-
-## Supporting Materials
-
-The following resources may help you complete this activity:
-
-<!--TODO: Add SNHU and external resources here-->
+  - [macOS](local/macos/README.md)
+  - [Linux](local/linux/README.md)
+- [ ] Follow the instructions.
+- [ ] Return to this file and continue to the next step.
 
 ## Technical Support
 
