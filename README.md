@@ -34,16 +34,16 @@ The official course IDE includes the software and extensions listed below.
 
 | **#** | **Software Category** | **Software** | **Student Use in IT 140** |
 | :-: | ---------------------- | ------------------------------- | --------------------------------------------- |
-| 0 | Version Control | Git and GitHub CLI | Download assignment materials; optionally publish portfolio artifacts |
-| 1 | Programming Language | Python 3.12 | Write, run, and debug Python programs |
-| 2 | Test Runner | pytest, pytest-cov | Run provided tests and review results |
-| 3 | Code Editor / IDE | Visual Studio Code (VS Code) | Design, write, test, debug, and manage assignment files |
-| 4 | Language Support | ms-python.python | Provide Python language support in VS Code |
-| 5 | Code Linter / Formatter | charliermarsh.ruff | Identify style issues and format code consistently |
-| 6 | Diagram Support | hediet.vscode-drawio | View, create, and edit flowcharts and game world maps |
-| 7 | Pseudocode Support | i2p-hub.i2p-pseudo | View, create, and edit pseudocode files with syntax highlighting |
-| 8 | Code Spell Checker | streetsidesoftware.code-spell-checker | Check spelling in source code and documentation |
-| 9 | File Viewers | cweijan.vscode-office | View course-provided Office and PDF files within VS Code |
+| 0 | Version Control | [Git](https://git-scm.com/) and [GitHub CLI](https://cli.github.com/) | Download assignment materials; optionally publish portfolio artifacts |
+| 1 | Programming Language | [Python 3.12](https://www.python.org/downloads/) | Write, run, and debug Python programs |
+| 2 | Test Runner | [pytest, pytest-cov](https://docs.pytest.org/en/stable/) | Run provided tests and review results |
+| 3 | Code Editor / IDE | [Visual Studio Code (VS Code)](https://code.visualstudio.com/) | Design, write, test, debug, and manage assignment files |
+| 4 | Language Support | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Provide Python language support in VS Code |
+| 5 | Code Linter / Formatter | [charliermarsh.ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff) | Identify style issues and format code consistently |
+| 6 | Diagram Support | [hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) | View, create, and edit flowcharts and game world maps |
+| 7 | Pseudocode Support | [i2p-hub.i2p-pseudo](https://marketplace.visualstudio.com/items?itemName=i2p-hub.i2p-pseudo) | View, create, and edit pseudocode files with syntax highlighting |
+| 8 | Code Spell Checker | [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) | Check spelling in source code and documentation |
+| 9 | File Viewers | [cweijan.vscode-office](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) | View course-provided Office and PDF files within VS Code |
 
 >[!NOTE]
 > This recommended software stack is fully supported for the course. If you choose a different software stack, it must provide the required file formats and equivalent functionality for each activity. Your instructor and the IT Service Desk may be unable to support software outside this recommended environment.
