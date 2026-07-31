@@ -101,7 +101,7 @@ Before starting the Module Two Assignment, follow the instructions below to set 
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
-This step is optional. If you are short on time or experience technical issues, use the Codio Virtual Desktop (CVD) to complete course assignments until you can configure the course IDE locally.
+This step is optional. If you are short on time or experience technical issues, use the Codio Virtual Desktop (CVD) to complete course assignments until you can set up the course IDE locally.
 
 - [ ] Open the README.md file for your operating system.
   - [Windows](local/windows/README.md)
