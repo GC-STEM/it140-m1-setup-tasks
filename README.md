@@ -116,7 +116,7 @@ Software setup can be frustrating, especially if you have not used command line 
 
 When asking for technical support, include as much of the following information as possible:
 
-- Your operating system, such as Windows 11, macOS, or Linux
+- Your operating system, such as Windows 11, macOS Tahoe, or Ubuntu 24.04
 - The step number or section where the problem happened
 - What you were trying to do
 - What you expected to happen
