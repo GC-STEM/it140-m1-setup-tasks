@@ -10,9 +10,15 @@ This repository is under active development. Code, documentation, structure, and
 
 ---
 
+## Activity Metadata
+
 - **Course**: IT 140 - *Introduction to Scripting*
 - **Activity Title**: 1-1 Setup Tasks
 - **Activity Type**: Required, non-graded, no submission
+- **Activity Purpose**: Prepare your software development environment (course IDE) for completing course assignments.
+- **Artifact Version**: 0.5.0
+- **Artifact Date**: 2026-07-31
+- **Development Status**: Alpha Testing
 
 ## Overview
 
