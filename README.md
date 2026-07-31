@@ -46,15 +46,15 @@ The official course IDE includes the software and extensions listed below.
 | 9 | File Viewers | [cweijan.vscode-office](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) | View course-provided Office and PDF files within VS Code |
 
 >[!NOTE]
-> This recommended software stack is fully supported for the course. If you choose a different software stack, it must provide the required file formats and equivalent functionality for each activity. Your instructor and the IT Service Desk may be unable to support software outside this recommended environment.
+> This recommended software stack is fully supported for the course. If you choose a different software stack, it must provide the required file formats and equivalent functionality for each activity. Your instructor and the IT Service Desk may be unable to support software outside this recommended environment. Python 3.12 is to maintain consistency with the CVD and zyBooks. If you choose to use a different Python version, you may encounter compatibility issues with provided tests and course materials.
 
 ### Activity Repository
 
+A code repository, or just "repo," is a storage location for software projects and their associated files. Most GitHub repos include one or more `README.md` files in Markdown (`.md`) format. A README file explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repo, begin with the top-level `README.md`.
+
+[Markdown](https://www.markdownguide.org/getting-started/) is a lightweight markup language that allows you to format text using plain text syntax. Markdown files are widely used for documentation, including GitHub repositories, because they are easy to read and write. You can view Markdown files in a web browser or in a code editor that supports Markdown rendering. You will edit your first Markdown file in the course IDE when you complete the Module Two Assignment.
+
 This repository is organized by setup topic. Each main folder contains the files needed to complete one part of the course IDE setup process—GitHub, Codio, and local setup.
-
-Most GitHub repositories include one or more `README.md` files in Markdown (`.md`) format. A README file explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repository, begin with the top-level `README.md` file unless directed otherwise.
-
-Markdown is a lightweight markup language that allows you to format text using plain text syntax. Markdown files are widely used for documentation, including GitHub repositories, because they are easy to read and write. You can view Markdown files in a web browser or in a code editor that supports Markdown rendering.
 
 ```text
 it140-m1-setup-tasks/
@@ -85,7 +85,7 @@ it140-m1-setup-tasks/
 
 ## Set Up the Course IDE
 
-Before starting the Module Two Assignment, follow the instructions below to set up the course IDE on at least one platform–the Codio Virtual Desktop (CVD) or your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
+Before starting the Module Two Assignment, follow the instructions below to set up the course IDE on at least the Codio Virtual Desktop (CVD). If you want, you can also set up the course IDE on your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
 
 ### 1. Set Up a GitHub Account
 
@@ -109,6 +109,10 @@ This step is optional. If you are short on time or experience technical issues, 
   - [Linux](local/linux/README.md)
 - [ ] Follow the instructions.
 - [ ] Return to this file and continue to the next step.
+
+## Next Steps
+
+{{SME TODO: Add some next steps for students to take after completing the setup tasks.}}
 
 ## Technical Support
 
