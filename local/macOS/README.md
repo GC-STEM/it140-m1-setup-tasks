@@ -7,7 +7,7 @@ This document provides instructions for optionally setting up the IT 140 develop
 > [!IMPORTANT]
 > Installing the course IDE on your Mac is optional. The following setup phases are sequential, so do **not** proceed to the next phase until the current phase is complete. Refer to the [Troubleshooting](#troubleshooting) section for additional help. If you get stuck, you can use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until your local course IDE is working.
 
-## 0. Run the System Compatibility Check
+## 0. Check System Compatibility
 
 Before setting up the course IDE, confirm that your Mac uses Apple silicon and that your account can authorize software installation. A Mac owned or managed by an employer, school, or another person may restrict these actions.
 
@@ -152,7 +152,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
    }
    /usr/bin/ditto "$SOURCE_ROOT" "$COURSE_ROOT"
    rm -rf -- "$COURSE_ROOT/.git"
-   chmod -- 0755 "$SCRIPT_DIR"/*.sh
+   chmod -- 0755 "$SCRIPT_DIR"/*.zsh
    readonly SHELL_STARTUP_FILE="$HOME/.zshrc"
    readonly PATH_LINE="export PATH=\"\$HOME/it140/scripts/mac:\$PATH\""
    grep -qxF "$PATH_LINE" "$SHELL_STARTUP_FILE" 2>/dev/null || printf '\n%s\n' "$PATH_LINE" >> "$SHELL_STARTUP_FILE"
@@ -168,17 +168,17 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 
    ```
 
-5. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
+5. Click in the Terminal window and press **Command (⌘)** + **V** or right-click and select **Paste** to paste the commands.
 
 6. Press **Return** once to ensure that all pasted commands run.
 
-7. Wait for the commands to finish and for the command prompt to return. This may take several minutes.
+7. Wait for the `[Process completed]` message.This may take several minutes.
 
-8. Type `exit` and press **Return** to close the Terminal window.
+8. Click the red 'X' close button to close the Terminal window.
 
 ## 4. Install the Course IDE
 
-1. Open a new Terminal window using Spotlight Search, as described in Steps 3.1–3.2.
+1. Open a new Terminal window using Spotlight Search, as described in Steps 3.1–3.2, or click on the Terminal icon in the Dock.
 
    > [!IMPORTANT]
    > Run the setup script from your regular macOS account. Do **not** add `sudo` before the script command. The script will request administrator authorization only when it is required.
