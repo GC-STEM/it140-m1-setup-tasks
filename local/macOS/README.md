@@ -27,16 +27,18 @@ Before setting up the course IDE, confirm that your Mac uses Apple silicon and t
 
    <!--SME TODO: Add link(s) to remedial instructions for NOGO when they are developed.  -->
 
-3. Open **System Settings**, select **Users & Groups**, and find your account.
+3. Open the **Apple menu**, select **System Settings**, and then select **Users & Groups**. Locate the account you are currently using.
 
-   - **GO**: Your account is identified as an **Admin** or **Administrator** account. Continue with the local setup.
-   - **NO GO**: Your account is a **Standard** account, or your Mac is managed and does not allow software installation.
+   - **GO**: Your account is an **Administrator** account, which may be shown as **Admin**. Continue with the local setup.
 
-   **Recommendation**: Ask the Mac owner or administrator whether they can authorize the required installations. Otherwise, use the CVD.
+   - **NO GO**: Your account is a **Standard** account, or the Mac is managed by an organization that restricts software installation or administrator-level changes.
 
-4. Confirm that the Mac is connected to the internet and has at least 5 GB of available storage.
+   > [!IMPORTANT]
+   > The account used for the IT 140 setup must be an Administrator account. Knowing the password for a different administrator account is not sufficient.
 
-   To check storage, open **System Settings**, select **General**, and then select **Storage**.
+   **Recommendation**: Ask the Mac owner or IT administrator whether they can make the account you will use for IT 140 an Administrator and permit the required software installations. Do not attempt to bypass management restrictions. Otherwise, use the CVD.
+
+4. Confirm that the Mac is connected to the internet and has at least 5 GB of available storage. To check storage, open **System Settings**, select **General**, and then select **Storage**.
 
 ## 1. Back Up Your Mac
 
@@ -60,7 +62,34 @@ This step is optional, but highly recommended. Before installing software, make 
 
 ## 2. Update the Operating System
 
-{{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating macOS.}}
+Before installing the course IDE, install current macOS and security updates. The update process may take several minutes and may restart the Mac more than once.
+
+1. Save your work and close any open applications.
+
+2. If you are using a MacBook, connect it to power. Keep the Mac connected to the internet throughout the update.
+
+3. Open the **Apple menu**, select **System Settings**, select **General**, and then select **Software Update**.
+
+4. Wait while the Mac checks for available software.
+
+5. Follow the instruction that applies:
+
+   - **Update available**: Select **Update Now** or **Restart Now**, and then follow the on-screen instructions.
+
+   - **Mac is up to date**: Continue to Step 7.
+
+   - **Major macOS upgrade available**: If the Mac is already running macOS 14 Sonoma, macOS 15 Sequoia, or macOS 26 Tahoe, you do not need to install a major release upgrade (e.g., macOS 15 Sequoia to macOS 26 Tahoe). Just install any available updates for your current macOS release instead.
+
+   - **Unsupported macOS version**: If the Mac is running a version earlier than macOS 14 Sonoma, install the latest compatible macOS upgrade offered by Software Update.
+
+   > [!IMPORTANT]
+   > Do not install a beta version of macOS. If **Beta Updates** appears in Software Update, make sure it is set to **Off**.
+
+6. Enter the administrator password when prompted. Allow the update to finish without shutting down the Mac, closing its lid, or disconnecting it from power. The screen may become blank and the Mac may restart several times.
+
+7. Sign back in to the account that you will use for IT 140.
+
+8. Return to **System Settings** > **General** > **Software Update**. Install any remaining updates and repeat this check until the Mac reports that it is up to date.
 
 After updating macOS, restart the Mac if prompted. Sign back in to the account that you will use for IT 140 before continuing.
 
@@ -77,7 +106,66 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 4. Using your pointing device, click the **Copy** button in the top-right corner of the code block below.
 
    ```zsh
-   {{SME TODO: Replace with the current actual code block for the bootstrap commands. The following is functional but outdated.}}
+   set -euo pipefail
+   readonly ARTIFACT_VERSION="0.5.3"
+   readonly VERSION_DATE="2026-07-30"
+   readonly COURSE_ROOT="${HOME}/it140"
+   readonly SCRIPT_DIR="${COURSE_ROOT}/scripts/mac"
+   readonly ARCHIVE_URL="https://github.com/GC-STEM/it140/archive/refs/heads/main.zip"
+   readonly TEMP_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/it140-bootstrap.XXXXXX")"
+   readonly ARCHIVE_PATH="${TEMP_ROOT}/it140-main.zip"
+   readonly EXTRACT_ROOT="${TEMP_ROOT}/extract"
+   cleanup() {
+      set +e
+      [ -d "$TEMP_ROOT" ] && [ ! -L "$TEMP_ROOT" ] && rm -rf -- "$TEMP_ROOT"
+   }
+   trap cleanup EXIT INT TERM
+   [ "$(uname -s)" = "Darwin" ] || {
+      printf '[ERROR] This bootstrap supports macOS only.\n' >&2
+      exit 2
+   }
+   [ "$(id -u)" -ne 0 ] || {
+      printf '[ERROR] Do not run this bootstrap with sudo or as root.\n' >&2
+      exit 3
+   }
+   mkdir -p -- "$COURSE_ROOT/logs" "$EXTRACT_ROOT"
+   chmod -- 0700 "$COURSE_ROOT/logs"
+   LOG_FILE="$COURSE_ROOT/logs/prepare_ide_$(date +%Y%m%d_%H%M%S).log"
+   exec > >(tee -a "$LOG_FILE") 2>&1
+   printf '\n============================================================\n'
+   printf 'IT 140 macOS BOOTSTRAP\n'
+   printf '============================================================\n'
+   printf '[INFO] Artifact version : %s\n' "$ARTIFACT_VERSION"
+   printf '[INFO] Version date     : %s\n' "$VERSION_DATE"
+   printf '[INFO] Current user     : %s\n' "$(id -un)"
+   printf '[INFO] Log file         : %s\n' "$LOG_FILE"
+   /usr/bin/curl --fail --location --show-error --retry 5 --retry-delay 5 \
+      "$ARCHIVE_URL" --output "$ARCHIVE_PATH"
+   /usr/bin/ditto -x -k "$ARCHIVE_PATH" "$EXTRACT_ROOT"
+   SOURCE_ROOT=""
+   for candidate in "$EXTRACT_ROOT"/it140-*; do
+      [ -f "$candidate/scripts/mac/install_ide.zsh" ] && SOURCE_ROOT="$candidate" && break
+   done
+   [ -n "$SOURCE_ROOT" ] || {
+      printf '[ERROR] The downloaded archive does not contain install_ide.zsh.\n' >&2
+      exit 4
+   }
+   /usr/bin/ditto "$SOURCE_ROOT" "$COURSE_ROOT"
+   rm -rf -- "$COURSE_ROOT/.git"
+   chmod -- 0755 "$SCRIPT_DIR"/*.sh
+   readonly SHELL_STARTUP_FILE="$HOME/.zshrc"
+   readonly PATH_LINE="export PATH=\"\$HOME/it140/scripts/mac:\$PATH\""
+   grep -qxF "$PATH_LINE" "$SHELL_STARTUP_FILE" 2>/dev/null || printf '\n%s\n' "$PATH_LINE" >> "$SHELL_STARTUP_FILE"
+   case ":$PATH:" in
+      *":$SCRIPT_DIR:"*) ;;
+      *) export PATH="$SCRIPT_DIR:$PATH" ;;
+   esac
+   hash -r
+   printf '[SUCCESS] The current IT 140 course package is available at:\n'
+   printf '[SUCCESS] %s\n' "$COURSE_ROOT"
+   printf '[NOTICE] Next step: cd ~/it140/scripts/mac && ./install_ide.zsh\n'
+   printf '[NOTICE] Bootstrap log: %s\n' "$LOG_FILE"
+
    ```
 
 5. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
@@ -98,8 +186,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 2. Copy the following commands.
 
    ```zsh
-   cd "$HOME/it140/scripts/mac"
-   ./setup_mac.sh
+   "$HOME/it140/scripts/mac/install_ide.zsh"
    ```
 
 3. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
@@ -127,8 +214,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 2. Copy the following commands.
 
    ```zsh
-   cd "$HOME/it140/scripts/mac"
-   ./config_mac.sh
+   "$HOME/it140/scripts/mac/configure_ide.zsh"
    ```
 
 3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
@@ -151,8 +237,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 2. Copy the following commands.
 
    ```zsh
-   cd "$HOME/it140/scripts/mac"
-   ./verify_mac.sh
+   "$HOME/it140/scripts/mac/verify_ide.zsh"
    ```
 
 3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
@@ -163,7 +248,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 
    - **PASS**: Continue to Step 7.
    - **PASS WITH WARNINGS**: Review each warning and any recommended action before continuing.
-   - **FAIL**: Follow the remediation instructions in the summary, and then run `verify_mac.sh` again.
+   - **FAIL**: Follow the remediation instructions in the summary, and then run `verify_ide.zsh` again.
 
 6. The script saves its log in `~/it140/logs/`.
 
@@ -198,7 +283,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
    3. Select **Keep in Dock**.
 
 > [!IMPORTANT]
-> Use `update_mac.sh` for periodic maintenance of the course IDE instead of updating its managed components individually. Save current course work to GitHub or another backup location before running an update.
+> Use `update_ide.zsh` for periodic maintenance of the course IDE instead of updating its managed components individually. Save current course work to GitHub or another backup location before running an update.
 
 ## 8. Periodic Updates to the Course IDE
 
