@@ -195,16 +195,18 @@ To complete CVD configuration, you will need the following:
 
    ![Update Summary in CVD Terminal](./assets/32_cvd_terminal_update_success.png)
 
-   <!--SME TODO: Add what to do if Result is not PASS or Failures is not 0.-->
+   {{SME TODO: Add what to do if Result is not PASS or Failures is not 0.}}
 
 4. Close the terminal window by typing `exit` and pressing **Enter**.
 
 5. If a VM restart is required:
 
    1. Save any open work and close all windows in the CVD.
-   2. Click **RESTART VM** on the VM tab menu bar.  
-      ![Restart VM Button in CVD](./assets/33_cvd_restart_vm.png)
-   3. Wait for the CVD to restart and reconnect. This may take a few minutes.
+   2. If you are in full screen mode, exit full screen mode by clicking the **Full Screen** button in the noVNC control bar.
+   3. In the upper-left corner of the VM tab, click **RESTART VM** on the VM tab menu bar.  
+      ![Restart VM Button in CVD](./assets/33_cvd_vm_restart.png)
+   4. If prompted, click **YES** to confirm that you want to restart the VM.
+   5. Wait for the CVD to restart and reconnect. This may take a few minutes.
 
    > 💡 *TIP*. If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes.
 
@@ -214,7 +216,7 @@ To complete CVD configuration, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
-2. Type `config_ide.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script. *Interactive* means you will be prompted to provide input to the script during the configuration process.
+2. Type `configure_ide.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script. *Interactive* means you will be prompted to provide input to the script during the configuration process.
 
 3. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -256,25 +258,20 @@ To complete CVD configuration, you will need the following:
 
 6. Click the **Get Started** button.
 
-7. Open the `it140` course repository by folder.
-   1. Click the **Open Folder...** link. If you do not see the **Open Folder...** link, click **File** > **Open Folder...** from the VS Code menu bar.
-   2. In the **Open Folder** popup window, click once on the `it140` folder. Click the **Select** button to open the folder in VS Code.
-   3. Wait for the `it140` folder to open in VS Code. You should see the folder name in the Explorer pane on the left side of the VS Code window.
-   4. Look for a popup message just below the VS Code main menu that says something about "Restricted Model" and click the **Manage** button.
-   5. In the popup message, click the **Trust** button or press **Ctrl** + **Enter**.
-   6. Close the **Workspace Trust** popup message by clicking the **X** in the upper-right corner of the message.
+7. In the popup message, click the **Trust** button or press **Ctrl** + **Enter**.
+8. Close the **Workspace Trust** popup message by clicking the **X** in the upper-right corner of the message.
 
-8. Optional: If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
+9. Optional: If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
    1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
    2. De-select any settings you do not want to synchronize between the CVD and your local course IDE. We recommend synchronizing all settings, but you may choose to exclude some if you prefer different settings in the CVD and your local course IDE.
    3. Click the **Sign in** button and select **Sign in with GitHub**.
    4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
 
-9. Optional: If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
+10. Optional: If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
 
    > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_ide.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 
-10. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
+11. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
 
 ## 7. Verify the CVD
 

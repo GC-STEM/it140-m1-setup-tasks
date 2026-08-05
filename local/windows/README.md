@@ -171,7 +171,7 @@ Click the **OK** button.
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\config_win.ps1
+   .\configure_win.ps1
 
    ```
 

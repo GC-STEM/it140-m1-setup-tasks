@@ -180,8 +180,8 @@ done
 
 echo "Configuring the course panel..."
 PANEL_CHANNEL="xfce4-panel"
-PANEL_CONFIG_DIR="$HOME/.config/xfce4/panel"
-mkdir -p "$PANEL_CONFIG_DIR"
+PANEL_configure_DIR="$HOME/.config/xfce4/panel"
+mkdir -p "$PANEL_configure_DIR"
 
 set_xfconf_string() {
     local property="$1"
@@ -260,7 +260,7 @@ if [[ -z "$COURSE_PANEL_ID" ]]; then
 fi
 
 # Reuse the prior VS Code launcher plugin on repeated runs, or allocate a new ID.
-VSCODE_PLUGIN_MARKER="$PANEL_CONFIG_DIR/it140-vscode-plugin-id"
+VSCODE_PLUGIN_MARKER="$PANEL_configure_DIR/it140-vscode-plugin-id"
 VSCODE_PLUGIN_ID=""
 
 if [[ -s "$VSCODE_PLUGIN_MARKER" ]]; then
@@ -296,7 +296,7 @@ if [[ -z "$VSCODE_PLUGIN_ID" ]]; then
 fi
 
 VSCODE_LAUNCHER_NAME="it140-vscode.desktop"
-VSCODE_LAUNCHER_DIR="$PANEL_CONFIG_DIR/launcher-$VSCODE_PLUGIN_ID"
+VSCODE_LAUNCHER_DIR="$PANEL_configure_DIR/launcher-$VSCODE_PLUGIN_ID"
 mkdir -p "$VSCODE_LAUNCHER_DIR"
 install -m 0644 \
     /usr/share/applications/code.desktop \
