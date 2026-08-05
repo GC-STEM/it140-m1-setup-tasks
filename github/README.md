@@ -8,7 +8,7 @@
   - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
-  - [3. Configure Your GitHub Profile (Optional)](#3-configure-your-github-profile-optional)
+  - [3. Make Your GitHub Profile Private](#3-make-your-github-profile-private)
   - [Next Step](#next-step)
   - [Troubleshooting](#troubleshooting)
 
@@ -87,9 +87,9 @@ You may use the same 2FA method that you use for your SNHU account, such as an a
 
 7. Optional: Add a passkey if your device and browser support one.
 
-## 3. Configure Your GitHub Profile (Optional)
+## 3. Make Your GitHub Profile Private
 
-If desired, you can make your GitHub profile private or add an avatar, bio, and other information. You can always change your profile settings later. To configure your GitHub profile, follow the instructions below.
+If desired, you can make your GitHub profile private or personalize it. You can always change your profile settings later. To configure your GitHub profile, follow the instructions below.
 
 1. Go to [https://github.com/settings/profile](https://github.com/settings/profile).
 
@@ -100,7 +100,10 @@ If desired, you can make your GitHub profile private or add an avatar, bio, and 
    2. Check the **Make profile private and hide activity** option.
    3. Click the **Update preferences** button to save your changes.
 
-4. Add or change other profile information as desired.
+4. Add or change other profile information as desired. For example, you can
+   - Add an avatar image;
+   - Include a bio;
+   - Add links to social media profiles
 
 5. Click the **Update profile** button when done to save your changes.
 

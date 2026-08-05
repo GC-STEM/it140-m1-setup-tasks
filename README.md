@@ -134,6 +134,37 @@ A command line interface (CLI) is a text-based way to use your computer by typin
 
 Some setup commands create transcript or log files. These files record what happened during setup and can help technical support troubleshoot the issue. If a log file was created, include it when asking for help.
 
+### Check for a Reported Solution
+
+Another student may have already experienced and resolved the same problem.
+
+Before requesting help:
+
+1. Search your section’s **General Questions** discussion topic.
+2. Search the main course repository’s **Discussions** tab.
+3. Look for posts containing the name of the script, application, error message, or task that caused the problem.
+4. Follow solutions posted or confirmed by course faculty or technical support.
+
+If you do not find a solution, create a new post in the General Questions topic or the appropriate GitHub Discussion. Include:
+
+- What you were trying to do
+- The platform you were using, such as the Codio Virtual Desktop, Windows, or macOS
+- The script, application, or course task involved
+- The exact error message or unexpected behavior
+- The troubleshooting actions you already tried
+- Whether those actions changed the result
+- A screenshot or the relevant portion of the log, when available
+
+Use a clear title that describes the problem. For example:
+
+```text
+CVD update_ide.sh stops during Ubuntu package download
+```
+
+Do not post passwords, authentication codes, access tokens, student identification numbers, personal contact information, or other private information. Review screenshots and log excerpts before posting them. Do not post complete solutions to graded assignments.
+
+After your problem is resolved, reply to your original post with the solution or identify the response that solved it. This helps other students who encounter the same problem.
+
 ### Artificial Intelligence (AI)
 
 You may use an AI assistant to help troubleshoot technical issues. AI can help explain error messages, suggest next steps, or help you understand what a command is doing.
