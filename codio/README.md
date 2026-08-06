@@ -304,7 +304,7 @@ To complete CVD configuration, you will need the following:
 
 9. Close the **Workspace Trust** popup message by clicking the **X** in the upper-right corner of the message.
 
-10. Optional: If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
+10. *Optional*. If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
 
     1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
 
@@ -313,7 +313,7 @@ To complete CVD configuration, you will need the following:
 
     4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
 
-11. Optional: If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
+11. *Optional*. If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
 
    > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_ide.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 

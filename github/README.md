@@ -16,7 +16,7 @@
 
 **[Git](https://git-scm.com/)** is a version control system included in the course integrated development environment (IDE). Git allows developers to track changes to project files, restore earlier versions, and maintain a history of their work. It also supports multiple developers working on the same project without overwriting each other’s changes. Employers consider Git a foundational skill for entry-level software developers [[1](https://doi.org/10.1109/ESEM64174.2025.00055)].
 
-**[GitHub](https://github.com/)**, which is owned by Microsoft, is a widely used web-based platform for storing and sharing Git repositories, reviewing changes, and collaborating on software projects. A repository, or repo, is a folder that stores project files and their change history. In a recent survey, developers ranked GitHub as the most admired community platform and the most desired code documentation and collaboration tool [[2](https://survey.stackoverflow.co/2025/technology#2-community-platforms), [3](https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools)]. This course uses GitHub to host its code repositories.
+**[GitHub](https://github.com/)**, which is owned by Microsoft, is a widely used web-based platform for storing and sharing Git repositories, reviewing changes, and collaborating on software projects. A repository, or "repo", is a folder that stores project files and their change history. In a recent survey, developers ranked GitHub as the most admired community platform and the most desired code documentation and collaboration tool [[2](https://survey.stackoverflow.co/2025/technology#2-community-platforms), [3](https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools)]. This course uses GitHub to host its code repositories.
 
 National job-posting data identifies both Git and GitHub as in-demand technologies for software-development positions [[4](https://www.onetonline.org/link/demand/15-1252.00)]. IT 140 introduces these tools so students can learn to organize, track, and manage programming projects. These skills support both course work and future professional use.
 
@@ -27,32 +27,34 @@ If you already have a GitHub account that you want to use for this course, skip 
 1. Go to [https://github.com/signup](https://github.com/signup).
 
 2. Select a sign-up method:
-   - Continue with Google
-   - Continue with Apple
+   - **Continue with Google** and follow prompts
+   - **Continue with Apple** and follow prompts
    - Manually enter your information:
-     - Use a personal email address. Do **NOT** use your SNHU account credentials here.
-     - Select a [professional username](github_username.md).
+     - Use a personal email address. Do **NOT** use your SNHU email or password here.
+     - Select a professional username. For guidance, see [github_username.md](github_username.md).
 
-3. Leave optional checkboxes unchecked for increased privacy and security.
+3. Check or uncheck optional checkboxes, as desired. You do not need to check any of the optional boxes for this course.
 
-4. Review GitHub’s *Terms of Service* and *Privacy Statement*, if desired.
+4. Review GitHub’s *Terms of Service* and *Privacy Statement*, if desired. An AI chatbot can help you understand these documents.
 
 5. Click the **Create account** button.
 
 6. Check your email for a verification message from GitHub.
 
-7. Follow the instructions in the email to complete the sign-up process.
+7. Follow the instructions in the verification email to complete the sign-up process.
 
 ## 1. Configure Your GitHub Email Addresses
 
 1. Go to [https://github.com/settings/emails](https://github.com/settings/emails).
 
-2. Sign in using the method you configured when creating your account.
+2. Sign in using the method you used when creating your GitHub account.
 
 3. In the **Add email address** field, enter your SNHU email address and click **Add**.
-   - Optional: Add another personal email address as a backup.
+   - *Optional*. Add other personal email addresses as backups, if desired.
 
-4. Check your SNHU email for a verification message from GitHub.
+   ![GitHub Email configuration page](./assets/04_github_email_add.png)
+
+4. Check your SNHU email Inbox for a verification message from GitHub. If you do not see the message, check your Junk or Spam folder.
 
 5. Follow the instructions in the email to verify the address.
 
@@ -66,9 +68,9 @@ If you already have a GitHub account that you want to use for this course, skip 
 
 ## 2. Secure Your GitHub Account
 
-GitHub requires users who contribute code to configure [two-factor authentication](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/about-mandatory-two-factor-authentication) (2FA). Two-factor authentication requires an additional form of verification when you sign in and helps protect your account if someone obtains your password.
+GitHub requires users who contribute code to configure [two-factor authentication](https://docs.github.com/authentication/securing-your-account-with-two-factor-authentication-2fa/about-two-factor-authentication) (2FA). Two-factor authentication requires an additional form of verification when you sign in and helps protect your account if someone obtains your password.
 
-You may use the same 2FA method that you use for your SNHU account, such as an authenticator app, if GitHub supports it. Your GitHub and SNHU accounts remain separate; do not use your SNHU password for GitHub.
+You may use the same 2FA method that you use for your SNHU account, such as [Microsoft Authenticator](https://www.microsoft.com/en-us/security/mobile-authenticator-app). Your GitHub and SNHU accounts remain separate; do not use your SNHU password for GitHub.
 
 1. Go to [https://github.com/settings/security](https://github.com/settings/security).
 
@@ -85,7 +87,7 @@ You may use the same 2FA method that you use for your SNHU account, such as an a
 
 6. Do not share your password, authentication codes, or recovery codes with anyone.
 
-7. Optional: Add a passkey if your device and browser support one.
+7. *Optional*. Add a passkey if your device and browser support one.
 
 ## 3. Make Your GitHub Profile Private
 
