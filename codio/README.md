@@ -202,15 +202,15 @@ To complete CVD configuration, you will need the following:
 5. If a VM restart is required:
 
    1. Save any open work and close all windows in the CVD.
+
    2. If you are in full screen mode, exit full screen mode by clicking the **Full Screen** button in the noVNC control bar.
    3. In the upper-left corner of the VM tab, click **RESTART VM** on the VM tab menu bar.  
-      ![Restart VM Button in CVD](./assets/33_cvd_vm_restart.png)
+
    4. If prompted, click **YES** to confirm that you want to restart the VM.
+
    5. Wait for the CVD to restart and reconnect. This may take a few minutes.
 
    > 💡 *TIP*. If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes.
-
-6. Continue to the next section, **[Configure the CVD](#4-configure-the-cvd)**.
 
 ## 4. Configure the CVD
 
@@ -218,7 +218,11 @@ To complete CVD configuration, you will need the following:
 
 2. Type `configure_ide.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script. *Interactive* means you will be prompted to provide input to the script during the configuration process.
 
-3. Close the terminal window by typing `exit` and pressing **Enter**.
+   ![Configure IDE Script in CVD Terminal](./assets/41_cvd_terminal_configure.png)
+
+3. Review the output of the configuration script to ensure that all checks passed successfully. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the setup and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
+
+4. Close the terminal window by typing `exit` and pressing **Enter**.
 
 ## 5. Sign into Cloud Storage Services (Optional)
 
@@ -227,15 +231,31 @@ To complete CVD configuration, you will need the following:
 2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
 
 3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+
    1. Enter your SNHU email address and click **Next**.
+
+      ![OneDrive Sign In - Enter username](./assets/51_cvd_onedrive_signin.png)
+
    2. Enter your SNHU password and click **Sign in**.
-   3. If you see an **Install** button on the browser address bar, click it to install the OneDrive desktop app. It makes it easier to access your OneDrive files in the CVD. If you do not see an **Install** button, you can skip this step.
-   4. If prompted to Keep OneDrive fully optimized, click **Allow** to allow OneDrive to local devices.
+
+      ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png)
+
+   3. Once signed in, you should see a web page that looks similar to the following.
+
+      ![OneDrive Sign In - Install OneDrive](./assets/53_cvd_onedrive_webpage.png)
+
+   4. If you see an **Install** button on the browser address bar near the upper-right, click it to install the OneDrive desktop app. If prompted to **Install app**, click **Install**. If you do not see an **Install** button, skip this step.
+
+      ![OneDrive Sign In - Install OneDrive](./assets/54_cvd_onedrive_install.png)
+
+   5. If you see a prompt to **Keep OneDrive fully optimized**, click **Allow** to allow OneDrive to access local devices. If prompted to allow SharePoint to access other apps on and services on this device, click **Allow**. If you do not see this prompt, skip this step.
+
+      ![OneDrive Sign In](./assets/55_cvd_onedrive_allow_sharepoint.png)
 
 4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
 
 > [!NOTE]
-> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this message, click **Launch Anyway**.
+> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this message, click **Make Executable**.
 
 ## 6. Configure Visual Studio Code in the CVD
 
