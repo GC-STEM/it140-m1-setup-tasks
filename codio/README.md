@@ -90,9 +90,13 @@ To complete CVD configuration, you will need the following:
    ![IT 140 Codio Virtual Desktop](./assets/12_cvd_it140_fresh_desktop.png)
 
 9. Expand the Codio Virtual Desktop (CVD) window to full screen for a better view of the CVD desktop.
+
    1. Click the Hide/Show button for the noVNC control bar on the middle left side of the CVD window.
+
    2. Click the middle **Full Screen** button the noVNC control bar to expand the CVD window to full screen.
+
    3. Click the **Full Screen** button again to exit full screen mode.
+
    4. Use the screen size which you prefer. You can always change it later.
 
    ![Codio Virtual Desktop noVNC control menu](./assets/13_cvd_it140_novnc_menu.png)
@@ -154,6 +158,7 @@ To complete CVD configuration, you will need the following:
    ```
 
 3. In the CVD terminal window, right-click at the end of the command prompt and select **Paste** from the popup menu.
+
    - Do NOT use keyboard shortcuts. If you use keyboard shortcuts (e.g., **Ctrl** + **V**), you will introduce unwanted characters into the command and it will not work.
 
    ![Paste Commands into CVD Terminal](./assets/23_cvd_terminal_paste.png)
@@ -167,12 +172,19 @@ To complete CVD configuration, you will need the following:
    ![Run Commands in CVD Terminal](./assets/25_cvd_terminal_pasted.png)
 
 6. Review the output of the commands in the terminal window.
+
    - If you see a `SUCCESS` message, congratulations! Follow the `Next step` instructions in the message.
-   ![Success Message in CVD Terminal](./assets/26_cvd_terminal_bootstrap_success.png)
+
+      ![Success Message in CVD Terminal](./assets/26_cvd_terminal_bootstrap_success.png)
+
    - If the terminal window closes unexpectedly, reopen it and repeat Steps 2-6 again making sure you copy and paste the entire command set.
+
    - If you see an `ERROR` message, repeat Steps 2-6 making sure you copy and paste the entire command set.
+
    - If you still see an `ERROR` message, follow the instructions in the message and the [Troubleshooting](#troubleshooting) section below to resolve the issue.  
-   ![Error Message in CVD Terminal](./assets/27_cvd_terminal_bootstrap_error.png)
+
+      ![Error Message in CVD Terminal](./assets/27_cvd_terminal_bootstrap_error.png)
+
    - *Note*. A log file was created in your `it140/logs/` folder. If you encounter problems with the CVD, you may be asked to provide the log file to instructor or technical support for troubleshooting.
 
 7. Close the terminal window by typing `exit` and pressing **Enter**. You must close the terminal window and open a new one before running the update script in the next step.
@@ -189,8 +201,11 @@ To complete CVD configuration, you will need the following:
    ![Update IDE Script in CVD Terminal](./assets/31_cvd_terminal_update.png)
 
 3. Review the **Update Summary**:
+
    - Confirm that **Result** is `PASS`.
+
    - Confirm that **Failures** is `0`.
+
    - Check the notices to determine whether a VM restart is required.
 
    ![Update Summary in CVD Terminal](./assets/32_cvd_terminal_update_success.png)
@@ -204,6 +219,7 @@ To complete CVD configuration, you will need the following:
    1. Save any open work and close all windows in the CVD.
 
    2. If you are in full screen mode, exit full screen mode by clicking the **Full Screen** button in the noVNC control bar.
+
    3. In the upper-left corner of the VM tab, click **RESTART VM** on the VM tab menu bar.  
 
    4. If prompted, click **YES** to confirm that you want to restart the VM.
@@ -255,43 +271,53 @@ To complete CVD configuration, you will need the following:
 4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
 
 > [!NOTE]
-> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this message, click **Make Executable**.
+> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this window, click **Make Executable**.
+>
+> ![Untrusted Application Launcher Warning](./assets/56_cvd_untrusted_app_launcher.png)
 
 ## 6. Configure Visual Studio Code in the CVD
 
 1. Double-click on the **Visual Studio Code** icon on the CVD desktop.
 
-2. Sign into VS Code using one of the following methods:
-   - **Continue with GitHub** (highly recommended)
-   - **Sign in with Google** (click on **G** icon)
-   - **Sign in with Apple** (click on Apple icon)
-   - **Continue without Signing in**
+2. The first time you click on the Visual Studio Code icon, you may see an **Untrusted application launcher** warning. If you see this window, click **Make Executable**.
+
+   ![Untrusted Application Launcher Warning](./assets/61_cvd_vsc_launcher_warning.png)
+
+3. If you see the **Welcome to Visual Studio Code** page, click the **Continue with GitHub** button.
+
+   ![Welcome to Visual Studio Code](./assets/62_cvd_vsc_welcome.png)
 
    > [!NOTE]
    > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar. If there is no **Sign in** button, you are likely already signed in.
 
-3. If prompted to "Authorize Visual Studio Code", click **Continue**.
+4. If prompted to "Authorize Visual Studio Code", click **Continue**.
 
-4. If prompted, **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open** button.
+5. If prompted to **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open** button.
 
-5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer. Just keep in mind that screenshots and videos may look different than your VS Code environment if you choose a different theme.
+   ![Open xdg-open](./assets/65_cvd_vsc_open_xdg.png)
 
-6. Click the **Get Started** button.
+6. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer. Just keep in mind that screenshots and videos may look different than your VS Code environment if you choose a different theme.
 
-7. In the popup message, click the **Trust** button or press **Ctrl** + **Enter**.
-8. Close the **Workspace Trust** popup message by clicking the **X** in the upper-right corner of the message.
+7. Click the **Get Started** button.
 
-9. Optional: If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
-   1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
-   2. De-select any settings you do not want to synchronize between the CVD and your local course IDE. We recommend synchronizing all settings, but you may choose to exclude some if you prefer different settings in the CVD and your local course IDE.
-   3. Click the **Sign in** button and select **Sign in with GitHub**.
-   4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
+8. In the popup message, click the **Trust** button or press **Ctrl** + **Enter**.
 
-10. Optional: If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
+9. Close the **Workspace Trust** popup message by clicking the **X** in the upper-right corner of the message.
+
+10. Optional: If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
+
+    1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
+
+    2. De-select any settings you do not want to synchronize between the CVD and your local course IDE. We recommend synchronizing all settings, but you may choose to exclude some if you prefer different settings in the CVD and your local course IDE.
+    3. Click the **Sign in** button and select **Sign in with GitHub**.
+
+    4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
+
+11. Optional: If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
 
    > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_ide.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 
-11. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
+12. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
 
 ## 7. Verify the CVD
 
