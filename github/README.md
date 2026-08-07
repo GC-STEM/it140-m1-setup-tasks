@@ -28,8 +28,8 @@ If you already have a GitHub account that you want to use for this course, skip 
 1. Go to [https://github.com/signup](https://github.com/signup).
 
 2. Manually enter your email address and password.:
-     - **Students**: Use a personal email address. Do **NOT** use your SNHU email or password here.
-     - **Faculty and Staff**: Use your SNHU email address. Do **NOT** use your SNHU password here.
+   - **Students**: Use a personal email address. Do **NOT** use your SNHU email or password here.
+   - **Faculty and Staff**: Use your SNHU email address. Do **NOT** use your SNHU password here.
 
 3. Enter a professional username. For guidance on selecting a professional username, see [github_username.md](github_username.md).
 
