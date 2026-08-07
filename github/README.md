@@ -84,8 +84,7 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 5. Store your recovery codes in a secure location separate from the device you normally use to sign in.
 
-   > [!IMPORTANT]
-   > Recovery codes can help you regain access to your account if you lose access to your normal authentication method. Store them securely. Do not save your only copy on a device that could be lost or damaged.
+   *Important*. Recovery codes can help you regain access to your account if you lose access to your normal authentication method. Store them securely. Do not save your only copy on a device that could be lost or damaged.
 
 6. Do not share your password, authentication codes, or recovery codes with anyone.
 
