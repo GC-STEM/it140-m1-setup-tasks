@@ -116,8 +116,8 @@ To complete CVD configuration, you will need the following:
    ```bash
    (
    set -Eeuo pipefail
-   version="0.5.1"
-   version_dtg="2026-08-01-11-06"
+   version="0.5.2"
+   version_dtg="2026-08-01-12-44"
    course_root="$HOME/it140"
    log_dir="$course_root/logs"
    archive_url="https://github.com/GC-STEM/it140/archive/refs/heads/main.tar.gz"
