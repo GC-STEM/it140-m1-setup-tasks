@@ -196,7 +196,7 @@ To complete CVD configuration, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
-2. Type `update_it140.sh` in the terminal window and press **Enter** to run the automated update script. Be patient. The update may take several minutes to complete.
+2. Type `update_it140.sh` in the terminal window and press **Enter** to run the automated update script. Be patient. The update may take 5 to 30 minutes to complete.
 
    ![Update IDE Script in CVD Terminal](./assets/31_cvd_terminal_update.png)
 
@@ -234,11 +234,66 @@ To complete CVD configuration, you will need the following:
 
 2. Type `configure_it140.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script. *Interactive* means you will be prompted to provide input to the script during the configuration process.
 
-   ![Configure IDE Script in CVD Terminal](./assets/41_cvd_terminal_configure.png)
+   ![Configure IDE Script in CVD Terminal](./assets/42_cvd_terminal_configure1.png)
 
-3. Review the output of the configuration script to ensure that all checks passed successfully. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the setup and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
+3. Press **Enter** again to start GitHub authentication. Type **C** to cancel.
 
-4. Close the terminal window by typing `exit` and pressing **Enter**.
+   ![Configure IDE Script in CVD Terminal](./assets/43_cvd_terminal_gh_auth1.png)
+
+4. Right-click on the URL provided in the terminal window and select **Open Link** from the popup menu. This will open a new browser tab to authenticate your GitHub account.
+
+   ![Open Link in Browser](./assets/44_cvd_terminal_gh_auth2.png)
+
+5. Sign into GitHub using your GitHub credentials or continue with Google or Apple, if you linked one of those accounts to your GitHub account.
+
+   ![Sign into GitHub](./assets/45_cvd_terminal_gh_signin.png)
+
+   *Note*. If desired, you may sign into Google Chrome using your Google credentials to synchronize your Google account settings, passwords, bookmarks, and extensions with the CVD.
+
+6. **Optional**. If desired, you may save your password by signing into Google Chrome using your Google credentials. If not, you may skip this step.
+
+   ![Configure IDE Script in CVD Terminal](./assets/46_cvd_terminal_gh_save_password.png)
+
+7. Click the **Continue** button to continue with the GitHub Device Activation process.
+
+   ![GitHub Device Activation](./assets/47_cvd_terminal_gh_device_activation.png)
+
+8. Right-click in the browser window and select **Paste** from the popup menu to paste the device code provided in the terminal window. Then click **Continue**.
+
+   ![GitHub Device Activation](./assets/48_cvd_terminal_gh_authorize_device_code.png)
+
+   *Note*. If the code does not paste, bring the terminal window to the front and note the code. Then, return to the browser window and manually type it in the provided fields.
+
+9. Click the **Authorize github** button to authorize the GitHub CLI to access your GitHub account.
+
+    ![Authorize GitHub CLI](./assets/49a_cvd_terminal_authorize_gh.png)
+
+   *Note*. If the GitHub Authentication process times-out or prematurely closes, the `configure_it140.sh` script will fail. You may see an error message similar to the one shown below. If this happens, simply re-run the `configure_it140.sh` script and try again.
+
+   ![Timeout Error](./assets/49_cvd_terminal_gh_authorize_timeout.png)
+
+   *Pro Tip*. Press the up arrow key in the terminal window to recall the last command you entered. This saves you from having to retype the command.
+
+10. Congratulations! You have successfully authorized the GitHub CLI to access your GitHub account. You may now close the browser tab and return to the CVD terminal window.
+
+    ![Authorize GitHub CLI](./assets/49b_cvd_terminal_gh_auth_congrats.png)
+
+11. The terminal window should now display your pre-configured Git commit name. If you wish to change it, just type the new name at the prompt. If you want to accept the pre-configured name, just press **Enter**.
+
+    ![Git Commit Name](./assets/49c_cvd_terminal_git_commit_name.png)
+
+12. Review the output of the configuration script to ensure that all checks passed successfully. Look for:
+
+    - **Result**: `PASS`
+    - **Warnings**: `0`
+    - **Failures**: `0`
+    - Success message near the end of the output.
+
+    ![Configure IDE Script in CVD Terminal](./assets/49f_cvd_terminal_git_commit_name.png)
+
+    *Note*. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the update and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
+
+13. Close the terminal window by typing `exit` and pressing **Enter**.
 
 ## 5. Sign into Cloud Storage Services (Optional)
 
