@@ -30,7 +30,7 @@ If you already have a GitHub account that you want to use for this course, skip 
    - **Continue with Google** and follow prompts
    - **Continue with Apple** and follow prompts
    - Manually enter your information:
-     - Use a personal email address. Do **NOT** use your SNHU email or password here.
+     - Students: Use a personal email address. Do **NOT** use your SNHU email or password here.
      - Select a professional username. For guidance, see [github_username.md](github_username.md).
 
 3. Check or uncheck optional checkboxes, as desired. You do not need to check any of the optional boxes for this course.
