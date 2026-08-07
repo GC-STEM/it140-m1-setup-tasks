@@ -142,7 +142,7 @@ To complete CVD configuration, you will need the following:
    tar -xzf "$archive_path" -C "$stage_root"
    source_root="$(find "$stage_root" -mindepth 1 -maxdepth 1 -type d -name 'it140-*' -print -quit)"
    [[ -n "$source_root" ]]
-   for script in prepare install configure verify update; do [[ -f "$source_root/scripts/cvd/${script}_ide.sh" ]]; done
+   for script in prepare install configure verify update; do [[ -f "$source_root/scripts/cvd/${script}_it140sh" ]]; done
    cp -a "$source_root/." "$course_root/"
    rm -rf -- "$course_root/.git"
    chmod +x "$course_root/scripts/cvd/"*.sh
@@ -196,7 +196,7 @@ To complete CVD configuration, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
-2. Type `update_ide.sh` in the terminal window and press **Enter** to run the automated update script. Be patient. The update may take several minutes to complete.
+2. Type `update_it140sh` in the terminal window and press **Enter** to run the automated update script. Be patient. The update may take several minutes to complete.
 
    ![Update IDE Script in CVD Terminal](./assets/31_cvd_terminal_update.png)
 
@@ -232,7 +232,7 @@ To complete CVD configuration, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
-2. Type `configure_ide.sh` in the terminal window and press **Enter** to configure the CVD with an interactive script. *Interactive* means you will be prompted to provide input to the script during the configuration process.
+2. Type `configure_it140sh` in the terminal window and press **Enter** to configure the CVD with an interactive script. *Interactive* means you will be prompted to provide input to the script during the configuration process.
 
    ![Configure IDE Script in CVD Terminal](./assets/41_cvd_terminal_configure.png)
 
@@ -315,7 +315,7 @@ To complete CVD configuration, you will need the following:
 
 11. *Optional*. If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
 
-   > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_ide.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
+   > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_it140sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 
 12. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
 
@@ -323,7 +323,7 @@ To complete CVD configuration, you will need the following:
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
-2. Type `verify_ide.sh` in the terminal window and press **Enter** to verify the CVD with an automated script.
+2. Type `verify_it140sh` in the terminal window and press **Enter** to verify the CVD with an automated script.
 
 3. Review the output of the verification script to ensure that all checks passed successfully.
 
@@ -386,7 +386,7 @@ If no new text appears for **30 consecutive minutes** **AND** the last line begi
 2. Wait for the script to stop and display its summary.
 3. Close the Terminal.
 4. Open a new Terminal.
-5. Run the update script again by typing `update_ide.sh` and pressing `Enter`.
+5. Run the update script again by typing `update_it140sh` and pressing `Enter`.
 
 > [!IMPORTANT]
 > Do not interrupt the script while the Terminal displays messages such as:
