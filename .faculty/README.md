@@ -70,7 +70,7 @@ As IT 140 faculty, you will need a GitHub account linked to your SNHU email addr
 
 It is also recommended that you set up the official course IDE on your local machine. Again, this will allow you to view course assignments and projects outside of the Codio Virtual Desktop (CVD) just as students will.
 
-If desired, you can install the course IDE on a local virtual machine (VM) instead of your host machine directly. 
+If desired, you can install the course IDE on a local virtual machine (VM) instead of your host machine directly.
 
 Follow the student-facing instructions in the appropriate local setup guide for your operating system:
 
