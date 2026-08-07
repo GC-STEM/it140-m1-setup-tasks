@@ -158,7 +158,7 @@ If you do not find a solution, create a new post in the General Questions topic 
 Use a clear title that describes the problem. For example:
 
 ```text
-CVD update_it140sh stops during Ubuntu package download
+CVD update_it140.sh stops during Ubuntu package download
 ```
 
 Do not post passwords, authentication codes, access tokens, student identification numbers, personal contact information, or other private information. Review screenshots and log excerpts before posting them. Do not post complete solutions to graded assignments.

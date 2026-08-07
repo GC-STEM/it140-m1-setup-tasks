@@ -144,10 +144,10 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
    /usr/bin/ditto -x -k "$ARCHIVE_PATH" "$EXTRACT_ROOT"
    SOURCE_ROOT=""
    for candidate in "$EXTRACT_ROOT"/it140-*; do
-      [ -f "$candidate/scripts/mac/install_it140zsh" ] && SOURCE_ROOT="$candidate" && break
+      [ -f "$candidate/scripts/mac/install_it140.zsh" ] && SOURCE_ROOT="$candidate" && break
    done
    [ -n "$SOURCE_ROOT" ] || {
-      printf '[ERROR] The downloaded archive does not contain install_it140zsh.\n' >&2
+      printf '[ERROR] The downloaded archive does not contain install_it140.zsh.\n' >&2
       exit 4
    }
    /usr/bin/ditto "$SOURCE_ROOT" "$COURSE_ROOT"
@@ -163,7 +163,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
    hash -r
    printf '[SUCCESS] The current IT 140 course package is available at:\n'
    printf '[SUCCESS] %s\n' "$COURSE_ROOT"
-   printf '[NOTICE] Next step: cd ~/it140/scripts/mac && ./install_it140zsh\n'
+   printf '[NOTICE] Next step: cd ~/it140/scripts/mac && ./install_it140.zsh\n'
    printf '[NOTICE] Bootstrap log: %s\n' "$LOG_FILE"
 
    ```
@@ -186,7 +186,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 2. Copy the following commands.
 
    ```zsh
-   "$HOME/it140/scripts/mac/install_it140zsh"
+   "$HOME/it140/scripts/mac/install_it140.zsh"
    ```
 
 3. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
@@ -214,7 +214,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 2. Copy the following commands.
 
    ```zsh
-   "$HOME/it140/scripts/mac/configure_it140zsh"
+   "$HOME/it140/scripts/mac/configure_it140.zsh"
    ```
 
 3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
@@ -237,7 +237,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 2. Copy the following commands.
 
    ```zsh
-   "$HOME/it140/scripts/mac/verify_it140zsh"
+   "$HOME/it140/scripts/mac/verify_it140.zsh"
    ```
 
 3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
@@ -248,7 +248,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
 
    - **PASS**: Continue to Step 7.
    - **PASS WITH WARNINGS**: Review each warning and any recommended action before continuing.
-   - **FAIL**: Follow the remediation instructions in the summary, and then run `verify_it140zsh` again.
+   - **FAIL**: Follow the remediation instructions in the summary, and then run `verify_it140.zsh` again.
 
 6. The script saves its log in `~/it140/logs/`.
 
@@ -283,7 +283,7 @@ After updating macOS, restart the Mac if prompted. Sign back in to the account t
    3. Select **Keep in Dock**.
 
 > [!IMPORTANT]
-> Use `update_it140zsh` for periodic maintenance of the course IDE instead of updating its managed components individually. Save current course work to GitHub or another backup location before running an update.
+> Use `update_it140.zsh` for periodic maintenance of the course IDE instead of updating its managed components individually. Save current course work to GitHub or another backup location before running an update.
 
 ## 8. Periodic Updates to the Course IDE
 
