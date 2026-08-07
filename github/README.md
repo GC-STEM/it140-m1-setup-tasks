@@ -49,12 +49,14 @@ If you already have a GitHub account that you want to use for this course, skip 
 
 2. Sign in using the method you used when creating your GitHub account.
 
-3. In the **Add email address** field, enter your SNHU email address and click **Add**.
-   - *Optional*. Add other personal email addresses as backups, if desired.
+3. In the **Add email address** field, enter another email address and click **Add**.
+   - **Students**: Add your SNHU email address to your GitHub account.
+   - **Faculty & Staff**: Add a personal address to your GitHub account.
+   - *Optional*. Add other personal email address(es) as backups, if desired.
 
    ![GitHub Email configuration page](./assets/04_github_email_add.png)
 
-4. Check your SNHU email Inbox for a verification message from GitHub. If you do not see the message, check your Junk or Spam folder.
+4. Check your added email Inbox(es) for a verification message from GitHub. If you do not see a message for each email address added, check your Junk or Spam folder.
 
 5. Follow the instructions in the email to verify the address.
 
