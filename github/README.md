@@ -8,7 +8,8 @@
   - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
-  - [3. Make Your GitHub Profile Private](#3-make-your-github-profile-private)
+  - [3. Customize Your GitHub Profile (Optional)](#3-customize-your-github-profile-optional)
+  - [4. Join GitHub Education (Optional)](#4-join-github-education-optional)
   - [Next Step](#next-step)
   - [Troubleshooting](#troubleshooting)
 
@@ -26,22 +27,21 @@ If you already have a GitHub account that you want to use for this course, skip 
 
 1. Go to [https://github.com/signup](https://github.com/signup).
 
-2. Select a sign-up method:
-   - **Continue with Google** and follow prompts
-   - **Continue with Apple** and follow prompts
-   - Manually enter your information:
-     - Students: Use a personal email address. Do **NOT** use your SNHU email or password here.
-     - Select a professional username. For guidance, see [github_username.md](github_username.md).
+2. Manually enter your email address and password.:
+     - **Students**: Use a personal email address. Do **NOT** use your SNHU email or password here.
+     - **Faculty and Staff**: Use your SNHU email address. Do **NOT** use your SNHU password here.
 
-3. Check or uncheck optional checkboxes, as desired. You do not need to check any of the optional boxes for this course.
+3. Enter a professional username. For guidance on selecting a professional username, see [github_username.md](github_username.md).
 
-4. Review GitHub’s *Terms of Service* and *Privacy Statement*, if desired. An AI chatbot can help you understand these documents.
+4. Check or uncheck optional checkboxes, as desired. You do not need to check any of the optional boxes for this course.
 
-5. Click the **Create account** button.
+5. Review GitHub’s *Terms of Service* and *Privacy Statement*, if desired. An AI chatbot can help you understand these documents.
 
-6. Check your email for a verification message from GitHub.
+6. Click the **Create account** button.
 
-7. Follow the instructions in the verification email to complete the sign-up process.
+7. Check your email for a verification message from GitHub.
+
+8. Follow the instructions in the verification email to complete the sign-up process.
 
 ## 1. Configure Your GitHub Email Addresses
 
@@ -89,7 +89,7 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 7. *Optional*. Add a passkey if your device and browser support one.
 
-## 3. Make Your GitHub Profile Private
+## 3. Customize Your GitHub Profile (Optional)
 
 If desired, you can make your GitHub profile private or personalize it. You can always change your profile settings later. To configure your GitHub profile, follow the instructions below.
 
@@ -97,7 +97,7 @@ If desired, you can make your GitHub profile private or personalize it. You can 
 
 2. Sign in, if not already.
 
-3. Make your profile private, if desired.
+3. Make your profile private, if desired (not recommended for teaching faculty).
    1. Scroll down to **Contributions & activity**.
    2. Check the **Make profile private and hide activity** option.
    3. Click the **Update preferences** button to save your changes.
@@ -109,10 +109,14 @@ If desired, you can make your GitHub profile private or personalize it. You can 
 
 5. Click the **Update profile** button when done to save your changes.
 
-<!-- GitHub has suspended new GitHub Education applications
 ## 4. Join GitHub Education (Optional)
 
-[GitHub Education](https://education.github.com/) provides eligible students with free access to GitHub benefits and professional development tools. These tools are not required for IT 140 but may be useful if you take additional programming or technical courses. You may skip this section and apply later.
+[GitHub Education](https://education.github.com/) provides eligible students and faculty with free access to GitHub benefits and professional development tools. These tools are not required for IT 140 but may be useful if you take additional programming or technical courses. You may skip this section and apply later.
+
+Read how to Apply to GitHub Education:
+
+- [for Students](https://docs.github.com/en/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student)
+- [for Faculty & Staff](https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher).
 
 1. Go to [https://github.com/settings/education/benefits](https://github.com/settings/education/benefits).
 2. Sign in, if needed.
@@ -120,8 +124,7 @@ If desired, you can make your GitHub profile private or personalize it. You can 
 4. Click **Start an application**.
 5. Complete and submit the **Education Benefits Application**.
 6. Check your email for follow-up messages from GitHub Education.
-   - GitHub may request additional information to verify your student status.
- -->
+   - GitHub may request additional information to verify your educational status.
 
 ## Next Step
 
