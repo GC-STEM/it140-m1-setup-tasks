@@ -351,7 +351,10 @@ You should have access to at least one cloud storage service to be able to share
    ![Welcome to Visual Studio Code](./assets/62_cvd_vsc_welcome.png)
 
    > [!NOTE]
-   > If you do not see the Welcome page, go to the main menu bar and select **Help** > **Welcome** to open the Welcome page. The **Help** menu may be hidden behind the **...** menu on the right side of the main menu bar.
+   > If you do not see the **Welcome** page shown,
+   > 1. In the VS Code Activity Bar (far left menu bar), select the Accounts icon (👤).
+   > 2. Select **Sign in with GitHub**.
+   > 3. It should open a browser window as shown below.
 
 4. If prompted to "Authorize Visual Studio Code", click **Continue**.
 
@@ -374,13 +377,14 @@ You should have access to at least one cloud storage service to be able to share
     1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
 
     2. De-select any settings you do not want to synchronize between the CVD and your local course IDE. We recommend synchronizing all settings, but you may choose to exclude some if you prefer different settings in the CVD and your local course IDE.
+
     3. Click the **Sign in** button and select **Sign in with GitHub**.
 
     4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
 
 11. *Optional*. If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
 
-   > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_it140.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
+    > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_it140.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 
 12. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
 
@@ -390,9 +394,13 @@ You should have access to at least one cloud storage service to be able to share
 
 2. Type `verify_it140.sh` in the terminal window and press **Enter** to verify the CVD with an automated script.
 
-3. Review the output of the verification script to ensure that all checks passed successfully.
+   ![Verify IDE Script in CVD Terminal](./assets/71_cvd_verify1.png)
 
-4. Address any issues reported by the verification script. The script may provide instructions for resolving specific issues. Re-running the setup and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
+3. Review the output of the verification script to ensure that no checks failed.
+
+   ![Review the verification script output](./assets/72_cvd_verify_summary.png)
+
+4. Address any issues reported by the verification script. The script may provide instructions for resolving specific issues. Re-running the update and configure scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
 
 5. Close the terminal window by typing `exit` and pressing **Enter**.
 
