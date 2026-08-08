@@ -77,7 +77,7 @@ Click the **OK** button.
 
 {{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating Windows.}}
 
-9. Create another restore point after updating Windows, as described in Step 1.4. A good name for this restore point is ***Before IT140 Course IDE Setup***. This way, if these is a problem with the course IDE setup, you can restore your system to the state it was in after updating Windows.
+- Create another restore point after updating Windows, as described in Step 1.4. A good name for this restore point is ***Before IT140 Course IDE Setup***. This way, if these is a problem with the course IDE setup, you can restore your system to the state it was in after updating Windows.
 
 ## 3. Clone the Main Course Repository
 
