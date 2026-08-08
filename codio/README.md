@@ -13,7 +13,7 @@
   - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
   - [1. Launch the Codio Virtual Desktop (CVD)](#1-launch-the-codio-virtual-desktop-cvd)
-  - [2. Sign into Cloud Storage Services (Optional)](#2-sign-into-cloud-storage-services-optional)
+  - [2. Sign into Cloud Storage Services](#2-sign-into-cloud-storage-services)
   - [3. Download the Course Automation Scripts to the CVD](#3-download-the-course-automation-scripts-to-the-cvd)
   - [4. Update the CVD](#4-update-the-cvd)
   - [5. Configure the CVD](#5-configure-the-cvd)
@@ -38,13 +38,16 @@ Even if you plan to complete most of your work on your own computer, launch and 
 
 To complete CVD configuration, you will need the following:
 
-- [ ] Access to an IT 140 course in D2L Brightspace
+- [ ] Access to an IT 140 course in D2L Brightspace.
 
-- [ ] GitHub credentials (username, password, noreply email address)
+- [ ] GitHub credentials (username or email, password, GitHub noreply email address).
 
-- [ ] SNHU credentials (email, password), if using OneDrive for persistent storage
+- [ ] Google credentials (email, password), if using Google Workspace for sync and persistent storage.
 
-- [ ] Google credentials (email, password), if using Google Workspace for account sync and persistent storage
+- [ ] Microsoft credentials (email, password), if using OneDrive for persistent storage. You can use:
+  
+  - Your SNHU email address and password, or
+  - Your personal Microsoft email address and password.
 
 > [!TIP]
 > You can find your GitHub username at [https://github.com/settings/profile](https://github.com/settings/profile)
@@ -91,33 +94,37 @@ To complete CVD configuration, you will need the following:
 
 9. Expand the Codio Virtual Desktop (CVD) window to full screen for a better view of the CVD desktop.
 
-   1. Click the Hide/Show button for the noVNC control bar on the middle left side of the CVD window.
+   1. Click the **Show** button (►) to show the noVNC control bar. It is on the middle left side of the CVD window. See the screenshot above for the location of the noVNC **Show** button.
 
-   2. Click the middle **Full Screen** button the noVNC control bar to expand the CVD window to full screen.
+   2. Click the middle **Full Screen** button the noVNC control bar to expand the CVD window to full screen, as shown in the screenshot below.
 
-   3. Click the **Full Screen** button again to exit full screen mode.
+   3. Click the **Hide** button (◄) to hide the noVNC control bar.
 
-   4. Use the screen size which you prefer. You can always change it later.
+   4. Press **Esc** to exit full screen mode.
+
+   5. Use the screen size which you prefer. You can always change it depending on your needs.
 
    ![Codio Virtual Desktop noVNC control menu](./assets/13_cvd_it140_novnc_menu.png)
 
    *Important*. The **Full Screen** button is the only button on the noVNC control bar that you will likely need. Do **NOT** change any settings for the noVNC control bar. If you do, you may not be able to reconnect to it.
 
-10. Bookmark the Codio Virtual Desktop (CVD) page in your local browser for direct access later.
+10. In your host/local browser, bookmark the Codio Virtual Desktop (CVD) for direct access later.
 
-## 2. Sign into Cloud Storage Services (Optional)
+## 2. Sign into Cloud Storage Services
+
+You should have access to at least one cloud storage service to be able to share files between your local computer and the CVD. SNHU recommends using your school-issued Microsoft OneDrive, but you may use any provider or any combination of your choice. However, only instructions for Microsoft OneDrive and Google Drive are provided.
 
 1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
 
-2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
+2. **Optional**. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
 
-3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+3. Sign into OneDrive using either your SNHU credentials (recommended) or your personal Microsoft account if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
 
-   1. Enter your SNHU email address and click **Next**.
+   1. Enter your email address (SNHU or personal) and click **Next**.
 
       ![OneDrive Sign In - Enter username](./assets/51_cvd_onedrive_signin.png)
 
-   2. Enter your SNHU password and click **Sign in**.
+   2. Enter your password (SNHU or personal) and click **Sign in**.
 
       ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png)
 
@@ -136,7 +143,7 @@ To complete CVD configuration, you will need the following:
 4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
 
 > [!NOTE]
-> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this window, click **Make Executable**.
+> The first time you double-click on a desktop icon, you may see an **Untrusted application launcher** warning. If you see this window for preinstalled applications or applications you install, click **Make Executable**.
 >
 > ![Untrusted Application Launcher Warning](./assets/56_cvd_untrusted_app_launcher.png)
 
@@ -205,7 +212,7 @@ To complete CVD configuration, you will need the following:
 
    ![Paste Warning in CVD Terminal](./assets/24_cvd_terminal_paste_warning.png)
 
-5. You should now see the pasted commands in the terminal window. With the terminal window selected, press **Enter** to run the pasted commands.
+5. You should now see the pasted commands in the terminal window. Do **NOT** type anything else in the terminal window or the commands may fail. Click anywhere in the terminal window and press **Enter** to run the pasted commands. The commands will run automatically.
 
    ![Run Commands in CVD Terminal](./assets/25_cvd_terminal_pasted.png)
 
@@ -215,7 +222,7 @@ To complete CVD configuration, you will need the following:
 
       ![Success Message in CVD Terminal](./assets/26_cvd_terminal_bootstrap_success.png)
 
-   - If the terminal window closes unexpectedly, reopen it and repeat Steps 2-6 again making sure you copy and paste the entire command set.
+   - If the terminal window closes unexpectedly, reopen it and repeat Steps 2-6 again making sure you copy and paste the entire command set without introducing any additional keystrokes into the commands.
 
    - If you see an `ERROR` message, repeat Steps 2-6 making sure you copy and paste the entire command set.
 
@@ -230,7 +237,7 @@ To complete CVD configuration, you will need the following:
 ## 4. Update the CVD
 
 > [!IMPORTANT]
-> If you update the CVD after starting work on course activities, save your work on another platform, such as GitHub, OneDrive, or your local computer, before running the update script. This protects your work in case the update fails and the VM must be reset. You do not need to create a backup if you have not saved any work in the CVD yet.
+> If you update the CVD after starting work on course assignments, save your work on another platform, such as GitHub or OneDrive, before running the update script. This protects your work in case the update fails and the VM must be reset. You do not need to create a backup if you have not saved any work in the CVD yet.
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
@@ -256,11 +263,11 @@ To complete CVD configuration, you will need the following:
 
    1. Save any open work and close all windows in the CVD.
 
-   2. If you are in full screen mode, exit full screen mode by clicking the **Full Screen** button in the noVNC control bar.
+   2. If you are in full screen mode, exit full screen mode by pressing the **Esc** key.
 
-   3. In the upper-left corner of the VM tab, click **RESTART VM** on the VM tab menu bar.  
+   3. In the upper-left corner of the VM tab, click **RESTART VM** on the VM tab menu bar.
 
-   4. If prompted, click **YES** to confirm that you want to restart the VM.
+   4. If prompted, click **YES** to confirm that you want to restart the VM. If prompted to enter a confirmation code, click **Cancel**. You clicked the **RESET VM** button by mistake.
 
    5. Wait for the CVD to restart and reconnect. This may take a few minutes.
 
@@ -274,7 +281,7 @@ To complete CVD configuration, you will need the following:
 
    ![Configure IDE Script in CVD Terminal](./assets/42_cvd_terminal_configure1.png)
 
-3. Press **Enter** again to start GitHub authentication. Type **C** to cancel.
+3. Press **Enter** again to start GitHub authentication. Type **C** to cancel. Note that GitHub Authentication is a time-sensitive process. If you do not complete the authentication process in a timely manner, the script will fail and you will need to re-run it.
 
    ![Configure IDE Script in CVD Terminal](./assets/43_cvd_terminal_gh_auth1.png)
 
@@ -282,11 +289,9 @@ To complete CVD configuration, you will need the following:
 
    ![Open Link in Browser](./assets/44_cvd_terminal_gh_auth2.png)
 
-5. Sign into GitHub using your GitHub credentials or continue with Google or Apple, if you linked one of those accounts to your GitHub account.
+5. Sign into GitHub using your GitHub credentials or continue with Google or Apple, if you previously linked one of those accounts to your GitHub account.
 
    ![Sign into GitHub](./assets/45_cvd_terminal_gh_signin.png)
-
-   *Note*. If desired, you may sign into Google Chrome using your Google credentials to synchronize your Google account settings, passwords, bookmarks, and extensions with the CVD.
 
 6. **Optional**. If desired, you may save your password by signing into Google Chrome using your Google credentials. If not, you may skip this step.
 
@@ -316,7 +321,7 @@ To complete CVD configuration, you will need the following:
 
     ![Authorize GitHub CLI](./assets/49b_cvd_terminal_gh_auth_congrats.png)
 
-11. The terminal window should now display your pre-configured Git commit name. If you wish to change it, just type the new name at the prompt. If you want to accept the pre-configured name, just press **Enter**.
+11. The terminal window should now display your pre-configured Git commit name. If you wish to change it, just type the new name at the prompt. Remember to keep this name professional. If you want to accept the pre-configured name, just press **Enter**.
 
     ![Git Commit Name](./assets/49c_cvd_terminal_git_commit_name.png)
 
@@ -346,7 +351,7 @@ To complete CVD configuration, you will need the following:
    ![Welcome to Visual Studio Code](./assets/62_cvd_vsc_welcome.png)
 
    > [!NOTE]
-   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar. If there is no **Sign in** button, you are likely already signed in.
+   > If you do not see the Welcome page, go to the main menu bar and select **Help** > **Welcome** to open the Welcome page. The **Help** menu may be hidden behind the **...** menu on the right side of the main menu bar.
 
 4. If prompted to "Authorize Visual Studio Code", click **Continue**.
 
@@ -355,6 +360,8 @@ To complete CVD configuration, you will need the following:
    ![Open xdg-open](./assets/65_cvd_vsc_open_xdg.png)
 
 6. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer. Just keep in mind that screenshots and videos may look different than your VS Code environment if you choose a different theme.
+
+   *Note*. For more accessible themes, see VS Code's [**Accessibility**](https://code.visualstudio.com/docs/configure/accessibility/accessibility) page.
 
 7. Click the **Get Started** button.
 
