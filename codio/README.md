@@ -192,6 +192,7 @@ To complete CVD configuration, you will need the following:
    cleanup
    printf "SUCCESS: The IT 140 automation package is ready.\nNext step: Close this terminal window by typing 'exit' and pressing 'Enter'.\nLog: %s\n" "$log_path"
    )
+   
    ```
 
 3. In the CVD terminal window, right-click at the end of the command prompt and select **Paste** from the popup menu.
