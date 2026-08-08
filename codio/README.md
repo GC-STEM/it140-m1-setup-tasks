@@ -13,10 +13,10 @@
   - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
   - [1. Launch the Codio Virtual Desktop (CVD)](#1-launch-the-codio-virtual-desktop-cvd)
-  - [2. Clone the Main Course Repository to the CVD](#2-clone-the-main-course-repository-to-the-cvd)
-  - [3. Update the CVD](#3-update-the-cvd)
-  - [4. Configure the CVD](#4-configure-the-cvd)
-  - [5. Sign into Cloud Storage Services (Optional)](#5-sign-into-cloud-storage-services-optional)
+  - [2. Sign into Cloud Storage Services (Optional)](#2-sign-into-cloud-storage-services-optional)
+  - [3. Download the Course Automation Scripts to the CVD](#3-download-the-course-automation-scripts-to-the-cvd)
+  - [4. Update the CVD](#4-update-the-cvd)
+  - [5. Configure the CVD](#5-configure-the-cvd)
   - [6. Configure Visual Studio Code in the CVD](#6-configure-visual-studio-code-in-the-cvd)
   - [7. Verify the CVD](#7-verify-the-cvd)
   - [Next Steps](#next-steps)
@@ -105,7 +105,42 @@ To complete CVD configuration, you will need the following:
 
 10. Bookmark the Codio Virtual Desktop (CVD) page in your local browser for direct access later.
 
-## 2. Clone the Main Course Repository to the CVD
+## 2. Sign into Cloud Storage Services (Optional)
+
+1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
+
+2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
+
+3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+
+   1. Enter your SNHU email address and click **Next**.
+
+      ![OneDrive Sign In - Enter username](./assets/51_cvd_onedrive_signin.png)
+
+   2. Enter your SNHU password and click **Sign in**.
+
+      ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png)
+
+   3. Once signed in, you should see a web page that looks similar to the following.
+
+      ![OneDrive Sign In - Install OneDrive](./assets/53_cvd_onedrive_webpage.png)
+
+   4. If you see an **Install** button on the browser address bar near the upper-right, click it to install the OneDrive desktop app. If prompted to **Install app**, click **Install**. If you do not see an **Install** button, skip this step.
+
+      ![OneDrive Sign In - Install OneDrive](./assets/54_cvd_onedrive_install.png)
+
+   5. If you see a prompt to **Keep OneDrive fully optimized**, click **Allow** to allow OneDrive to access local devices. If prompted to allow SharePoint to access other apps on and services on this device, click **Allow**. If you do not see this prompt, skip this step.
+
+      ![OneDrive Sign In](./assets/55_cvd_onedrive_allow_sharepoint.png)
+
+4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
+
+> [!NOTE]
+> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this window, click **Make Executable**.
+>
+> ![Untrusted Application Launcher Warning](./assets/56_cvd_untrusted_app_launcher.png)
+
+## 3. Download the Course Automation Scripts to the CVD
 
 1. On the CVD desktop, click once on the **Terminal** icon in the taskbar to open a new terminal. It is the second icon from the left on the taskbar.
 
@@ -116,8 +151,8 @@ To complete CVD configuration, you will need the following:
    ```bash
    (
    set -Eeuo pipefail
-   version="0.5.2"
-   version_dtg="2026-08-01-12-44"
+   version="0.5.3"
+   version_dtg="2026-08-07-20-12"
    course_root="$HOME/it140"
    log_dir="$course_root/logs"
    archive_url="https://github.com/GC-STEM/it140/archive/refs/heads/main.tar.gz"
@@ -143,9 +178,11 @@ To complete CVD configuration, you will need the following:
    source_root="$(find "$stage_root" -mindepth 1 -maxdepth 1 -type d -name 'it140-*' -print -quit)"
    [[ -n "$source_root" ]]
    for script in prepare install configure verify update; do [[ -f "$source_root/scripts/cvd/${script}_it140.sh" ]]; done
+   [[ -f "$source_root/scripts/cvd/sanitize_CVD.sh" ]]
    cp -a "$source_root/." "$course_root/"
    rm -rf -- "$course_root/.git"
    chmod +x "$course_root/scripts/cvd/"*.sh
+   "$course_root/scripts/cvd/sanitize_CVD.sh"
    path_line='export PATH="$HOME/it140/scripts/cvd:$PATH"'
    touch "$HOME/.bashrc"
    grep -qxF "$path_line" "$HOME/.bashrc" || printf '\n%s\n' "$path_line" >> "$HOME/.bashrc"
@@ -189,7 +226,7 @@ To complete CVD configuration, you will need the following:
 
 7. Close the terminal window by typing `exit` and pressing **Enter**. You must close the terminal window and open a new one before running the update script in the next step.
 
-## 3. Update the CVD
+## 4. Update the CVD
 
 > [!IMPORTANT]
 > If you update the CVD after starting work on course activities, save your work on another platform, such as GitHub, OneDrive, or your local computer, before running the update script. This protects your work in case the update fails and the VM must be reset. You do not need to create a backup if you have not saved any work in the CVD yet.
@@ -228,7 +265,7 @@ To complete CVD configuration, you will need the following:
 
    > 💡 *TIP*. If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes.
 
-## 4. Configure the CVD
+## 5. Configure the CVD
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
@@ -294,41 +331,6 @@ To complete CVD configuration, you will need the following:
     *Note*. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the update and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
 
 13. Close the terminal window by typing `exit` and pressing **Enter**.
-
-## 5. Sign into Cloud Storage Services (Optional)
-
-1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
-
-2. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
-
-3. Sign into OneDrive using your SNHU credentials if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
-
-   1. Enter your SNHU email address and click **Next**.
-
-      ![OneDrive Sign In - Enter username](./assets/51_cvd_onedrive_signin.png)
-
-   2. Enter your SNHU password and click **Sign in**.
-
-      ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png)
-
-   3. Once signed in, you should see a web page that looks similar to the following.
-
-      ![OneDrive Sign In - Install OneDrive](./assets/53_cvd_onedrive_webpage.png)
-
-   4. If you see an **Install** button on the browser address bar near the upper-right, click it to install the OneDrive desktop app. If prompted to **Install app**, click **Install**. If you do not see an **Install** button, skip this step.
-
-      ![OneDrive Sign In - Install OneDrive](./assets/54_cvd_onedrive_install.png)
-
-   5. If you see a prompt to **Keep OneDrive fully optimized**, click **Allow** to allow OneDrive to access local devices. If prompted to allow SharePoint to access other apps on and services on this device, click **Allow**. If you do not see this prompt, skip this step.
-
-      ![OneDrive Sign In](./assets/55_cvd_onedrive_allow_sharepoint.png)
-
-4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
-
-> [!NOTE]
-> The first time you double-click on the OneDrive icon, you may see an **Untrusted application launcher** warning. If you see this window, click **Make Executable**.
->
-> ![Untrusted Application Launcher Warning](./assets/56_cvd_untrusted_app_launcher.png)
 
 ## 6. Configure Visual Studio Code in the CVD
 
