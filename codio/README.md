@@ -358,7 +358,7 @@ You should have access to at least one cloud storage service to be able to share
 
 4. If prompted to "Authorize Visual Studio Code", click **Continue**.
 
-5. If prompted to **Open xdg-open?**, check the "Always allow" box and click **Open xdg-open** button.
+5. If prompted to **Open xdg-open?**, check the **Always allow** box and click **Open xdg-open** button.
 
    ![Open xdg-open](./assets/65_cvd_vsc_open_xdg.png)
 
@@ -368,11 +368,23 @@ You should have access to at least one cloud storage service to be able to share
 
 7. Click the **Get Started** button.
 
-8. In the popup message, click the **Trust** button or press **Ctrl** + **Enter**.
+8. Trust your `$HOME/Repos` folder in VS Code.
 
-9. Close the **Workspace Trust** popup message by clicking the **X** in the upper-right corner of the message.
+   1. Press **Ctrl** + **Shift** + **P** to open the VS Code Command Palette.
 
-10. *Optional*. If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
+      ![Trust Workspace in VS Code](./assets/66_cvd_vsc_cmd_palette.png)
+
+   2. Type `Workspaces: Manage Workspace Trust` in the Command Palette and press **Enter** or select it from the list.
+
+      ![Trust Workspace in VS Code](./assets/67_cvd_vsc_trust1.png)
+
+   3. Click the **Trust** button or press **Ctrl** + **Enter** to trust your `$HOME/Repos` folder.
+
+      ![Trust Workspace in VS Code](./assets/68_cvd_vsc_trust.png)
+
+   4. Click the **Close** (**X**) button to close the **Manage Workspace Trust** window.
+
+9. *Optional*. If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
 
     1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
 
@@ -382,11 +394,11 @@ You should have access to at least one cloud storage service to be able to share
 
     4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
 
-11. *Optional*. If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
+10. *Optional*. If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
 
     > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_it140.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 
-12. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
+11. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
 
 ## 7. Verify the CVD
 
