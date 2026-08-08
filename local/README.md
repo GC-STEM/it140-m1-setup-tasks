@@ -16,9 +16,10 @@ This repository is under active development. Code, documentation, structure, and
 - **Activity Title**: 1-1 Setup Tasks | Local Setup
 - **Activity Type**: Optional, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local computer.
-- **Artifact Version**: 0.5.1
-- **Artifact Date**: 2026-08-03
-- **Development Status**: Construction
+- **Activity Description**: This activity provides instructions for installing and configuring the IT 140 development environment (course IDE) on your local computer. The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Installing the course IDE locally allows you to work on assignments without relying on an internet connection or a remote server.
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
 
 ## Overview
 

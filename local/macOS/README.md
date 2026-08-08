@@ -7,6 +7,17 @@ This document provides instructions for optionally setting up the IT 140 develop
 > [!IMPORTANT]
 > Installing the course IDE on your Mac is optional. The following setup phases are sequential, so do **not** proceed to the next phase until the current phase is complete. Refer to the [Troubleshooting](#troubleshooting) section for additional help. If you get stuck, you can use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until your local course IDE is working.
 
+## Activity Metadata
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks | Local Setup | macOS
+- **Activity Type**: Optional, non-graded, no submission
+- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local macOS computer.
+- **Activity Description**: This activity provides instructions for installing and configuring the IT 140 development environment (course IDE) on your local macOS computer. The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Installing the course IDE locally allows you to work on assignments without relying on an internet connection or a remote server.
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
+
 ## 0. Check System Compatibility
 
 Before setting up the course IDE, confirm that your Mac uses Apple silicon and that your account can authorize software installation. A Mac owned or managed by an employer, school, or another person may restrict these actions.

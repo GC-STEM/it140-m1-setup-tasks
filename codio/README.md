@@ -10,6 +10,7 @@
 
 - [IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)](#it-140-module-one-setup-tasks--codio-virtual-desktop-cvd)
   - [Table of Contents](#table-of-contents)
+  - [Activity Metadata](#activity-metadata)
   - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
   - [1. Launch the Codio Virtual Desktop (CVD)](#1-launch-the-codio-virtual-desktop-cvd)
@@ -25,6 +26,17 @@
       - [The Terminal Stops Showing New Output](#the-terminal-stops-showing-new-output)
         - [Symptoms the terminal is frozen or unresponsive](#symptoms-the-terminal-is-frozen-or-unresponsive)
         - [Corrective actions for a frozen or unresponsive terminal](#corrective-actions-for-a-frozen-or-unresponsive-terminal)
+
+## Activity Metadata
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD) Setup
+- **Activity Type**: Recommended, non-graded, no submission
+- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).
+- **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Using the CVD allows you to work on assignments without relying on an internet connection or a remote server.
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
 
 ## What is a Codio Virtual Desktop (CVD)?
 

@@ -4,6 +4,7 @@
 
 - [Set Up a GitHub Account](#set-up-a-github-account)
   - [Table of Contents](#table-of-contents)
+  - [Activity Metadata](#activity-metadata)
   - [What Are Git and GitHub?](#what-are-git-and-github)
   - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
@@ -12,6 +13,17 @@
   - [4. Join GitHub Education (Optional)](#4-join-github-education-optional)
   - [Next Step](#next-step)
   - [Troubleshooting](#troubleshooting)
+
+## Activity Metadata
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks | GitHub Account Setup
+- **Activity Type**: Recommended, non-graded, no submission
+- **Activity Purpose**: Set up a GitHub account for use in the IT 140 course.
+- **Activity Description**: This activity guides students through the process of creating a GitHub account, configuring email addresses, enabling two-factor authentication, and optionally customizing their profile and joining GitHub Education. These steps are essential for managing code repositories and collaborating on programming projects throughout the course.
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
 
 ## What Are Git and GitHub?
 

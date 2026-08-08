@@ -7,6 +7,17 @@ This document provides step-by-step instructions for installing the IT 140 devel
 > [!IMPORTANT]
 > The following setup phases are sequential. Do NOT proceed with the next phase of the installation until you have fully completed the preceding phases. Refer to the [Troubleshooting](#troubleshooting) section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
 
+## Activity Metadata
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks | Local Setup | Windows
+- **Activity Type**: Optional, non-graded, no submission
+- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local Windows computer.
+- **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a publisher-supported version of Windows. These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
+
 ## 0. Check System Compatibility
 
 Before setting up the course IDE on Windows, we must verify that your computer's security permissions allow you to run software developer tools. It is common for users of computers owned by others to have restricted account privileges. Another restriction can come from manufacturer default settings, such as [Windows S Mode](https://support.microsoft.com/en-us/windows/experience/platform-variants/windows-10-and-windows-11-in-s-mode-faq). This simple 5-second test will determine if your machine can support local setup of the course IDE, or if you should bypass it and use just the Codio Virtual Desktop (CVD) option.

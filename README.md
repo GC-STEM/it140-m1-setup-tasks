@@ -16,9 +16,9 @@ This repository is under active development. Code, documentation, structure, and
 - **Activity Title**: 1-1 Setup Tasks
 - **Activity Type**: Required, non-graded, no submission
 - **Activity Purpose**: Prepare your software development environment (course IDE) for completing course assignments.
-- **Artifact Version**: 0.5.0
-- **Artifact Date**: 2026-07-31
-- **Development Status**: Alpha Testing
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
 
 ## Overview
 

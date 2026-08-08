@@ -11,6 +11,17 @@ This repository is under active development. Code, documentation, structure, and
 
 ---
 
+## Activity Metadata
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks | Faculty & Staff Setup
+- **Activity Type**: Recommended
+- **Activity Purpose**: Prepare faculty and staff to use the IT 140 course IDE and GitHub repositories for teaching the course.
+- **Activity Description**: This activity provides instructions for faculty and staff to set up the IT 140 course IDE and GitHub repositories. It includes steps for creating a GitHub account, accessing the Codio Virtual Desktop (CVD), and setting up the course IDE both in the CVD and on a local machine.
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
+
 ## Overview of the Course IDE
 
 {{SME TODO: Add a faculty-facing brief overview of the course IDE and its purpose.}}

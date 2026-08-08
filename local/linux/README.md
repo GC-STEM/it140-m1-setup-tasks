@@ -4,6 +4,17 @@
 
 This document provides instructions for optionally setting up an IT 140 development environment, also called the course IDE, on Debian-based Linux operating systems, such as Debian, Ubuntu, Linux Mint, Pop!_OS, and Raspberry Pi OS. It covers the installation of necessary software and tools needed to complete all course activities.
 
+## Activity Metadata
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks | Local Setup | Linux
+- **Activity Type**: Optional, non-graded, no submission
+- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local Linux computer.
+- **Activity Description**: This activity provides instructions for installing and configuring the IT 140 development environment (course IDE) on your local Linux computer. The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Installing the course IDE locally allows you to work on assignments without relying on an internet connection or a remote server.
+- **Artifact Version**: 0.10.0-beta.1
+- **Artifact Date**: 2026-08-09
+- **Development Status**: Beta Testing
+
 ## 1. Open a Terminal Window
 
 The next phase in setting up the course IDE on your local Linux machine is to open a **Terminal** window. You can do this by following these steps:
