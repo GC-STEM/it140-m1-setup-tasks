@@ -75,9 +75,32 @@ Click the **OK** button.
 
 ## 2. Update the Operating System
 
-{{SME TODO: Add instructions and screenshots for the most reliable and novice-friendly way of updating Windows.}}
+Before installing the course IDE, make sure Windows has the latest required updates. Updating first helps prevent problems when the course automation scripts install programming software.
 
-- Create another restore point after updating Windows, as described in Step 1.4. A good name for this restore point is ***Before IT140 Course IDE Setup***. This way, if these is a problem with the course IDE setup, you can restore your system to the state it was in after updating Windows.
+1. On your keyboard, hold down the **Windows (⊞)** key and press the **S** key to open Search.
+
+2. Type **Check for updates** in the search box, then select **Check for updates** from the results. This opens Windows Update in the Settings app.
+
+3. Click the **Check for updates** button.
+
+4. Allow Windows to download and install any required updates it finds.
+
+   > [!NOTE]
+   > You do not need to install **optional updates**, **preview updates**, or **optional driver updates** for this course, but you may if you wish.
+
+5. If Windows asks you to restart your computer, save any open work and click **Restart now**.
+
+6. After your computer restarts, sign back in and repeat Steps 1–3. Continue installing required updates and restarting when requested until Windows Update reports that your computer is up to date.
+
+7. Create another restore point using the instructions in **Step 1: Create a Restore Point**. Name this restore point:
+
+   ```text
+   Before IT140 Course IDE Setup
+   ```
+
+   This restore point gives you a known working Windows configuration to return to if you experience a problem while setting up the course IDE.
+
+Once Windows is up to date and you have created the new restore point, continue to **Step 3**.
 
 ## 3. Clone the Main Course Repository
 
