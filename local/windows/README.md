@@ -57,7 +57,7 @@ Click the **OK** button.
    ![System Protection for Drive Off](./assets/13_system_protection_for_drive_off.png)
    ![System Protection for Drive On](./assets/14_system_protection_for_drive_on.png)
 
-4. Click the **Create…** button. Enter a descriptive name for the restore point in the **System Protection** popup window, such as ***Before General Update*** and click the **Create** button.
+4. Click the **Create…** button. Enter a descriptive name, such as ***Before General Update***, for the restore point in the **System Protection** popup window and click the **Create** button.
 
    ![System Protection Create Restore Point](./assets/15_create_restore_point.png)
    ![System Protection Created Restore Point](./assets/16_created_restore_point.png)
@@ -75,7 +75,7 @@ Click the **OK** button.
 
 ## 2. Update the Operating System
 
-Before installing the course IDE, make sure Windows has the latest required updates. Updating first helps prevent problems when the course automation scripts install programming software.
+Before installing the course IDE, make sure Windows has the latest updates. Updating first helps prevent problems when the course automation scripts install programming software.
 
 1. On your keyboard, hold down the **Windows (⊞)** key and press the **S** key to open Search.
 
@@ -102,7 +102,7 @@ Before installing the course IDE, make sure Windows has the latest required upda
 
 Once Windows is up to date and you have created the new restore point, continue to **Step 3**.
 
-## 3. Clone the Main Course Repository
+## 3. Prepare the Course Automation Package
 
 <!--SME TODO: Add brief explanation of what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
 
@@ -125,42 +125,10 @@ Once Windows is up to date and you have created the new restore point, continue 
    {{SME TODO: Replace with the current actual code block for the bootstrap commands. The following is functional but outdated.}}
 
    ```powershell
-   Start-Transcript -Path "$env:USERPROFILE\Desktop\it140_setup.log" -Force
-   # Installing and updating system dependencies...
-   Add-AppxPackage -RegisterByFamilyName -MainPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe
-   Install-PackageProvider -Name NuGet -Force | Out-Null
-   Install-Module -Name Microsoft.WinGet.Client -Force -Repository PSGallery | Out-Null
-   Repair-WinGetPackageManager -AllUsers
-   winget source update
-   # Installing course IDE components...
-   winget install --id Git.Git -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-   winget install --id GitHub.cli -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-   winget install --id Python.Python.3.12 -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-   winget install --id Microsoft.VisualStudioCode -e -s winget --silent --disable-interactivity --accept-source-agreements --accept-package-agreements --verbose-logs
-   # Updating the terminal environment...
-   [System.Environment]::GetEnvironmentVariables('Machine').GetEnumerator() | ForEach-Object { Set-Item -Path "Env:\$($_.Key)" -Value $_.Value }; [System.Environment]::GetEnvironmentVariables('User').GetEnumerator() | ForEach-Object { Set-Item -Path "Env:\$($_.Key)" -Value $_.Value }; $env:Path = [System.Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [System.Environment]::GetEnvironmentVariable('Path','User')
-   # Configuring course IDE components...
-   python.exe -m pip install --upgrade pip pytest pytest-cov ruff
-   git config --global init.defaultBranch main
-   git config --global core.editor "code --wait"
-   # Installing code editor extensions...
-   $env:NODE_NO_WARNINGS = "1"
-   code --install-extension ms-python.python --force
-   code --install-extension charliermarsh.ruff --force
-   code --install-extension hediet.vscode-drawio --force
-   code --install-extension streetsidesoftware.code-spell-checker --force
-   code --install-extension i2p-hub.i2p-pseudo --force
-   code --install-extension cweijan.vscode-office --force
-   Remove-Item Env:NODE_NO_WARNINGS -ErrorAction SilentlyContinue
-   # ===== Course IDE installation complete. =====
-   # Before continuing, review the messages above.
-   # Look for words like Error, Failed, Exception, Access denied, or not recognized.
-   # Some errors may appear in red text, but text color can vary.
-   # If you do not see an error message, continue to the next step.
-   # If you see an error, see the Troubleshooting section of the setup repo.
-   # A setup log was saved to your Desktop as: it140_setup.log.
-   # Detailed WinGet logs are available if tech support needs them; run: winget --logs.
-   Stop-Transcript
+   $PrepareScript = Join-Path $env:TEMP "prepare_it140.ps1"
+   Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/win/prepare_it140.ps1" -OutFile $PrepareScript -UseBasicParsing
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   & $PrepareScript
 
    ```
 
@@ -181,7 +149,7 @@ Once Windows is up to date and you have created the new restore point, continue 
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\setup_win.ps1
+   install_it140.ps1
 
    ```
 
@@ -205,7 +173,7 @@ Once Windows is up to date and you have created the new restore point, continue 
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\configure_win.ps1
+   .\configure_it140.ps1
 
    ```
 
@@ -229,7 +197,7 @@ Once Windows is up to date and you have created the new restore point, continue 
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   .\verify_win.ps1
+   .\verify_it140.ps1
 
    ```
 
@@ -267,7 +235,7 @@ Once Windows is up to date and you have created the new restore point, continue 
 6. Click the **Get Started** button on the **Welcome** page to dismiss it.
 
    > [!IMPORTANT]
-   > If you ever see an **Update** button on the VS Code menu bar in the Windows, don't press it. You can ignore it or update the Windows by re-running `update_win.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the Windows, just in case the update fails and we need to reset your VM.
+   > If you ever see an **Update** button on the VS Code menu bar in Windows, don't press it. You can ignore it or update Windows by re-running `update_it140.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating Windows, just in case the update fails and we need to reset your VM.
 
 ## 8. Periodic Updates to Course IDE
 
