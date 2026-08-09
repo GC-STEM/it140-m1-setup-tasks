@@ -9,7 +9,7 @@
   - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
-  - [3. Customize Your GitHub Profile (Optional)](#3-customize-your-github-profile-optional)
+  - [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
   - [4. Join GitHub Education (Optional)](#4-join-github-education-optional)
   - [Next Step](#next-step)
   - [Troubleshooting](#troubleshooting)
@@ -39,8 +39,8 @@ If you already have a GitHub account that you want to use for this course, skip 
 
 1. Go to [https://github.com/signup](https://github.com/signup).
 
-2. Manually enter your email address and password.:
-   - **Students**: Use a personal email address. Do **NOT** use your SNHU email or password here.
+2. Enter your email address and password:
+   - **Students**: Continue with Google or Apple or manually enter another personal email address. Do **NOT** use your SNHU email or password here.
    - **Faculty and Staff**: Use your SNHU email address. Do **NOT** use your SNHU password here.
 
 3. Enter a professional username. For guidance on selecting a professional username, see [github_username.md](github_username.md).
@@ -119,27 +119,39 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 7. **Recommended**. Add a passkey if your device and browser support one.
 
-## 3. Customize Your GitHub Profile (Optional)
-
-If desired, you can make your GitHub profile private or personalize it. You can always change your profile settings later. To configure your GitHub profile, follow the instructions below.
-
-*Note*. If you make your profile private, you will need to add other GitHub usersyour instructor
+## 3. Customize Your GitHub Profile
 
 1. Go to [https://github.com/settings/profile](https://github.com/settings/profile).
 
-2. Sign in, if not already.
+2. Sign in to GitHub, if prompted.
 
-3. Make your profile private, if desired (not recommended for teaching faculty).
-   1. Scroll down to **Contributions & activity**.
-   2. Check the **Make profile private and hide activity** option.
+3. **Optional**. Add or change profile information that you wish to share publicly. For example, you can:
+   - Add an avatar image;
+   - Include a brief bio;
+   - Add links to social media profiles.
+   - Click the **Update profile** button to save your changes.
+
+   *Warning*. Even if you make your GitHub profile private in the next step, some profile information you choose to provide—such as your profile picture, bio, and [profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme)—may still be publicly visible.
+
+4. Scroll down to **Contributions & activity**.
+
+   1. Consider the **Make profile private and hide activity** checkbox and the recommendations below:
+
+      - **Students**: Check the box while you are learning. When you are ready to use GitHub as part of your portfolio, uncheck this box so that prospective employers and others can see the work you choose to showcase.
+
+      - **Faculty**: Do NOT check the box so that your SNHU GitHub profile remains public and students can view your profile as an example of a professional GitHub presence.
+
+   2. Check the **Include private contributions on my profile** checkbox. This lets your GitHub contribution graph reflect work you do in private repositories without revealing the repositories or their contents.
+
    3. Click the **Update preferences** button to save your changes.
 
-4. Add or change other profile information as desired. For example, you can
-   - Add an avatar image;
-   - Include a bio;
-   - Add links to social media profiles
+5. Scroll down to **Profile settings**.
 
-5. Click the **Update profile** button when done to save your changes.
+   1. Check the **Show Achievements on my profile** checkbox. This lets your GitHub profile display badges for achievements you earn.
+
+   2. Click the **Update preferences** button to save your changes.
+
+6. **Optional**. Scroll down to **Trending settings** and update your **Preferred spoken language**, if desired.
 
 ## 4. Join GitHub Education (Optional)
 
