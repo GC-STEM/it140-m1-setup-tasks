@@ -2,7 +2,7 @@
 
 Setting up a GitHub account is **recommended for all students**. Having a GitHub account makes it easier to back up your work, sync your work across devices, and recover earlier versions of your code if you make a mistake. It also allows you to start building a professional portfolio of your work.
 
-Technology majors will need a GitHub account later in their degree programs and as part of their capstone projects.
+Technology majors will need a GitHub account later in their degree programs and as part of their portfolio.
 
 ## Table of Contents
 
@@ -14,7 +14,7 @@ Technology majors will need a GitHub account later in their degree programs and 
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
   - [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
-  - [4. Join GitHub Education (Optional)](#4-join-github-education-optional)
+  - [4. Optional: Join GitHub Education](#4-optional-join-github-education)
   - [Next Step](#next-step)
   - [Troubleshooting](#troubleshooting)
 
@@ -119,9 +119,10 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
    *Important*. Recovery codes can help you regain access to your account if you lose access to your normal authentication method. Store them securely. Do not save your only copy on a device that could be lost or damaged.
 
-6. Do not share your password, authentication codes, or recovery codes with anyone.
+6. **Recommended**. Add a passkey if your device and browser support one.
 
-7. **Recommended**. Add a passkey if your device and browser support one.
+> [!WARNING]
+> Do not share your password, passkey, authentication codes, or recovery codes with anyone. Neither GitHub nor SNHU will ever ask you for this information. If someone asks for it, report the request to GitHub and SNHU immediately.
 
 ## 3. Customize Your GitHub Profile
 
@@ -129,50 +130,42 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 2. Sign in to GitHub, if prompted.
 
-3. **Optional**. Add or change profile information that you wish to share publicly. For example, you can:
+3. **Optional**. Add or change profile information that you wish to share publicly. Remove any information you do not want to be public. For example, you can:
    - Add an avatar image;
    - Include a brief bio;
-   - Add links to social media profiles.
+   - Add links to social media;
+   - Add a [profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme) (advanced);
    - Click the **Update profile** button to save your changes.
 
-   *Warning*. Even if you make your GitHub profile private in the next step, some profile information you choose to provide—such as your profile picture, bio, and [profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme)—may still be publicly visible.
+   For an example user profile with custom README, see [Petey Penmen's profile](https://github.com/petey-penmen).
 
 4. Scroll down to **Contributions & activity**.
 
-   1. Consider the **Make profile private and hide activity** checkbox and the recommendations below:
+   1. Consider leaving the **Make profile private and hide activity** checkbox unchecked. Checking this box only hides your contributions and activity from public view. It does not hide other information in your profile, such as your username, avatar, or bio.
 
-      - **Students**: Check the box while you are learning. When you are ready to use GitHub as part of your portfolio, uncheck this box so that prospective employers and others can see the work you choose to showcase.
-
-      - **Faculty**: Do NOT check the box so that your SNHU GitHub profile remains public and students can view your profile as an example of a professional GitHub presence.
-
-   2. Check the **Include private contributions on my profile** checkbox. This lets your GitHub contribution graph reflect work you do in private repositories without revealing the repositories or their contents.
+   2. Consider checking the **Include private contributions on my profile** checkbox. This lets your GitHub contribution graph reflect work you do in private repositories (e.g., course assignments) without revealing the repositories or their contents.
 
    3. Click the **Update preferences** button to save your changes.
 
 5. Scroll down to **Profile settings**.
 
-   1. Check the **Show Achievements on my profile** checkbox. This lets your GitHub profile display badges for achievements you earn.
+   1. Check the **Show Achievements on my profile** checkbox, if desired. This lets your GitHub profile display badges for achievements you earn.
 
    2. Click the **Update preferences** button to save your changes.
 
-6. **Optional**. Scroll down to **Trending settings** and update your **Preferred spoken language**, if desired.
+6. If your preferred spoken language is not English, scroll down to **Trending settings** and update your **Preferred spoken language**, if desired, and **Save Trending settings**.
 
-## 4. Join GitHub Education (Optional)
+## 4. Optional: Join GitHub Education
 
-[GitHub Education](https://education.github.com/) provides eligible students and faculty with free access to GitHub benefits and professional development tools. These tools are not required for IT 140 but may be useful if you take additional programming or technical courses. You may skip this section and apply later.
+If an `.edu` email address is associated with your GitHub account, you may see an invitation to **Join GitHub Education!** on your [GitHub dashboard](https://github.com/), like the one shown below.
 
-Read how to Apply to GitHub Education:
+> ![GitHub Education invitation](assets/41_github_education_invite.png)
 
-- [for Students](https://docs.github.com/en/education/about-github-education/github-education-for-students/apply-to-github-education-as-a-student)
-- [for Faculty & Staff](https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher).
+**GitHub Education is not required or recommended for this course.** The additional tools and services it provides are not needed for IT 140 and may add unnecessary complexity for beginning programmers.
 
-1. Go to [https://github.com/settings/education/benefits](https://github.com/settings/education/benefits).
-2. Sign in, if needed.
-3. Click **Learn more** to review the available benefits.
-4. Click **Start an application**.
-5. Complete and submit the **Education Benefits Application**.
-6. Check your email for follow-up messages from GitHub Education.
-   - GitHub may request additional information to verify your educational status.
+You may find [GitHub Education](https://github.com/education) useful later if you take more advanced computing courses or want to explore additional developer tools on your own.
+
+Applying for GitHub Education is optional and outside the scope of this course and SNHU technical support. If you choose to apply, you will need to complete the application process independently.
 
 ## Next Step
 
@@ -182,4 +175,4 @@ Once your GitHub account is set up, your SNHU email address is verified, and you
 
 ## Troubleshooting
 
-{{< SME TODO: Add troubleshooting information for GitHub account creation and configuration. >}}
+{{SME TODO: Add troubleshooting information for GitHub account creation and configuration. >}}
