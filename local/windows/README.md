@@ -86,7 +86,7 @@ Before installing the course IDE, make sure Windows has the latest updates. Upda
 4. Allow Windows to download and install any required updates it finds.
 
    > [!NOTE]
-   > You do not need to install **optional updates**, **preview updates**, or **optional driver updates** for this course, but you may if you wish.
+   > You do not need to install **optional updates**, **preview updates**, or **optional driver updates** for this course.
 
 5. If Windows asks you to restart your computer, save any open work and click **Restart now**.
 
@@ -108,21 +108,11 @@ Once Windows is up to date and you have created the new restore point, continue 
 
 1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
 
-2. In the **Run** dialog box, type ***powershell*** and press **Ctrl** + **Shift** + **Enter** to open with administrator privileges, regardless of which version of Run you see.
+2. In the **Run** dialog box, type ***powershell*** and press **Enter** to open a PowerShell terminal.
 
-   ![Run Dialog: Open PowerShell](./assets/21_run_powershell_user.png)
-   ![Run Dialog: Open PowerShell as User](./assets/21_run_powershell_user.png)
+   ![Run Dialog: Open PowerShell as regular user](./assets/21_run_powershell_user.png)
 
-3. Verify the PowerShell terminal window title bar shows **Administrator: Windows PowerShell**, as shown in the image below. If it does not, close the window and repeat Steps 1–2.
-
-   ![PowerShell Terminal: Administrator Privileges](./assets/23_powershell_admin.png)
-
-   >[!NOTE]
-   > The colors of your terminal window and prompt path (C:\Users\USERNAME) may be different than those shown in the screenshots, which is fine. Just make sure the window title bar shows **Administrator: Windows PowerShell**
-
-4. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
-
-   {{SME TODO: Replace with the current actual code block for the bootstrap commands. The following is functional but outdated.}}
+3. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
    ```powershell
    $PrepareScript = Join-Path $env:TEMP "prepare_it140.ps1"
@@ -132,24 +122,31 @@ Once Windows is up to date and you have created the new restore point, continue 
 
    ```
 
-5. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after **PS C:\WINDOWS\system32>**.
+4. Paste clipboard contents into the PowerShell terminal at the command prompt by right-clicking immediately after the command prompt.
 
-6. Press **Enter** once to ensure all the commands run.
+5. Press **Enter** once to ensure all the commands run.
 
-7. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
+6. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
 
-8. Type `exit` and press **Enter** to close the PowerShell terminal window.
+7. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
 ## 4. Install the Course IDE
 
-1. Open a new PowerShell terminal window with administrator privileges, as you did in Steps 3.1 to 3.3.
+1. Open a new Windows PowerShell terminal with administrator privileges.
+
+   1. Press **Windows** (⊞) + **R**.
+   2. Type **powershell** and press **Ctrl** + **Shift** + **Enter**.
+   3. If Windows displays a User Account Control prompt, click **Yes**.
+   4. Make sure **Administrator** appears in the PowerShell window title bar.
+
+   ![PowerShell Terminal: Administrator Privileges](./assets/23_powershell_admin.png)
 
 2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
 
    ```powershell
    cd "C:\Users\$env:USERNAME\it140\scripts\win\"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-   install_it140.ps1
+   .\install_it140.ps1
 
    ```
 
@@ -209,8 +206,6 @@ Once Windows is up to date and you have created the new restore point, continue 
 
 6. Close the terminal window by typing `exit` and pressing **Enter**.
 
-7. Create
-
 ## 7. Configure Visual Studio Code
 
 <!--SME TODO: Check what is needed after configure VS Code on one platform. -->
@@ -241,11 +236,16 @@ Once Windows is up to date and you have created the new restore point, continue 
 
 {{SME TODO: Add instructions for updating the course IDE on Windows. Note that VS Code releases updates weekly.}}
 
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+update_it140.ps1
+```
+
 ## Next Step
 
-Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you also configure the course IDE on Codio, if you have not do so already.
+Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you also configure the course IDE on Codio, if you have not done so already.
 
-- **[Configure the course IDE on Codio](../local/codio/README.md)**
+- **[Configure the course IDE on Codio](../../codio/README.md)**
 
 Optionally, if you have another local computer, you can also set up the course IDE on that machine. See the following links for instructions:
 
