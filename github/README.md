@@ -1,6 +1,6 @@
 # Set Up a GitHub Account
 
-Setting up a GitHub account is optional, but **recommended for all students**. Having a GitHub account makes it easier to back up your work and recover earlier versions of your code if you make a mistake. It also allows you to start building a professional portfolio of your work.
+Setting up a GitHub account is **recommended for all students**. Having a GitHub account makes it easier to back up your work, sync your work across devices, and recover earlier versions of your code if you make a mistake. It also allows you to start building a professional portfolio of your work.
 
 Technology majors will need a GitHub account later in their degree programs and as part of their capstone projects.
 
