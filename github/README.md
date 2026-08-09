@@ -157,7 +157,7 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 ## 4. Optional: Join GitHub Education
 
-If an `.edu` email address is associated with your GitHub account, you may see an invitation to **Join GitHub Education!** on your [GitHub dashboard](https://github.com/), like the one shown below.
+If an `.edu` email address is associated with your GitHub account, you may see an invitation to **Join GitHub Education!** on your [GitHub dashboard](https://github.com/), like the one shown below. If you do not see this invitation, then GitHub may not be accepting new applications for GitHub Education at this time.
 
 > ![GitHub Education invitation](assets/41_github_education_invite.png)
 
