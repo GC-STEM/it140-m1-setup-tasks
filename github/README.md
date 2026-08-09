@@ -14,8 +14,10 @@ Technology majors will need a GitHub account later in their degree programs and 
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
   - [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
-  - [4. Optional: Join GitHub Education](#4-optional-join-github-education)
   - [Next Step](#next-step)
+  - [Optional: Explore GitHub Further](#optional-explore-github-further)
+    - [1. Later: Learn GitHub Skills](#1-later-learn-github-skills)
+    - [2. Later: Join GitHub Education](#2-later-join-github-education)
   - [Troubleshooting](#troubleshooting)
 
 ## Activity Metadata
@@ -155,7 +157,27 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 6. If your preferred spoken language is not English, scroll down to **Trending settings** and update your **Preferred spoken language**, if desired, and **Save Trending settings**.
 
-## 4. Optional: Join GitHub Education
+## Next Step
+
+Once your GitHub account is set up, your SNHU email address is verified, and you have recorded your GitHub username and public noreply email address, you are ready to configure the course IDE on the Codio Virtual Desktop (CVD).
+
+We highly recommended all students and faculty configure the course IDE on the CVD, even if you do not plan to use the CVD to complete or review assignments. This ensures that you have a working course IDE that matches the reference environment or in case you have trouble installing it on your local computer.
+
+- [Set Up the Course IDE on Codio](../codio/README.md)
+
+## Optional: Explore GitHub Further
+
+### 1. Later: Learn GitHub Skills
+
+After you finish setting up your GitHub account and the course IDE on at least one platform, you may want to explore GitHub’s free learning resources. These resources are optional and not required for this course but may help assignments go more smoothly.
+
+1. Go to [https://learn.github.com/skills](https://learn.github.com/skills).
+
+2. Sign in to GitHub, if prompted.
+
+3. Consider completing the [Communicating using Markdown](https://github.com/skills/communicate-using-markdown) course before writing about IDE features in the Module Two assignment.
+
+### 2. Later: Join GitHub Education
 
 If an `.edu` email address is associated with your GitHub account, you may see an invitation to **Join GitHub Education!** on your [GitHub dashboard](https://github.com/), like the one shown below. If you do not see this invitation, then GitHub may not be accepting new applications for GitHub Education at this time.
 
@@ -166,12 +188,6 @@ If an `.edu` email address is associated with your GitHub account, you may see a
 You may find [GitHub Education](https://github.com/education) useful later if you take more advanced computing courses or want to explore additional developer tools on your own.
 
 Applying for GitHub Education is optional and outside the scope of this course and SNHU technical support. If you choose to apply, you will need to complete the application process independently.
-
-## Next Step
-
-Once your GitHub account is set up, your SNHU email address is verified, and you have recorded your GitHub username and public noreply email address, you are ready to configure the course IDE on the Codio Virtual Desktop (CVD).
-
-- [Set Up the Course IDE on Codio](../codio/README.md)
 
 ## Troubleshooting
 
