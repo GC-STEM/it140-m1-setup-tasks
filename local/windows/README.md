@@ -237,7 +237,11 @@ The Verify script checks that the required course software and settings are read
 
 4. Press **Enter** once if the script does not start automatically.
 
-5. Review the final **VERIFICATION SUMMARY**. If Verify reports a problem, follow the remediation instructions shown in the terminal before continuing.
+   ![Run verify script](./assets/64_win_verify4.png)
+
+5. Review the final **VERIFICATION SUMMARY**. If Verify reports a problem, follow the remediation instructions shown in the terminal before continuing. Make sure **Failures**: `0`.
+
+   ![Review verify script summary](./assets/65_win_verify5.png)
 
 6. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
