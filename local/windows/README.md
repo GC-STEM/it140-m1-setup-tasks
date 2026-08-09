@@ -31,8 +31,7 @@ Before setting up the course IDE on Windows, we must verify that your computer's
    - **GO**: A terminal window opens and shows a blinking cursor after the command prompt. Your computer's operating system likely allows local command-line tools.
    **Recommendation**: Continue with local setup of the course IDE.
 
-   > [!NOTE]
-   > This test only confirms that command-line tools can open. **Step 4: Install the Course IDE** also requires an administrator account. If you cannot approve an administrator prompt when you reach Step 4, use the CVD instead.
+   > *Note*. This test only confirms that command-line tools can open. **Step 4: Install the Course IDE** also requires an administrator account. If you cannot approve an administrator prompt when you reach Step 4, use the CVD instead.
 
    <!--SME TODO: Add screenshots for GO.-->
 
@@ -127,6 +126,7 @@ Before the course IDE can be installed, you need the current IT 140 automation p
    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/win/prepare_it140.ps1" -OutFile $PrepareScript -UseBasicParsing
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    & $PrepareScript
+
    ```
 
 5. Paste the copied commands into the **Windows PowerShell** terminal by right-clicking at the command prompt.
@@ -158,13 +158,21 @@ The Install script adds or repairs the system-level software required for the co
    cd "$env:USERPROFILE\it140\scripts\win"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    .\install_it140.ps1
+
    ```
 
 3. Paste the copied commands into the **Administrator: Windows PowerShell** terminal by right-clicking at the command prompt.
 
 4. Press **Enter** once if the script does not start automatically.
 
-5. Wait for the Install script to finish. This may take several minutes. Review the final **SETUP SUMMARY** and follow its **Next step** instructions.
+   ![Run install script](./assets/44_win_install4.png)
+
+5. Wait for the Install script to finish. This may take several minutes. Review the final **SETUP SUMMARY** and follow its **Next step** instructions. Make sure:
+
+   - **Result**: `PASS`
+   - **Failures**: `0`
+
+   ![Review install script summary](./assets/45_win_install5.png)
 
 6. If the Install script tells you to restart Windows, save your work, restart the computer, and sign back in before continuing to Step 5.
 
@@ -172,7 +180,7 @@ The Install script adds or repairs the system-level software required for the co
 
 ## 5. Configure the Course IDE
 
-The Configure script sets up the course IDE for your Windows user account. It may ask you to sign into GitHub and confirm your Git display name.
+The Configure script sets up the course IDE for your Windows user account. It may ask you to sign into GitHub and confirm your Git display name. This process is very similar to configuring the course IDE in the Codio Virtual Desktop (CVD). If you need more detailed instructions or screenshots, see the **[codio/README.md](../../codio/README.md#configure-the-course-ide)** file.
 
 1. Open a new PowerShell terminal window as a **regular user**.
    1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
@@ -185,15 +193,25 @@ The Configure script sets up the course IDE for your Windows user account. It ma
    cd "$env:USERPROFILE\it140\scripts\win"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    .\configure_it140.ps1
+
    ```
 
 3. Paste the copied commands into the **Windows PowerShell** terminal by right-clicking at the command prompt.
 
 4. Press **Enter** once if the script does not start automatically.
 
+   ![Run configure script](./assets/54_win_configure4.png)
+
 5. Follow the on-screen prompts to complete the configuration. If GitHub authentication is required, the script will guide you through the secure web sign-in process.
 
-6. When the script finishes, review the final **CONFIGURATION SUMMARY** and follow its **Next step** instructions.
+   ![Run configure script](./assets/55_win_configure5.png)
+
+6. When the script finishes, review the final **CONFIGURATION SUMMARY** and follow its **Next step** instructions. Make sure:
+
+   - **Result**: `PASS`
+   - **Failures**: `0`
+
+   ![Review configure script summary](./assets/56_win_configure6.png)
 
 7. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
@@ -212,6 +230,7 @@ The Verify script checks that the required course software and settings are read
    cd "$env:USERPROFILE\it140\scripts\win"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    .\verify_it140.ps1
+
    ```
 
 3. Paste the copied commands into the **Windows PowerShell** terminal by right-clicking at the command prompt.
@@ -232,8 +251,7 @@ The Verify script checks that the required course software and settings are read
    - **Sign in with Apple** (click on the Apple icon)
    - **Continue without Signing in**
 
-   > [!NOTE]
-   > If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
+   > *Note*. If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
 
 3. If prompted, authorize VS Code to access GitHub or other linked account(s).
 
@@ -243,8 +261,7 @@ The Verify script checks that the required course software and settings are read
 
 6. Click the **Get Started** button on the **Welcome** page to dismiss it.
 
-   > [!IMPORTANT]
-   > If VS Code reports that an update is available, you do not need to install it directly from VS Code. The IT 140 Update script maintains VS Code and the other managed course IDE components. See **Step 8: Periodic Updates to Course IDE** below.
+   > *Important*. If VS Code reports that an update is available, you do not need to install it directly from VS Code. The IT 140 Update script maintains VS Code and the other managed course IDE components. See **Step 8: Periodic Updates to Course IDE** below.
 
 ## 8. Periodic Updates to Course IDE
 
@@ -263,6 +280,7 @@ Run the IT 140 Update script when your course instructions ask you to update the
    cd "$env:USERPROFILE\it140\scripts\win"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    .\update_it140.ps1
+
    ```
 
 3. Paste the copied commands into the **Windows PowerShell** terminal and press **Enter** once if the script does not start automatically.
