@@ -1,9 +1,5 @@
 # Set Up a GitHub Account
 
-Setting up a GitHub account is **recommended for all students**. Having a GitHub account makes it easier to back up your work, sync your work across devices, and recover earlier versions of your code if you make a mistake. It also allows you to start building a professional portfolio of your work.
-
-Technology majors will need a GitHub account later in their degree programs and as part of their portfolio.
-
 ## Table of Contents
 
 - [Set Up a GitHub Account](#set-up-a-github-account)
@@ -38,6 +34,10 @@ Technology majors will need a GitHub account later in their degree programs and 
 **[GitHub](https://github.com/)**, which is owned by Microsoft, is a widely used web-based platform for storing and sharing Git repositories, reviewing changes, and collaborating on software projects. A repository, or "repo", is a folder that stores project files and their change history. In a recent survey, developers ranked GitHub as the most admired community platform and the most desired code documentation and collaboration tool [[2](https://survey.stackoverflow.co/2025/technology#2-community-platforms), [3](https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools)]. This course uses GitHub to host its code repositories.
 
 National job-posting data identifies both Git and GitHub as in-demand technologies for software-development positions [[4](https://www.onetonline.org/link/demand/15-1252.00)]. IT 140 introduces these tools so students can learn to organize, track, and manage programming projects. These skills support both course work and future professional use.
+
+Setting up a GitHub account is **recommended for all students**. Having a GitHub account in this course makes it easier to back up your work, sync your work across devices, and recover earlier versions of your code if you make a mistake. It also allows you to start building a professional portfolio of your work.
+
+Technology majors will need a GitHub account later in their degree programs and as part of their portfolio.
 
 ## 0. Sign Up for a New GitHub Account
 
