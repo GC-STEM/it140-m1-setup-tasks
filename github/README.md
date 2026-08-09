@@ -61,24 +61,35 @@ If you already have a GitHub account that you want to use for this course, skip 
 
 2. Sign in using the method you used when creating your GitHub account.
 
-3. In the **Add email address** field, enter another email address and click **Add**.
+3. In the **Add email address** field, enter at least one other email address and click **Add**.
    - **Students**: Add your SNHU email address to your GitHub account.
    - **Faculty & Staff**: Add a personal address to your GitHub account.
-   - *Optional*. Add other personal email address(es) as backups, if desired.
+   - *Optional*. Add other email addresses as backups, if desired.
 
-   ![GitHub Email configuration page](./assets/04_github_email_add.png)
+   ![GitHub Email settings page](./assets/13_github_email_add.png)
 
-4. Check your added email Inbox(es) for a verification message from GitHub. If you do not see a message for each email address added, check your Junk or Spam folder.
+4. Check your email inbox for a verification message from GitHub.
+   - If you do not see a message for each email address added, check your Junk or Spam folder.
+   - Click the **Verify email address** button in the message to confirm that you own the email address, or copy and paste the URL into your browser.
+   - Repeat this step for each email address you added to your GitHub account.
 
-5. Follow the instructions in the email to verify the address.
+5. Back in [GitHub > Settings > Emails](https://github.com/settings/emails), refresh the page to confirm that all email addresses are listed as verified.
 
-6. Confirm that your SNHU email address is listed as verified.
+   ![GitHub verification email](./assets/15_github_email_addresses.png)
+
+6. **Optional**. Change your **Primary email address** from the list of verified addresses to the one you desire. This is the address that GitHub will use for notifications and other communications.
+
+   ![GitHub primary email address settings](./assets/16_github_email_primary.png)
 
 7. Scroll down and turn on **Keep my email addresses private**.
 
-8. Note your GitHub-provided public email address. It will look similar to `302346351+petey-penmen@users.noreply.github.com`.
+   ![GitHub Keep my email addresses private](./assets/17_github_email_private.png)
+
+8. Remember your GitHub-provided public email address. You will need it to configure the course IDE. The public email address will look similar to `302346351+your-username@users.noreply.github.com`.
 
 9. Turn on **Block command line pushes that expose my email**.
+
+   ![GitHub block command line pushes that expose my email](./assets/19_github_email_block.png)
 
 ## 2. Secure Your GitHub Account
 
@@ -88,9 +99,15 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 1. Go to [https://github.com/settings/security](https://github.com/settings/security).
 
-2. Under **Two-factor authentication**, click **Enable two-factor authentication**.
+2. Under **Two-factor authentication**, click the **Enable two-factor authentication** button.
 
-3. Follow GitHub’s on-screen instructions to configure an authentication method.
+   ![GitHub enable two-factor authentication](./assets/22_github_security_enable_2FA.png)
+
+3. Follow GitHub’s on-screen instructions to configure a two-factor authentication (2FA) method. This step is time-sensitive. One-time codes expire quickly.
+
+   *TIP*. Use the same authenticator app you use for your SNHU account. This is usually the [Microsoft Authenticator](https://support.microsoft.com/en-us/authenticator/download-microsoft-authenticator) app from the [Apple](https://apps.apple.com/us/app/microsoft-authenticator/id983156458) or [Google Play](https://play.google.com/store/apps/details?id=com.azure.authenticator) stores.
+
+   *WARNING*. Only enable SMS text messages authentication if you have no other option. SMS is less secure than other methods, such as an authenticator app or a security key.
 
 4. Download or copy your recovery codes when prompted.
 
@@ -100,11 +117,13 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 6. Do not share your password, authentication codes, or recovery codes with anyone.
 
-7. *Optional*. Add a passkey if your device and browser support one.
+7. **Recommended**. Add a passkey if your device and browser support one.
 
 ## 3. Customize Your GitHub Profile (Optional)
 
 If desired, you can make your GitHub profile private or personalize it. You can always change your profile settings later. To configure your GitHub profile, follow the instructions below.
+
+*Note*. If you make your profile private, you will need to add other GitHub usersyour instructor
 
 1. Go to [https://github.com/settings/profile](https://github.com/settings/profile).
 
