@@ -13,7 +13,7 @@
   - [Activity Metadata](#activity-metadata)
   - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
-  - [1. Launch the Codio Virtual Desktop (CVD)](#1-launch-the-codio-virtual-desktop-cvd)
+  - [1. Launch the CVD](#1-launch-the-cvd)
   - [2. Sign into Cloud Storage Services](#2-sign-into-cloud-storage-services)
   - [3. Download the Course Automation Scripts to the CVD](#3-download-the-course-automation-scripts-to-the-cvd)
   - [4. Update the CVD](#4-update-the-cvd)
@@ -68,7 +68,7 @@ To complete CVD configuration, you will need the following:
 >
 > It will look similar to `302326151+petey-penmen@users.noreply.github.com` but with your GitHub user ID and username.
 
-## 1. Launch the Codio Virtual Desktop (CVD)
+## 1. Launch the CVD
 
 1. Go to [https://learn.snhu.edu/](https://learn.snhu.edu/) and log into Brightspace using your SNHU credentials.
 
@@ -138,7 +138,7 @@ You should have access to at least one cloud storage service to be able to share
 
    2. Enter your password (SNHU or personal) and click **Sign in**.
 
-      ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png)
+      <!-- ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png) -->
 
    3. Once signed in, you should see a web page that looks similar to the following.
 
@@ -220,13 +220,15 @@ You should have access to at least one cloud storage service to be able to share
 
    ![Paste Commands into CVD Terminal](./assets/23_cvd_terminal_paste.png)
 
-4. If you receive a pop-up message warning of potentially unsafe paste, click **Paste**.
+4. If you receive a pop-up message warning of potentially unsafe paste, click **Paste** 
 
    ![Paste Warning in CVD Terminal](./assets/24_cvd_terminal_paste_warning.png)
 
-5. You should now see the pasted commands in the terminal window. Do **NOT** type anything else in the terminal window or the commands may fail. Click anywhere in the terminal window and press **Enter** to run the pasted commands. The commands will run automatically.
+5. Press **Enter**. Do **NOT** type anything else in the terminal window or the commands may fail.
 
    ![Run Commands in CVD Terminal](./assets/25_cvd_terminal_pasted.png)
+
+   - If the commands do not run, click anywhere in the terminal window and press **Enter** again to run the commands.
 
 6. Review the output of the commands in the terminal window.
 
@@ -253,7 +255,7 @@ You should have access to at least one cloud storage service to be able to share
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
-2. Type `update_it140.sh` in the terminal window and press **Enter** to run the automated update script. Be patient. The update may take 5 to 30 minutes to complete.
+2. Type `update_it140.sh` in the terminal window and press **Enter** to run the automated update script. Be patient. The update may take 5 to 30 minutes to complete, depending on how long since the last update and how busy the servers are.
 
    ![Update IDE Script in CVD Terminal](./assets/31_cvd_terminal_update.png)
 
