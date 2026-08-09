@@ -31,6 +31,9 @@ Before setting up the course IDE on Windows, we must verify that your computer's
    - **GO**: A terminal window opens and shows a blinking cursor after the command prompt. Your computer's operating system likely allows local command-line tools.
    **Recommendation**: Continue with local setup of the course IDE.
 
+   > [!NOTE]
+   > This test only confirms that command-line tools can open. **Step 4: Install the Course IDE** also requires an administrator account. If you cannot approve an administrator prompt when you reach Step 4, use the CVD instead.
+
    <!--SME TODO: Add screenshots for GO.-->
 
    - **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.  
@@ -104,118 +107,129 @@ Once Windows is up to date and you have created the new restore point, continue 
 
 ## 3. Prepare the Course Automation Package
 
-<!--SME TODO: Add brief explanation of what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
+Before the course IDE can be installed, you need the current IT 140 automation package. This first setup action is sometimes called **bootstrapping**. The commands below download the current Prepare script, which places the course automation files in your `it140` folder and makes the Windows lifecycle scripts available to PowerShell.
+
+> [!IMPORTANT]
+> Run this step from a **regular Windows PowerShell** terminal. Do **not** run it as an administrator.
 
 1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
 
-2. In the **Run** dialog box, type ***powershell*** and press **Enter** to open a PowerShell terminal.
+2. In the **Run** dialog box, type ***powershell*** and press **Enter**.
 
    ![Run Dialog: Open PowerShell as regular user](./assets/21_run_powershell_user.png)
 
-3. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+3. Make sure **Administrator** does **not** appear in the PowerShell window title bar. If it does, close the window and repeat Steps 1–2.
+
+4. Click the **Copy** button in the top-right corner of the code block below.
 
    ```powershell
    $PrepareScript = Join-Path $env:TEMP "prepare_it140.ps1"
    Invoke-WebRequest -Uri "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/win/prepare_it140.ps1" -OutFile $PrepareScript -UseBasicParsing
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    & $PrepareScript
-
    ```
 
-4. Paste clipboard contents into the PowerShell terminal at the command prompt by right-clicking immediately after the command prompt.
+5. Paste the copied commands into the **Windows PowerShell** terminal by right-clicking at the command prompt.
 
-5. Press **Enter** once to ensure all the commands run.
+6. Press **Enter** once if the commands do not start automatically.
 
-6. Wait for the commands to complete as evidenced by the return of the command prompt. This may take several minutes.
+7. Wait for the Prepare script to finish and for the PowerShell command prompt to return. Review the final messages before continuing.
 
-7. Type `exit` and press **Enter** to close the PowerShell terminal window.
+8. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
 ## 4. Install the Course IDE
 
-1. Open a new Windows PowerShell terminal with administrator privileges.
+The Install script adds or repairs the system-level software required for the course. This step requires administrator privileges.
+
+1. Open a new **Windows PowerShell** terminal with administrator privileges.
 
    1. Press **Windows** (⊞) + **R**.
-   2. Type **powershell** and press **Ctrl** + **Shift** + **Enter**.
-   3. If Windows displays a User Account Control prompt, click **Yes**.
-   4. Make sure **Administrator** appears in the PowerShell window title bar.
+   2. Type ***powershell***.
+   3. Press **Ctrl** + **Shift** + **Enter**.
+   4. If Windows displays a **User Account Control** prompt, click **Yes**.
+   5. Make sure **Administrator** appears in the PowerShell window title bar.
 
+   ![Run Dialog: Open PowerShell as Administrator](./assets/22_run_powershell_admin.png)
    ![PowerShell Terminal: Administrator Privileges](./assets/23_powershell_admin.png)
 
-2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+2. Click the **Copy** button in the top-right corner of the code block below.
 
    ```powershell
-   cd "C:\Users\$env:USERNAME\it140\scripts\win\"
+   cd "$env:USERPROFILE\it140\scripts\win"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    .\install_it140.ps1
-
    ```
 
-3. Paste clipboard contents into the **Administrator: Windows PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+3. Paste the copied commands into the **Administrator: Windows PowerShell** terminal by right-clicking at the command prompt.
 
-4. If the script did not start, press **Enter** to run it.
+4. Press **Enter** once if the script does not start automatically.
 
-5. Wait for the script to complete as evidenced by the return of the command prompt. This may take several minutes.
+5. Wait for the Install script to finish. This may take several minutes. Review the final **SETUP SUMMARY** and follow its **Next step** instructions.
 
-6. Close the terminal window by typing `exit` and pressing **Enter**.
+6. If the Install script tells you to restart Windows, save your work, restart the computer, and sign back in before continuing to Step 5.
+
+7. If a restart is not required, type `exit` and press **Enter** to close the Administrator PowerShell window before continuing to Step 5.
 
 ## 5. Configure the Course IDE
 
+The Configure script sets up the course IDE for your Windows user account. It may ask you to sign into GitHub and confirm your Git display name.
+
 1. Open a new PowerShell terminal window as a **regular user**.
    1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
-   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
-   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 5.1.1–5.1.2.
+   2. In the **Run** dialog box, type ***powershell*** and press **Enter**.
+   3. Make sure **Administrator** does **not** appear in the terminal window title bar. If it does, close the window and repeat Steps 5.1.1–5.1.2.
 
-2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+2. Click the **Copy** button in the top-right corner of the code block below.
 
    ```powershell
-   cd "C:\Users\$env:USERNAME\it140\scripts\win\"
+   cd "$env:USERPROFILE\it140\scripts\win"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    .\configure_it140.ps1
-
    ```
 
-3. Paste clipboard contents into the **Windows PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+3. Paste the copied commands into the **Windows PowerShell** terminal by right-clicking at the command prompt.
 
-4. If the script did not start, press **Enter** to run it.
+4. Press **Enter** once if the script does not start automatically.
 
-5. Follow the on-screen prompts to complete the configuration script.
+5. Follow the on-screen prompts to complete the configuration. If GitHub authentication is required, the script will guide you through the secure web sign-in process.
 
-6. Close the terminal window by typing `exit` and pressing **Enter**.
+6. When the script finishes, review the final **CONFIGURATION SUMMARY** and follow its **Next step** instructions.
+
+7. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
 ## 6. Verify the Course IDE
 
+The Verify script checks that the required course software and settings are ready to use. It does not install or change the course IDE.
+
 1. Open a new PowerShell terminal window as a **regular user**.
    1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
-   2. In the **Run** dialog box, type ***powershell*** and press just **Enter**.
-   3. Make sure that **Administrator** does NOT appear in the terminal window title bar. If it does, close the window and repeat Steps 6.1.1–6.1.2.
+   2. In the **Run** dialog box, type ***powershell*** and press **Enter**.
+   3. Make sure **Administrator** does **not** appear in the terminal window title bar. If it does, close the window and repeat Steps 6.1.1–6.1.2.
 
-2. Using your pointing device (mouse, trackpad, etc.), click the **Copy** button in the top-right corner of the code block below
+2. Click the **Copy** button in the top-right corner of the code block below.
 
    ```powershell
-   cd "C:\Users\$env:USERNAME\it140\scripts\win\"
+   cd "$env:USERPROFILE\it140\scripts\win"
    Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
    .\verify_it140.ps1
-
    ```
 
-3. Paste clipboard contents into the **Windows PowerShell** terminal at the command prompt by right-clicking immediately after the prompt.
+3. Paste the copied commands into the **Windows PowerShell** terminal by right-clicking at the command prompt.
 
-4. If the script did not start, press **Enter** to run it.
+4. Press **Enter** once if the script does not start automatically.
 
-5. Review the verification summary and follow any instructions provided to resolve issues, if any.
+5. Review the final **VERIFICATION SUMMARY**. If Verify reports a problem, follow the remediation instructions shown in the terminal before continuing.
 
-6. Close the terminal window by typing `exit` and pressing **Enter**.
+6. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
 ## 7. Configure Visual Studio Code
 
-<!--SME TODO: Check what is needed after configure VS Code on one platform. -->
-
-1. Double-click on the **Visual Studio Code** icon on the Windows desktop.
+1. Press the **Windows** (⊞) key, type **Visual Studio Code**, and open **Visual Studio Code** from the search results.
 
 2. Sign into VS Code using one of the following methods:
    - **Continue with GitHub** (highly recommended)
-   - **Sign in with Google** (click on **G** icon)
-   - **Sign in with Apple** (click on Apple icon)
+   - **Sign in with Google** (click on the **G** icon)
+   - **Sign in with Apple** (click on the Apple icon)
    - **Continue without Signing in**
 
    > [!NOTE]
@@ -223,23 +237,41 @@ Once Windows is up to date and you have created the new restore point, continue 
 
 3. If prompted, authorize VS Code to access GitHub or other linked account(s).
 
-4. If prompted, check the "Always allow" box and click **Open** button.
+4. If prompted, check the **Always allow** box and click the **Open** button.
 
-5. If prompted, select your color theme. Course screenshots and videos show the "Dark High Contrast" theme, but you may choose the theme you prefer.
+5. If prompted, select your color theme. Course screenshots and videos show the **Dark High Contrast** theme, but you may choose the theme you prefer.
 
 6. Click the **Get Started** button on the **Welcome** page to dismiss it.
 
    > [!IMPORTANT]
-   > If you ever see an **Update** button on the VS Code menu bar in Windows, don't press it. You can ignore it or update Windows by re-running `update_it140.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating Windows, just in case the update fails and we need to reset your VM.
+   > If VS Code reports that an update is available, you do not need to install it directly from VS Code. The IT 140 Update script maintains VS Code and the other managed course IDE components. See **Step 8: Periodic Updates to Course IDE** below.
 
 ## 8. Periodic Updates to Course IDE
 
-{{SME TODO: Add instructions for updating the course IDE on Windows. Note that VS Code releases updates weekly.}}
+The IT 140 Update script keeps the managed course IDE software, Python tools, VS Code extensions, and course automation files current. It does **not** run Windows Update; continue using Windows Update normally for operating-system updates.
 
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
-update_it140.ps1
-```
+Run the IT 140 Update script when your course instructions ask you to update the IDE or when you need to bring the managed course software up to date.
+
+1. Open a new PowerShell terminal window as a **regular user**.
+   1. Press **Windows** (⊞) + **R**.
+   2. Type ***powershell*** and press **Enter**.
+   3. Make sure **Administrator** does **not** appear in the terminal window title bar.
+
+2. Click the **Copy** button in the top-right corner of the code block below.
+
+   ```powershell
+   cd "$env:USERPROFILE\it140\scripts\win"
+   Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+   .\update_it140.ps1
+   ```
+
+3. Paste the copied commands into the **Windows PowerShell** terminal and press **Enter** once if the script does not start automatically.
+
+4. If Windows displays a **User Account Control** prompt during the update, click **Yes**. The Update script requests administrator privileges only when it needs to maintain system-wide course software.
+
+5. Wait for the Update script to finish. Review the final **UPDATE SUMMARY** and follow its **Next step** instructions.
+
+6. After a successful update, open a **new regular PowerShell window** before running the next lifecycle script. In most cases, Update will tell you to run Verify. If it tells you to run Configure first, complete Configure and then run Verify in another new PowerShell window.
 
 ## Next Step
 
@@ -250,9 +282,11 @@ Once you have completed setting up the course IDE on one local computer, you may
 Optionally, if you have another local computer, you can also set up the course IDE on that machine. See the following links for instructions:
 
 - **Set up the course IDE on another local computer**
-  - [macOS](../local/macos/README.md)
-  - [Linux](../local/linux/README.md)
+  - [macOS](../macOS/README.md)
+  - [Linux](../linux/README.md)
 
 ## Troubleshooting
 
-<!--SME TODO: Add troubleshooting information for Windows configuration.-->
+If a setup or verification script reports an error, review the final summary and the log file identified by the script. IT 140 automation logs are stored in your `it140\logs` folder.
+
+For troubleshooting guidance and information to include when asking for help, see the main activity's **[Technical Support](../../README.md#technical-support)** section.
