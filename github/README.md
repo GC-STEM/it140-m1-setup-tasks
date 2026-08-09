@@ -16,7 +16,7 @@ Technology majors will need a GitHub account later in their degree programs and 
   - [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
   - [Next Step](#next-step)
   - [Optional: Explore GitHub Further](#optional-explore-github-further)
-    - [1. Later: Learn GitHub Skills](#1-later-learn-github-skills)
+    - [1. Later: Learn Markdown](#1-later-learn-markdown)
     - [2. Later: Join GitHub Education](#2-later-join-github-education)
   - [Troubleshooting](#troubleshooting)
 
@@ -167,7 +167,7 @@ We highly recommended all students and faculty configure the course IDE on the C
 
 ## Optional: Explore GitHub Further
 
-### 1. Later: Learn GitHub Skills
+### 1. Later: Learn Markdown
 
 After you finish setting up your GitHub account and the course IDE on at least one platform, you may want to explore GitHub’s free learning resources. These resources are optional and not required for this course but may help assignments go more smoothly.
 
@@ -175,7 +175,7 @@ After you finish setting up your GitHub account and the course IDE on at least o
 
 2. Sign in to GitHub, if prompted.
 
-3. Consider completing the [Communicating using Markdown](https://github.com/skills/communicate-using-markdown) course before writing about IDE features in the Module Two assignment.
+3. Consider completing the [Communicating using Markdown](https://github.com/skills/communicate-using-markdown) course before writing about IDE features in the Module Two assignment or your project design document in Module Five.
 
 ### 2. Later: Join GitHub Education
 
