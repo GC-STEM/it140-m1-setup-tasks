@@ -35,9 +35,9 @@
 
 National job-posting data identifies both Git and GitHub as in-demand technologies for software-development positions [[4](https://www.onetonline.org/link/demand/15-1252.00)]. IT 140 introduces these tools so students can learn to organize, track, and manage programming projects. These skills support both course work and future professional use.
 
-Setting up a GitHub account is **recommended for all students**. Having a GitHub account in this course makes it easier to back up your work, sync your work across devices, and recover earlier versions of your code if you make a mistake. It also allows you to start building a professional portfolio of your work.
+Because Git and GitHub are widely used professional tools and in-demand career skills, **setting up a GitHub account now** gives you an opportunity to begin developing these skills early in your academic journey. In IT 140, a GitHub account can also help you back up your work, sync projects across devices, recover earlier versions of your code, and begin building a professional portfolio.
 
-Technology majors will need a GitHub account later in their degree programs and as part of their portfolio.
+A GitHub account is **recommended for all students** and will be especially useful for technology majors, who will use GitHub again in later courses and as part of their academic and professional portfolios.
 
 ## 0. Sign Up for a New GitHub Account
 
