@@ -352,6 +352,9 @@ You should have access to at least one cloud storage service to be able to share
 
 13. Close the terminal window by typing `exit` and pressing **Enter**.
 
+14. If desired, right-click anywhere on the CVD desktop and select **Arrange Desktop Icons** to arrange the desktop icons in a grid pattern. This is optional, but it may make it easier to find the icons you need.
+   ![Arrange Desktop Icons](./assets/59_cvd_arrange_icons.png)
+
 ## 6. Configure Visual Studio Code in the CVD
 
 1. Double-click on the **Visual Studio Code** icon on the CVD desktop.
@@ -360,7 +363,7 @@ You should have access to at least one cloud storage service to be able to share
 
    ![Untrusted Application Launcher Warning](./assets/61_cvd_vsc_launcher_warning.png)
 
-3. If you see the **Welcome to Visual Studio Code** page, click the **Continue with GitHub** button.
+3. If you see the **Welcome to Visual Studio Code** page, click the **Continue with GitHub** button. Be patient, as it may take a few seconds for the browser to open.
 
    ![Welcome to Visual Studio Code](./assets/62_cvd_vsc_welcome.png)
 
@@ -380,9 +383,9 @@ You should have access to at least one cloud storage service to be able to share
 
    *Note*. For more accessible themes, see VS Code's [**Accessibility**](https://code.visualstudio.com/docs/configure/accessibility/accessibility) page.
 
-7. Click the **Get Started** button.
+7. Click the **Get Started** button in the lower right corner.
 
-8. Trust your `$HOME/Repos` folder in VS Code.
+8. If you get a popup window, asking "Do you trust the authors of the files in folder?", click the **Trust Folder & Continue** button. If you do not get that popup, follow the directions below to trust your `$HOME/Repos` folder in VS Code.
 
    1. Press **Ctrl** + **Shift** + **P** to open the VS Code Command Palette.
 
@@ -412,7 +415,7 @@ You should have access to at least one cloud storage service to be able to share
 
     > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_it140.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
 
-11. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window.
+11. When you are done configuring VS Code, press **Ctrl** + **Q** to close the VS Code window or click the **X** in the upper-right corner of the window. Close any other open windows in the CVD, such as the Chrome browser.
 
 ## 7. Verify the CVD
 
@@ -422,7 +425,7 @@ You should have access to at least one cloud storage service to be able to share
 
    ![Verify IDE Script in CVD Terminal](./assets/71_cvd_verify1.png)
 
-3. Review the output of the verification script to ensure that no checks failed.
+3. Review the output of the verification script to ensure that no checks failed (i.e., `Failed: 0`).
 
    ![Review the verification script output](./assets/72_cvd_verify_summary.png)
 
@@ -434,7 +437,7 @@ You should have access to at least one cloud storage service to be able to share
 
 When you are done configuring the CVD, close the CVD browser tab. DO NOT use the **Shut Down** option within the Ubuntu desktop. Codio will keep trying to reconnect to the CVD, which will prevent you from accessing it again until you log out of Codio and log back in.
 
-Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you set up the course IDE on at least one local computer, if possible. Doing so provides an alternative development environment in case the CVD is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the CVD and your local course IDE, so you can continue working on assignments from either environment.
+Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop here until you are ready to start on the Module Two assignment. You may, if desired, set up the course IDE on one or more local computers. Doing so provides an alternative development environment in case the CVD is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the CVD and your local course IDE, so you can continue working on assignments from either environment.
 
 - **Set Up the Course IDE on Your Local Computer(s)**
   - [Windows](../local/windows/README.md)
