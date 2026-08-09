@@ -141,7 +141,7 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 4. Scroll down to **Contributions & activity**.
 
-   1. Consider leaving the **Make profile private and hide activity** checkbox unchecked. Checking this box only hides your contributions and activity from public view. It does not hide other information in your profile, such as your username, avatar, or bio.
+   1. Consider leaving the **Make profile private and hide activity** checkbox unchecked. Checking this box only hides your activity and social information, such as your contribution graph, achievements, activity feed, organization memberships, and follower information. It does not make public repositories private or hide the profile information noted above.
 
    2. Consider checking the **Include private contributions on my profile** checkbox. This lets your GitHub contribution graph reflect work you do in private repositories (e.g., course assignments) without revealing the repositories or their contents.
 
