@@ -144,12 +144,7 @@ Before the course IDE can be installed, you need the current IT 140 automation p
 
    ![Successful IT 140 macOS Prepare summary](./assets/32_macos_prepare_summary.png)
 
-8. Review the **Next step** shown in the summary. The expected next lifecycle script is:
-
-   ```text
-   $HOME/it140/scripts/mac/install_it140.zsh   ```
-
-9. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window before continuing to Step 4.
+8. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window before continuing to Step 4.
 
 > [!NOTE]
 > The Prepare script saves its log in `~/it140/logs/`. If the script reports an error, review the final summary and the log file identified there before continuing.
