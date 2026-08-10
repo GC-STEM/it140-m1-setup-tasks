@@ -7,11 +7,11 @@
 
 ## 🧪 Beta Testing
 
-This activity has completed **end-to-end (E2E) Alpha Testing** and is now in **Beta Testing with faculty and staff**. E2E testing verifies that the complete setup process works from start to finish.
+The Module One Setup Tasks have completed end-to-end (E2E) Alpha Testing and are now in Beta Testing with faculty and staff. The Codio Virtual Desktop (CVD) automation is expected to be reliable because each CVD begins from a standardized environment. Local Windows, macOS, and Linux computers vary in software, settings, permissions, security controls, and prior configurations, so Beta Testing may uncover conditions that were not encountered during Alpha Testing.
 
-The **Codio Virtual Desktop (CVD)** automation is expected to be reliable because each CVD begins from a standardized environment. The local Windows, macOS, and Linux automation scripts have been tested primarily on fresh operating system installations. Real-world computers have different software, settings, permissions, security controls, and prior configurations, so Beta Testing may uncover conditions not encountered during Alpha Testing.
+For course-wide information about the Beta, course IDE, repository model, GitHub workflow, activity-repository releases, and common faculty questions, see the [IT 140 Faculty Guide](https://github.com/GC-STEM/it140/blob/main/.faculty/README.md).
 
-**Beta testers**: Please report issues and feature requests using [GitHub Issues](https://github.com/GC-STEM/it140-m1-setup-tasks/issues). An **issue** is any error, failed step, unexpected result, missing or incorrect behavior, or instruction that prevents or makes the setup difficult to complete. A **feature request** is a suggestion for improving the setup process, automation, documentation, or user experience.
+If you choose to work through the Module One setup and encounter an issue or have a feature request, you are welcome to submit it using [GitHub Issues](https://github.com/GC-STEM/it140-m1-setup-tasks/issues).
 
 ---
 
@@ -28,18 +28,35 @@ The **Codio Virtual Desktop (CVD)** automation is expected to be reliable becaus
 
 ## Overview of the Course IDE
 
-{{SME TODO: Add a faculty-facing brief overview of the course IDE and its purpose.}}
+This README supplements the course-wide [IT 140 Faculty Guide](https://github.com/GC-STEM/it140/blob/main/.faculty/README.md).
+
+The **IT 140 Faculty Guide** is the primary reference for:
+
+- The purpose and components of the course IDE
+- How course automation handles software installation and configuration
+- The IT 140 GitHub repository model and student GitHub workflow
+- Activity-repository release status and scheduling
+- Common faculty questions
+- Course-wide questions, concerns, technical issues, and feature requests
+
+This README is the primary reference for **faculty-specific Module One setup and access instructions**.
+
+Faculty who would like to become familiar with the student experience may choose to work through the same Module One setup process. Doing so can provide a reference environment for viewing the course IDE and understanding the steps students will encounter.
+
+The course automation manages the supported installation and configuration of Visual Studio Code (VS Code), Python, Git, GitHub CLI, course extensions, and related settings. Separate manual installation or installer-option instructions are therefore not part of the standard setup workflow. For more information, see [Course IDE](https://github.com/GC-STEM/it140/blob/main/.faculty/README.md#course-ide) and [Common Faculty Questions](https://github.com/GC-STEM/it140/blob/main/.faculty/README.md#common-faculty-questions) in the IT 140 Faculty Guide.
 
 ## 1. Set Up A GitHub Account
 
 As IT 140 faculty, you will need a GitHub account linked to your SNHU email address. You can add your SNHU email address to an existing GitHub account or create a new one specifically for this purpose.
 
-1. Follow the student-facing instructions in the [github/README.md](../github/README.md) with the following exception:
-   - If creating a new GitHub account just for your SNHU role, use your SNHU email address but not your SNHU password.
+1. Follow the [Set Up a GitHub Account](../github/README.md) instructions.
+2. Return to this page after completing the GitHub setup. Faculty first access the Codio Virtual Desktop (CVD) differently than students.
 
-2. Return to this page when done setting up your GitHub account. Faculty first access the Codio Virtual Desktop (CVD) differently than students.
+For an explanation of how GitHub is used later in IT 140, see [GitHub in IT 140](https://github.com/GC-STEM/it140/blob/main/.faculty/README.md#github-in-it-140) in the IT 140 Faculty Guide.
 
 ## 2. Set Up the Course IDE on Codio
+
+Faculty who would like to experience the reference course IDE can use the steps below to access a faculty CVD instance and then follow the student-facing first-time setup.
 
 1. From your IT 140 course site in [D2L Brightspace](https://learn.snhu.edu), select **Learning Modules** from the **Course Menu**.
 
@@ -63,7 +80,7 @@ As IT 140 faculty, you will need a GitHub account linked to your SNHU email addr
 
     ![Codio Learning Environment link](./assets/05_fac_codio_overview1.png)
 
-    *Note*. You will not be able to use Codio instructor dashboard for any purpose other than to access your Codio Virtual Desktop (CVD). Assignment submissions, grading, and student management tasks will be done in D2L Brightspace.
+    *Note*. The Codio instructor dashboard is used in IT 140 only to access the Codio Virtual Desktop (CVD). Assignment submissions, grading, and student management remain in D2L Brightspace.
 
 6. Click the **Preview** button (looks like an eye) on the *Overview* page to open the Codio Virtual Desktop (CVD) landing page in a new browser tab.
 
@@ -79,11 +96,11 @@ As IT 140 faculty, you will need a GitHub account linked to your SNHU email addr
 
 9. In the *IT 140 Codio Virtual Desktop Guide*, follow the student-facing Codio [**First-Time Setup**](../codio/README.md) instructions.
 
-    *Note*. When you get to **Section 1** just review it so you understand how students access their CVD. Start following instructions in **Section 2** to set up the course IDE in your CVD instance. This will give you the same experience as your students and allow you to help them if they have questions. You will also be able to see the course IDE in action and verify that it is working correctly.
+    *Note*. In Section 1, review how students access their CVD. Begin following the setup instructions in Section 2, where the course IDE is configured inside the CVD.
 
 ## 3. Set Up the Course IDE Locally
 
-It is also recommended that you set up the official course IDE on your local machine. Again, this will allow you to view course assignments and projects outside of the Codio Virtual Desktop (CVD) just as students will.
+It is also recommended that you set up the official course IDE on your local machine. Again, this will allow you to view assignments and projects outside the Codio Virtual Desktop. You may also choose to set up the course IDE on a supported local computer.
 
 If desired, you can install the course IDE on a local virtual machine (VM) instead of your host machine directly.
 
@@ -93,14 +110,14 @@ Follow the student-facing instructions in the appropriate local setup guide for 
 - [macOS](local/macos/README.md)
 - [Linux](local/linux/README.md)
 
-## Questions, Concerns, or Issues
+## Questions, Concerns, and Issues
 
-### Questions and Concerns
+The course-wide [IT 140 Faculty Guide](https://github.com/GC-STEM/it140/blob/main/.faculty/README.md#questions-concerns-or-issues) is the primary reference for faculty questions, concerns, and support channels.
 
 For the initial pilot term, please post any questions or concerns about the new course IDE or GitHub repositories in the [IT 140 Community of Practice](https://teams.microsoft.com/l/team/19:165fa3c3a9904a1999ca640d2ed13d27%40thread.tacv2/conversations?groupId=61d85fe7-44f7-4918-896f-bb83a07883c1&tenantId=2baef15b-b8de-423f-9d8a-46f3686d8848)
 
 Please do **NOT** post faculty-sensitive questions or concerns in [GitHub Discussions](https://github.com/GC-STEM/it140/discussions) as it is also a student-facing forum.
 
-### Technical Issues
+For a technical issue or feature request specific to the Module One Setup Tasks, you are welcome to submit an issue in the [`it140-m1-setup-tasks` repository](https://github.com/GC-STEM/it140-m1-setup-tasks/issues).
 
-If you encounter any technical issues with any content in the course GitHub repositories, please submit a GitHub issue in the appropriate repository. You can find the link to submit an issue in the [**GitHub Issues**](https://github.com/GC-STEM/it140/issues) tab of each repository.
+When reporting an issue, include the relevant platform, step, expected result, actual result, and any error message or screenshot that may help reproduce the problem. Do not include passwords, authentication codes, access tokens, student information, or other private information.
