@@ -124,12 +124,14 @@ Before the course IDE can be installed, you need the current IT 140 automation p
 
    ```zsh
    (
-       set -e
-       PREPARE_SCRIPT="$(mktemp "${TMPDIR:-/tmp}/it140-prepare-script.XXXXXX")"
-       trap 'rm -f -- "$PREPARE_SCRIPT"' EXIT
-       /usr/bin/curl --fail --location --show-error "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/mac/prepare_it140.zsh" --output "$PREPARE_SCRIPT"
-       /bin/zsh "$PREPARE_SCRIPT"
+   set -e
+   PREPARE_SCRIPT="$(mktemp "${TMPDIR:-/tmp}/it140-prepare-script.XXXXXX")"
+   trap 'rm -f -- "$PREPARE_SCRIPT"' EXIT
+   CACHE_BUSTER="$(date +%s)"
+   /usr/bin/curl --fail --location --show-error --header 'Cache-Control: no-cache' "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/mac/prepare_it140.zsh?it140=${CACHE_BUSTER}" --output "$PREPARE_SCRIPT"
+   /bin/zsh "$PREPARE_SCRIPT"
    )
+
    ```
 
 5. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
@@ -168,6 +170,7 @@ The Install script adds or repairs the system-level software required for IT 140
 
    ```zsh
    "$HOME/it140/scripts/mac/install_it140.zsh"
+
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
@@ -219,6 +222,7 @@ This process is similar to configuring the course IDE in the Codio Virtual Deskt
 
    ```zsh
    "$HOME/it140/scripts/mac/configure_it140.zsh"
+
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
@@ -272,6 +276,7 @@ The Verify script checks that the required course software, GitHub authenticatio
 
    ```zsh
    "$HOME/it140/scripts/mac/verify_it140.zsh"
+
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
@@ -355,6 +360,7 @@ Run the IT 140 Update script when your course instructions ask you to update the
 
    ```zsh
    "$HOME/it140/scripts/mac/update_it140.zsh"
+   
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V** and press **Return** once if the script does not start automatically.
