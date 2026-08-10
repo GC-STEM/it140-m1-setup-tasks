@@ -116,7 +116,13 @@ This step is optional. If you are short on time or experience technical issues, 
 
 ## Next Steps
 
-{{SME TODO: Add some next steps for students to take after completing the setup tasks.}}
+Once you have completed the course IDE setup, return to your IT 140 course in [D2L Brightspace](https://learn.snhu.edu) and complete any remaining Module One activities before the end of Week 1.
+
+If you have completed all Module One activities and have time remaining in Week 1, consider exploring the course IDE and its features. Becoming familiar with the course IDE will help you complete assignments in Modules Two through Seven more efficiently and effectively. Below are some suggestions for exploring the course IDE:
+
+- [Getting Started with VS Code](https://learn.microsoft.com/en-us/shows/visual-studio-code/learn-visual-studio-code-in-7min-official-beginner-tutorial) video (7 minutes)
+- [Introduction to GitHub](https://github.com/skills/introduction-to-github) short-course.
+- [Communicate using Markdown](https://github.com/skills/communicate-using-markdown) short-course.
 
 ## Technical Support
 
