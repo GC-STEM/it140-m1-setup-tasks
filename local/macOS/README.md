@@ -1,11 +1,12 @@
 <!-- To see this file in a clean, formatted view, right-click on the filename and choose “Open Preview.” -->
-
 # IT 140 Development Environment Local Setup on macOS
 
-This document provides instructions for optionally setting up the IT 140 development environment (course IDE) on a supported Apple silicon Mac. The local setup is intended for students who can authorize software installation with an administrator account. It installs and configures the programming software and developer tools needed to complete IT 140 course activities.
+This document provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a supported Apple silicon Mac running macOS 14 Sonoma, macOS 15 Sequoia, or macOS 26 Tahoe. These local installation files and automation scripts are designed for students who use an Administrator account on their Mac.
+
+Following these steps will configure the programming software and developer tools required to complete IT 140 course activities.
 
 > [!IMPORTANT]
-> Installing the course IDE on your Mac is optional. The following setup phases are sequential, so do **not** proceed to the next phase until the current phase is complete. Refer to the [Troubleshooting](#troubleshooting) section for additional help. If you get stuck, you can use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until your local course IDE is working.
+> Installing the course IDE on your Mac is optional. The following setup phases are sequential. Do **not** proceed to the next phase until you have fully completed the preceding phase. Refer to the [Troubleshooting](#troubleshooting) section for additional help. If you get stuck, you can use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until your local course IDE is working.
 
 ## Activity Metadata
 
@@ -13,43 +14,42 @@ This document provides instructions for optionally setting up the IT 140 develop
 - **Activity Title**: 1-1 Setup Tasks | Local Setup | macOS
 - **Activity Type**: Optional, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local macOS computer.
-- **Activity Description**: This activity provides instructions for installing and configuring the IT 140 development environment (course IDE) on your local macOS computer. The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Installing the course IDE locally allows you to work on assignments without relying on an internet connection or a remote server.
+- **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a supported Apple silicon Mac. These local installation files and automation scripts are designed for students who use an Administrator account on their Mac. Following these steps will configure the programming software and developer tools required to complete IT 140 course activities.
 - **Artifact Version**: 0.10.0-beta.1
 - **Artifact Date**: 2026-08-09
 - **Development Status**: Beta Testing
 
 ## 0. Check System Compatibility
 
-Before setting up the course IDE, confirm that your Mac uses Apple silicon and that your account can authorize software installation. A Mac owned or managed by an employer, school, or another person may restrict these actions.
+Before setting up the course IDE, confirm that your Mac uses Apple silicon, runs a supported version of macOS, and uses an account that can authorize software installation. Macs owned or managed by an employer, school, or another person may restrict these actions.
 
 1. Click the **Apple menu** in the upper-left corner of the screen and select **About This Mac**.
 
-2. Find the **Chip** entry.
+2. Check the **Chip** and **macOS** information.
 
-   - **GO**: The chip name begins with **Apple M**, such as Apple M1, M2, M3, M4, or a later Apple chip. Continue to Step 3.
+   - **GO**: The chip name begins with **Apple M**, such as Apple M1, M2, M3, M4, or a later Apple silicon chip, and the Mac is running macOS 14 Sonoma, macOS 15 Sequoia, or macOS 26 Tahoe. Continue to Step 3.
+   - **NO GO — Intel Mac**: The chip entry identifies an Intel processor. The current IT 140 macOS automation does not support Intel-based Macs.
+   - **NO GO — older macOS**: The Mac is running a version earlier than macOS 14 Sonoma. Continue to **Step 2: Update the Operating System** only if Software Update offers a supported macOS version for this Mac.
 
-   <!--SME TODO: Add screenshots for GO.-->
+   ![About This Mac showing the Apple silicon chip and macOS version](./assets/01_macos_about_this_mac_chip.png)
 
-   - **NO GO**: The chip entry identifies an Intel processor. The current IT 140 macOS automation does not support Intel-based Macs.
-
-   **Recommendation**: Use the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
-
-   <!--SME TODO: Add screenshots for NOGO.-->
-
-   <!--SME TODO: Add link(s) to remedial instructions for NOGO when they are developed.  -->
+   **Recommendation for an unsupported Mac**: Use the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
 
 3. Open the **Apple menu**, select **System Settings**, and then select **Users & Groups**. Locate the account you are currently using.
 
    - **GO**: Your account is an **Administrator** account, which may be shown as **Admin**. Continue with the local setup.
-
    - **NO GO**: Your account is a **Standard** account, or the Mac is managed by an organization that restricts software installation or administrator-level changes.
 
+   ![Users and Groups showing the current macOS account as an Administrator](./assets/02_macos_users_groups_admin.png)
+
    > [!IMPORTANT]
-   > The account used for the IT 140 setup must be an Administrator account. Knowing the password for a different administrator account is not sufficient.
+   > The macOS account used for IT 140 must be an **Administrator** account. The automation scripts must be started from your regular account, not with `sudo`. The scripts request administrator authorization only when it is required.
 
    **Recommendation**: Ask the Mac owner or IT administrator whether they can make the account you will use for IT 140 an Administrator and permit the required software installations. Do not attempt to bypass management restrictions. Otherwise, use the CVD.
 
-4. Confirm that the Mac is connected to the internet and has at least 5 GB of available storage. To check storage, open **System Settings**, select **General**, and then select **Storage**.
+4. Confirm that the Mac is connected to the internet and has at least **5 GB of available storage**. To check storage, open **System Settings**, select **General**, and then select **Storage**.
+
+   ![macOS Storage settings showing available storage](./assets/03_macos_storage.png)
 
 ## 1. Back Up Your Mac
 
@@ -58,6 +58,8 @@ This step is optional, but highly recommended. Before installing software, make 
 1. Connect an external storage device that you can use for backups.
 
 2. Open **System Settings**, select **General**, and then select **Time Machine**.
+
+   ![macOS Time Machine settings](./assets/11_macos_time_machine.png)
 
 3. Select **Add Backup Disk**, choose the external storage device, and follow the on-screen instructions.
 
@@ -73,7 +75,7 @@ This step is optional, but highly recommended. Before installing software, make 
 
 ## 2. Update the Operating System
 
-Before installing the course IDE, install current macOS and security updates. The update process may take several minutes and may restart the Mac more than once.
+Before installing the course IDE, install current macOS and security updates. The IT 140 automation scripts maintain the course IDE software, but they do **not** install macOS operating-system upgrades.
 
 1. Save your work and close any open applications.
 
@@ -81,236 +83,316 @@ Before installing the course IDE, install current macOS and security updates. Th
 
 3. Open the **Apple menu**, select **System Settings**, select **General**, and then select **Software Update**.
 
+   ![macOS Software Update in System Settings](./assets/21_macos_software_update.png)
+
 4. Wait while the Mac checks for available software.
 
 5. Follow the instruction that applies:
 
-   - **Update available**: Select **Update Now** or **Restart Now**, and then follow the on-screen instructions.
-
+   - **Update available**: Select **Update Now** or **Restart Now**, and follow the on-screen instructions.
    - **Mac is up to date**: Continue to Step 7.
-
-   - **Major macOS upgrade available**: If the Mac is already running macOS 14 Sonoma, macOS 15 Sequoia, or macOS 26 Tahoe, you do not need to install a major release upgrade (e.g., macOS 15 Sequoia to macOS 26 Tahoe). Just install any available updates for your current macOS release instead.
-
-   - **Unsupported macOS version**: If the Mac is running a version earlier than macOS 14 Sonoma, install the latest compatible macOS upgrade offered by Software Update.
+   - **Major macOS upgrade available**: If the Mac is already running macOS 14 Sonoma, macOS 15 Sequoia, or macOS 26 Tahoe, you do not need to install a major release upgrade for this course. Install the available updates for your current macOS release.
+   - **Unsupported macOS version**: If the Mac is running a version earlier than macOS 14 Sonoma, install a supported macOS upgrade offered by Software Update before continuing with the local course IDE setup.
 
    > [!IMPORTANT]
-   > Do not install a beta version of macOS. If **Beta Updates** appears in Software Update, make sure it is set to **Off**.
+   > Do not install a beta version of macOS for the course IDE. If **Beta Updates** appears in Software Update, make sure it is set to **Off**.
 
-6. Enter the administrator password when prompted. Allow the update to finish without shutting down the Mac, closing its lid, or disconnecting it from power. The screen may become blank and the Mac may restart several times.
+6. If prompted, enter your macOS password. Allow the update to finish without shutting down the Mac or disconnecting it from power. The Mac may restart during the update.
 
-7. Sign back in to the account that you will use for IT 140.
+7. Sign back in to the Administrator account that you will use for IT 140.
 
 8. Return to **System Settings** > **General** > **Software Update**. Install any remaining updates and repeat this check until the Mac reports that it is up to date.
 
-After updating macOS, restart the Mac if prompted. Sign back in to the account that you will use for IT 140 before continuing.
+Once macOS is up to date, continue to **Step 3**.
 
-## 3. Clone the Main Course Repository
+## 3. Prepare the Course Automation Package
 
-<!--SME TODO: Add brief explanation of what 'bootstrap' means in this context and high level summary of what the bootstrap commands do.-->
+Before the course IDE can be installed, you need the current IT 140 automation package. This first setup action is sometimes called **bootstrapping**. The commands below download the current Prepare script. The Prepare script then downloads and validates the IT 140 automation package, places it in your `~/it140` folder, makes the macOS lifecycle scripts executable, and configures the command path used by the course scripts.
+
+> [!IMPORTANT]
+> Run this step from a **regular Terminal** window. Do **not** add `sudo` before any of these commands.
 
 1. Press **Command (⌘)** + **Space bar** to open Spotlight Search.
 
 2. Type ***Terminal*** and press **Return**.
 
-3. Verify that a Terminal window opens and displays a command prompt. The prompt and Terminal colors may look different from examples in this guide.
+   ![Spotlight Search opening Terminal on macOS](./assets/31_macos_terminal_spotlight.png)
 
-4. Using your pointing device, click the **Copy** button in the top-right corner of the code block below.
+3. Verify that a Terminal window opens and displays a command prompt. The prompt and Terminal colors may look different from the screenshots in this guide.
+
+4. Click the **Copy** button in the top-right corner of the code block below.
 
    ```zsh
-   set -euo pipefail
-   readonly ARTIFACT_VERSION="0.5.3"
-   readonly VERSION_DATE="2026-07-30"
-   readonly COURSE_ROOT="${HOME}/it140"
-   readonly SCRIPT_DIR="${COURSE_ROOT}/scripts/mac"
-   readonly ARCHIVE_URL="https://github.com/GC-STEM/it140/archive/refs/heads/main.zip"
-   readonly TEMP_ROOT="$(mktemp -d "${TMPDIR:-/tmp}/it140-bootstrap.XXXXXX")"
-   readonly ARCHIVE_PATH="${TEMP_ROOT}/it140-main.zip"
-   readonly EXTRACT_ROOT="${TEMP_ROOT}/extract"
-   cleanup() {
-      set +e
-      [ -d "$TEMP_ROOT" ] && [ ! -L "$TEMP_ROOT" ] && rm -rf -- "$TEMP_ROOT"
-   }
-   trap cleanup EXIT INT TERM
-   [ "$(uname -s)" = "Darwin" ] || {
-      printf '[ERROR] This bootstrap supports macOS only.\n' >&2
-      exit 2
-   }
-   [ "$(id -u)" -ne 0 ] || {
-      printf '[ERROR] Do not run this bootstrap with sudo or as root.\n' >&2
-      exit 3
-   }
-   mkdir -p -- "$COURSE_ROOT/logs" "$EXTRACT_ROOT"
-   chmod -- 0700 "$COURSE_ROOT/logs"
-   LOG_FILE="$COURSE_ROOT/logs/prepare_ide_$(date +%Y%m%d_%H%M%S).log"
-   exec > >(tee -a "$LOG_FILE") 2>&1
-   printf '\n============================================================\n'
-   printf 'IT 140 macOS BOOTSTRAP\n'
-   printf '============================================================\n'
-   printf '[INFO] Artifact version : %s\n' "$ARTIFACT_VERSION"
-   printf '[INFO] Version date     : %s\n' "$VERSION_DATE"
-   printf '[INFO] Current user     : %s\n' "$(id -un)"
-   printf '[INFO] Log file         : %s\n' "$LOG_FILE"
-   /usr/bin/curl --fail --location --show-error --retry 5 --retry-delay 5 \
-      "$ARCHIVE_URL" --output "$ARCHIVE_PATH"
-   /usr/bin/ditto -x -k "$ARCHIVE_PATH" "$EXTRACT_ROOT"
-   SOURCE_ROOT=""
-   for candidate in "$EXTRACT_ROOT"/it140-*; do
-      [ -f "$candidate/scripts/mac/install_it140.zsh" ] && SOURCE_ROOT="$candidate" && break
-   done
-   [ -n "$SOURCE_ROOT" ] || {
-      printf '[ERROR] The downloaded archive does not contain install_it140.zsh.\n' >&2
-      exit 4
-   }
-   /usr/bin/ditto "$SOURCE_ROOT" "$COURSE_ROOT"
-   rm -rf -- "$COURSE_ROOT/.git"
-   chmod -- 0755 "$SCRIPT_DIR"/*.zsh
-   readonly SHELL_STARTUP_FILE="$HOME/.zshrc"
-   readonly PATH_LINE="export PATH=\"\$HOME/it140/scripts/mac:\$PATH\""
-   grep -qxF "$PATH_LINE" "$SHELL_STARTUP_FILE" 2>/dev/null || printf '\n%s\n' "$PATH_LINE" >> "$SHELL_STARTUP_FILE"
-   case ":$PATH:" in
-      *":$SCRIPT_DIR:"*) ;;
-      *) export PATH="$SCRIPT_DIR:$PATH" ;;
-   esac
-   hash -r
-   printf '[SUCCESS] The current IT 140 course package is available at:\n'
-   printf '[SUCCESS] %s\n' "$COURSE_ROOT"
-   printf '[NOTICE] Next step: cd ~/it140/scripts/mac && ./install_it140.zsh\n'
-   printf '[NOTICE] Bootstrap log: %s\n' "$LOG_FILE"
-
+   (
+       set -e
+       PREPARE_SCRIPT="$(mktemp "${TMPDIR:-/tmp}/it140-prepare-script.XXXXXX")"
+       trap 'rm -f -- "$PREPARE_SCRIPT"' EXIT
+       /usr/bin/curl --fail --location --show-error "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/mac/prepare_it140.zsh" --output "$PREPARE_SCRIPT"
+       /bin/zsh "$PREPARE_SCRIPT"
+   )
    ```
 
-5. Click in the Terminal window and press **Command (⌘)** + **V** or right-click and select **Paste** to paste the commands.
+5. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
 
-6. Press **Return** once to ensure that all pasted commands run.
+6. Press **Return** once if the commands do not start automatically.
 
-7. Wait for the `[Process completed]` message.This may take several minutes.
+7. Wait for the Prepare script to finish and for the command prompt to return. Review the final **IT 140 macOS PREPARE SUMMARY** before continuing. Make sure:
 
-8. Click the red 'X' close button to close the Terminal window.
+   - **Result**: `PASS`
+   - **Artifact version**: `0.10.0-beta.1`
+   - **Exit code**: `0`
+
+   ![Successful IT 140 macOS Prepare summary](./assets/32_macos_prepare_summary.png)
+
+8. Review the **Next step** shown in the summary. The expected next lifecycle script is:
+
+   ```text
+   $HOME/it140/scripts/mac/install_it140.zsh
+   ```
+
+9. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window before continuing to Step 4.
+
+> [!NOTE]
+> The Prepare script saves its log in `~/it140/logs/`. If the script reports an error, review the final summary and the log file identified there before continuing.
 
 ## 4. Install the Course IDE
 
-1. Open a new Terminal window using Spotlight Search, as described in Steps 3.1–3.2, or click on the Terminal icon in the Dock.
+The Install script adds or repairs the system-level software required for IT 140. This includes Apple Command Line Tools, Homebrew, and the manifest-declared course software such as Git, GitHub CLI, Python 3.12, and Visual Studio Code.
 
-   > [!IMPORTANT]
-   > Run the setup script from your regular macOS account. Do **not** add `sudo` before the script command. The script will request administrator authorization only when it is required.
+> [!IMPORTANT]
+> Run the Install script from your regular macOS Administrator account. Do **not** add `sudo` before the script command. The script requests administrator authorization only when it is required.
 
-2. Copy the following commands.
+1. Open a **new Terminal** window using Spotlight Search, as described in Steps 3.1–3.2.
+
+2. Click the **Copy** button in the top-right corner of the code block below.
 
    ```zsh
    "$HOME/it140/scripts/mac/install_it140.zsh"
    ```
 
-3. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
+3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
 
-4. Press **Return** if the setup script does not start automatically.
+4. Press **Return** once if the script does not start automatically.
 
-5. Follow the on-screen instructions. If Terminal requests your password, type the password that you use to sign in to your Mac and press **Return**.
+5. Follow the on-screen instructions.
+
+   - If **Apple Command Line Tools** are not installed, macOS may open an installer window. Complete the installer. The IT 140 Install script will stop with a `PARTIAL` result and tell you to rerun `install_it140.zsh` after the Apple installer finishes.
+   - If **Homebrew** is not installed, the script uses the official Homebrew installer. Terminal may request the password for your current Administrator account.
+   - When Terminal requests a password, type the password that you use to sign in to your Mac and press **Return**.
 
    > [!NOTE]
    > Terminal does not display dots, asterisks, or other characters while you type a password. This is normal.
 
-6. Keep the Terminal window open until the script displays its final setup summary. Review any warnings or errors and follow the script's stated next step.
+   ![Apple Command Line Tools installation prompt during IT 140 setup](./assets/41_macos_command_line_tools_prompt.png)
 
-7. The script saves its log in `~/it140/logs/`.
+6. Keep the Terminal window open until the script displays its final **IT 140 macOS INSTALL SUMMARY**.
 
-8. Type `exit` and press **Return** to close the Terminal window.
+7. On a successful run, make sure:
+
+   - **Result**: `PASS`
+   - **Artifact version**: `0.10.0-beta.1`
+   - **Failures**: `0`
+   - **Exit code**: `0`
+
+   ![Successful IT 140 macOS Install summary](./assets/42_macos_install_summary.png)
+
+8. Follow the summary's **Next step** instructions. The expected next lifecycle script after a successful Install is:
+
+   ```text
+   $HOME/it140/scripts/mac/configure_it140.zsh
+   ```
+
+9. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window before continuing to Step 5.
 
 ## 5. Configure the Course IDE
 
-1. Open a **new** Terminal window using Spotlight Search.
+The Configure script sets up the course IDE for your macOS user account. It authenticates the GitHub CLI, configures your Git identity, creates the `~/Repos` folder used for course repositories, creates a **Repos** link on your Desktop, creates the course Python virtual environment, installs the required Python tools and VS Code extensions, and applies the course-managed VS Code settings.
 
-   > [!IMPORTANT]
-   > Run the configuration script from the macOS account that you will use for course work. Do **not** run it with `sudo`.
+This process is similar to configuring the course IDE in the Codio Virtual Desktop (CVD). If you need more detailed GitHub authentication guidance, see the **[Codio README.md](../../codio/README.md#5-configure-the-cvd)**.
 
-2. Copy the following commands.
+> [!IMPORTANT]
+> Run Configure from the macOS account that you will use for course work. Do **not** run it with `sudo`.
+
+1. Open a **new Terminal** window.
+
+2. Click the **Copy** button in the top-right corner of the code block below.
 
    ```zsh
    "$HOME/it140/scripts/mac/configure_it140.zsh"
    ```
 
-3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
+3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
 
-4. Follow the on-screen prompts. The script may open a browser so that you can sign in to GitHub.
+4. Press **Return** once if the script does not start automatically.
 
-5. Keep the Terminal window open until the script displays its final configuration summary. Review any warnings or errors and follow the script's stated next step.
+5. Follow the on-screen prompts to complete GitHub authentication.
 
-6. The script saves its log in `~/it140/logs/`.
+   1. When the script says GitHub authentication is required, press **Return** to begin. Type `C` only if you want to cancel the configuration.
+   2. Follow the GitHub CLI instructions shown in Terminal and in the browser window that opens.
+   3. Sign in to the GitHub account that you will use for IT 140 and authorize the GitHub CLI when prompted.
+   4. Return to Terminal after GitHub authentication is complete.
 
-7. Type `exit` and press **Return** to close the Terminal window.
+   ![GitHub authentication opened from the macOS Configure script](./assets/51_macos_github_authentication.png)
+
+6. The script displays a proposed **Git commit display name** based on your GitHub account.
+
+   - Press **Return** to accept the displayed name.
+   - Or type a professional name that you want associated with your Git commits and press **Return**.
+
+   The script automatically configures your Git email address using the private GitHub `users.noreply.github.com` address associated with your account.
+
+7. Wait for the script to finish. Review the final **CONFIGURATION SUMMARY** and make sure:
+
+   - **Result**: `PASS`
+   - **Artifact version**: `0.10.0-beta.1`
+   - **Warnings**: `0`
+   - **Failures**: `0`
+   - **Exit code**: `0`
+
+   ![Successful IT 140 macOS Configuration summary](./assets/52_macos_configure_summary.png)
+
+8. Confirm that a **Repos** item now appears on your Desktop. Opening it should show your `~/Repos` folder. This is where your course repositories will be stored.
+
+   ![macOS Desktop showing the Repos folder link created by Configure](./assets/53_macos_desktop_repos.png)
+
+9. Follow the summary's **Next step** instructions. The expected next lifecycle script is `verify_it140.zsh`.
+
+10. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window before continuing to Step 6.
 
 ## 6. Verify the Course IDE
 
-1. Open a **new** Terminal window using Spotlight Search.
+The Verify script checks that the required course software, GitHub authentication, Git settings, VS Code settings and extensions, Python environment, `~/Repos` workspace, and Desktop **Repos** link are ready to use. Verify is read-only except for its transcript log; it does not install or repair the course IDE.
 
-   > [!IMPORTANT]
-   > Run the verification script as your regular macOS user. Do **not** run it with `sudo`.
+> [!IMPORTANT]
+> Run Verify as your regular macOS user. Do **not** run it with `sudo`.
 
-2. Copy the following commands.
+1. Open a **new Terminal** window.
+
+2. Click the **Copy** button in the top-right corner of the code block below.
 
    ```zsh
    "$HOME/it140/scripts/mac/verify_it140.zsh"
    ```
 
-3. Paste the commands into Terminal with **Command (⌘)** + **V**, and then press **Return** if the script does not start automatically.
+3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
 
-4. Wait for the script to finish.
+4. Press **Return** once if the script does not start automatically.
 
-5. Review the verification summary.
+5. Wait for the script to finish and review the final **VERIFICATION SUMMARY**.
 
-   - **PASS**: Continue to Step 7.
-   - **PASS WITH WARNINGS**: Review each warning and any recommended action before continuing.
-   - **FAIL**: Follow the remediation instructions in the summary, and then run `verify_it140.zsh` again.
+   - **Ready to continue**: `Result` is `COMPLIANT` and `Failed` is `0`.
+   - **Warnings**: Review any warning and its recommended action. A warning does not by itself make the course IDE noncompliant.
+   - **Problem found**: If `Result` is `NOT COMPLIANT` or `Failed` is greater than `0`, follow the **Remediation** instructions shown below the summary and run Verify again after correcting the problem.
 
-6. The script saves its log in `~/it140/logs/`.
+   ![Successful IT 140 macOS Verification summary showing COMPLIANT and zero failed checks](./assets/61_macos_verify_summary.png)
 
-7. Type `exit` and press **Return** to close the Terminal window.
+6. Type `exit` and press **Return** to close Terminal.
 
 ## 7. Configure Visual Studio Code
 
-<!--SME TODO: Check what is needed after configure VS Code on one platform. -->
+The automation scripts install the required VS Code extensions and course-managed settings. This step completes the first-launch options and prepares VS Code to work with your `~/Repos` folder.
 
 1. Open Visual Studio Code using either method:
 
    - Press **Command (⌘)** + **Space bar**, type ***Visual Studio Code***, and press **Return**.
    - Open **Finder**, select **Applications**, and double-click **Visual Studio Code**.
 
-2. Sign in with GitHub if you want to synchronize supported VS Code settings across computers. You may also continue without signing in.
+   ![Visual Studio Code Welcome page on macOS](./assets/71_macos_vscode_welcome.png)
+
+2. If macOS displays a security prompt because Visual Studio Code is being opened for the first time, confirm that you want to open the application.
+
+3. Sign into VS Code using one of the available options if you want to synchronize supported VS Code settings between computers. **Continue with GitHub** is recommended because you already use GitHub for IT 140. You may also continue without signing in.
 
    > [!NOTE]
-   > If you do not see the Welcome page, select the **Accounts** icon in the lower-left corner of the Visual Studio Code window to access sign-in options.
+   > If you do not see the Welcome page or a sign-in option, select the **Accounts** icon in the lower-left corner of the VS Code window.
 
-3. If prompted, authorize Visual Studio Code to access GitHub.
+4. If prompted, authorize Visual Studio Code to access GitHub or another account used for VS Code sign-in.
 
-4. If macOS asks whether to open Visual Studio Code from the browser, select **Open**.
+5. If the browser asks permission to open Visual Studio Code, select **Open**.
 
-5. If prompted, select a color theme. Course screenshots and videos show the **Dark High Contrast** theme, but you may choose the theme you prefer.
+6. If prompted, select a color theme. Course screenshots and videos show the **Dark High Contrast** theme, but you may choose the theme you prefer.
 
-6. Complete or dismiss the remaining Welcome page items.
+7. Open the course repository workspace:
 
-7. Optionally, keep Visual Studio Code in the Dock:
+   1. In VS Code, select **File** > **Open Folder...**.
+   2. Select the **Repos** folder in your home directory (`~/Repos`).
+   3. Select **Open**.
+
+8. If VS Code asks **Do you trust the authors of the files in this folder?**, choose the option to trust the `~/Repos` folder and continue.
+
+   If the prompt does not appear and you need to review Workspace Trust later:
+
+   1. Press **Command (⌘)** + **Shift** + **P** to open the Command Palette.
+   2. Type `Workspaces: Manage Workspace Trust` and select that command.
+   3. Trust the `~/Repos` folder.
+   4. Close the Workspace Trust page.
+
+   ![Visual Studio Code Workspace Trust prompt for the Repos folder](./assets/72_macos_vscode_workspace_trust.png)
+
+9. Optional: Keep Visual Studio Code in the Dock.
 
    1. Control-click the Visual Studio Code icon in the Dock.
    2. Select **Options**.
    3. Select **Keep in Dock**.
 
+10. Optional: If you work in both the CVD and a local course IDE, enable VS Code settings synchronization using your preferred VS Code sign-in account.
+
 > [!IMPORTANT]
-> Use `update_it140.zsh` for periodic maintenance of the course IDE instead of updating its managed components individually. Save current course work to GitHub or another backup location before running an update.
+> If VS Code reports that an update is available, you do not need to update the course-managed copy separately from VS Code. The IT 140 Update script maintains VS Code and the other managed course IDE components. See **Step 8: Periodic Updates to Course IDE**.
 
-## 8. Periodic Updates to the Course IDE
+## 8. Periodic Updates to Course IDE
 
-{{SME TODO: Add instructions for updating the course IDE on macOS. Note that VS Code releases updates weekly.}}
+The IT 140 Update script keeps the managed course IDE software, course automation files, Python tools, VS Code extensions, and course-managed VS Code settings current. It does **not** perform a major macOS upgrade and does not manage files inside your `~/Repos` workspace. Continue using **System Settings** > **General** > **Software Update** for macOS operating-system updates.
+
+Run the IT 140 Update script when your course instructions ask you to update the IDE or when you need to bring the managed course software up to date.
+
+> [!IMPORTANT]
+> Before updating after you have started course work, commit and push current work to GitHub or save another backup copy. Do **not** run the Update script with `sudo`.
+
+1. Open a **new Terminal** window as your regular macOS Administrator user.
+
+2. Click the **Copy** button in the top-right corner of the code block below.
+
+   ```zsh
+   "$HOME/it140/scripts/mac/update_it140.zsh"
+   ```
+
+3. Paste the copied command into Terminal with **Command (⌘)** + **V** and press **Return** once if the script does not start automatically.
+
+4. If Terminal requests your password during maintenance of system-wide software, type your macOS password and press **Return**. The script requests administrator authorization only when it is required.
+
+5. Wait for the Update script to finish. Review the final **IT 140 macOS UPDATE SUMMARY** and make sure:
+
+   - **Result**: `PASS`
+   - **Failures**: `0`
+   - **Exit code**: `0`
+
+   ![Successful IT 140 macOS Update summary](./assets/81_macos_update_summary.png)
+
+6. Follow the summary's **Next step** instructions. After a successful update, the expected next lifecycle script is:
+
+   ```text
+   $HOME/it140/scripts/mac/verify_it140.zsh
+   ```
+
+7. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window and run Verify using the instructions in Step 6.
 
 ## Next Step
 
 Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start the Module Two assignment. However, we recommend that you also configure the course IDE in Codio, if you have not done so already.
 
-- **[Configure the course IDE in Codio](../../codio/README.md)**
+- **[Configure the course IDE on Codio](../../codio/README.md)**
 
 Optionally, if you have another local computer, you can also set up the course IDE on that machine:
 
-- [Windows](../windows/README.md)
-- [Linux](../linux/README.md)
+- **Set up the course IDE on another local computer**
+  - [Windows](../windows/README.md)
+  - [Linux](../linux/README.md)
 
 ## Troubleshooting
 
-<!--SME TODO: Add troubleshooting information for macOS configuration.-->
+If a setup or verification script reports an error, review the final summary and the log file identified by the script. IT 140 automation logs are stored in your `~/it140/logs/` folder.
+
+Follow any **Next step** or **Remediation** instructions displayed by the script. Do not proceed to the next lifecycle phase until the current phase completes successfully.
+
+For troubleshooting guidance and information to include when asking for help, see the main activity's **[Technical Support](../../README.md#technical-support)** section.
