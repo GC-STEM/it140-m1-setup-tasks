@@ -127,8 +127,8 @@ Before the course IDE can be installed, you need the current IT 140 automation p
    set -e
    PREPARE_SCRIPT="$(mktemp "${TMPDIR:-/tmp}/it140-prepare-script.XXXXXX")"
    trap 'rm -f -- "$PREPARE_SCRIPT"' EXIT
-   CACHE_BUSTER="$(date +%s)"
-   /usr/bin/curl --fail --location --show-error --header 'Cache-Control: no-cache' "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/mac/prepare_it140.zsh?it140=${CACHE_BUSTER}" --output "$PREPARE_SCRIPT"
+   CACHE_BUSTER="$(date +%s)-$$"
+   /usr/bin/curl --fail --location --show-error --header 'Cache-Control: no-cache' --header 'Pragma: no-cache' "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/mac/prepare_it140.zsh?it140=${CACHE_BUSTER}" --output "$PREPARE_SCRIPT"
    /bin/zsh "$PREPARE_SCRIPT"
    )
 
@@ -141,7 +141,6 @@ Before the course IDE can be installed, you need the current IT 140 automation p
 7. Wait for the Prepare script to finish and for the command prompt to return. Review the final **IT 140 macOS PREPARE SUMMARY** before continuing. Make sure:
 
    - **Result**: `PASS`
-   - **Artifact version**: `0.10.0-beta.1`
    - **Exit code**: `0`
 
    ![Successful IT 140 macOS Prepare summary](./assets/32_macos_prepare_summary.png)
@@ -193,7 +192,6 @@ The Install script adds or repairs the system-level software required for IT 140
 7. On a successful run, make sure:
 
    - **Result**: `PASS`
-   - **Artifact version**: `0.10.0-beta.1`
    - **Failures**: `0`
    - **Exit code**: `0`
 
@@ -248,8 +246,6 @@ This process is similar to configuring the course IDE in the Codio Virtual Deskt
 7. Wait for the script to finish. Review the final **CONFIGURATION SUMMARY** and make sure:
 
    - **Result**: `PASS`
-   - **Artifact version**: `0.10.0-beta.1`
-   - **Warnings**: `0`
    - **Failures**: `0`
    - **Exit code**: `0`
 
@@ -360,7 +356,7 @@ Run the IT 140 Update script when your course instructions ask you to update the
 
    ```zsh
    "$HOME/it140/scripts/mac/update_it140.zsh"
-   
+
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V** and press **Return** once if the script does not start automatically.
