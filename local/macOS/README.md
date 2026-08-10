@@ -131,7 +131,6 @@ Before the course IDE can be installed, you need the current IT 140 automation p
    /usr/bin/curl --fail --location --show-error --header 'Cache-Control: no-cache' --header 'Pragma: no-cache' "https://raw.githubusercontent.com/GC-STEM/it140/main/scripts/mac/prepare_it140.zsh?it140=${CACHE_BUSTER}" --output "$PREPARE_SCRIPT"
    /bin/zsh "$PREPARE_SCRIPT"
    )
-
    ```
 
 5. Click in the Terminal window and press **Command (⌘)** + **V** to paste the commands.
@@ -148,8 +147,7 @@ Before the course IDE can be installed, you need the current IT 140 automation p
 8. Review the **Next step** shown in the summary. The expected next lifecycle script is:
 
    ```text
-   $HOME/it140/scripts/mac/install_it140.zsh
-   ```
+   $HOME/it140/scripts/mac/install_it140.zsh   ```
 
 9. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window before continuing to Step 4.
 
@@ -169,7 +167,6 @@ The Install script adds or repairs the system-level software required for IT 140
 
    ```zsh
    "$HOME/it140/scripts/mac/install_it140.zsh"
-
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
@@ -178,8 +175,15 @@ The Install script adds or repairs the system-level software required for IT 140
 
 5. Follow the on-screen instructions.
 
-   - If **Apple Command Line Tools** are not installed, macOS may open an installer window. Complete the installer. The IT 140 Install script will stop with a `PARTIAL` result and tell you to rerun `install_it140.zsh` after the Apple installer finishes.
+   - If **Apple Command Line Tools** are not installed, macOS may open a separate installer window. Complete the installer. The IT 140 Install script will stop with a `PARTIAL` result and tell you to rerun `install_it140.zsh` after the Apple installer finishes.
+      > *Important.* The Apple Command Line Tools installer may open **behind Terminal or another window**, so it may not be immediately visible. If the Install script appears to be waiting:
+      > - Check the Dock at the bottom of the screen for another open or minimized installer window.
+      > - Move or minimize your open windows, especially Terminal, and look for the Apple Command Line Tools installer.
+      > - Complete the installation and wait for it to finish. Do not close Terminal while the installer is running.
+      > After the Apple installer finishes, return to Terminal. The IT 140 Install script will finish with a PARTIAL result and tell you to run install_it140.zsh again.
+
    - If **Homebrew** is not installed, the script uses the official Homebrew installer. Terminal may request the password for your current Administrator account.
+
    - When Terminal requests a password, type the password that you use to sign in to your Mac and press **Return**.
 
    > [!NOTE]
@@ -220,7 +224,6 @@ This process is similar to configuring the course IDE in the Codio Virtual Deskt
 
    ```zsh
    "$HOME/it140/scripts/mac/configure_it140.zsh"
-
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
@@ -272,7 +275,6 @@ The Verify script checks that the required course software, GitHub authenticatio
 
    ```zsh
    "$HOME/it140/scripts/mac/verify_it140.zsh"
-
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V**.
@@ -356,7 +358,6 @@ Run the IT 140 Update script when your course instructions ask you to update the
 
    ```zsh
    "$HOME/it140/scripts/mac/update_it140.zsh"
-
    ```
 
 3. Paste the copied command into Terminal with **Command (⌘)** + **V** and press **Return** once if the script does not start automatically.
@@ -374,8 +375,7 @@ Run the IT 140 Update script when your course instructions ask you to update the
 6. Follow the summary's **Next step** instructions. After a successful update, the expected next lifecycle script is:
 
    ```text
-   $HOME/it140/scripts/mac/verify_it140.zsh
-   ```
+   $HOME/it140/scripts/mac/verify_it140.zsh   ```
 
 7. Type `exit` and press **Return** to close Terminal. Open a **new** Terminal window and run Verify using the instructions in Step 6.
 
