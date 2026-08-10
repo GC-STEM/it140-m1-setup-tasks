@@ -6,6 +6,7 @@
   - [Table of Contents](#table-of-contents)
   - [Activity Metadata](#activity-metadata)
   - [What Are Git and GitHub?](#what-are-git-and-github)
+  - [Why Create a GitHub Account?](#why-create-a-github-account)
   - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
@@ -31,13 +32,19 @@
 
 **[Git](https://git-scm.com/)** is a version control system included in the course integrated development environment (IDE). Git allows developers to track changes to project files, restore earlier versions, and maintain a history of their work. It also supports multiple developers working on the same project without overwriting each other’s changes. Employers consider Git a foundational skill for entry-level software developers [[1](https://doi.org/10.1109/ESEM64174.2025.00055)].
 
-**[GitHub](https://github.com/)**, which is owned by Microsoft, is a widely used web-based platform for storing and sharing Git repositories, reviewing changes, and collaborating on software projects. A repository, or "repo", is a folder that stores project files and their change history. In a recent survey, developers ranked GitHub as the most admired community platform and the most desired code documentation and collaboration tool [[2](https://survey.stackoverflow.co/2025/technology#2-community-platforms), [3](https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools)]. This course uses GitHub to host its code repositories.
+**[GitHub](https://github.com/)**, which is owned by Microsoft, is a widely used web-based platform for storing and sharing Git repositories, reviewing changes, and collaborating on software projects. A repository, or "repo", is a folder that stores project files and their change history. In a recent survey, developers ranked GitHub as the most admired community platform and the most desired code documentation and collaboration tool [[2](https://survey.stackoverflow.co/2025/technology#2-community-platforms), [3](https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools)].
 
-National job-posting data identifies both Git and GitHub as in-demand technologies for software-development positions [[4](https://www.onetonline.org/link/demand/15-1252.00)]. IT 140 introduces these tools so students can learn to organize, track, and manage programming projects. These skills support both course work and future professional use.
+National job-posting data also identifies Git and GitHub as in-demand technologies for software-development positions [[4](https://www.onetonline.org/link/demand/15-1252.00)]. IT 140 introduces these tools so you can begin learning how developers organize, track, and manage programming projects.
 
-Because Git and GitHub are widely used professional tools and in-demand career skills, **setting up a GitHub account now** gives you an opportunity to begin developing these skills early in your academic journey. In IT 140, a GitHub account can also help you back up your work, sync projects across devices, recover earlier versions of your code, and begin building a professional portfolio.
+## Why Create a GitHub Account?
 
-A GitHub account is **recommended for all students** and will be especially useful for technology majors, who will use GitHub again in later courses and as part of their academic and professional portfolios.
+IT 140 uses GitHub to host its programming repositories. Beginning with the Module Two assignment, course instructions will direct you to use Visual Studio Code (VS Code) to *clone* (i.e., copy) the appropriate assignment or project repository into the `Repos` folder on your computer. You will then work with those files in the course IDE.
+
+You do **not** need to clone the central **IT 140** course repository or the **Module One Setup Tasks** repository. These repositories provide course infrastructure and setup instructions. Only clone an assignment or project repository when the course instructions direct you to do so.
+
+Because Git and GitHub are widely used professional tools, **setting up a GitHub account now** also gives you an opportunity to begin developing these skills early in your academic journey. A GitHub account can help you manage and back up your work, recover earlier versions of your code, and begin building a professional portfolio.
+
+A GitHub account is **recommended for all students** and may be especially useful for technology majors, who are likely to use GitHub again in later courses and professional work.
 
 ## 0. Sign Up for a New GitHub Account
 
