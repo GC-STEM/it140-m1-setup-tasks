@@ -20,8 +20,8 @@ The **Codio Virtual Desktop (CVD)** automation is expected to be reliable becaus
 - **Activity Title**: 1-1 Setup Tasks
 - **Activity Type**: Required, non-graded, no submission
 - **Activity Purpose**: Prepare your IT 140 development environment (course IDE) for completing course assignments.
-- **Artifact Version**: 0.10.0-beta.1
-- **Artifact Date**: 2026-08-09
+- **Artifact Version**: 0.10.1-beta.1
+- **Artifact Date**: 2026-08-11
 - **Development Status**: Beta Testing
 
 ## Overview
@@ -94,13 +94,19 @@ Before starting the Module Two Assignment, follow the instructions below to set 
 ### 1. Set Up a GitHub Account
 
 - [ ] Open the [`github/README.md`](github/README.md) file.
+
 - [ ] Follow the instructions.
+
 - [ ] Return to this file and continue to the next step.
 
 ### 2. Set Up the Course IDE on Codio
 
-- [ ] Open the [`codio/README.md`](codio/README.md) file.
+- [ ] Open the appropriate Codio README file.
+  - [Students](codio/README.md)
+  - [Faculty & Staff](.faculty/README.md)
+
 - [ ] Follow the instructions.
+
 - [ ] Return to this file and continue to the next step.
 
 ### 3. Set Up the Course IDE on Your Local Computer
@@ -111,7 +117,9 @@ This step is optional. If you are short on time or experience technical issues, 
   - [Windows](local/windows/README.md)
   - [macOS](local/macos/README.md)
   - [Linux](local/linux/README.md)
+
 - [ ] Follow the instructions.
+
 - [ ] Return to this file and continue to the next step.
 
 ## Next Steps
