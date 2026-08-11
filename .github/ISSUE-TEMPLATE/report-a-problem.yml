@@ -1,0 +1,56 @@
+name: Report a problem
+description: Report something that did not work as expected.
+title: "[Problem] "
+body:
+  - type: dropdown
+    id: submitter
+    attributes:
+      label: Submitter
+      description: Who is submitting this report?
+      options:
+        - Student
+        - Faculty
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Environment
+      description: Where did the problem occur?
+      options:
+        - Codio Virtual Desktop (CVD)
+        - Windows
+        - macOS
+        - Linux
+        - Other or not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Briefly describe what you were trying to do and what went wrong.
+      placeholder: I was trying to... Instead...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect to happen?
+      description: Briefly describe what you expected instead.
+      placeholder: I expected...
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: Additional details
+      description: Optional. Add steps, error messages, screenshots, or other information that may help us reproduce the problem. Do not include passwords, access tokens, or other sensitive information.
+      placeholder: Add any helpful details here.
+    validations:
+      required: false
