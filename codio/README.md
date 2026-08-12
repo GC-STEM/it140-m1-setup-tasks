@@ -67,7 +67,7 @@ To complete CVD configuration, you will need the following:
 ## 1. Launch the CVD
 
 > [!NOTE]
-> Faculty and staff should follow instructions for launching the CVD in the [Faculty CVD Setup Guide](../.faculty/README.md/#2-set-up-the-course-ide-on-codio). Then, return to this guide at [2. Sign into Cloud Storage Services](#2-sign-into-cloud-storage-services) to complete the remaining steps.
+> Faculty and staff should follow instructions for launching the CVD in the [Faculty CVD Setup Guide](../.faculty/README.md/#2-set-up-the-course-ide-on-codio). Then, return to this guide at [5. Sign into Cloud Storage Services](#5-sign-into-cloud-storage-services) to complete the remaining steps.
 
 1. Go to [https://learn.snhu.edu/](https://learn.snhu.edu/) and log into Brightspace using your SNHU credentials.
 
@@ -182,7 +182,7 @@ To complete CVD configuration, you will need the following:
 
    ![Paste Commands into CVD Terminal](./assets/23_cvd_terminal_paste.png)
 
-4. If you receive a pop-up message warning of potentially unsafe paste, click **Paste** 
+4. If you receive a pop-up message warning of potentially unsafe paste, click **Paste**
 
    ![Paste Warning in CVD Terminal](./assets/24_cvd_terminal_paste_warning.png)
 
