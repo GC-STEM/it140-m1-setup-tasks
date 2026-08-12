@@ -15,6 +15,18 @@ If you choose to work through the Module One setup and encounter an issue or hav
 
 ---
 
+## Table of Contents
+
+- [IT 140 Faculty Setup Instructions](#it-140-faculty-setup-instructions)
+  - [🧪 Beta Testing](#-beta-testing)
+  - [Table of Contents](#table-of-contents)
+  - [Activity Metadata](#activity-metadata)
+  - [Overview of the Course IDE](#overview-of-the-course-ide)
+  - [1. Set Up A GitHub Account](#1-set-up-a-github-account)
+  - [2. Set Up the Course IDE on Codio](#2-set-up-the-course-ide-on-codio)
+  - [3. Set Up the Course IDE Locally](#3-set-up-the-course-ide-locally)
+  - [Questions, Concerns, and Issues](#questions-concerns-and-issues)
+
 ## Activity Metadata
 
 - **Course**: IT 140 - *Introduction to Scripting*
@@ -22,8 +34,8 @@ If you choose to work through the Module One setup and encounter an issue or hav
 - **Activity Type**: Recommended
 - **Activity Purpose**: Prepare faculty and staff to use the IT 140 course IDE and GitHub repositories for teaching the course.
 - **Activity Description**: This activity provides instructions for faculty and staff to set up the IT 140 course IDE and GitHub repositories. It includes steps for creating a GitHub account, accessing the Codio Virtual Desktop (CVD), and setting up the course IDE both in the CVD and on a local machine.
-- **Artifact Version**: 0.10.0-beta.1
-- **Artifact Date**: 2026-08-09
+- **Artifact Version**: 0.10.1-beta.1
+- **Artifact Date**: 2026-08-11
 - **Development Status**: Beta Testing
 
 ## Overview of the Course IDE
@@ -106,9 +118,9 @@ If desired, you can install the course IDE on a local virtual machine (VM) inste
 
 Follow the student-facing instructions in the appropriate local setup guide for your operating system:
 
-- [Windows](local/windows/README.md)
-- [macOS](local/macos/README.md)
-- [Linux](local/linux/README.md)
+- [Windows](../local/windows/README.md)
+- [macOS](../local/macos/README.md)
+- [Linux](../local/linux/README.md)
 
 ## Questions, Concerns, and Issues
 

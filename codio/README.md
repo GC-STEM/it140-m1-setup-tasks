@@ -2,10 +2,6 @@
 
 # IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)
 
-- **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD)
-- **Activity Type**: Required, non-graded, no submission
-
 ## Table of Contents
 
 - [IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)](#it-140-module-one-setup-tasks--codio-virtual-desktop-cvd)
@@ -34,8 +30,8 @@
 - **Activity Type**: Recommended, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).
 - **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Using the CVD allows you to work on assignments without relying on an internet connection or a remote server.
-- **Artifact Version**: 0.10.0-beta.1
-- **Artifact Date**: 2026-08-09
+- **Artifact Version**: 0.10.1-beta.1
+- **Artifact Date**: 2026-08-11
 - **Development Status**: Beta Testing
 
 ## What is a Codio Virtual Desktop (CVD)?
@@ -69,6 +65,9 @@ To complete CVD configuration, you will need the following:
 > It will look similar to `302326151+petey-penmen@users.noreply.github.com` but with your GitHub user ID and username.
 
 ## 1. Launch the CVD
+
+> [!NOTE]
+> Faculty and staff should follow instructions for launching the CVD in the [Faculty CVD Setup Guide](../.faculty/README.md/#2-set-up-the-course-ide-on-codio). Then, return to this guide at [2. Sign into Cloud Storage Services](#2-sign-into-cloud-storage-services) to complete the remaining steps.
 
 1. Go to [https://learn.snhu.edu/](https://learn.snhu.edu/) and log into Brightspace using your SNHU credentials.
 
