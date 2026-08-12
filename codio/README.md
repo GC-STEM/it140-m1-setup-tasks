@@ -255,9 +255,11 @@ You should have access to at least one cloud storage service to be able to share
 
 1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
 
+   > *Note*. While you are here you may notice the **IT 140 Resources** folder on the bookmark bar. It contains links to helpful resources for the course. Do not explore the links until you have completed the CVD configuration. We'll remind you about them later.
+
 2. **Optional**. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
 
-3. Sign into OneDrive using either your SNHU credentials (recommended) or your personal Microsoft account if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+3. **Optional**. Sign into OneDrive using either your SNHU credentials or your personal Microsoft account if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
 
    1. Enter your email address (SNHU or personal) and click **Next**.
 
@@ -384,23 +386,29 @@ You should have access to at least one cloud storage service to be able to share
 
 7. Click the **Get Started** button in the lower right corner.
 
-8. If you get a popup window, asking "Do you trust the authors of the files in folder?", click the **Trust Folder & Continue** button. If you do not get that popup, follow the directions below to trust your `$HOME/Repos` folder in VS Code.
+8. Trust your `$HOME/Repos` workspace.
 
-   1. Press **Ctrl** + **Shift** + **P** to open the VS Code Command Palette.
+   - If you get a popup window, asking "Do you trust the authors of the files in folder?", click the **Trust Folder & Continue** button.
 
-      ![Trust Workspace in VS Code](./assets/66_cvd_vsc_cmd_palette.png)
+      ![Trust Workspace Window in VS Code](./assets/66_cvd_vsc_cmd_trust_window.png)
 
-   2. Type `Workspaces: Manage Workspace Trust` in the Command Palette and press **Enter** or select it from the list.
+   - If you do not get that popup, follow the directions below to trust your `$HOME/Repos` folder in VS Code.
 
-      ![Trust Workspace in VS Code](./assets/67_cvd_vsc_trust1.png)
+     1. Press **Ctrl** + **Shift** + **P** to open the VS Code Command Palette.
 
-   3. Click the **Trust** button or press **Ctrl** + **Enter** to trust your `$HOME/Repos` folder.
+        ![Trust Workspace in VS Code](./assets/67_cvd_vsc_cmd_palette.png)
 
-      ![Trust Workspace in VS Code](./assets/68_cvd_vsc_trust.png)
+     2. Type `Workspaces: Manage Workspace Trust` in the Command Palette and press **Enter** or select it from the list.
 
-   4. Click the **Close** (**X**) button to close the **Manage Workspace Trust** window.
+        ![Trust Workspace in VS Code](./assets/68_cvd_vsc_trust1.png)
 
-9. *Optional*. If you plan on working in both the CVD and a local course IDE, enable "Backup and Sync Settings..." in VS Code.
+     3. Click the **Trust** button or press **Ctrl** + **Enter** to trust your `$HOME/Repos` folder.
+
+        ![Trust Workspace in VS Code](./assets/69_cvd_vsc_trust.png)
+
+     4. Click the **Close** (**X**) button to close the **Manage Workspace Trust** window.
+
+9. *Optional*. If you plan on working in both the CVD and on a local machine, enable "Backup and Sync Settings..." in VS Code.
 
     1. Click on the gear icon in the lower-left corner of VS Code and select **Backup and Sync Settings...**.
 
