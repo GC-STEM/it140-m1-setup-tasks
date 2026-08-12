@@ -1,0 +1,46 @@
+name: Request an improvement
+description: Suggest a change that could make the course tools, setup, or repository better.
+title: "[Improvement] "
+body:
+  - type: dropdown
+    id: submitter
+    attributes:
+      label: Submitter
+      description: Who is submitting this request?
+      options:
+        - Student
+        - Faculty
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      description: What part of the course does this suggestion relate to?
+      options:
+        - Course setup or automation
+        - Instructions or documentation
+        - GitHub repository
+        - Other or not sure
+    validations:
+      required: true
+
+  - type: textarea
+    id: improvement
+    attributes:
+      label: What would you improve?
+      description: Briefly describe the change you would like to see.
+      placeholder: It would be helpful if...
+    validations:
+      required: true
+
+  - type: textarea
+    id: benefit
+    attributes:
+      label: Why would this help?
+      description: Optional. Explain how this change would make the experience clearer, easier, or more reliable.
+      placeholder: This would help because...
+    validations:
+      required: false
