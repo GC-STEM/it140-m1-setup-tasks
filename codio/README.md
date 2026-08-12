@@ -10,10 +10,10 @@
   - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
   - [1. Launch the CVD](#1-launch-the-cvd)
-  - [2. Sign into Cloud Storage Services](#2-sign-into-cloud-storage-services)
-  - [3. Download the Course Automation Scripts to the CVD](#3-download-the-course-automation-scripts-to-the-cvd)
-  - [4. Update the CVD](#4-update-the-cvd)
-  - [5. Configure the CVD](#5-configure-the-cvd)
+  - [2. Download the Course Automation Scripts to the CVD](#2-download-the-course-automation-scripts-to-the-cvd)
+  - [3. Update the CVD](#3-update-the-cvd)
+  - [4. Configure the CVD](#4-configure-the-cvd)
+  - [5. Sign into Cloud Storage Services](#5-sign-into-cloud-storage-services)
   - [6. Configure Visual Studio Code in the CVD](#6-configure-visual-studio-code-in-the-cvd)
   - [7. Verify the CVD](#7-verify-the-cvd)
   - [Next Steps](#next-steps)
@@ -121,44 +121,7 @@ To complete CVD configuration, you will need the following:
 
 10. In your host/local browser, bookmark the Codio Virtual Desktop (CVD) for direct access later.
 
-## 2. Sign into Cloud Storage Services
-
-You should have access to at least one cloud storage service to be able to share files between your local computer and the CVD. SNHU recommends using your school-issued Microsoft OneDrive, but you may use any provider or any combination of your choice. However, only instructions for Microsoft OneDrive and Google Drive are provided.
-
-1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
-
-2. **Optional**. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
-
-3. Sign into OneDrive using either your SNHU credentials (recommended) or your personal Microsoft account if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
-
-   1. Enter your email address (SNHU or personal) and click **Next**.
-
-      ![OneDrive Sign In - Enter username](./assets/51_cvd_onedrive_signin.png)
-
-   2. Enter your password (SNHU or personal) and click **Sign in**.
-
-      <!-- ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png) -->
-
-   3. Once signed in, you should see a web page that looks similar to the following.
-
-      ![OneDrive Sign In - Install OneDrive](./assets/53_cvd_onedrive_webpage.png)
-
-   4. If you see an **Install** button on the browser address bar near the upper-right, click it to install the OneDrive desktop app. If prompted to **Install app**, click **Install**. If you do not see an **Install** button, skip this step.
-
-      ![OneDrive Sign In - Install OneDrive](./assets/54_cvd_onedrive_install.png)
-
-   5. If you see a prompt to **Keep OneDrive fully optimized**, click **Allow** to allow OneDrive to access local devices. If prompted to allow SharePoint to access other apps on and services on this device, click **Allow**. If you do not see this prompt, skip this step.
-
-      ![OneDrive Sign In](./assets/55_cvd_onedrive_allow_sharepoint.png)
-
-4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
-
-> [!NOTE]
-> The first time you double-click on a desktop icon, you may see an **Untrusted application launcher** warning. If you see this window for preinstalled applications or applications you install, click **Make Executable**.
->
-> ![Untrusted Application Launcher Warning](./assets/56_cvd_untrusted_app_launcher.png)
-
-## 3. Download the Course Automation Scripts to the CVD
+## 2. Download the Course Automation Scripts to the CVD
 
 1. On the CVD desktop, click once on the **Terminal** icon in the taskbar to open a new terminal. It is the second icon from the left on the taskbar.
 
@@ -247,7 +210,7 @@ You should have access to at least one cloud storage service to be able to share
 
 7. Close the terminal window by typing `exit` and pressing **Enter**. You must close the terminal window and open a new one before running the update script in the next step.
 
-## 4. Update the CVD
+## 3. Update the CVD
 
 > [!IMPORTANT]
 > If you update the CVD after starting work on course assignments, save your work on another platform, such as GitHub or OneDrive, before running the update script. This protects your work in case the update fails and the VM must be reset. You do not need to create a backup if you have not saved any work in the CVD yet.
@@ -286,7 +249,7 @@ You should have access to at least one cloud storage service to be able to share
 
    > 💡 *TIP*. If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes.
 
-## 5. Configure the CVD
+## 4. Configure the CVD
 
 1. Click once on the **Terminal** icon in the CVD taskbar to open a new terminal window.
 
@@ -353,6 +316,43 @@ You should have access to at least one cloud storage service to be able to share
 
 14. If desired, right-click anywhere on the CVD desktop and select **Arrange Desktop Icons** to arrange the desktop icons in a grid pattern. This is optional, but it may make it easier to find the icons you need.
    ![Arrange Desktop Icons](./assets/59_cvd_arrange_icons.png)
+
+## 5. Sign into Cloud Storage Services
+
+You should have access to at least one cloud storage service to be able to share files between your local computer and the CVD. SNHU recommends using your school-issued Microsoft OneDrive, but you may use any provider or any combination of your choice. However, only instructions for Microsoft OneDrive and Google Drive are provided.
+
+1. Double-click on the "OneDrive" icon on the CVD desktop to open the OneDrive login page in Chrome. Be patient, as it may take a few seconds for the browser to open.
+
+2. **Optional**. Sign into Chrome using your Google Account credentials if you wish to synchronize your Google Account settings, bookmarks, and extensions with the CVD, or use G-Drive as persistent storage. Otherwise, you may skip this step.
+
+3. Sign into OneDrive using either your SNHU credentials (recommended) or your personal Microsoft account if you wish to use OneDrive as persistent storage for your work in the CVD. Otherwise, you may skip this step. If you choose to sign into OneDrive, follow the steps below:
+
+   1. Enter your email address (SNHU or personal) and click **Next**.
+
+      ![OneDrive Sign In - Enter username](./assets/51_cvd_onedrive_signin.png)
+
+   2. Enter your password (SNHU or personal) and click **Sign in**.
+
+      <!-- ![OneDrive Sign In - Enter password](./assets/52_cvd_onedrive_password.png) -->
+
+   3. Once signed in, you should see a web page that looks similar to the following.
+
+      ![OneDrive Sign In - Install OneDrive](./assets/53_cvd_onedrive_webpage.png)
+
+   4. If you see an **Install** button on the browser address bar near the upper-right, click it to install the OneDrive desktop app. If prompted to **Install app**, click **Install**. If you do not see an **Install** button, skip this step.
+
+      ![OneDrive Sign In - Install OneDrive](./assets/54_cvd_onedrive_install.png)
+
+   5. If you see a prompt to **Keep OneDrive fully optimized**, click **Allow** to allow OneDrive to access local devices. If prompted to allow SharePoint to access other apps on and services on this device, click **Allow**. If you do not see this prompt, skip this step.
+
+      ![OneDrive Sign In](./assets/55_cvd_onedrive_allow_sharepoint.png)
+
+4. Close the browser and/or OneDrive window in the CVD when done signing into OneDrive and/or Chrome.
+
+> [!NOTE]
+> The first time you double-click on a desktop icon, you may see an **Untrusted application launcher** warning. If you see this window for preinstalled applications or applications you install, click **Make Executable**.
+>
+> ![Untrusted Application Launcher Warning](./assets/56_cvd_untrusted_app_launcher.png)
 
 ## 6. Configure Visual Studio Code in the CVD
 
