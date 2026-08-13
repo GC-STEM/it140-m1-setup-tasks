@@ -30,7 +30,7 @@ If you prefer to work directly on your own computer, you may also install the co
 
 ### Recommended: Use a Supported Setup Guide
 
-If your computer uses one of the supported operating systems below, use its README. These guides use IT 140 automation to install, configure, and verify the course IDE as consistently as possible.
+If your computer uses one of the supported operating systems below, use its README. These guides use IT 140 automation scripts to install, configure, and verify the course IDE as consistently as possible.
 
 * **Windows:** [Windows 10 22H2 or Windows 11](windows/README.md)
 * **macOS:** [Sonoma 14, Sequoia 15, or Tahoe 26](macOS/README.md)
