@@ -1,21 +1,21 @@
 # Set Up a GitHub Account
 
+**Setup progress:** [0 Start Here](../README.md) → **1 GitHub** → [2 Codio](../codio/README.md) → [3 Local Computer](../README.md#3-set-up-the-course-ide-on-your-local-computer)
+
 ## Table of Contents
 
 - [Set Up a GitHub Account](#set-up-a-github-account)
   - [Table of Contents](#table-of-contents)
   - [Activity Metadata](#activity-metadata)
-  - [What Are Git and GitHub?](#what-are-git-and-github)
-  - [Why Create a GitHub Account?](#why-create-a-github-account)
+  - [What You Will Do](#what-you-will-do)
+  - [How IT 140 Uses GitHub](#how-it-140-uses-github)
   - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
+  - [GitHub Account Ready Check](#github-account-ready-check)
   - [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
-  - [Next Step](#next-step)
-  - [Optional: Explore GitHub Further](#optional-explore-github-further)
-    - [1. Later: Learn Markdown](#1-later-learn-markdown)
-    - [2. Later: Join GitHub Education](#2-later-join-github-education)
-  - [Troubleshooting](#troubleshooting)
+  - [Continue to Step 2: Set Up Codio](#continue-to-step-2-set-up-codio)
+  - [Learn More or Get Help](#learn-more-or-get-help)
 
 ## Activity Metadata
 
@@ -23,28 +23,31 @@
 - **Activity Title**: 1-1 Setup Tasks | GitHub Account Setup
 - **Activity Type**: Recommended, non-graded, no submission
 - **Activity Purpose**: Set up a GitHub account for use in the IT 140 course.
-- **Activity Description**: This activity guides students through the process of creating a GitHub account, configuring email addresses, enabling two-factor authentication, and optionally customizing their profile and joining GitHub Education. These steps are essential for managing code repositories and collaborating on programming projects throughout the course.
+- **Activity Description**: This activity guides students through creating or configuring a GitHub account, verifying email addresses, enabling two-factor authentication, and identifying the account information used by the course IDE. Course instructions beginning in Module Two assume that students can access GitHub for assignment and project repositories.
 - **Artifact Version**: 0.10.0-beta.1
 - **Artifact Date**: 2026-08-09
 - **Development Status**: Beta Testing
 
-## What Are Git and GitHub?
+## What You Will Do
 
-**[Git](https://git-scm.com/)** is a version control system included in the course integrated development environment (IDE). Git allows developers to track changes to project files, restore earlier versions, and maintain a history of their work. It also supports multiple developers working on the same project without overwriting each other’s changes. Employers consider Git a foundational skill for entry-level software developers [[1](https://doi.org/10.1109/ESEM64174.2025.00055)].
+In this guide, you will:
 
-**[GitHub](https://github.com/)**, which is owned by Microsoft, is a widely used web-based platform for storing and sharing Git repositories, reviewing changes, and collaborating on software projects. A repository, or "repo", is a folder that stores project files and their change history. In a recent survey, developers ranked GitHub as the most admired community platform and the most desired code documentation and collaboration tool [[2](https://survey.stackoverflow.co/2025/technology#2-community-platforms), [3](https://survey.stackoverflow.co/2025/technology#2-code-documentation-and-collaboration-tools)].
+1. Create a GitHub account or prepare an account you already use.
+2. Add and verify the email addresses used for IT 140.
+3. Protect your email address with GitHub's privacy settings.
+4. Configure two-factor authentication (2FA).
+5. Record your GitHub username and public noreply email address for the course IDE setup.
+6. Review profile settings you may want to customize now or later.
 
-National job-posting data also identifies Git and GitHub as in-demand technologies for software-development positions [[4](https://www.onetonline.org/link/demand/15-1252.00)]. IT 140 introduces these tools so you can begin learning how developers organize, track, and manage programming projects.
+You are ready to continue when the **GitHub Account Ready Check** near the end of this guide is complete.
 
-## Why Create a GitHub Account?
+## How IT 140 Uses GitHub
 
-IT 140 uses GitHub to host its programming repositories. Beginning with the Module Two assignment, course instructions will direct you to use Visual Studio Code (VS Code) to *clone* (i.e., copy) the appropriate assignment or project repository into the `Repos` folder on your computer. You will then work with those files in the course IDE.
+IT 140 uses GitHub to host programming repositories. Beginning with the Module Two Assignment, course instructions will direct you to use Visual Studio Code (VS Code) to *clone* (copy) the appropriate assignment or project repository into your `Repos` folder. You will then work with those files in the course IDE.
 
-You do **not** need to clone the central **IT 140** course repository or the **Module One Setup Tasks** repository. These repositories provide course infrastructure and setup instructions. Only clone an assignment or project repository when the course instructions direct you to do so.
+You do **not** need to clone the central **IT 140** course repository or this **Module One Setup Tasks** repository. These repositories provide course infrastructure and setup instructions. Only clone an assignment or project repository when the course instructions direct you to do so.
 
-Because Git and GitHub are widely used professional tools, **setting up a GitHub account now** also gives you an opportunity to begin developing these skills early in your academic journey. A GitHub account can help you manage and back up your work, recover earlier versions of your code, and begin building a professional portfolio.
-
-A GitHub account is **recommended for all students** and may be especially useful for technology majors, who are likely to use GitHub again in later courses and professional work.
+For a beginner-friendly explanation of Git, GitHub, repositories, professional uses, GitHub Education, and additional learning resources, see **[GitHub in IT 140](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/GitHub-in-IT-140)**.
 
 ## 0. Sign Up for a New GitHub Account
 
@@ -133,6 +136,21 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 > [!WARNING]
 > Do not share your password, passkey, authentication codes, or recovery codes with anyone. Neither GitHub nor SNHU will ever ask you for this information. If someone asks for it, report the request to GitHub and SNHU immediately.
 
+## GitHub Account Ready Check
+
+Before continuing to the course IDE setup, confirm that the account information used by IT 140 is ready:
+
+- [ ] You can sign in to your GitHub account.
+- [ ] The email addresses you added for this activity show as verified.
+- [ ] **Keep my email addresses private** is turned on.
+- [ ] You know your GitHub username.
+- [ ] You have recorded your GitHub-provided `@users.noreply.github.com` email address.
+- [ ] Two-factor authentication (2FA) is configured and your recovery codes are stored securely.
+
+If all of these checks are complete, the GitHub account information needed to configure the course IDE is ready.
+
+The profile-customization step below can help you begin building a professional GitHub presence, but it does not affect whether the course IDE can connect to your account.
+
 ## 3. Customize Your GitHub Profile
 
 1. Go to [https://github.com/settings/profile](https://github.com/settings/profile).
@@ -164,38 +182,15 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 6. If your preferred spoken language is not English, scroll down to **Trending settings** and update your **Preferred spoken language**, if desired, and **Save Trending settings**.
 
-## Next Step
+## Continue to Step 2: Set Up Codio
 
-Once your GitHub account is set up, your SNHU email address is verified, and you have recorded your GitHub username and public noreply email address, you are ready to configure the course IDE on the Codio Virtual Desktop (CVD).
+After the **GitHub Account Ready Check** is complete, continue directly to the Codio guide:
 
-We highly recommended all students and faculty configure the course IDE on the CVD, even if you do not plan to use the CVD to complete or review assignments. This ensures that you have a working course IDE that matches the reference environment or in case you have trouble installing it on your local computer.
+**[Continue to Step 2: Set Up the Course IDE on Codio →](../codio/README.md)**
 
-- [Set Up the Course IDE on Codio](../codio/README.md)
+The CVD is the course reference environment. Configuring it gives you an environment that matches course screenshots, instructional videos, and the environment instructors and technical support staff can most easily reproduce.
 
-## Optional: Explore GitHub Further
+## Learn More or Get Help
 
-### 1. Later: Learn Markdown
-
-After you finish setting up your GitHub account and the course IDE on at least one platform, you may want to explore GitHub’s free learning resources. These resources are optional and not required for this course but may help assignments go more smoothly.
-
-1. Go to [https://learn.github.com/skills](https://learn.github.com/skills).
-
-2. Sign in to GitHub, if prompted.
-
-3. Consider completing the [Communicating using Markdown](https://github.com/skills/communicate-using-markdown) course before writing about IDE features in the Module Two assignment or your project design document in Module Five.
-
-### 2. Later: Join GitHub Education
-
-If an `.edu` email address is associated with your GitHub account, you may see an invitation to **Join GitHub Education!** on your [GitHub dashboard](https://github.com/), like the one shown below. If you do not see this invitation, then GitHub may not be accepting new applications for GitHub Education at this time.
-
-> ![GitHub Education invitation](assets/41_github_education_invite.png)
-
-**GitHub Education is not required or recommended for this course.** The additional tools and services it provides are not needed for IT 140 and may add unnecessary complexity for beginning programmers.
-
-You may find [GitHub Education](https://github.com/education) useful later if you take more advanced computing courses or want to explore additional developer tools on your own.
-
-Applying for GitHub Education is optional and outside the scope of this course and SNHU technical support. If you choose to apply, you will need to complete the application process independently.
-
-## Troubleshooting
-
-{{SME TODO: Add troubleshooting information for GitHub account creation and configuration. >}}
+- Learn more about Git and GitHub: **[GitHub in IT 140](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/GitHub-in-IT-140)**
+- Get help with account or setup problems: **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)**

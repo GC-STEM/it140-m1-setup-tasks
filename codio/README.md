@@ -2,11 +2,14 @@
 
 # IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)
 
+**Setup progress:** [0 Start Here](../README.md) → [1 GitHub](../github/README.md) → **2 Codio** → [3 Local Computer](../README.md#3-set-up-the-course-ide-on-your-local-computer)
+
 ## Table of Contents
 
 - [IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)](#it-140-module-one-setup-tasks--codio-virtual-desktop-cvd)
   - [Table of Contents](#table-of-contents)
   - [Activity Metadata](#activity-metadata)
+  - [What You Will Do](#what-you-will-do)
   - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
   - [1. Launch the CVD](#1-launch-the-cvd)
@@ -16,12 +19,8 @@
   - [5. Configure the CVD](#5-configure-the-cvd)
   - [6. Configure Visual Studio Code](#6-configure-visual-studio-code)
   - [7. Verify the CVD](#7-verify-the-cvd)
-  - [Next Steps](#next-steps)
-  - [Troubleshooting](#troubleshooting)
-    - [Update Script](#update-script)
-      - [The Terminal Stops Showing New Output](#the-terminal-stops-showing-new-output)
-        - [Symptoms the terminal is frozen or unresponsive](#symptoms-the-terminal-is-frozen-or-unresponsive)
-        - [Corrective actions for a frozen or unresponsive terminal](#corrective-actions-for-a-frozen-or-unresponsive-terminal)
+  - [Your Course IDE Is Ready](#your-course-ide-is-ready)
+  - [If Something Goes Wrong](#if-something-goes-wrong)
 
 ## Activity Metadata
 
@@ -29,10 +28,30 @@
 - **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD) Setup
 - **Activity Type**: Recommended, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).
-- **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Using the CVD allows you to work on assignments without relying on an internet connection or a remote server.
+- **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. The CVD is a cloud-based environment that you access through an internet connection and web browser, so the course software runs in a consistent remote environment rather than depending on software installed on your own computer.
 - **Artifact Version**: 0.10.1-beta.1
 - **Artifact Date**: 2026-08-11
 - **Development Status**: Beta Testing
+
+## What You Will Do
+
+In this guide, you will:
+
+1. Launch the Codio Virtual Desktop from Brightspace.
+2. Download the IT 140 automation package.
+3. Update the CVD.
+4. Sign in to cloud storage services you choose to use.
+5. Configure the CVD and connect the GitHub command-line tools to your account.
+6. Configure Visual Studio Code.
+7. Run the verification script and review the final Verification Summary.
+
+You are finished when the final **Verification Summary** reports:
+
+- **Result**: `COMPLIANT`
+- **Failed**: `0`
+- **Exit code**: `0`
+
+The detailed instructions below are written for first-time users. If you have completed this setup before, you can usually skim the headings and success checkpoints.
 
 ## What is a Codio Virtual Desktop (CVD)?
 
@@ -40,7 +59,9 @@ A Codio Virtual Desktop (CVD) is a cloud-based Linux desktop that you access thr
 
 The CVD is the course's reference development environment. Assignment instructions, screenshots, and instructional videos use the CVD, and instructors and technical support staff can most easily help you when you are using it.
 
-Even if you plan to complete most of your work on your own computer, launch and configure the CVD at least once. If your local course IDE stops working or you need to use another computer, you can switch to the CVD and continue working with little interruption.
+We recommend configuring the CVD even if you plan to complete most of your work on your own computer. Doing so gives you access to the course reference environment if your local course IDE stops working, you need to use another computer, or you need an environment that matches course screenshots and demonstrations.
+
+For help choosing between the CVD and a local environment, see **[Setup Options](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Options)**.
 
 ## 0. Prerequisites
 
@@ -123,6 +144,9 @@ To complete CVD configuration, you will need the following:
 
 ## 2. Download the Course Automation Scripts to the CVD
 
+> [!IMPORTANT]
+> You do not need to understand or type the bootstrap code below. Use the **Copy** button on the code block to copy the entire command exactly as shown, then paste it into the CVD Terminal as directed.
+
 1. On the CVD desktop, click once on the **Terminal** icon in the taskbar to open a new terminal. It is the second icon from the left on the taskbar.
 
    ![CVD Terminal Icon](./assets/21_cvd_taskbar_terminal.png)
@@ -202,7 +226,7 @@ To complete CVD configuration, you will need the following:
 
    - If you see an `ERROR` message, repeat Steps 2-6 making sure you copy and paste the entire command set.
 
-   - If you still see an `ERROR` message, follow the instructions in the message and the [Troubleshooting](#troubleshooting) section below to resolve the issue.  
+   - If you still see an `ERROR` message, follow the instructions in the message and see the [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support) Wiki page for additional help.  
 
       ![Error Message in CVD Terminal](./assets/27_cvd_terminal_bootstrap_error.png)
 
@@ -221,17 +245,18 @@ To complete CVD configuration, you will need the following:
 
    ![Update IDE Script in CVD Terminal](./assets/31_cvd_terminal_update.png)
 
-3. Review the **Update Summary**:
+3. Review the **Update Summary** before continuing:
 
-   - Confirm that **Result** is `PASS`.
-
-   - Confirm that **Failures** is `0`.
-
-   - Check the notices to determine whether a VM restart is required.
+   - Check **Result**. A normal successful update reports `PASS`.
+   - Confirm **Failures** is `0`.
+   - Check **Restart required**.
+   - Check **Exit code**. A completed update without an error reports `0`.
+   - Read **Next step** and follow the action shown there.
 
    ![Update Summary in CVD Terminal](./assets/32_cvd_terminal_update_success.png)
 
-   {{SME TODO: Add what to do if Result is not PASS or Failures is not 0.}}
+   > [!IMPORTANT]
+   > If the summary reports a failure or tells you to retry, re-run `update_it140.sh` **no more than once**. If the second run also fails, stop and use [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support). Include the update log from `~/it140/logs/`. Do not attempt manual `sudo`, APT, package, or file repairs unless course support directs you to do so.
 
 4. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -345,11 +370,12 @@ You should have access to at least one cloud storage service to be able to share
     - **Result**: `PASS`
     - **Warnings**: `0`
     - **Failures**: `0`
-    - Success message near the end of the output.
+    - **Exit code**: `0`
+    - **Next step**: open a fresh Terminal and run `verify_it140.sh`.
 
     ![Configure IDE Script in CVD Terminal](./assets/49f_cvd_terminal_git_commit_name.png)
 
-    *Note*. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the update and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
+    *Note*. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the update and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)** for assistance.
 
 13. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -418,6 +444,9 @@ You should have access to at least one cloud storage service to be able to share
 
     4. Follow the prompts to sign into your GitHub account and authorize VS Code to access your GitHub account.
 
+    > [!NOTE]
+    > VS Code Settings Sync synchronizes supported VS Code settings. It does **not** automatically synchronize assignment files between the CVD and another computer. Course files move between environments only when you deliberately use the Git/GitHub workflow described in course instructions or copy files through storage you control.
+
 10. *Optional*. If this is your first time using VS Code, we recommend you complete the VS Code **Walkthroughs** to familiarize yourself with the IDE. You will use VS Code for all course assignments and projects, so it is worth your time to learn how to use it effectively.
 
     > 💡 *TIP*.  If you ever see an **Update** button on the VS Code menu bar in the CVD, don't press it. You can ignore it or update the CVD by re-running `update_it140.sh`. Be sure to save your work on another platform (e.g., GitHub, OneDrive, your local machine) before updating the CVD, just in case the update fails and we need to reset your VM.
@@ -432,83 +461,42 @@ You should have access to at least one cloud storage service to be able to share
 
    ![Verify IDE Script in CVD Terminal](./assets/71_cvd_verify1.png)
 
-3. Review the output of the verification script to ensure that no checks failed (i.e., `Failed: 0`).
+3. Review the **Verification Summary**. A successfully configured CVD reports:
+
+   - **Result**: `COMPLIANT`
+   - **Failed**: `0`
+   - **Exit code**: `0`
 
    ![Review the verification script output](./assets/72_cvd_verify_summary.png)
 
-4. Address any issues reported by the verification script. The script may provide instructions for resolving specific issues. Re-running the update and configure scripts may resolve other issues. If you encounter problems that you cannot resolve, see the [**Troubleshooting**](#troubleshooting) section for assistance.
+4. If any checks fail, follow the remediation instructions shown by the script. Do not continue by guessing at manual repairs. If you cannot resolve the reported issue, use **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)**.
 
 5. Close the terminal window by typing `exit` and pressing **Enter**.
 
-## Next Steps
+## Your Course IDE Is Ready
 
-When you are done configuring the CVD, close the CVD browser tab. DO NOT use the **Shut Down** option within the Ubuntu desktop. Codio will keep trying to reconnect to the CVD, which will prevent you from accessing it again until you log out of Codio and log back in.
+If the Verification Summary reports `COMPLIANT`, `Failed: 0`, and `Exit code: 0`, the course IDE on your CVD is configured and ready to use.
 
-Once you have completed Codio Virtual Desktop (CVD) configuration, you may stop here until you are ready to start on the Module Two assignment. You may, if desired, set up the course IDE on one or more local computers. Doing so provides an alternative development environment in case the CVD is unavailable and provides access after the course. Your VS Code and your GitHub account will synchronize your work between the CVD and your local course IDE, so you can continue working on assignments from either environment.
+When you are finished, close the CVD browser tab. **Do not use the Shut Down option within the Ubuntu desktop.** Codio will keep trying to reconnect to a shut-down VM, which can prevent you from accessing it again until you log out of Codio and log back in.
 
-- **Set Up the Course IDE on Your Local Computer(s)**
-  - [Windows](../local/windows/README.md)
-  - [MacOS](../local/macos/README.md)
-  - [Linux](../local/linux/README.md)
+You can now return to your IT 140 course in [D2L Brightspace](https://learn.snhu.edu/) and complete any remaining Module One activities.
 
-## Troubleshooting
+If you also want the course IDE on your own computer, choose the setup guide for the supported computer you want to use:
 
-{{< SME TODO: Add troubleshooting information for CVD configuration. >}}
+- [Windows](../local/windows/README.md)
+- [macOS](../local/macOS/README.md)
+- [Linux](../local/linux/README.md)
 
-### Update Script
+> [!NOTE]
+> Enabling VS Code Settings Sync can synchronize supported editor settings, but it does not automatically synchronize assignment files. Follow the Git/GitHub workflow in each assignment or project when moving repository work between environments.
 
-The update script normally takes about **4–5 minutes**, but it may take **15–30 minutes or longer**. Longer update times are more likely when:
+## If Something Goes Wrong
 
-- You run the script for the first time on a fresh CVD.
-- Ubuntu has many pending updates.
-- The script must download large system or Linux kernel packages.
-- Your network connection is slow or temporarily unstable.
-- An Ubuntu download server is busy or temporarily unavailable.
-- Ubuntu automatically retries an interrupted or unsuccessful download.
+For setup failures, update delays, log locations, privacy guidance, and support channels, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)**.
 
-#### The Terminal Stops Showing New Output
+If the Update script appears to stop producing output, see the Wiki section **Codio: Update Appears to Stop** before interrupting it. Large Ubuntu downloads can remain quiet for several minutes without being frozen.
 
-##### Symptoms the terminal is frozen or unresponsive
-
-The Terminal may appear to stop at a line beginning with `Get:` or `Ign:`. No new text may appear for several minutes.
-
-For example:
-
-```text
-Get:2 ... linux-modules ... [148 MB]
-Ign:2 ... linux-modules ...
-```
-
-This usually means Ubuntu is downloading a large file, waiting for the download server, or automatically retrying the download. An `Ign:` line does not necessarily mean that the update failed.
-
-##### Corrective actions for a frozen or unresponsive terminal
-
-1. Keep the Terminal open.
-2. Do not press keys or start another update command.
-3. Wait up to **30 minutes after the last new line appears**.
-
-Do not interrupt the script only because its total running time exceeds 30 minutes. Continue waiting as long as new lines occasionally appear.
-
-If no new text appears for **30 consecutive minutes** **AND** the last line begins with `Get:` or `Ign:`:
-
-1. Press `Ctrl+C` once.
-2. Wait for the script to stop and display its summary.
-3. Close the Terminal.
-4. Open a new Terminal.
-5. Run the update script again by typing `update_it140.sh` and pressing `Enter`.
-
-> [!IMPORTANT]
-> Do not interrupt the script while the Terminal displays messages such as:
-
-```text
-Unpacking
-Setting up
-Processing triggers
-```
-
-These messages mean Ubuntu is installing or configuring software rather than downloading it.
-
-If the script repeatedly stops at the same download, take a screenshot of the Terminal and contact course support. Include the update log from the following folder:
+When asking for help with a CVD automation problem, include the step that failed, the exact summary or error message, and the relevant log from:
 
 ```text
 ~/it140/logs/

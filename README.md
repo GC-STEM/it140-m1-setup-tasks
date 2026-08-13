@@ -28,213 +28,66 @@ The **Codio Virtual Desktop (CVD)** automation is expected to be reliable becaus
 
 In this activity, you will prepare your software development environment, also called the **course IDE**. An integrated development environment (IDE) is software that helps you design, write, run, test, debug, and manage programs and related files in one place.
 
-You may complete this activity using the Codio Virtual Desktop (CVD), your local computer, or both. The course IDE is already installed on the CVD, so you only need to configure and verify it. A local installation is optional and allows you to work on your own computer. If you are short on time or experience technical issues, use the CVD to complete course assignments until you can configure the course IDE locally.
+Course instructions beginning with the Module Two Assignment assume that you have a **GitHub account** and access to a **configured course IDE**. The setup sequence below begins with GitHub and the **Codio Virtual Desktop (CVD)**, the course reference environment. You may also configure the course IDE on a supported Windows, macOS, or Linux computer.
 
-You must complete this activity on at least one platform because you will use the course IDE throughout the course. You will use it to design software using flowcharts and pseudocode; write and debug Python programs; run automated tests; and manage assignment files. This activity also supports the course competency: *Develop a fully functional program using industry-relevant tools*. The recommended course IDE includes software commonly used by professional developers, including tools identified in the [2025 Stack Overflow Developer Survey](https://survey.stackoverflow.co/2025/).
+The recommended course IDE includes VS Code, Python 3.12, Git and GitHub tools, testing tools, and course extensions. The same core toolset is used across supported environments so that course instructions, examples, automated tests, and technical support work as consistently as possible.
 
-### Course IDE Manifest
+> [!TIP]
+> Want to understand the tools before or after setup? See the Wiki pages [What Is the Course IDE?](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/What-Is-the-Course-IDE) and [Setup Options](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Options). You do not need to understand every tool before starting setup.
 
-The official course IDE includes the software and extensions listed below.
+## Setup Progress
 
-| **#** | **Software Category** | **Software** | **Student Use in IT 140** |
-| :-: | ---------------------- | ------------------------------- | --------------------------------------------- |
-| 0 | Version Control | [Git](https://git-scm.com/) and [GitHub CLI](https://cli.github.com/) | Download assignment materials; optionally publish portfolio artifacts |
-| 1 | Programming Language | [Python 3.12](https://www.python.org/downloads/) | Write, run, and debug Python programs |
-| 2 | Test Runner | [pytest, pytest-cov](https://docs.pytest.org/en/stable/) | Run provided tests and review results |
-| 3 | Code Editor / IDE | [Visual Studio Code (VS Code)](https://code.visualstudio.com/) | Design, write, test, debug, and manage assignment files |
-| 4 | Language Support | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | Provide Python language support in VS Code |
-| 5 | Code Linter / Formatter | [charliermarsh.ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff) | Identify style issues and format code consistently |
-| 6 | Diagram Support | [hediet.vscode-drawio](https://marketplace.visualstudio.com/items?itemName=hediet.vscode-drawio) | View, create, and edit flowcharts and game world maps |
-| 7 | Pseudocode Support | [i2p-hub.i2p-pseudo](https://marketplace.visualstudio.com/items?itemName=i2p-hub.i2p-pseudo) | View, create, and edit pseudocode files with syntax highlighting |
-| 8 | Code Spell Checker | [streetsidesoftware.code-spell-checker](https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker) | Check spelling in source code and documentation |
-| 9 | File Viewers | [cweijan.vscode-office](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) | View course-provided Office and PDF files within VS Code |
+**0 Start Here** → [1 GitHub](github/README.md) → [2 Codio](codio/README.md) → 3 Local Computer
 
->[!NOTE]
-> This recommended software stack is fully supported for the course. If you choose a different software stack, it must provide the required file formats and equivalent functionality for each activity. Your instructor and the IT Service Desk may be unable to support software outside this recommended environment. Python 3.12 is to maintain consistency with the CVD and zyBooks. If you choose to use a different Python version, you may encounter compatibility issues with provided tests and course materials.
-
-### Activity Repository
-
-A code repository, or just "repo," is a storage location for software projects and their associated files. Most GitHub repos include one or more `README.md` files in Markdown (`.md`) format. A README file explains the purpose and contents of a repository or folder and usually provides instructions for getting started. When working with a GitHub repo, begin with the top-level `README.md`.
-
-[Markdown](https://www.markdownguide.org/getting-started/) is a lightweight markup language that allows you to format text using plain text syntax. Markdown files are widely used for documentation, including GitHub repositories, because they are easy to read and write. You can view Markdown files in a web browser or in a code editor that supports Markdown rendering. You will edit your first Markdown file in the course IDE when you complete the Module Two Assignment.
-
-This repository is organized by setup topic. Each main folder contains the files needed to complete one part of the course IDE setup process—GitHub, Codio, and local setup.
-
-```text
-it140-m1-setup-tasks/
-│
-├── README.md          0. Start here: IDE setup activity overview
-│
-├── github/            1. Set up a GitHub account
-│   └── README.md         Instructions for creating and configuring a GH account
-│
-├── codio/             2. Set up the course IDE on Codio
-│   └── README.md         Instructions for configuring the course IDE
-│
-└── local/             3. Set up the course IDE on your local computer
-    │
-    ├── linux/            Set up course IDE on your Linux computer
-    │   ├── distros/      Set up course IDE on other Linux distributions
-    │   └── README.md     Instructions for Debian/Ubuntu local setup
-    │
-    ├── macOS/            Set up course IDE on your macOS computer
-    │   └── README.md     Instructions for macOS local setup
-    │
-    └── windows/          Set up course IDE on your Windows computer
-        └── README.md     Instructions for Windows local setup
-```
-
-> [!NOTE]
-> This repository also contains folders and files that are not shown above. These files support repository maintenance, configuration, and development. They are not part of this activity, so you can safely ignore them.
-
-## Set Up the Course IDE
-
-Before starting the Module Two Assignment, follow the instructions below to set up the course IDE on at least the Codio Virtual Desktop (CVD). If you want, you can also set up the course IDE on your local computer. If you encounter technical issues, review the **[Technical Support](#technical-support)** section for guidance.
+Follow the links below rather than browsing the repository folders. Each guide tells you what to do, how to recognize a successful result, and where to go next.
 
 ### 1. Set Up a GitHub Account
 
-- [ ] Open the [`github/README.md`](github/README.md) file.
+Course instructions beginning in Module Two assume that you can access a GitHub account and identify the account information used by the course IDE.
 
-- [ ] Follow the instructions.
-
-- [ ] Return to this file and continue to the next step.
+- [ ] Open **[Set Up a GitHub Account](github/README.md)**.
+- [ ] Follow that guide through its **GitHub Account Ready Check**.
+- [ ] At the end of the GitHub guide, use its link to continue directly to the Codio guide.
 
 ### 2. Set Up the Course IDE on Codio
 
-- [ ] Open the appropriate Codio README file.
-  - [Students](codio/README.md)
-  - [Faculty & Staff](.faculty/README.md)
+The CVD is the course reference environment used in assignment instructions, screenshots, and instructional videos. It already contains the main system software for IT 140; the setup process updates, configures, and verifies it. **We recommend configuring the CVD even if you also plan to work on your own computer.**
 
-- [ ] Follow the instructions.
-
-- [ ] Return to this file and continue to the next step.
+- [ ] **Students:** Open **[Set Up the Course IDE on Codio](codio/README.md)**.
+- [ ] **Faculty and staff:** Use the **[Faculty CVD Setup Guide](.faculty/README.md)** where directed.
+- [ ] Continue until the CVD **Verification Summary** reports the successful completion values shown in the guide.
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
-This step is optional. If you are short on time or experience technical issues, use the Codio Virtual Desktop (CVD) to complete course assignments until you can set up the course IDE locally.
+After you have access to a configured course IDE, you may also configure the course IDE on a supported local computer. Most students need at most one local installation.
 
-- [ ] Open the README.md file for your operating system.
-  - [Windows](local/windows/README.md)
-  - [macOS](local/macos/README.md)
-  - [Linux](local/linux/README.md)
+Choose the guide for the computer you want to use:
 
-- [ ] Follow the instructions.
+- [Windows](local/windows/README.md)
+- [macOS](local/macOS/README.md)
+- [Linux](local/linux/README.md)
 
-- [ ] Return to this file and continue to the next step.
+If a local computer is managed by an employer, school, or another person, do not bypass security controls or installation restrictions. Use the CVD while you determine whether you have permission to install software.
 
-## Next Steps
+## When Setup Is Complete
 
-Once you have completed the course IDE setup, return to your IT 140 course in [D2L Brightspace](https://learn.snhu.edu) and complete any remaining Module One activities before the end of Week 1.
+When you have access to a configured and verified course IDE, return to your IT 140 course in [D2L Brightspace](https://learn.snhu.edu/) and complete any remaining Module One activities before the end of Week 1.
 
-If you have completed all Module One activities and have time remaining in Week 1, consider exploring the course IDE and its features. Becoming familiar with the course IDE will help you complete assignments in Modules Two through Seven more efficiently and effectively. Below are some suggestions for exploring the course IDE:
+If you have time remaining, see **[Explore Your Course IDE](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Explore-Your-Course-IDE)** for resources you can use to become more comfortable with VS Code, GitHub, and Markdown.
 
-- [Getting Started with VS Code](https://learn.microsoft.com/en-us/shows/visual-studio-code/learn-visual-studio-code-in-7min-official-beginner-tutorial) video (7 minutes)
-- [Introduction to GitHub](https://github.com/skills/introduction-to-github) short-course.
-- [Communicate using Markdown](https://github.com/skills/communicate-using-markdown) short-course.
+## If Something Goes Wrong
 
-## Technical Support
+If a setup script reports `FAIL`, `PARTIAL`, `NOT COMPLIANT`, a nonzero exit code, or another unexpected result, **do not guess at a repair or automatically continue to the next setup phase**. Follow the instructions in the script summary and the README for that step.
 
-Software setup can be frustrating, especially if you have not used command line interface (CLI) tools before. If something does not work, pause and collect information before asking for help. Clear details make it much easier for others to understand the problem and help you solve it.
+Before asking for help, save the exact error message and note the step where it occurred. Setup scripts also save diagnostic logs under `~/it140/logs/` or the corresponding `it140/logs` folder in your user profile.
 
-When asking for technical support, include as much of the following information as possible:
+See **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)** for troubleshooting guidance, what information to collect, and where to ask for help.
 
-- Your operating system, such as Windows 11, macOS Tahoe, or Ubuntu 24.04
-- The step number or section where the problem happened
-- What you were trying to do
-- What you expected to happen
-- What actually happened
-- The exact command you entered, if you were using the CLI
-- Any error messages you saw
-- A screenshot, if the issue happened in a graphical user interface (GUI)
-- Any setup log files created during the process
+> [!WARNING]
+> Never share passwords, authentication or verification codes, recovery codes, personal access tokens, or other credentials in screenshots, logs, GitHub posts, or support requests.
 
-A command line interface (CLI) is a text-based way to use your computer by typing commands. Windows PowerShell, macOS Terminal, and Linux Bash are examples of CLI tools. A graphical user interface (GUI) is the more familiar point-and-click type of interface, such as a settings window or installer screen.
+## Learn More About This Repository
 
-Some setup commands create transcript or log files. These files record what happened during setup and can help technical support troubleshoot the issue. If a log file was created, include it when asking for help.
+You do not need to understand the GitHub repository structure to complete setup. Use the direct links in the guides.
 
-### Check for a Reported Solution
-
-Another student may have already experienced and resolved the same problem.
-
-Before requesting help:
-
-1. Search your section’s **General Questions** discussion topic.
-2. Search the main course repository’s **Discussions** tab.
-3. Look for posts containing the name of the script, application, error message, or task that caused the problem.
-4. Follow solutions posted or confirmed by course faculty or technical support.
-
-If you do not find a solution, create a new post in the General Questions topic or the appropriate GitHub Discussion. Include:
-
-- What you were trying to do
-- The platform you were using, such as the Codio Virtual Desktop, Windows, or macOS
-- The script, application, or course task involved
-- The exact error message or unexpected behavior
-- The troubleshooting actions you already tried
-- Whether those actions changed the result
-- A screenshot or the relevant portion of the log, when available
-
-Use a clear title that describes the problem. For example:
-
-```text
-CVD update_it140.sh stops during Ubuntu package download
-```
-
-Do not post passwords, authentication codes, access tokens, student identification numbers, personal contact information, or other private information. Review screenshots and log excerpts before posting them. Do not post complete solutions to graded assignments.
-
-After your problem is resolved, reply to your original post with the solution or identify the response that solved it. This helps other students who encounter the same problem.
-
-### Artificial Intelligence (AI)
-
-You may use an AI assistant to help troubleshoot technical issues. AI can help explain error messages, suggest next steps, or help you understand what a command is doing.
-
-When using AI for technical support, provide clear details. Do not only say, “It does not work.” Include the task, the step where the issue happened, the command you entered, the error message, and what you already tried.
-
-You can use this prompt template:
-
-```text
-I am a beginner programming student. I am trying to [describe the task], but I am having trouble at [step number or section name].
-
-My operating system is [Windows 11 / macOS / Linux].
-
-Here is the command I entered, if any:
-[paste the command]
-
-Here is the message or error I received:
-[paste the full message or error]
-
-Here is what I expected to happen:
-[describe the expected result]
-
-Here is what actually happened:
-[describe the result]
-
-Here is what I have already tried:
-[list any steps you already tried]
-
-Please explain what might be causing the issue in beginner-friendly language. Give me one suggestion at a time, and explain how to try it before moving to the next suggestion.
-```
-
-Review AI suggestions carefully before running commands. If a suggestion asks you to delete files, change security settings, download unknown software, or run a command you do not understand, ask your instructor or the IT Service Desk before continuing.
-
-### IT Service Desk
-
-Contact the **IT Service Desk** if you need help with SNHU systems, Codio access, account access, software installation, or technical problems you cannot resolve.
-
-To contact the **IT Service Desk**:
-
-- Log in to the [course site](https://learn.snhu.edu/d2l/home).
-- Click the **Help** drop-down menu near the top right of the page.
-- Click **IT Service Desk**.
-- Click **Ask for Technology Help**.
-- If the issue is time sensitive, click **Chat Now** or call the listed phone number.
-- If the issue is not time sensitive, submit a support ticket.
-
-When you contact the **IT Service Desk**, include the details listed at the start of this section. If a log file was created, attach it to your ticket or mention that it is available.
-
-### Instructor and Classmates
-
-Post technical support questions in the **General Questions** course discussion forum. This allows the whole class to benefit from the question and answer. If you had the problem, another student may have the same problem too.
-
-When posting, include the same information listed at the start of this section: the step where the issue happened, what you tried, and any error message you received. Do not post private information such as passwords, personal access tokens, or security codes.
-
-If you solve a problem, consider posting the solution in the forum. Sharing what worked can help your classmates and build good troubleshooting habits.
+If you want to learn what a repository, README, or Markdown file is, or see how this Setup Tasks repository is organized, visit **[Using the Setup Tasks Repository](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Using-the-Setup-Tasks-Repository)**.
