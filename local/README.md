@@ -9,11 +9,11 @@ Setup progress: [0 Start Here](../README.md) → [1 GitHub](../github/README.md)
 Installing the IT 140 development environment (**course IDE**) on your local computer is **optional**.
 
 The [Codio Virtual Desktop (CVD)](../codio/README.md) is the course reference environment. Course instructions, screenshots, and instructional videos use the CVD as their reference. You can complete IT 140 using the CVD without installing the course IDE on your own computer.
-
 If you prefer to work directly on your own computer, you may also install the course IDE locally. You can do this now, later in the course, or not at all.
 
-> **If local setup becomes difficult or stops working, use the CVD.**
-> A working local installation is not required to complete IT 140.
+> **If your computer or operating system is not supported by one of the local setup guides, use the CVD.** This includes devices such as Chromebooks, tablets, and other systems that cannot run the supported Windows, macOS, or Linux course IDE. The CVD is the recommended course environment for these devices; you do not need to find another way to install the course IDE locally.
+>
+> **If your computer is supported but local setup becomes difficult or stops working, use the CVD.** A working local installation is not required to complete IT 140.
 
 ## Activity Metadata
 
@@ -35,8 +35,9 @@ If your computer uses one of the supported operating systems below, use its READ
 * **Windows:** [Windows 10 22H2 or Windows 11](windows/README.md)
 * **macOS:** [Sonoma 14, Sequoia 15, or Tahoe 26](macOS/README.md)
 * **Linux:** [Ubuntu with GNOME Desktop](linux/README.md)
+  The operating-system-specific README is the primary source for system requirements, preparation, installation, configuration, verification, updates, and troubleshooting for that platform. Just click on one of the links above to continue with the recommended setup.
 
-The operating-system-specific README is the primary source for system requirements, preparation, installation, configuration, verification, updates, and troubleshooting for that platform. Just click on one of the links above to continue with the recommended setup.
+> **Recommended:** If your operating system or device is not supported by one of the guides above, use the [Codio Virtual Desktop (CVD)](../codio/README.md). This includes Chromebooks, tablets, and other devices that cannot run the supported course IDE. Advanced users may continue with the manual setup instructions below, but manual setup on an unsupported system is optional and is not the recommended student path.
 
 If your operating system is supported but you prefer to install the course tools yourself, you may instead continue with the **Manual Local Setup** below.
 
@@ -51,8 +52,7 @@ Continue with the remainder of this README if:
 * You use another Linux distribution or desktop environment.
 * You use an older version of Windows or macOS.
 * You prefer to install and configure the course tools manually.
-
-The manual instructions use graphical installers and application settings where practical. A few short terminal commands are included where they are the simplest way to configure or verify developer tools.
+  The manual instructions use graphical installers and application settings where practical. A few short terminal commands are included where they are the simplest way to configure or verify developer tools.
 
 > **Important**
 >
@@ -66,22 +66,21 @@ The manual instructions use graphical installers and application settings where 
 
 The manual setup uses the same core tools used by the supported IT 140 course IDE:
 
-| Category             | Software                                |
-| -------------------- | --------------------------------------- |
-| Version control      | Git                                     |
-| GitHub tools         | GitHub CLI                              |
-| Programming language | Python 3.12                             |
-| Testing              | pytest and pytest-cov                   |
-| Code quality         | Ruff                                    |
-| Code editor / IDE    | Visual Studio Code                      |
-| Python support       | `ms-python.python`                      |
-| Ruff support         | `charliermarsh.ruff`                    |
-| Diagram support      | `hediet.vscode-drawio`                  |
-| Pseudocode support   | `i2p-hub.i2p-pseudo`                    |
-| Spell checking       | `streetsidesoftware.code-spell-checker` |
-| File viewing         | `cweijan.vscode-office`                 |
-
-Python **3.12** is used to remain consistent with the CVD, zyBooks, course examples, and provided tests.
+| Category                                                                                                 | Software                                |
+| -------------------------------------------------------------------------------------------------------- | --------------------------------------- |
+| Version control                                                                                          | Git                                     |
+| GitHub tools                                                                                             | GitHub CLI                              |
+| Programming language                                                                                     | Python 3.12                             |
+| Testing                                                                                                  | pytest and pytest-cov                   |
+| Code quality                                                                                             | Ruff                                    |
+| Code editor / IDE                                                                                        | Visual Studio Code                      |
+| Python support                                                                                           | `ms-python.python`                      |
+| Ruff support                                                                                             | `charliermarsh.ruff`                    |
+| Diagram support                                                                                          | `hediet.vscode-drawio`                  |
+| Pseudocode support                                                                                       | `i2p-hub.i2p-pseudo`                    |
+| Spell checking                                                                                           | `streetsidesoftware.code-spell-checker` |
+| File viewing                                                                                             | `cweijan.vscode-office`                 |
+| Python **3.12** is used to remain consistent with the CVD, zyBooks, course examples, and provided tests. |                                         |
 
 ---
 
@@ -260,16 +259,16 @@ VS Code extensions add the language, diagram, pseudocode, spell-checking, and fi
 
 3. Search for and install each extension below.
 
-| Extension           | Extension ID                            |
-| ------------------- | --------------------------------------- |
-| Python              | `ms-python.python`                      |
-| Ruff                | `charliermarsh.ruff`                    |
-| Draw.io Integration | `hediet.vscode-drawio`                  |
-| Code Spell Checker  | `streetsidesoftware.code-spell-checker` |
-| I2P Pseudocode      | `i2p-hub.i2p-pseudo`                    |
-| Office Viewer       | `cweijan.vscode-office`                 |
+   | Extension           | Extension ID                            |
+   | ------------------- | --------------------------------------- |
+   | Python              | `ms-python.python`                      |
+   | Ruff                | `charliermarsh.ruff`                    |
+   | Draw.io Integration | `hediet.vscode-drawio`                  |
+   | Code Spell Checker  | `streetsidesoftware.code-spell-checker` |
+   | I2P Pseudocode      | `i2p-hub.i2p-pseudo`                    |
+   | Office Viewer       | `cweijan.vscode-office`                 |
 
-When searching, use the **Extension ID** if more than one extension has a similar name.
+   When searching, use the **Extension ID** if more than one extension has a similar name.
 
 4. When finished, leave VS Code open.
 
@@ -293,8 +292,7 @@ VS Code must know which Python installation to use.
 4. Choose the Python **3.12** installation you installed earlier.
 
 5. If several Python installations appear, select the one whose version begins with `3.12`.
-
-VS Code should now use Python 3.12 when you run Python programs.
+   VS Code should now use Python 3.12 when you run Python programs.
 
 > **Having trouble?** If Python 3.12 does not appear, do not randomly remove other Python installations. You can use the CVD while you review your local Python installation.
 
@@ -448,8 +446,7 @@ Before relying on your local course IDE, confirm the following:
 * [ ] Ruff is installed.
 * [ ] GitHub CLI is installed.
 * [ ] `gh auth status` shows that you are signed in to GitHub.
-
-If all of these checks are complete, your manually configured local course IDE should provide the core tools needed for IT 140.
+  If all of these checks are complete, your manually configured local course IDE should provide the core tools needed for IT 140.
 
 Because this installation was configured manually, its exact behavior may differ from the CVD or an automated supported installation.
 
@@ -471,7 +468,6 @@ When asking for help, record:
 * A screenshot when it helps explain the problem.
 
 Do not include passwords, authentication or verification codes, recovery codes, personal access tokens, student identification numbers, or other private information.
-
 Support for operating-system-specific problems may be limited on systems that are not supported by the IT 140 automated setup.
 
 > **Remember:** A local setup problem does not need to stop your progress in IT 140. Return to the [Codio Virtual Desktop (CVD)](../codio/README.md) and continue your coursework there.
@@ -486,7 +482,6 @@ You now have two possible places to complete IT 140 programming work:
 * your **local course IDE**.
 
 You may switch between them as needed. Store each Git repository in only one working location at a time unless you understand how Git is being used to synchronize your work.
-
 Return to your IT 140 course in **Brightspace** and complete any remaining Module One activities.
 
 If you want to learn more about the tools you just configured, see [Explore Your Course IDE](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Explore-Your-Course-IDE).
