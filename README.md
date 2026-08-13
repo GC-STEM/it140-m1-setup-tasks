@@ -37,7 +37,7 @@ The recommended course IDE includes VS Code, Python 3.12, Git and GitHub tools, 
 
 ## Setup Progress
 
-**0 Start Here** → [1 GitHub](github/README.md) → [2 Codio](codio/README.md) → 3 Local Computer
+**0 Start Here** → [1 GitHub](github/README.md) → [2 Codio](codio/README.md) → [3 Local Computer](local/README.md) → **Done**
 
 Follow the links below rather than browsing the repository folders. Each guide tells you what to do, how to recognize a successful result, and where to go next.
 
