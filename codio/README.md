@@ -61,7 +61,7 @@ The CVD is the course's reference development environment. Assignment instructio
 
 We recommend configuring the CVD even if you plan to complete most of your work on your own computer. Doing so gives you access to the course reference environment if your local course IDE stops working, you need to use another computer, or you need an environment that matches course screenshots and demonstrations.
 
-For help choosing between the CVD and a local environment, see **[Setup Options](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Options)**.
+For help choosing between the CVD and a local environment, see **[Setup Options](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Options)**.
 
 ## 0. Prerequisites
 
@@ -256,7 +256,7 @@ To complete CVD configuration, you will need the following:
    ![Update Summary in CVD Terminal](./assets/32_cvd_terminal_update_success.png)
 
    > [!IMPORTANT]
-   > If the summary reports a failure or tells you to retry, re-run `update_it140.sh` **no more than once**. If the second run also fails, stop and use [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support). Include the update log from `~/it140/logs/`. Do not attempt manual `sudo`, APT, package, or file repairs unless course support directs you to do so.
+   > If the summary reports a failure or tells you to retry, re-run `update_it140.sh` **no more than once**. If the second run also fails, stop and use [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support). Include the update log from `~/it140/logs/`. Do not attempt manual `sudo`, APT, package, or file repairs unless course support directs you to do so.
 
 4. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -375,7 +375,7 @@ You should have access to at least one cloud storage service to be able to share
 
     ![Configure IDE Script in CVD Terminal](./assets/49f_cvd_terminal_git_commit_name.png)
 
-    *Note*. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the update and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)** for assistance.
+    *Note*. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the update and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)** for assistance.
 
 13. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -469,7 +469,7 @@ You should have access to at least one cloud storage service to be able to share
 
    ![Review the verification script output](./assets/72_cvd_verify_summary.png)
 
-4. If any checks fail, follow the remediation instructions shown by the script. Do not continue by guessing at manual repairs. If you cannot resolve the reported issue, use **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)**.
+4. If any checks fail, follow the remediation instructions shown by the script. Do not continue by guessing at manual repairs. If you cannot resolve the reported issue, use **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)**.
 
 5. Close the terminal window by typing `exit` and pressing **Enter**.
 
@@ -492,7 +492,7 @@ If you also want the course IDE on your own computer, choose the setup guide for
 
 ## If Something Goes Wrong
 
-For setup failures, update delays, log locations, privacy guidance, and support channels, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)**.
+For setup failures, update delays, log locations, privacy guidance, and support channels, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)**.
 
 If the Update script appears to stop producing output, see the Wiki section **Codio: Update Appears to Stop** before interrupting it. Large Ubuntu downloads can remain quiet for several minutes without being frozen.
 

@@ -33,7 +33,7 @@ Course instructions beginning with the Module Two Assignment assume that you hav
 The recommended course IDE includes VS Code, Python 3.12, Git and GitHub tools, testing tools, and course extensions. The same core toolset is used across supported environments so that course instructions, examples, automated tests, and technical support work as consistently as possible.
 
 > [!TIP]
-> Want to understand the tools before or after setup? See the Wiki pages [What Is the Course IDE?](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/What-Is-the-Course-IDE) and [Setup Options](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Options). You do not need to understand every tool before starting setup.
+> Want to understand the tools before or after setup? See the Wiki pages [What Is the Course IDE?](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/What-Is-the-Course-IDE) and [Setup Options](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Options). You do not need to understand every tool before starting setup.
 
 ## Setup Progress
 
@@ -81,7 +81,7 @@ If a setup script reports `FAIL`, `PARTIAL`, `NOT COMPLIANT`, a nonzero exit cod
 
 Before asking for help, save the exact error message and note the step where it occurred. Setup scripts also save diagnostic logs under `~/it140/logs/` or the corresponding `it140/logs` folder in your user profile.
 
-See **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup%E2%80%90Problems%E2%80%90and%E2%80%90Support)** for troubleshooting guidance, what information to collect, and where to ask for help.
+See **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)** for troubleshooting guidance, what information to collect, and where to ask for help.
 
 > [!WARNING]
 > Never share passwords, authentication or verification codes, recovery codes, personal access tokens, or other credentials in screenshots, logs, GitHub posts, or support requests.
