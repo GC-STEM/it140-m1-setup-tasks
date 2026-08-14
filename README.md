@@ -14,15 +14,22 @@ The **Codio Virtual Desktop (CVD)** automation is expected to be reliable becaus
 
 ---
 
+> [!TIP]
+GitHub provides several ways to interact with this repository in the upper-right corner of the page. Recommended options for this repo:
+>
+> * **Star** – Click to bookmark this repo so it is easier to find later.
+> * **Watch** – Click only if you want notifications about repo activity.
+> * **Fork** – Not recommended for this repo.
+
 ## Activity Metadata
 
-- **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks
-- **Activity Type**: Required, non-graded, no submission
-- **Activity Purpose**: Prepare your IT 140 development environment (course IDE) for completing course assignments.
-- **Artifact Version**: 0.10.1-beta.1
-- **Artifact Date**: 2026-08-11
-- **Development Status**: Beta Testing
+* **Course**: IT 140 - *Introduction to Scripting*
+* **Activity Title**: 1-1 Setup Tasks
+* **Activity Type**: Required, non-graded, no submission
+* **Activity Purpose**: Prepare your IT 140 development environment (course IDE) for completing course assignments.
+* **Artifact Version**: 0.10.1-beta.1
+* **Artifact Date**: 2026-08-11
+* **Development Status**: Beta Testing
 
 ## Overview
 
@@ -45,17 +52,17 @@ Follow the links below rather than browsing the repository folders. Each guide t
 
 Course instructions beginning in Module Two assume that you can access a GitHub account and identify the account information used by the course IDE.
 
-- [ ] Open **[Set Up a GitHub Account](github/README.md)**.
-- [ ] Follow that guide through its **GitHub Account Ready Check**.
-- [ ] At the end of the GitHub guide, use its link to continue directly to the Codio guide.
+* [ ] Open **[Set Up a GitHub Account](github/README.md)**.
+* [ ] Follow that guide through its **GitHub Account Ready Check**.
+* [ ] At the end of the GitHub guide, use its link to continue directly to the Codio guide.
 
 ### 2. Set Up the Course IDE on Codio
 
 The CVD is the course reference environment used in assignment instructions, screenshots, and instructional videos. It already contains the main system software for IT 140; the setup process updates, configures, and verifies it. **We recommend configuring the CVD even if you also plan to work on your own computer.**
 
-- [ ] **Students:** Open **[Set Up the Course IDE on Codio](codio/README.md)**.
-- [ ] **Faculty and staff:** Use the **[Faculty CVD Setup Guide](.faculty/README.md)** where directed.
-- [ ] Continue until the CVD **Verification Summary** reports the successful completion values shown in the guide.
+* [ ] **Students:** Open **[Set Up the Course IDE on Codio](codio/README.md)**.
+* [ ] **Faculty and staff:** Use the **[Faculty CVD Setup Guide](.faculty/README.md)** where directed.
+* [ ] Continue until the CVD **Verification Summary** reports the successful completion values shown in the guide.
 
 ### 3. Set Up the Course IDE on Your Local Computer
 
@@ -63,9 +70,9 @@ After you have access to a configured course IDE, you may also configure the cou
 
 Choose the guide for the computer you want to use:
 
-- [Windows](local/windows/README.md)
-- [macOS](local/macOS/README.md)
-- [Linux](local/linux/README.md)
+* [Windows](local/windows/README.md)
+* [macOS](local/macOS/README.md)
+* [Linux](local/linux/README.md)
 
 If a local computer is managed by an employer, school, or another person, do not bypass security controls or installation restrictions. Use the CVD while you determine whether you have permission to install software.
 
