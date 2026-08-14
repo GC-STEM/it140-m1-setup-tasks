@@ -8,7 +8,6 @@
 
 - [IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)](#it-140-module-one-setup-tasks--codio-virtual-desktop-cvd)
   - [Table of Contents](#table-of-contents)
-  - [Activity Metadata](#activity-metadata)
   - [What You Will Do](#what-you-will-do)
   - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
   - [0. Prerequisites](#0-prerequisites)
@@ -21,17 +20,7 @@
   - [7. Verify the CVD](#7-verify-the-cvd)
   - [Your Course IDE Is Ready](#your-course-ide-is-ready)
   - [If Something Goes Wrong](#if-something-goes-wrong)
-
-## Activity Metadata
-
-- **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD) Setup
-- **Activity Type**: Recommended, non-graded, no submission
-- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).
-- **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. The CVD is a cloud-based environment that you access through an internet connection and web browser, so the course software runs in a consistent remote environment rather than depending on software installed on your own computer.
-- **Artifact Version**: 0.10.1-beta.1
-- **Artifact Date**: 2026-08-11
-- **Development Status**: Beta Testing
+  - [Activity Metadata](#activity-metadata)
 
 ## What You Will Do
 
@@ -51,7 +40,10 @@ You are finished when the final **Verification Summary** reports:
 - **Failed**: `0`
 - **Exit code**: `0`
 
-The detailed instructions below are written for first-time users. If you have completed this setup before, you can usually skim the headings and success checkpoints.
+> [!NOTE]
+> You normally complete this CVD setup only once. Your course IDE remains configured when you close the CVD, return in a later session, or restart the VM.
+>
+> If you **reset the VM**, the CVD returns to its original state and you will need to repeat this setup process.
 
 ## What is a Codio Virtual Desktop (CVD)?
 
@@ -479,6 +471,11 @@ If the Verification Summary reports `COMPLIANT`, `Failed: 0`, and `Exit code: 0`
 
 When you are finished, close the CVD browser tab. **Do not use the Shut Down option within the Ubuntu desktop.** Codio will keep trying to reconnect to a shut-down VM, which can prevent you from accessing it again until you log out of Codio and log back in.
 
+> [!NOTE]
+> You normally complete this setup only once. The next time you use the CVD, launch it and continue your course work. Closing the CVD or restarting the VM does not require you to repeat the setup.
+>
+> If you **reset the VM**, it returns to its original state and you will need to repeat the setup process.
+
 You can now return to your IT 140 course in [D2L Brightspace](https://learn.snhu.edu/) and complete any remaining Module One activities.
 
 If you also want the course IDE on your own computer, choose the setup guide for the supported computer you want to use:
@@ -501,3 +498,14 @@ When asking for help with a CVD automation problem, include the step that failed
 ```text
 ~/it140/logs/
 ```
+
+## Activity Metadata
+
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD) Setup
+- **Activity Type**: Recommended, non-graded, no submission
+- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).
+- **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. The CVD is a cloud-based environment that you access through an internet connection and web browser, so the course software runs in a consistent remote environment rather than depending on software installed on your own computer.
+- **Artifact Version**: 0.10.1-beta.1
+- **Artifact Date**: 2026-08-11
+- **Development Status**: Beta Testing
