@@ -76,13 +76,13 @@ For more information, see [Course IDE](https://github.com/GC-STEM/it140/blob/mai
 
 Faculty should understand the different roles of the systems students use.
 
-| Platform                        | Role in IT 140                                                                                             |
-| ------------------------------- | ---------------------------------------------------------------------------------------------------------- |
-| **D2L Brightspace**             | Course content, assignment instructions, submissions, grading, instructor feedback, and student management |
-| **Codio Virtual Desktop (CVD)** | Reference and preferred student development environment                                                    |
-| **Local course IDE**            | Optional alternative development environment on a supported computer                                       |
-| **GitHub**                      | Course repositories and Git/GitHub development workflow                                                    |
-| **Visual Studio Code**          | Primary application for creating, editing, running, testing, and debugging course files                    |
+| **Platform** | **Role in IT 140** |
+| ------------ | ------------------ |
+| **D2L Brightspace** | Course content, assignment instructions, submissions, grading, instructor feedback, and student management |
+| **Codio Virtual Desktop (CVD)** | Reference and preferred student development environment |
+| **Local course IDE** | Optional alternative development environment on a supported computer |
+| **GitHub** | Course repositories and Git/GitHub development workflow |
+| **Visual Studio Code** | Primary application for creating, editing, running, testing, and debugging course files |
 
 The intended Module One student setup sequence is:
 
@@ -161,13 +161,11 @@ Faculty access the CVD differently than students:
 
    *Note*. In IT 140, course IDE work is done within the **VM** tab that contains the Codio Virtual Desktop and the **Guide** tab. Neither students nor faculty need to use the other items on the main Codio menu bar for normal IT 140 coursework.
 
-8. Read the *IT 140 Codio Virtual Desktop Guide* all the way through at least once so you are familiar with what your students will see and do in the CVD.
+8. Read the *IT 140 Codio Virtual Desktop Guide* all the way through at least once so you are familiar with what your students will see and do in the CVD. Once you are finished, click the **Collapse** button to close the guide and return to the CVD landing page. You can reopen the guide at any time by clicking the **Guide** tab in the CVD.
 
-9. In the *IT 140 Codio Virtual Desktop Guide*, follow the student-facing Codio [**First-Time Setup**](../codio/README.md) instructions.
+9. Follow the setup instructions in the student-facing [Codio README](../codio/README.md) file.
 
-   *Note*. In Section 1, review how students access their CVD. Begin following the setup instructions at the point identified for faculty in the student CVD guide, where the course IDE is configured inside the CVD.
-
-Complete the process through the final CVD **Verification Summary** so that you have a verified reference environment available when assisting students.
+   *Note*. Just review the *Step 1. Launch the CVD* to understand how students access their CVD. Start implementing instructions on *Step 2. Download the Automation Scripts* to setup your CVD. Complete the CVD setup instructions so that you have a verified reference environment available when assisting students.
 
 ## 3. Review the Optional Local Course IDE
 

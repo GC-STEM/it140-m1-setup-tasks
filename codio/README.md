@@ -1,18 +1,18 @@
 <!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
 
-# IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)
+# IT 140 Module One: Setup Tasks | Codio Virtual Desktop
 
 **Setup progress:** [0 Start Here](../README.md) → [1 GitHub](../github/README.md) → **2 Codio** → [3 Local Computer](../README.md#3-set-up-the-course-ide-on-your-local-computer)
 
 ## Table of Contents
 
-- [IT 140 Module One: Setup Tasks | Codio Virtual Desktop (CVD)](#it-140-module-one-setup-tasks--codio-virtual-desktop-cvd)
+- [IT 140 Module One: Setup Tasks | Codio Virtual Desktop](#it-140-module-one-setup-tasks--codio-virtual-desktop)
   - [Table of Contents](#table-of-contents)
   - [What You Will Do](#what-you-will-do)
-  - [What is a Codio Virtual Desktop (CVD)?](#what-is-a-codio-virtual-desktop-cvd)
+  - [What is a Codio Virtual Desktop?](#what-is-a-codio-virtual-desktop)
   - [0. Prerequisites](#0-prerequisites)
   - [1. Launch the CVD](#1-launch-the-cvd)
-  - [2. Download the Course Automation Scripts to the CVD](#2-download-the-course-automation-scripts-to-the-cvd)
+  - [2. Download the Automation Scripts to the CVD](#2-download-the-automation-scripts-to-the-cvd)
   - [3. Update the CVD](#3-update-the-cvd)
   - [4. Sign into Cloud Storage Services](#4-sign-into-cloud-storage-services)
   - [5. Configure the CVD](#5-configure-the-cvd)
@@ -45,9 +45,9 @@ You are finished when the final **Verification Summary** reports:
 >
 > If you **reset the VM**, the CVD returns to its original state and you will need to repeat this setup process.
 
-## What is a Codio Virtual Desktop (CVD)?
+## What is a Codio Virtual Desktop?
 
-A Codio Virtual Desktop (CVD) is a cloud-based Linux desktop that you access through your web browser. It includes the IT 140 development environment (course IDE), so you can begin working on course assignments without installing software on your own computer.
+A *Codio Virtual Desktop* (CVD) is a cloud-based Linux desktop that you access through your web browser. It includes the IT 140 development environment (course IDE), so you can begin working on course assignments without installing software on your own computer.
 
 The CVD is the course's reference development environment. Assignment instructions, screenshots, and instructional videos use the CVD, and instructors and technical support staff can most easily help you when you are using it.
 
@@ -80,7 +80,7 @@ To complete CVD configuration, you will need the following:
 ## 1. Launch the CVD
 
 > [!NOTE]
-> Faculty and staff should follow instructions for launching the CVD in the [Faculty CVD Setup Guide](../.faculty/README.md/#2-set-up-the-course-ide-on-codio). Then, return to this guide at [4. Sign into Cloud Storage Services](#4-sign-into-cloud-storage-services) to complete the remaining steps.
+> Faculty and staff should follow instructions for launching the CVD in the [Faculty CVD Setup Guide](../.faculty/README.md/#2-set-up-the-course-ide-on-codio). Then, return to this guide at [2. Download the Automation Scripts to the CVD](#2-download-the-automation-scripts-to-the-cvd) to complete the remaining steps.
 
 1. Go to [https://learn.snhu.edu/](https://learn.snhu.edu/) and log into Brightspace using your SNHU credentials.
 
@@ -134,7 +134,7 @@ To complete CVD configuration, you will need the following:
 
 10. In your host/local browser, bookmark the Codio Virtual Desktop (CVD) for direct access later.
 
-## 2. Download the Course Automation Scripts to the CVD
+## 2. Download the Automation Scripts to the CVD
 
 > [!IMPORTANT]
 > You do not need to understand or type the bootstrap code below. Use the **Copy** button on the code block to copy the entire command exactly as shown, then paste it into the CVD Terminal as directed.
