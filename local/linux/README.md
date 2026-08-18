@@ -23,11 +23,6 @@ The next phase in setting up the course IDE on your local Linux machine is to op
 
 2. In the search box, start typing ***Terminal***. Select the **Terminal** app from the results when it appears.
 
-    ![Search for Terminal](./assets/11_search_for_terminal.png)
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-    ![Terminal Window](./assets/12_terminal_window.png)
-
     **⚠️ IMPORTANT**. Do NOT proceed with the next phase of the installation until you successfully complete this step. Refer to the Troubleshooting section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
 
 ## 2. Install the Course IDE on Your Local Linux Machine
@@ -99,4 +94,4 @@ code --install-extension cweijan.vscode-office --force
 
 ## 3. Configure Local Course IDE
 
-Follow the instructions in the [Codio README.md](../codio/README.md) file to configure your local course IDE. The procedures are the same for both Codio Virtual Desktop (CVD) and your local desktop, regardless of your operating system (OS) platform.<!-- To see this file in a clean, formatted view, right-click on the filename and choose “Open Preview.” -->
+Continue with the [Manual Local Setup Instructions](../README.md#manual-local-setup-instructions) to complete the remaining local configuration steps, including your Git identity, GitHub CLI authentication, opening your `Repos` folder in VS Code, and the final ready check. You can skip software-installation steps that you already completed above.<!-- To see this file in a clean, formatted view, right-click on the filename and choose “Open Preview.” -->

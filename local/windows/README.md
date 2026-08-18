@@ -180,7 +180,7 @@ The Install script adds or repairs the system-level software required for the co
 
 ## 5. Configure the Course IDE
 
-The Configure script sets up the course IDE for your Windows user account. It may ask you to sign into GitHub and confirm your Git display name. This process is very similar to configuring the course IDE in the Codio Virtual Desktop (CVD). If you need more detailed instructions or screenshots, see the **[codio/README.md](../../codio/README.md#configure-the-course-ide)** file.
+The Configure script sets up the course IDE for your Windows user account. It may ask you to sign into GitHub and confirm your Git display name. This process is very similar to configuring the course IDE in the Codio Virtual Desktop (CVD). If you need more detailed instructions or screenshots, see the **[codio/README.md](../../codio/README.md#5-configure-the-cvd)** file.
 
 1. Open a new PowerShell terminal window as a **regular user**.
    1. Hold down the **Windows** (⊞) key on your keyboard and press the **R** key to open the **Run** application.
@@ -311,4 +311,4 @@ Optionally, if you have another local computer, you can also set up the course I
 
 If a setup or verification script reports an error, review the final summary and the log file identified by the script. IT 140 automation logs are stored in your `it140\logs` folder.
 
-For troubleshooting guidance and information to include when asking for help, see the main activity's **[Technical Support](../../README.md#technical-support)** section.
+For troubleshooting guidance and information to include when asking for help, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)**.

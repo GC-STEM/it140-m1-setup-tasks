@@ -190,7 +190,7 @@ Before the course IDE can be installed, you need the current IT 140 automation p
    - **Result**: `PASS`
    - **Exit code**: `0`
 
-   ![Successful IT 140 macOS Prepare summary](./assets/32_macos_prepare_summary.png)
+   ![Successful IT 140 macOS Prepare summary](./assets/38_mac_prepare8.png)
 
    *Why Exit Code 0 Matters?* In computing, an exit code is a number a program returns when it finishes. By long-standing convention on macOS, Linux, and many other systems, an exit code of 0 means success. A nonzero exit code usually indicates an error or another condition that needs attention. Exit codes are important in CS and IT because operating systems, scripts, and automated tools use them to determine whether a command completed successfully and whether the next step should continue.
 
@@ -317,7 +317,7 @@ This process is similar to configuring the course IDE in the Codio Virtual Deskt
 
 7. Confirm that a **Repos** item now appears on your Desktop. Opening it should show your `~/Repos` folder. This is where your course repositories will be stored.
 
-   ![macOS Desktop showing the Repos folder link created by Configure](./assets/53_macos_desktop_repos.png)
+   ![macOS Desktop showing the Repos folder link created by Configure](./assets/Screenshot%202026-08-10%20120729.png)
 
 8. Type `exit` and press **Return**. Wait for "[Process completed]" to appear and then click the red **X** to close Terminal.
 
@@ -344,7 +344,7 @@ The Verify script checks that the required course software, GitHub authenticatio
    - **Warnings**: Review any warning and its recommended action. A warning does not by itself make the course IDE noncompliant.
    - **Problem found**: If `Result` is `NOT COMPLIANT` or `Failed` is greater than `0`, follow the **Remediation** instructions shown below the summary and run Verify again after correcting the problem.
 
-   ![Successful IT 140 macOS Verification summary showing COMPLIANT and zero failed checks](./assets/61_macos_verify_summary.png)
+   ![Successful IT 140 macOS Verification summary showing COMPLIANT and zero failed checks](./assets/Screenshot%202026-08-10%20120706.png)
 
 5. Type `exit` and press **Return** to close Terminal.
 
@@ -357,7 +357,7 @@ The automation scripts install the required VS Code extensions and course-manage
    - Press **Command (⌘)** + **Space bar**, type ***Visual Studio Code***, and press **Return**.
    - Open **Finder**, select **Applications**, and double-click **Visual Studio Code**.
 
-   ![Visual Studio Code Welcome page on macOS](./assets/71_macos_vscode_welcome.png)
+   ![Visual Studio Code Welcome page on macOS](./assets/Screenshot%202026-08-10%20120759.png)
 
 2. If macOS displays a security prompt because Visual Studio Code is being opened for the first time, confirm that you want to open the application.
 
@@ -387,7 +387,7 @@ The automation scripts install the required VS Code extensions and course-manage
    3. Trust the `~/Repos` folder.
    4. Close the Workspace Trust page.
 
-   ![Visual Studio Code Workspace Trust prompt for the Repos folder](./assets/72_macos_vscode_workspace_trust.png)
+   ![Visual Studio Code Workspace Trust prompt for the Repos folder](./assets/Screenshot%202026-08-10%20120927.png)
 
 9. Optional: Keep Visual Studio Code in the Dock.
 
@@ -427,7 +427,7 @@ Run the IT 140 Update script when your course instructions ask you to update the
    - **Failures**: `0`
    - **Exit code**: `0`
 
-   ![Successful IT 140 macOS Update summary](./assets/81_macos_update_summary.png)
+   ![Successful IT 140 macOS Update summary](./assets/Screenshot%202026-08-10%20121722.png)
 
 6. Follow the summary's **Next step** instructions. After a successful update, the expected next lifecycle script is:
 
@@ -454,4 +454,4 @@ If a setup or verification script reports an error, review the final summary and
 
 Follow any **Next step** or **Remediation** instructions displayed by the script. Do not proceed to the next lifecycle phase until the current phase completes successfully.
 
-For troubleshooting guidance and information to include when asking for help, see the main activity's **[Technical Support](../../README.md#technical-support)** section.
+For troubleshooting guidance and information to include when asking for help, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)**.
