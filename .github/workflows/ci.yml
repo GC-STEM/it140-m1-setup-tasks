@@ -23,7 +23,7 @@ jobs:
       - name: Lint Markdown
         uses: DavidAnson/markdownlint-cli2-action@v24.2.0
         with:
-          config: .markdownlint-cli2.jsonc
+          config: .github/.markdownlint-cli2.jsonc
           globs: |
             **/*.md
             #codio/master/**
