@@ -2,7 +2,7 @@
 
 # IT 140 Module One: Setup Tasks | Codio Virtual Desktop
 
-**Setup progress:** [0 Start Here](../README.md) → [1 GitHub](../github/README.md) → **2 Codio** → [3 Local Computer](../README.md#3-set-up-the-course-ide-on-your-local-computer)
+**Setup progress:** [0 Start Here](../README.md) → [1 GitHub](../github/README.md) → **2 Codio** → [3 Local Computer](../local/README.md) → **Done**
 
 ## Table of Contents
 

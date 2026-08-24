@@ -1,6 +1,6 @@
 # Set Up a GitHub Account
 
-**Setup progress:** [0 Start Here](../README.md) → **1 GitHub** → [2 Codio](../codio/README.md) → [3 Local Computer](../README.md#3-set-up-the-course-ide-on-your-local-computer)
+**Setup progress:** [0 Start Here](../README.md) → **1 GitHub** → [2 Codio](../codio/README.md) → [3 Local Computer](../local/README.md) → **Done**
 
 ## Table of Contents
 
