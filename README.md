@@ -64,9 +64,9 @@ The CVD is the course reference environment used in assignment instructions, scr
 * [ ] **Faculty and staff:** Use the **[Faculty CVD Setup Guide](.faculty/README.md)** where directed.
 * [ ] Continue until the CVD **Verification Summary** reports the successful completion values shown in the guide.
 
-### 3. Set Up the Course IDE on Your Local Computer
+### 3. Set Up the Course IDE on Your Local Computer (Optional)
 
-After you have access to a configured course IDE, you may also configure the course IDE on a supported local computer. Most students need at most one local installation.
+After you have access to a configured course IDE, you may also configure the course IDE on a supported local computer, if desired. Students need at most one local installation.
 
 Choose the guide for the computer you want to use:
 
