@@ -12,8 +12,8 @@
   - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
   - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
   - [2. Secure Your GitHub Account](#2-secure-your-github-account)
-  - [GitHub Account Ready Check](#github-account-ready-check)
   - [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
+  - [GitHub Account Ready Check](#github-account-ready-check)
   - [Continue to Step 2: Set Up Codio](#continue-to-step-2-set-up-codio)
   - [Learn More or Get Help](#learn-more-or-get-help)
 
@@ -136,21 +136,6 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 > [!WARNING]
 > Do not share your password, passkey, authentication codes, or recovery codes with anyone. Neither GitHub nor SNHU will ever ask you for this information. If someone asks for it, report the request to GitHub and SNHU immediately.
 
-## GitHub Account Ready Check
-
-Before continuing to the course IDE setup, confirm that the account information used by IT 140 is ready:
-
-- [ ] You can sign in to your GitHub account.
-- [ ] The email addresses you added for this activity show as verified.
-- [ ] **Keep my email addresses private** is turned on.
-- [ ] You know your GitHub username.
-- [ ] You have recorded your GitHub-provided `@users.noreply.github.com` email address.
-- [ ] Two-factor authentication (2FA) is configured and your recovery codes are stored securely.
-
-If all of these checks are complete, the GitHub account information needed to configure the course IDE is ready.
-
-The profile-customization step below can help you begin building a professional GitHub presence, but it does not affect whether the course IDE can connect to your account.
-
 ## 3. Customize Your GitHub Profile
 
 1. Go to [https://github.com/settings/profile](https://github.com/settings/profile).
@@ -181,6 +166,21 @@ The profile-customization step below can help you begin building a professional 
    2. Click the **Update preferences** button to save your changes.
 
 6. If your preferred spoken language is not English, scroll down to **Trending settings** and update your **Preferred spoken language**, if desired, and **Save Trending settings**.
+
+## GitHub Account Ready Check
+
+Before continuing to the course IDE setup, confirm that the account information used by IT 140 is ready:
+
+- [ ] You can sign in to your GitHub account.
+- [ ] The email addresses you added for this activity show as verified.
+- [ ] **Keep my email addresses private** is turned on.
+- [ ] You know your GitHub username.
+- [ ] You have recorded your GitHub-provided `@users.noreply.github.com` email address.
+- [ ] Two-factor authentication (2FA) is configured and your recovery codes are stored securely.
+
+If all of these checks are complete, the GitHub account information needed to configure the course IDE is ready.
+
+The profile-customization step below can help you begin building a professional GitHub presence, but it does not affect whether the course IDE can connect to your account.
 
 ## Continue to Step 2: Set Up Codio
 
