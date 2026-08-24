@@ -61,7 +61,7 @@ Course instructions beginning in Module Two assume that you can access a GitHub 
 The Codio Virtual Desktop (CVD) is the course reference environment used in assignment instructions, screenshots, and instructional videos. It already contains the main system software for IT 140; the setup process updates, configures, and verifies it. **We recommend configuring the CVD even if you also plan to work on your own computer.**
 
 * [ ] **Students:** Open **[Set Up the Course IDE on Codio](codio/README.md)**.
-* [ ] **Faculty and staff:** Use the **[Faculty CVD Setup Guide](.faculty/README.md)** where directed.
+* [ ] **Faculty and staff:** Start with the **[Faculty CVD Setup Guide](.faculty/README.md)**.
 * [ ] Continue until the CVD **Verification Summary** reports the successful completion values shown in the guide.
 
 ### 3. Set Up the Course IDE on Your Local Computer (Optional)
