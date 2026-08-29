@@ -1,39 +1,25 @@
-<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
+<!-- To see this file in a clean, formatted view, select "Text Editor ▼" in the upper-right corner of the editor, then select "Markdown Preview". -->
 
 # IT 140 Module One | Setup Tasks
 
 ---
 
-## 🧪 Beta Testing
-
-This activity has completed **end-to-end (E2E) Alpha Testing** and is now in **Beta Testing with faculty and staff**. E2E testing verifies that the complete setup process works from start to finish.
-
-The **Codio Virtual Desktop (CVD)** automation is expected to be reliable because each CVD begins from a standardized environment. The local Windows, macOS, and Linux automation scripts have been tested primarily on fresh operating system installations. Real-world computers have different software, settings, permissions, security controls, and prior configurations, so Beta Testing may uncover conditions not encountered during Alpha Testing.
-
-**Beta testers**: Please report issues and feature requests using [GitHub Issues](https://github.com/GC-STEM/it140-m1-setup-tasks/issues). An **issue** is any error, failed step, unexpected result, missing or incorrect behavior, or instruction that prevents or makes the setup difficult to complete. A **feature request** is a suggestion for improving the setup process, automation, documentation, or user experience.
+> [!NOTE]
+> **🆕 New for 2026 C-5:** IT 140 now uses GitHub repositories to provide assignment starter files, development resources, and supporting documentation.
+>
+> If you find a problem with this GitHub repository or its instructions, or have a suggestion for improvement, please open [GitHub Issues](https://github.com/GC-STEM/it140-m1-setup-tasks/issues) to review existing issues or create a new issue.
 
 ---
 
-> [!TIP]
-GitHub provides several ways to interact with this repository in the upper-right corner of the page. Recommended options for this repo:
->
-> * **Star** – Click to bookmark this repo so it is easier to find later.
-> * **Watch** – Click only if you want notifications about repo activity.
-> * **Fork** – Not recommended for this repo.
-
-## Activity Metadata
-
-* **Course**: IT 140 - *Introduction to Scripting*
-* **Activity Title**: 1-1 Setup Tasks
-* **Activity Type**: Required, non-graded, no submission
-* **Activity Purpose**: Prepare your IT 140 development environment (course IDE) for completing course assignments.
-* **Artifact Version**: 0.10.1-beta.1
-* **Artifact Date**: 2026-08-11
-* **Development Status**: Beta Testing
+- **Course**: IT 140 - *Introduction to Scripting*
+- **Task Title**: 1-1: Setup Tasks
+- **Task Type**: Required, non-graded, no submission
+- **Repository Version**: 1.0.0
+- **Repository Version Date**: 08/29/2026
 
 ## Overview
 
-In this activity, you will prepare your software development environment, also called the **course IDE**. An integrated development environment (IDE) is software that helps you design, write, run, test, debug, and manage programs and related files in one place.
+In this task, you will prepare your software development environment, also called the **course IDE**. An integrated development environment (IDE) is software that helps you design, write, run, test, debug, and manage programs and related files in one place.
 
 Course instructions beginning with the Module Two Assignment assume that you have a **GitHub account** and access to a **configured course IDE**. The setup sequence below begins with GitHub and the **Codio Virtual Desktop (CVD)**, the course reference environment. You may also configure the course IDE on a supported Windows, macOS, or Linux computer.
 
@@ -78,7 +64,7 @@ If a local computer is managed by an employer, school, or another person, do not
 
 ## When Setup Is Complete
 
-When you have access to a configured and verified course IDE, return to your IT 140 course in [D2L Brightspace](https://learn.snhu.edu/) and complete any remaining Module One activities before the end of Week 1.
+When you have access to a configured and verified course IDE, return to your IT 140 course in [D2L Brightspace](https://learn.snhu.edu/) and complete any remaining Module One tasks before the end of Week 1.
 
 If you have time remaining, see **[Explore Your Course IDE](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Explore-Your-Course-IDE)** for resources you can use to become more comfortable with VS Code, GitHub, and Markdown.
 
