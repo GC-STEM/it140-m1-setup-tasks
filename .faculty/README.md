@@ -47,7 +47,7 @@ If you choose to work through the Module One setup and encounter an issue or hav
 - **Activity Description**: This activity provides faculty and staff with instructions for setting up a GitHub account, accessing and configuring the Codio Virtual Desktop (CVD), reviewing optional local setup, and understanding how the course development environment relates to D2L Brightspace.
 - **Artifact Version**: 0.10.1-beta.1
 - **Artifact Date**: 2026-08-11
-- **Development Status**: Beta Testing
+- **Development Status**: Pilot — Active Development
 
 ## Overview of the Course IDE
 

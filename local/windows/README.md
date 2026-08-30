@@ -14,9 +14,9 @@ This document provides step-by-step instructions for installing the IT 140 devel
 - **Activity Type**: Optional, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local Windows computer.
 - **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a publisher-supported version of Windows. These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
-- **Artifact Version**: 0.10.0-beta.1
-- **Artifact Date**: 2026-08-09
-- **Development Status**: Beta Testing
+- **Artifact Version**: 1.0.1
+- **Artifact Date-Time Group**: 2026-08-31-07-1
+- **Development Status**: Pilot — Active Development
 
 ## 0. Check System Compatibility
 
@@ -35,7 +35,7 @@ Before setting up the course IDE on Windows, we must verify that your computer's
 
    <!--SME TODO: Add screenshots for GO.-->
 
-   - **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.  
+   - **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.
    **Recommendation**: Use just the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
 
    <!--SME TODO: Add screenshots for NOGO.-->

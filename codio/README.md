@@ -66,7 +66,7 @@ To complete CVD configuration, you will need the following:
 - [ ] Google credentials (email, password), if using Google Workspace for sync and persistent storage.
 
 - [ ] Microsoft credentials (email, password), if using OneDrive for persistent storage. You can use:
-  
+
   - Your SNHU email address and password, or
   - Your personal Microsoft email address and password.
 
@@ -189,7 +189,7 @@ To complete CVD configuration, you will need the following:
    cleanup
    printf "SUCCESS: The IT 140 automation package is ready.\nNext step: Close this terminal window by typing 'exit' and pressing 'Enter'.\nLog: %s\n" "$log_path"
    )
-   
+
    ```
 
 3. In the CVD terminal window, right-click at the end of the command prompt and select **Paste** from the popup menu.
@@ -218,7 +218,7 @@ To complete CVD configuration, you will need the following:
 
    - If you see an `ERROR` message, repeat Steps 2-6 making sure you copy and paste the entire command set.
 
-   - If you still see an `ERROR` message, follow the instructions in the message and see the [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support) Wiki page for additional help.  
+   - If you still see an `ERROR` message, follow the instructions in the message and see the [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support) Wiki page for additional help.
 
       ![Error Message in CVD Terminal](./assets/27_cvd_terminal_bootstrap_error.png)
 
@@ -508,4 +508,4 @@ When asking for help with a CVD automation problem, include the step that failed
 - **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. The CVD is a cloud-based environment that you access through an internet connection and web browser, so the course software runs in a consistent remote environment rather than depending on software installed on your own computer.
 - **Artifact Version**: 0.10.1-beta.1
 - **Artifact Date**: 2026-08-11
-- **Development Status**: Beta Testing
+- **Development Status**: Pilot — Active Development
