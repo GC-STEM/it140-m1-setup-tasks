@@ -33,8 +33,8 @@ Following these steps will configure the programming software and developer tool
 - **Activity Type**: Optional, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local macOS computer.
 - **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a supported Apple silicon Mac. These local installation files and automation scripts are designed for students who use an Administrator account on their Mac. Following these steps will configure the programming software and developer tools required to complete IT 140 course activities.
-- **Artifact Version**: 1.0.1
-- **Artifact Date-Time Group**: 2026-08-31-07-1
+- **Artifact Version**: 1.0.2
+- **Artifact Date-Time Group**: 2026-08-30-12-56
 - **Development Status**: Pilot — Active Development
 
 ## 0. Check System Compatibility

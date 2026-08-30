@@ -23,9 +23,9 @@ If you prefer to work directly on your own computer, you may also install the co
 * **Activity Type:** Optional, non-graded, no submission
 * **Activity Purpose:** Optionally prepare the IT 140 development environment for completing course assignments on a local computer.
 * **Activity Description:** This activity directs students using supported operating systems to the appropriate automated setup guide and provides a manual setup option for other computers or students who prefer to install and configure the course tools themselves.
-* **Artifact Version:** 1.0.1
-* **Artifact Date:** 2026-08-09
-* **Development Status:** Beta Testing
+* **Artifact Version:** 1.0.2
+* **Artifact Date:** 2026-08-30
+* **Development Status:** Pilot — Active Development
 
 ## Choose a Local Setup Method
 

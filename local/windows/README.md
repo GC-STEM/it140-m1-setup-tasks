@@ -14,8 +14,8 @@ This document provides step-by-step instructions for installing the IT 140 devel
 - **Activity Type**: Optional, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local Windows computer.
 - **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a publisher-supported version of Windows. These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
-- **Artifact Version**: 1.0.1
-- **Artifact Date-Time Group**: 2026-08-31-07-1
+- **Artifact Version**: 1.0.2
+- **Artifact Date-Time Group**: 2026-08-30-12-56
 - **Development Status**: Pilot — Active Development
 
 ## 0. Check System Compatibility

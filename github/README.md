@@ -24,8 +24,8 @@
 - **Activity Type**: Recommended, non-graded, no submission
 - **Activity Purpose**: Set up a GitHub account for use in the IT 140 course.
 - **Activity Description**: This activity guides students through creating or configuring a GitHub account, verifying email addresses, enabling two-factor authentication, and identifying the account information used by the course IDE. Course instructions beginning in Module Two assume that students can access GitHub for assignment and project repositories.
-- **Artifact Version**: 1.0.1
-- **Artifact Date-Time Group**: 2026-08-31-07-1
+- **Artifact Version**: 1.0.2
+- **Artifact Date-Time Group**: 2026-08-30-12-56
 - **Development Status**: Pilot — Active Development
 
 ## What You Will Do

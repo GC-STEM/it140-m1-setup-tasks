@@ -237,22 +237,34 @@ To complete CVD configuration, you will need the following:
 
    ![Update IDE Script in CVD Terminal](./assets/31_cvd_terminal_update.png)
 
-3. Review the **Update Summary** before continuing:
+3. Review the final Update summary before continuing. Read the first three lines in this order:
 
-   - Check **Result**. A normal successful update reports `PASS`.
-   - Confirm **Failures** is `0`.
-   - Check **Restart required**.
-   - Check **Exit code**. A completed update without an error reports `0`.
-   - Read **Next step** and follow the action shown there.
+   - **Result** tells you whether Update completed. A successful update reports `PASS`.
+   - **Action required** tells you whether you must do something before continuing, such as `RESTART VM`.
+   - **Next step** tells you exactly what to do after the action is complete.
 
-   ![Update Summary in CVD Terminal](./assets/32_cvd_terminal_update_success.png)
+   A successful update that requires a VM restart looks like this:
+
+   ```text
+   Result          : PASS
+   Action required : RESTART VM
+   Next step       : After the VM restarts, open Terminal and run configure_it140.sh.
+   ```
+
+   This means **Update succeeded**. Do **not** rerun `update_it140.sh`. Save your work, restart the VM, and then follow **Next step**.
+
+   The **Support Details** section provides technical information if you need help. For a successful restart-required Update, it may show:
+
+   - **Failures**: `0`
+   - **Restart required**: `Yes`
+   - **Exit code**: `0`
 
    > [!IMPORTANT]
-   > If the summary reports a failure or tells you to retry, re-run `update_it140.sh` **no more than once**. If the second run also fails, stop and use [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support). Include the update log from `~/it140/logs/`. Do not attempt manual `sudo`, APT, package, or file repairs unless course support directs you to do so.
+   > Rerun `update_it140.sh` only when **Result** is `PARTIAL` or `FAIL`, or when **Action required** or **Next step** explicitly tells you to retry Update. Rerun it **no more than once**. If the second run also fails, stop and use [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support). Include the update log from `~/it140/logs/`. Do not attempt manual `sudo`, APT, package, or file repairs unless course support directs you to do so.
 
 4. Close the terminal window by typing `exit` and pressing **Enter**.
 
-5. If a VM restart is required:
+5. If **Action required** says `RESTART VM`:
 
    1. Save any open work and close all windows in the CVD.
 
@@ -264,7 +276,7 @@ To complete CVD configuration, you will need the following:
 
    5. Wait for the CVD to restart and reconnect. This may take a few minutes.
 
-   > 💡 *TIP*. If you are not sure if a restart is required, restart. It does not hurt and only takes a few minutes.
+   6. Follow the **Next step** shown by Update. During initial CVD setup, this normally tells you to open Terminal and run `configure_it140.sh`.
 
 ## 4. Sign into Cloud Storage Services
 
