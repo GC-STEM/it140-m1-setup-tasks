@@ -18,6 +18,7 @@ If you choose to work through the Module One setup and encounter an issue or hav
 
 ---
 
+<!-- omit from toc -->
 ## Table of Contents
 
 - [IT 140 Faculty Setup Instructions](#it-140-faculty-setup-instructions)

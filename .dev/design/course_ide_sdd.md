@@ -8,6 +8,7 @@
 - **Design Subject**: IT 140 Development Environment, also called the course IDE
 - **Design Purpose**: Define the software design for the IT 140 Development Environment (course IDE) setup process, including the target architecture, supported environments, setup workflow, verification process, support artifacts, and design decisions needed to implement and maintain the course IDE across Codio and supported local desktop environments.
 
+<!-- omit from toc -->
 ## Table of Contents
 
 - [IT 140 Development Environment Software Design Document](#it-140-development-environment-software-design-document)

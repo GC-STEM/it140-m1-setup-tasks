@@ -40,6 +40,17 @@ You are finished when the final **Verification Summary** reports:
 - **Failed**: `0`
 - **Exit code**: `0`
 
+> [!IMPORTANT]
+> **These results mean SUCCESS.**
+>
+> Some IT 140 automation scripts use technical terms instead of the word `SUCCESS`.
+>
+> - `PASS` means the script completed successfully.
+> - `COMPLIANT` means verification succeeded. It does **not** mean a complaint or error.
+> - `Exit code: 0` means the script completed successfully.
+>
+> Always read the final summary and follow its **Action required** and **Next step** instructions.
+
 > [!NOTE]
 > You normally complete this CVD setup only once. Your course IDE remains configured when you close the CVD, return in a later session, or restart the VM.
 >
@@ -243,7 +254,7 @@ To complete CVD configuration, you will need the following:
    - **Action required** tells you whether you must do something before continuing, such as `RESTART VM`.
    - **Next step** tells you exactly what to do after the action is complete.
 
-   A successful update that requires a VM restart looks like this:
+   A successful update that requires a VM restart looks like this. **`PASS` means the Update succeeded.**
 
    ```text
    Result          : PASS
@@ -251,13 +262,15 @@ To complete CVD configuration, you will need the following:
    Next step       : After the VM restarts, open Terminal and run configure_it140.sh.
    ```
 
-   This means **Update succeeded**. Do **not** rerun `update_it140.sh`. Save your work, restart the VM, and then follow **Next step**.
+   This is a **successful Update**. `RESTART VM` is a required action, not a failure. Do **not** rerun `update_it140.sh`. Save your work, restart the VM, and then follow **Next step**.
 
    The **Support Details** section provides technical information if you need help. For a successful restart-required Update, it may show:
 
    - **Failures**: `0`
    - **Restart required**: `Yes`
    - **Exit code**: `0`
+
+   In this example, `Failures: 0` and `Exit code: 0` confirm that Update succeeded. `Restart required: Yes` only means that the VM must be restarted before you continue.
 
    > [!IMPORTANT]
    > Rerun `update_it140.sh` only when **Result** is `PARTIAL` or `FAIL`, or when **Action required** or **Next step** explicitly tells you to retry Update. Rerun it **no more than once**. If the second run also fails, stop and use [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support). Include the update log from `~/it140/logs/`. Do not attempt manual `sudo`, APT, package, or file repairs unless course support directs you to do so.
@@ -369,7 +382,7 @@ You should have access to at least one cloud storage service to be able to share
 
     ![Git Commit Name](./assets/49c_cvd_terminal_git_commit_name.png)
 
-12. Review the output of the configuration script to ensure that all checks passed successfully. Look for:
+12. Review the final output of the configuration script. **The following summary means Configuration succeeded:**
 
     - **Result**: `PASS`
     - **Warnings**: `0`
@@ -378,6 +391,8 @@ You should have access to at least one cloud storage service to be able to share
     - **Next step**: open a fresh Terminal and run `verify_it140.sh`.
 
     ![Configure IDE Script in CVD Terminal](./assets/49f_cvd_terminal_git_commit_name.png)
+
+    `PASS` and `Exit code: 0` indicate success. Continue with the **Next step** shown in the summary.
 
     *Note*. Address any issues reported by the configuration script. The script may provide instructions for resolving specific issues. Re-running the update and configuration scripts may resolve other issues. If you encounter problems that you cannot resolve, see **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)** for assistance.
 
@@ -465,11 +480,13 @@ You should have access to at least one cloud storage service to be able to share
 
    ![Verify IDE Script in CVD Terminal](./assets/71_cvd_verify1.png)
 
-3. Review the **Verification Summary**. A successfully configured CVD reports:
+3. Review the **Verification Summary**. **Verification succeeded if the summary reports all three of the following:**
 
    - **Result**: `COMPLIANT`
    - **Failed**: `0`
    - **Exit code**: `0`
+
+   **`COMPLIANT` means SUCCESS.** It means the CVD passed the required verification checks; it does **not** mean a complaint or error. `Exit code: 0` also indicates that Verify completed successfully.
 
    ![Review the verification script output](./assets/72_cvd_verify_summary.png)
 
@@ -479,7 +496,7 @@ You should have access to at least one cloud storage service to be able to share
 
 ## Your Course IDE Is Ready
 
-If the Verification Summary reports `COMPLIANT`, `Failed: 0`, and `Exit code: 0`, the course IDE on your CVD is configured and ready to use.
+If the Verification Summary reports `COMPLIANT`, `Failed: 0`, and `Exit code: 0`, **verification was successful**. The course IDE on your CVD is configured and ready to use.
 
 When you are finished, close the CVD browser tab. **Do not use the Shut Down option within the Ubuntu desktop.** Codio will keep trying to reconnect to a shut-down VM, which can prevent you from accessing it again until you log out of Codio and log back in.
 

@@ -2,6 +2,7 @@
 
 **Setup progress:** [0 Start Here](../README.md) → **1 GitHub** → [2 Codio](../codio/README.md) → [3 Local Computer](../local/README.md) → **Done**
 
+<!-- omit from toc -->
 ## Table of Contents
 
 - [Set Up a GitHub Account](#set-up-a-github-account)

@@ -8,6 +8,7 @@ Following these steps will configure the programming software and developer tool
 > [!IMPORTANT]
 > Installing the course IDE on your Mac is optional. The following setup phases are sequential. Do **not** proceed to the next phase until you have fully completed the preceding phase. Refer to the [Troubleshooting](#troubleshooting) section for additional help. If you get stuck, you can use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until your local course IDE is working.
 
+<!-- omit from toc -->
 ## Table of Contents
 
 - [IT 140 Development Environment Local Setup on macOS](#it-140-development-environment-local-setup-on-macos)
