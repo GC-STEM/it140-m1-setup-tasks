@@ -7,6 +7,13 @@ This document provides step-by-step instructions for installing the IT 140 devel
 > [!IMPORTANT]
 > The following setup phases are sequential. Do NOT proceed with the next phase of the installation until you have fully completed the preceding phases. Refer to the [Troubleshooting](#troubleshooting) section of this guide for additional help. If you get stuck, you can always use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until you get your local course IDE working.
 
+> [!IMPORTANT]
+> **How to recognize a successful script result**
+>
+> IT 140 lifecycle scripts may use technical terms instead of the word `SUCCESS`. In a final summary, `Result: PASS` means the script succeeded, and `Failures: 0` means no failures were found. If the summary includes `Exit code: 0`, that also means the script completed successfully.
+>
+> A successful script may still require a restart or another action before you continue. A required restart or other **Next step** is not a failure. Always follow the **Next step** shown in the final summary.
+
 ## Activity Metadata
 
 - **Course**: IT 140 - *Introduction to Scripting*
@@ -133,7 +140,7 @@ Before the course IDE can be installed, you need the current IT 140 automation p
 
 6. Press **Enter** once if the commands do not start automatically.
 
-7. Wait for the Prepare script to finish and for the PowerShell command prompt to return. Review the final messages before continuing.
+7. Wait for the Prepare script to finish and for the PowerShell command prompt to return. Review the final messages before continuing. If the final Prepare output shows `[SUCCESS]`, Prepare succeeded. Follow the **Next step** shown in the final message.
 
 8. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
@@ -174,6 +181,8 @@ The Install script adds or repairs the system-level software required for the co
 
    ![Review install script summary](./assets/45_win_install5.png)
 
+   `PASS` means Install succeeded, and `Failures: 0` means no failures were found. If the summary tells you to restart Windows, the restart is a required next step, not a failure.
+
 6. If the Install script tells you to restart Windows, save your work, restart the computer, and sign back in before continuing to Step 5.
 
 7. If a restart is not required, type `exit` and press **Enter** to close the Administrator PowerShell window before continuing to Step 5.
@@ -213,6 +222,8 @@ The Configure script sets up the course IDE for your Windows user account. It ma
 
    ![Review configure script summary](./assets/56_win_configure6.png)
 
+   `PASS` means Configuration succeeded, and `Failures: 0` means no failures were found. Follow the **Next step** shown in the summary.
+
 7. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
 ## 6. Verify the Course IDE
@@ -242,6 +253,8 @@ The Verify script checks that the required course software and settings are read
 5. Review the final **VERIFICATION SUMMARY**. If Verify reports a problem, follow the remediation instructions shown in the terminal before continuing. Make sure **Failures**: `0`.
 
    ![Review verify script summary](./assets/65_win_verify5.png)
+
+   If the final summary shows `[SUCCESS] The Windows course environment passed all required checks.` and `Exit code: 0`, verification succeeded. `Failures: 0` means no required checks failed. Review any warnings and their recommended actions; warnings do not by themselves mean verification failed.
 
 6. Type `exit` and press **Enter** to close the PowerShell terminal window.
 
@@ -292,6 +305,8 @@ Run the IT 140 Update script when your course instructions ask you to update the
 4. If Windows displays a **User Account Control** prompt during the update, click **Yes**. The Update script requests administrator privileges only when it needs to maintain system-wide course software.
 
 5. Wait for the Update script to finish. Review the final **UPDATE SUMMARY** and follow its **Next step** instructions.
+
+   If the final **UPDATE SUMMARY** reports `Result: PASS`, Update succeeded. If it also shows `Exit code: 0`, that confirms success. A required restart or another **Next step** does not mean Update failed. Follow the **Next step** exactly as shown before running another lifecycle script.
 
 6. After a successful update, open a **new regular PowerShell window** before running the next lifecycle script. In most cases, Update will tell you to run Verify. If it tells you to run Configure first, complete Configure and then run Verify in another new PowerShell window.
 

@@ -78,6 +78,9 @@ The next phase in setting up the course IDE on your local Linux machine is to op
 
 5. Expect the commands to take 15–45 minutes, depending on your system and Internet speed.
 
+   > [!IMPORTANT]
+   > The message `===== Course IDE installation complete. =====` means the command block finished running. It does **not** by itself confirm that every command succeeded. Review the output as the following messages instruct. If you do not see `Error`, `Failed`, `Exception`, `Permission denied`, or `command not found`, continue to the next step. If you see one of these messages, treat the setup as unsuccessful and use the Troubleshooting guidance or the CVD.
+
 6. If the script says the `code` command was not found, close Terminal, open a new Terminal window, and copy and paste the commands below:
 
 ```bash

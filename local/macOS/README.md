@@ -8,6 +8,13 @@ Following these steps will configure the programming software and developer tool
 > [!IMPORTANT]
 > Installing the course IDE on your Mac is optional. The following setup phases are sequential. Do **not** proceed to the next phase until you have fully completed the preceding phase. Refer to the [Troubleshooting](#troubleshooting) section for additional help. If you get stuck, you can use the course IDE in the Codio Virtual Desktop (CVD) to complete assignments until your local course IDE is working.
 
+> [!IMPORTANT]
+> **How to recognize a successful script result**
+>
+> IT 140 lifecycle scripts may use technical terms instead of the word `SUCCESS`. In a final summary, `Result: PASS` means the script succeeded. In a Verification Summary, `Result: COMPLIANT` means verification succeeded; it does **not** mean a complaint or error. `Failures: 0` or `Failed: 0` means no failures were found. `Exit code: 0` also means the script completed successfully.
+>
+> A successful script may still require another action before you continue. A required **Next step** is not a failure. Always follow the **Next step** shown in the final summary.
+
 <!-- omit from toc -->
 ## Table of Contents
 
@@ -193,6 +200,8 @@ Before the course IDE can be installed, you need the current IT 140 automation p
 
    ![Successful IT 140 macOS Prepare summary](./assets/38_mac_prepare8.png)
 
+   In this summary, `Result: PASS` and `Exit code: 0` mean Prepare succeeded.
+
    *Why Exit Code 0 Matters?* In computing, an exit code is a number a program returns when it finishes. By long-standing convention on macOS, Linux, and many other systems, an exit code of 0 means success. A nonzero exit code usually indicates an error or another condition that needs attention. Exit codes are important in CS and IT because operating systems, scripts, and automated tools use them to determine whether a command completed successfully and whether the next step should continue.
 
 9. Type `exit` and press **Return**. Wait for "[Process completed]" to appear and then click the red **X** to close Terminal. Consider adding Terminal to the Dock for easy access to future IT 140 lifecycle scripts.
@@ -251,6 +260,8 @@ The Install script adds or repairs the system-level software required for IT 140
    - **Exit code**: `0`
 
    ![Final IT 140 macOS Install summary](./assets/46_mac_terminal_install7.png)
+
+   `PASS` means Install succeeded, `Failures: 0` means no failures were found, and `Exit code: 0` confirms success.
 
 8. Type `exit` and press **Return**. Wait for "[Process completed]" to appear and then click the red **X** to close Terminal.
 
@@ -316,6 +327,8 @@ This process is similar to configuring the course IDE in the Codio Virtual Deskt
 
    ![Successful IT 140 macOS Configuration summary](./assets/56_mac_configure_summary.png)
 
+   `PASS` means Configuration succeeded, `Failures: 0` means no failures were found, and `Exit code: 0` confirms success. Follow the **Next step** shown in the summary.
+
 7. Confirm that a **Repos** item now appears on your Desktop. Opening it should show your `~/Repos` folder. This is where your course repositories will be stored.
 
    ![macOS Desktop showing the Repos folder link created by Configure](./assets/Screenshot%202026-08-10%20120729.png)
@@ -346,6 +359,8 @@ The Verify script checks that the required course software, GitHub authenticatio
    - **Problem found**: If `Result` is `NOT COMPLIANT` or `Failed` is greater than `0`, follow the **Remediation** instructions shown below the summary and run Verify again after correcting the problem.
 
    ![Successful IT 140 macOS Verification summary showing COMPLIANT and zero failed checks](./assets/Screenshot%202026-08-10%20120706.png)
+
+   **`COMPLIANT` means SUCCESS.** It means the Mac passed all required verification checks; it does **not** mean a complaint or error. If the summary shows `Exit code: 0`, Verify also completed successfully. Review any warnings and their recommended actions; warnings do not by themselves mean verification failed.
 
 5. Type `exit` and press **Return** to close Terminal.
 
@@ -429,6 +444,8 @@ Run the IT 140 Update script when your course instructions ask you to update the
    - **Exit code**: `0`
 
    ![Successful IT 140 macOS Update summary](./assets/Screenshot%202026-08-10%20121722.png)
+
+   `PASS` means Update succeeded, `Failures: 0` means no failures were found, and `Exit code: 0` confirms success. Follow the **Next step** shown in the summary.
 
 6. Follow the summary's **Next step** instructions. After a successful update, the expected next lifecycle script is:
 
