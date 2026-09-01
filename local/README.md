@@ -12,6 +12,7 @@ The [Codio Virtual Desktop (CVD)](../codio/README.md) is the course reference en
 
 If you prefer to work directly on your own computer, you may also install the course IDE locally. You can do this now, later in the course, or not at all.
 
+> [!NOTE]
 > **If your computer or operating system is not supported by one of the local setup guides, use the CVD.** This includes devices such as Chromebooks, tablets, and other systems that cannot run the supported Windows, macOS, or Linux course IDE. The CVD is the recommended course environment for these devices; you do not need to find another way to install the course IDE locally.
 >
 > **If your computer is supported but local setup becomes difficult or stops working, use the CVD.** A working local installation is not required to complete IT 140.
@@ -41,11 +42,12 @@ If your computer uses one of the supported operating systems below, click on the
 
 > **Recommended:** If your operating system or device is not supported by one of the guides above, use the [Codio Virtual Desktop (CVD)](../codio/README.md). This includes Chromebooks, tablets, and other devices that cannot run the supported course IDE. Advanced users may continue with the manual setup instructions below, but manual setup on an unsupported system is optional and is not the recommended student path.
 
+### Manual Local Setup Option
+
 If your operating system is supported but you prefer to install the course tools yourself, you may instead continue with the **Manual Local Setup** below.
 
+> [!TIP]
 > **Having trouble?** You can stop local setup at any time and continue your coursework in the [Codio Virtual Desktop (CVD)](../codio/README.md).
-
-### Manual Local Setup Option
 
 Continue with the remainder of this README if:
 
@@ -56,7 +58,7 @@ Continue with the remainder of this README if:
 * You prefer to install and configure the course tools manually.
   The manual instructions use graphical installers and application settings where practical. A few short terminal commands are included where they are the simplest way to configure or verify developer tools.
 
-> **Important**
+> [!IMPORTANT]
 >
 > Manual setup is a best-effort alternative and is not a fully supported IT 140 configuration. Operating systems, package managers, application installers, and security settings differ between computers.
 >
