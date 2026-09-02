@@ -14,8 +14,8 @@
 - **Course**: IT 140 - *Introduction to Scripting*
 - **Task Title**: 1-1: Setup Tasks
 - **Task Type**: Required, non-graded, no submission
-- **Repository Version**: 1.0.2
-- **Repository Version DTG**: 2026-08-30-12-56
+- **Repository Version**: 1.0.3
+- **Repository Version DTG**: 2026-09-02-09-37
 
 ## Overview
 

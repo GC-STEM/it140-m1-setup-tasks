@@ -42,6 +42,9 @@ If your computer uses one of the supported operating systems below, click on the
 
 > **Recommended:** If your operating system or device is not supported by one of the guides above, use the [Codio Virtual Desktop (CVD)](../codio/README.md). This includes Chromebooks, tablets, and other devices that cannot run the supported course IDE. Advanced users may continue with the manual setup instructions below, but manual setup on an unsupported system is optional and is not the recommended student path.
 
+> [!TIP]
+> Already experienced with another IDE or development toolset? First configure and verify the CVD so you have the course reference environment and a working backup. Then review [Alternative Local Development Tools](https://github.com/GC-STEM/it140/wiki/Alternative-Local-Development-Tools) before deciding whether to use your preferred tools.
+
 ### Manual Local Setup Option
 
 If your operating system is supported but you prefer to install the course tools yourself, you may instead continue with the **Manual Local Setup** below.

@@ -11,8 +11,8 @@ This document provides instructions for optionally setting up an IT 140 developm
 - **Activity Type**: Optional, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local Linux computer.
 - **Activity Description**: This activity provides instructions for installing and configuring the IT 140 development environment (course IDE) on your local Linux computer. The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. Installing the course IDE locally allows you to work on assignments without relying on an internet connection or a remote server.
-- **Artifact Version**: 1.0.2
-- **Artifact Date-Time Group**: 2026-08-30-12-56
+- **Artifact Version**: 1.0.3
+- **Artifact Date-Time Group**: 2026-09-02-09-37
 - **Development Status**: Pilot — Active Development
 
 ## 1. Open a Terminal Window
