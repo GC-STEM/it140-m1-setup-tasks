@@ -36,13 +36,13 @@ Following these steps will configure the programming software and developer tool
 
 ## Activity Metadata
 
-- **Course**: IT 140 - *Introduction to Scripting*
+* **Course**: IT 140 - *Introduction to Scripting*
 - **Activity Title**: 1-1 Setup Tasks | Local Setup | macOS
 - **Activity Type**: Optional, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local macOS computer.
 - **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a supported Apple silicon Mac. These local installation files and automation scripts are designed for students who use an Administrator account on their Mac. Following these steps will configure the programming software and developer tools required to complete IT 140 course activities.
-- **Artifact Version**: 1.0.3
-- **Artifact Date-Time Group**: 2026-09-02-09-37
+- **Artifact Version**: 1.0.4
+- **Artifact Date-Time Group**: 2026-09-07-14-30
 - **Development Status**: Pilot — Active Development
 
 ## 0. Check System Compatibility
@@ -232,16 +232,16 @@ The Install script adds or repairs the system-level software required for IT 140
 
 5. Follow the on-screen instructions and select default options.
 
-   - If **Xcode** or **Apple Command Line Tools** are not installed, macOS may open a separate installer window. Complete the installer. The IT 140 Install script will stop with a `PARTIAL` result and tell you to rerun `install_it140.zsh` after the Apple installer finishes.
+   * If **Xcode** or **Apple Command Line Tools** are not installed, macOS may open a separate installer window. Complete the installer. The IT 140 Install script will stop with a `PARTIAL` result and tell you to rerun `install_it140.zsh` after the Apple installer finishes.
       > *Important.* The installers may open **behind Terminal or another window**, so they may not be immediately visible. If the Install script appears to be waiting:
-      > - Check the Dock at the bottom of the screen for another open or minimized installer window.
-      > - Move or minimize your open windows, especially Terminal, and look for the Apple Command Line Tools installer.
-      > - Complete the installation and wait for it to finish. Do not close Terminal while the installer is running.
+      > * Check the Dock at the bottom of the screen for another open or minimized installer window.
+      > * Move or minimize your open windows, especially Terminal, and look for the Apple Command Line Tools installer.
+      > * Complete the installation and wait for it to finish. Do not close Terminal while the installer is running.
       > After the Apple installer finishes, return to Terminal. The IT 140 Install script will finish with a PARTIAL result and tell you to run `"$HOME/it140/scripts/mac/install_it140.zsh"` again. Just press the up arrow key in Terminal to recall the previous command and press **Return** to run it again.
 
       ![Waiting for Xcode or Apple Command Line Tools installation](./assets/45_mac_terminal_install5.png)
 
-   - If **Homebrew** is not installed, the script uses the official Homebrew installer.
+   * If **Homebrew** is not installed, the script uses the official Homebrew installer.
 
    - When Terminal requests a password, type the password that you use to sign in to your Mac and press **Return**.
 

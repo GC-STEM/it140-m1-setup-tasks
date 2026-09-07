@@ -2,7 +2,7 @@
 
 ## Project Information
 
-- **Course**: IT 140 - *Introduction to Scripting*
+* **Course**: IT 140 - *Introduction to Scripting*
 - **Activity Title**: 1-1 Setup Tasks
 - **Activity Type**: Required, non-graded, no submission
 - **Design Subject**: IT 140 Development Environment, also called the course IDE
@@ -141,8 +141,8 @@ The flowchart represents the combined manual and automated setup process, includ
 The setup workflow follows this general sequence:
 
 - Identify whether the student will use the CVD or an optional local desktop environment.
-- If the student uses the CVD, verify that the preconfigured course IDE tools are available.
-- If the student chooses local setup, confirm that the operating system is supported and receiving security updates.
+* If the student uses the CVD, verify that the preconfigured course IDE tools are available.
+* If the student chooses local setup, confirm that the operating system is supported and receiving security updates.
 - Confirm that the student’s computer meets the applicable university minimum hardware baseline.
 - Run the platform-specific setup commands or guide the student through required manual installation steps.
 - Install or verify the required course IDE software stack.

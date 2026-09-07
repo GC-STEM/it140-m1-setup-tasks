@@ -1,4 +1,4 @@
-<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
+<!-- To see this file in a clean, formatted view, select ▼ in the upper-right corner of the editor pane, then select "Markdown Preview". -->
 
 # IT 140 Module One: Setup Tasks | Codio Virtual Desktop
 
@@ -45,9 +45,9 @@ You are finished when the final **Verification Summary** reports:
 >
 > Some IT 140 automation scripts use technical terms instead of the word `SUCCESS`.
 >
-> - `PASS` means the script completed successfully.
-> - `COMPLIANT` means verification succeeded. It does **not** mean a complaint or error.
-> - `Exit code: 0` means the script completed successfully.
+> * `PASS` means the script completed successfully.
+> * `COMPLIANT` means verification succeeded. It does **not** mean a complaint or error.
+> * `Exit code: 0` means the script completed successfully.
 >
 > Always read the final summary and follow its **Action required** and **Next step** instructions.
 
@@ -217,23 +217,23 @@ To complete CVD configuration, you will need the following:
 
    ![Run Commands in CVD Terminal](./assets/25_cvd_terminal_pasted.png)
 
-   - If the commands do not run, click anywhere in the terminal window and press **Enter** again to run the commands.
+   * If the commands do not run, click anywhere in the terminal window and press **Enter** again to run the commands.
 
 6. Review the output of the commands in the terminal window.
 
-   - If you see a `SUCCESS` message, congratulations! Follow the `Next step` instructions in the message.
+   * If you see a `SUCCESS` message, congratulations! Follow the `Next step` instructions in the message.
 
       ![Success Message in CVD Terminal](./assets/26_cvd_terminal_bootstrap_success.png)
 
-   - If the terminal window closes unexpectedly, reopen it and repeat Steps 2-6 again making sure you copy and paste the entire command set without introducing any additional keystrokes into the commands.
+   * If the terminal window closes unexpectedly, reopen it and repeat Steps 2-6 again making sure you copy and paste the entire command set without introducing any additional keystrokes into the commands.
 
-   - If you see an `ERROR` message, repeat Steps 2-6 making sure you copy and paste the entire command set.
+   * If you see an `ERROR` message, repeat Steps 2-6 making sure you copy and paste the entire command set.
 
-   - If you still see an `ERROR` message, follow the instructions in the message and see the [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support) Wiki page for additional help.
+   * If you still see an `ERROR` message, follow the instructions in the message and see the [Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support) Wiki page for additional help.
 
       ![Error Message in CVD Terminal](./assets/27_cvd_terminal_bootstrap_error.png)
 
-   - *Note*. A log file was created in your `it140/logs/` folder. If you encounter problems with the CVD, you may be asked to provide the log file to instructor or technical support for troubleshooting.
+   * *Note*. A log file was created in your `it140/logs/` folder. If you encounter problems with the CVD, you may be asked to provide the log file to instructor or technical support for troubleshooting.
 
 7. Close the terminal window by typing `exit` and pressing **Enter**. You must close the terminal window and open a new one before running the update script in the next step.
 
@@ -433,11 +433,11 @@ You should have access to at least one cloud storage service to be able to share
 
 8. Trust your `$HOME/Repos` workspace.
 
-   - If you get a popup window, asking "Do you trust the authors of the files in folder?", click the **Trust Folder & Continue** button.
+   * If you get a popup window, asking "Do you trust the authors of the files in folder?", click the **Trust Folder & Continue** button.
 
       ![Trust Workspace Window in VS Code](./assets/66_cvd_vsc_cmd_trust_window.png)
 
-   - If you do not get that popup, follow the directions below to trust your `$HOME/Repos` folder in VS Code.
+   * If you do not get that popup, follow the directions below to trust your `$HOME/Repos` folder in VS Code.
 
      1. Press **Ctrl** + **Shift** + **P** to open the VS Code Command Palette.
 
@@ -530,7 +530,7 @@ When asking for help with a CVD automation problem, include the step that failed
 
 ## Activity Metadata
 
-- **Course**: IT 140 - *Introduction to Scripting*
+* **Course**: IT 140 - *Introduction to Scripting*
 - **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD) Setup
 - **Activity Type**: Recommended, non-graded, no submission
 - **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).

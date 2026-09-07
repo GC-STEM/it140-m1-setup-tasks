@@ -1,4 +1,4 @@
-<!-- To see this file in a clean, formatted view, right-click on the filename and choose "Open Preview." -->
+<!-- To see this file in a clean, formatted view, select ▼ in the upper-right corner of the editor pane, then select "Markdown Preview". -->
 
 # IT 140 Faculty Setup Instructions
 
@@ -41,7 +41,7 @@ If you choose to work through the Module One setup and encounter an issue or hav
 
 ## Activity Metadata
 
-- **Course**: IT 140 - *Introduction to Scripting*
+* **Course**: IT 140 - *Introduction to Scripting*
 - **Activity Title**: 1-1 Setup Tasks | Faculty & Staff Setup
 - **Activity Type**: Recommended
 - **Activity Purpose**: Prepare faculty and staff to understand and use the IT 140 course IDE and GitHub repositories and to guide students through the Module One setup process.
@@ -156,7 +156,7 @@ Faculty access the CVD differently than students:
 
    ![Codio Overview page](./assets/06_fac_codio_overview2.png)
 
-7. This is the student landing page when they click on the **Optional Codio Virtual Desktop** link in D2L Brightspace. Consider bookmarking this CVD landing page for direct access in the future. <!-- If you are teaching more than one section of IT 140, you may want to bookmark both CVD URLs. -->
+7. This is the student landing page when they click on the **Optional Codio Virtual Desktop** link in D2L Brightspace. Consider bookmarking this CVD landing page for direct access in the future. <!-* If you are teaching more than one section of IT 140, you may want to bookmark both CVD URLs. -->
 
    ![Codio Virtual Desktop landing page](../codio/assets/11_cvd_it140_landing_page.png)
 

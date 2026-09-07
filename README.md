@@ -1,4 +1,4 @@
-<!-- To see this file in a clean, formatted view, select "Text Editor ▼" in the upper-right corner of the editor, then select "Markdown Preview". -->
+<!-- To see this file in a clean, formatted view, select ▼ in the upper-right corner of the editor pane, then select "Markdown Preview". -->
 
 # IT 140 Module One | Setup Tasks
 
@@ -11,11 +11,11 @@
 
 ---
 
-- **Course**: IT 140 - *Introduction to Scripting*
-- **Task Title**: 1-1: Setup Tasks
-- **Task Type**: Required, non-graded, no submission
-- **Repository Version**: 1.0.3
-- **Repository Version DTG**: 2026-09-02-09-37
+* **Course**: IT 140 - *Introduction to Scripting*
+* **Task Title**: 1-1: Setup Tasks
+* **Task Type**: Required, non-graded, no submission
+* **Repository Version**: 1.0.4
+* **Repository Version DTG**: 2026-09-07-14-30
 
 ## Overview
 

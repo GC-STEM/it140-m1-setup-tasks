@@ -2,7 +2,7 @@
 
 ## Project Information
 
-- **Course**: IT 140 - Introduction to Scripting
+* **Course**: IT 140 - Introduction to Scripting
 - **Activity Title**: 1-1 Setup Tasks
 - **Activity Type**: Required, non-graded, no submission
 - **Project Purpose**: Develop, test, and document the setup process for the course IDE in Codio, currently using Ubuntu 24.04 LTS, and supported local desktop environments, including Windows, macOS, and Debian/Ubuntu-based Linux distributions. This includes creating a comprehensive command set, testing it across supported platforms, and providing clear student-facing instructions in the README.md file.

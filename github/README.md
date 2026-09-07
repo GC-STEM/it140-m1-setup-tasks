@@ -20,13 +20,13 @@
 
 ## Activity Metadata
 
-- **Course**: IT 140 - *Introduction to Scripting*
+* **Course**: IT 140 - *Introduction to Scripting*
 - **Activity Title**: 1-1 Setup Tasks | GitHub Account Setup
 - **Activity Type**: Recommended, non-graded, no submission
 - **Activity Purpose**: Set up a GitHub account for use in the IT 140 course.
 - **Activity Description**: This activity guides students through creating or configuring a GitHub account, verifying email addresses, enabling two-factor authentication, and identifying the account information used by the course IDE. Course instructions beginning in Module Two assume that students can access GitHub for assignment and project repositories.
-- **Artifact Version**: 1.0.3
-- **Artifact Date-Time Group**: 2026-09-02-09-37
+- **Artifact Version**: 1.0.4
+- **Artifact Date-Time Group**: 2026-09-07-14-30
 - **Development Status**: Pilot — Active Development
 
 ## What You Will Do
@@ -86,8 +86,8 @@ If you already have a GitHub account that you want to use for this course, skip 
    ![GitHub Email settings page](./assets/13_github_email_add.png)
 
 4. Check your email inbox for a verification message from GitHub.
-   - If you do not see a message for each email address added, check your Junk or Spam folder.
-   - Click the **Verify email address** button in the message to confirm that you own the email address, or copy and paste the URL into your browser.
+   * If you do not see a message for each email address added, check your Junk or Spam folder.
+   * Click the **Verify email address** button in the message to confirm that you own the email address, or copy and paste the URL into your browser.
    - Repeat this step for each email address you added to your GitHub account.
 
 5. Back in [GitHub > Settings > Emails](https://github.com/settings/emails), refresh the page to confirm that all email addresses are listed as verified.
@@ -148,7 +148,7 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
    - Include a brief bio;
    - Add links to social media;
    - Add a [profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme) (advanced);
-   - Click the **Update profile** button to save your changes.
+   * Click the **Update profile** button to save your changes.
 
    For an example user profile with custom README, see [Petey Penmen's profile](https://github.com/petey-penmen).
 
