@@ -44,11 +44,15 @@ You are ready to continue when the **GitHub Account Ready Check** near the end o
 
 ## How IT 140 Uses GitHub
 
-IT 140 uses GitHub to host programming repositories. Beginning with the Module Two Assignment, course instructions will direct you to use Visual Studio Code (VS Code) to *clone* (copy) the appropriate assignment or project repository into your `Repos` folder. You will then work with those files in the course IDE.
+IT 140 uses GitHub to provide public course repositories containing assignment/project starter files, development resources, documentation, and automated checks.
 
-You do **not** need to clone the central **IT 140** course repository or this **Module One Setup Tasks** repository. These repositories provide course infrastructure and setup instructions. Only clone an assignment or project repository when the course instructions direct you to do so.
+Beginning with the Module Two Assignment, each activity README will tell you how to create or open a **personal private GitHub repository** and a local clone in your `Repos` folder. You will do your work in the local clone and can push committed changes to your personal GitHub repository.
 
-For a beginner-friendly explanation of Git, GitHub, repositories, professional uses, GitHub Education, and additional learning resources, see **[GitHub in IT 140](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/GitHub-in-IT-140)**.
+The public course repository, your personal GitHub repository, and your local clone are related but different copies. Follow the current activity README instead of using GitHub's **Fork** or **Use this template** buttons.
+
+You do **not** need to clone the central **IT 140** course repository or this **Module One Setup Tasks** repository. These repositories provide course infrastructure and setup instructions.
+
+For a beginner-friendly explanation of Git, GitHub, repositories, personal repositories, local clones, professional uses, GitHub Education, and additional learning resources, see **[GitHub in IT 140](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/GitHub-in-IT-140)**.
 
 ## 0. Sign Up for a New GitHub Account
 
