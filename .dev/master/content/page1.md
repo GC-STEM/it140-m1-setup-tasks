@@ -34,7 +34,7 @@ The **Guide** tab appears on the right and displays these instructions.
 
 - Collapse or expand the Guide as needed.
 - Read the complete Guide at least once.
-- **Mark as Complete** is optional and does not affect your grade.
+* **Mark as Complete** is optional and does not affect your grade.
 
 ### VM Tab
 
@@ -46,11 +46,11 @@ The noVNC control bar handle (**>** or **<**) appears along the far-left edge of
 
 Most students will use only **Full Screen**.
 
-- **Show keyboard:** Opens an on-screen keyboard. This is mainly useful on tablets and other touch-screen devices.
-- **Show extra keys:** Provides keys such as **Ctrl**, **Alt**, **Tab**, and **Esc** when your browser or device does not send them correctly to the CVD.
-- **Full screen:** Expands the CVD to fill your screen. Select it again or press **Esc** to exit full-screen mode.
-- **Settings:** Changes display and connection settings. Keep the default settings unless Codio Support instructs you to change them.
-- **Disconnect:** Ends your browser’s connection to the CVD. It does not reset the VM or delete saved files. Reopen the VM tab to reconnect.
+* **Show keyboard:** Opens an on-screen keyboard. This is mainly useful on tablets and other touch-screen devices.
+* **Show extra keys:** Provides keys such as **Ctrl**, **Alt**, **Tab**, and **Esc** when your browser or device does not send them correctly to the CVD.
+* **Full screen:** Expands the CVD to fill your screen. Select it again or press **Esc** to exit full-screen mode.
+* **Settings:** Changes display and connection settings. Keep the default settings unless Codio Support instructs you to change them.
+* **Disconnect:** Ends your browser’s connection to the CVD. It does not reset the VM or delete saved files. Reopen the VM tab to reconnect.
 
 #### Virtual Machine Control Bar
 
@@ -58,8 +58,8 @@ The **Virtual Machine Control Bar** appears at the top of the VM tab. It display
 
 ##### VM Status
 
-- **Virtual Machine is Ready:** The CVD is ready to use.
-- **Virtual Machine is Inactive:** Refresh the browser window and wait for the VM to reconnect. Do not select **RESTART VM** or **RESET VM** unless the VM remains unavailable.
+* **Virtual Machine is Ready:** The CVD is ready to use.
+* **Virtual Machine is Inactive:** Refresh the browser window and wait for the VM to reconnect. Do not select **RESTART VM** or **RESET VM** unless the VM remains unavailable.
 
 ##### RESTART VM
 
@@ -94,15 +94,15 @@ You normally will not use the Codio menu bar. Complete your programming and file
 
 These menu options may be helpful:
 
-- **Tools → Virtual Machine → Open:** Reopens the VM tab if it is missing or was accidentally closed.
-- **Help → Help Center:** Opens Codio’s documentation.
-- **Help → System Status:** Shows whether Codio is experiencing an outage or service disruption.
-- **Help → Support:** Opens a chat with **Codio Support**. It does not connect you to the SNHU IT Service Desk.
+* **Tools → Virtual Machine → Open:** Reopens the VM tab if it is missing or was accidentally closed.
+* **Help → Help Center:** Opens Codio’s documentation.
+* **Help → System Status:** Shows whether Codio is experiencing an outage or service disruption.
+* **Help → Support:** Opens a chat with **Codio Support**. It does not connect you to the SNHU IT Service Desk.
 
 ## Getting Help
 
 Contact the appropriate support resource:
 
-- **Codio Support:** Problems with Codio, the VM tab, or the CVD connection
-- **SNHU IT Service Desk:** Problems with your SNHU account, authentication, Brightspace, or other SNHU systems
-- **Your instructor:** Questions about assignments, course requirements, or Python code. Unless the matter is private, post your question in the General Questions discussion forum so other students can benefit from the answer.
+* **Codio Support:** Problems with Codio, the VM tab, or the CVD connection
+* **SNHU IT Service Desk:** Problems with your SNHU account, authentication, Brightspace, or other SNHU systems
+* **Your instructor:** Questions about assignments, course requirements, or Python code. Unless the matter is private, post your question in the General Questions discussion forum so other students can benefit from the answer.

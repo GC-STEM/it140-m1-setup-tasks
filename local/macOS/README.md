@@ -18,32 +18,32 @@ Following these steps will configure the programming software and developer tool
 <!-- omit from toc -->
 ## Table of Contents
 
-- [IT 140 Development Environment Local Setup on macOS](#it-140-development-environment-local-setup-on-macos)
-  - [Table of Contents](#table-of-contents)
-  - [Activity Metadata](#activity-metadata)
-  - [0. Check System Compatibility](#0-check-system-compatibility)
-  - [1. Back Up Your Mac](#1-back-up-your-mac)
-    - [Restore Your Mac (*if needed*)](#restore-your-mac-if-needed)
-  - [2. Update the Operating System](#2-update-the-operating-system)
-  - [3. Prepare the Course Automation Package](#3-prepare-the-course-automation-package)
-  - [4. Install the Course IDE](#4-install-the-course-ide)
-  - [5. Configure the Course IDE](#5-configure-the-course-ide)
-  - [6. Verify the Course IDE](#6-verify-the-course-ide)
-  - [7. Configure Visual Studio Code](#7-configure-visual-studio-code)
-  - [8. Periodic Updates to Course IDE](#8-periodic-updates-to-course-ide)
-  - [Next Step](#next-step)
-  - [Troubleshooting](#troubleshooting)
+* [IT 140 Development Environment Local Setup on macOS](#it-140-development-environment-local-setup-on-macos)
+  * [Table of Contents](#table-of-contents)
+  * [Activity Metadata](#activity-metadata)
+  * [0. Check System Compatibility](#0-check-system-compatibility)
+  * [1. Back Up Your Mac](#1-back-up-your-mac)
+    * [Restore Your Mac (*if needed*)](#restore-your-mac-if-needed)
+  * [2. Update the Operating System](#2-update-the-operating-system)
+  * [3. Prepare the Course Automation Package](#3-prepare-the-course-automation-package)
+  * [4. Install the Course IDE](#4-install-the-course-ide)
+  * [5. Configure the Course IDE](#5-configure-the-course-ide)
+  * [6. Verify the Course IDE](#6-verify-the-course-ide)
+  * [7. Configure Visual Studio Code](#7-configure-visual-studio-code)
+  * [8. Periodic Updates to Course IDE](#8-periodic-updates-to-course-ide)
+  * [Next Step](#next-step)
+  * [Troubleshooting](#troubleshooting)
 
 ## Activity Metadata
 
 * **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks | Local Setup | macOS
-- **Activity Type**: Optional, non-graded, no submission
-- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local macOS computer.
-- **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a supported Apple silicon Mac. These local installation files and automation scripts are designed for students who use an Administrator account on their Mac. Following these steps will configure the programming software and developer tools required to complete IT 140 course activities.
-- **Artifact Version**: 1.0.4
-- **Artifact Date-Time Group**: 2026-09-07-14-30
-- **Development Status**: Pilot — Active Development
+* **Activity Title**: 1-1 Setup Tasks | Local Setup | macOS
+* **Activity Type**: Optional, non-graded, no submission
+* **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local macOS computer.
+* **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a supported Apple silicon Mac. These local installation files and automation scripts are designed for students who use an Administrator account on their Mac. Following these steps will configure the programming software and developer tools required to complete IT 140 course activities.
+* **Artifact Version**: 1.0.4
+* **Artifact Date-Time Group**: 2026-09-07-14-30
+* **Development Status**: Pilot — Active Development
 
 ## 0. Check System Compatibility
 
@@ -58,11 +58,11 @@ Before setting up the course IDE, confirm that your Mac uses Apple silicon, runs
 
 2. Check the **Chip** and **macOS** information.
 
-   - **GO**: The chip name begins with **Apple M**, such as Apple M1, M2, M3, M4, or a later Apple silicon chip, and the Mac is running macOS Sonoma 14.x.y, Sequoia 15.x.y, Tahoe 26.x.y, or newer. Continue to Step 3.
+   * **GO**: The chip name begins with **Apple M**, such as Apple M1, M2, M3, M4, or a later Apple silicon chip, and the Mac is running macOS Sonoma 14.x.y, Sequoia 15.x.y, Tahoe 26.x.y, or newer. Continue to Step 3.
 
-   - **NO GO — Intel Mac**: The chip entry identifies an Intel processor. The current IT 140 macOS automation does not support Intel-based Macs.
+   * **NO GO — Intel Mac**: The chip entry identifies an Intel processor. The current IT 140 macOS automation does not support Intel-based Macs.
 
-   - **NO GO — older macOS**: The Mac is running a version earlier than macOS 14 Sonoma. Continue to **Step 2: Update the Operating System** only if Software Update offers a supported macOS version for this Mac.
+   * **NO GO — older macOS**: The Mac is running a version earlier than macOS 14 Sonoma. Continue to **Step 2: Update the Operating System** only if Software Update offers a supported macOS version for this Mac.
 
    ![About This Mac showing the Apple silicon chip and macOS version](./assets/02_apple_about_this_mac.png)
 
@@ -80,9 +80,9 @@ Before setting up the course IDE, confirm that your Mac uses Apple silicon, runs
 
    3. Confirm that the account you are currently signed in to is listed as **Admin**.
 
-      - **GO**: Your account is listed as **Admin**. Continue with the local setup.
+      * **GO**: Your account is listed as **Admin**. Continue with the local setup.
 
-      - **NO GO**: Your account is a **Standard** account, or you know that the Mac is managed by an organization that restricts the required software installations or administrator-level changes.
+      * **NO GO**: Your account is a **Standard** account, or you know that the Mac is managed by an organization that restricts the required software installations or administrator-level changes.
 
          *Recommendation*. If your account is Standard or the Mac is managed by another person or organization, ask the Mac owner or IT administrator whether they can make the account you will use for IT 140 an administrator and permit the required software installations. Do not attempt to bypass management restrictions. If this is not possible, use the CVD.
 
@@ -128,11 +128,11 @@ Before installing the course IDE, install current macOS and security updates. Th
 
 5. Follow the instruction that applies. Pay attention to "update" versus "upgrade" in the instructions:
 
-   - **No updates available**: Continue to [Step 3. Prepare the Course Automation Package](#3-prepare-the-course-automation-package).
-   - **Update available**: Select **Update Now** or **Restart Now**, and follow the on-screen instructions.
-   - **Major macOS upgrade available**. If the Mac is running:
-     - **Sonoma 14, Sequoia 15, Tahoe 26, or later**: Install the available **updates** for your current macOS release. You do not need to install a major release upgrade for this course.
-     - **Ventura 13, Monterey 12, or earlier**: install a supported macOS **upgrade** offered by Software Update before continuing with the local course IDE setup or use the Codio Virtual Desktop (CVD).
+   * **No updates available**: Continue to [Step 3. Prepare the Course Automation Package](#3-prepare-the-course-automation-package).
+   * **Update available**: Select **Update Now** or **Restart Now**, and follow the on-screen instructions.
+   * **Major macOS upgrade available**. If the Mac is running:
+     * **Sonoma 14, Sequoia 15, Tahoe 26, or later**: Install the available **updates** for your current macOS release. You do not need to install a major release upgrade for this course.
+     * **Ventura 13, Monterey 12, or earlier**: install a supported macOS **upgrade** offered by Software Update before continuing with the local course IDE setup or use the Codio Virtual Desktop (CVD).
 
    ![macOS Software Update showing available updates](./assets/25_mac_update.png)
 
@@ -195,8 +195,8 @@ Before the course IDE can be installed, you need the current IT 140 automation p
 
 8. Wait for the Prepare script to finish and for the command prompt to return. Review the final **IT 140 macOS PREPARE SUMMARY** before continuing. Make sure:
 
-   - **Result**: `PASS`
-   - **Exit code**: `0`
+   * **Result**: `PASS`
+   * **Exit code**: `0`
 
    ![Successful IT 140 macOS Prepare summary](./assets/38_mac_prepare8.png)
 
@@ -255,9 +255,9 @@ The Install script adds or repairs the system-level software required for IT 140
 
 7. On a successful run, make sure:
 
-   - **Result**: `PASS`
-   - **Failures**: `0`
-   - **Exit code**: `0`
+   * **Result**: `PASS`
+   * **Failures**: `0`
+   * **Exit code**: `0`
 
    ![Final IT 140 macOS Install summary](./assets/46_mac_terminal_install7.png)
 
@@ -321,9 +321,9 @@ This process is similar to configuring the course IDE in the Codio Virtual Deskt
 
 6. Wait for the script to finish. Review the final **CONFIGURATION SUMMARY** and make sure:
 
-   - **Result**: `PASS`
-   - **Failures**: `0`
-   - **Exit code**: `0`
+   * **Result**: `PASS`
+   * **Failures**: `0`
+   * **Exit code**: `0`
 
    ![Successful IT 140 macOS Configuration summary](./assets/56_mac_configure_summary.png)
 
@@ -354,9 +354,9 @@ The Verify script checks that the required course software, GitHub authenticatio
 
 4. Wait for the script to finish and review the final **VERIFICATION SUMMARY**.
 
-   - **Ready to continue**: `Result` is `COMPLIANT` and `Failed` is `0`.
-   - **Warnings**: Review any warning and its recommended action. A warning does not by itself make the course IDE noncompliant.
-   - **Problem found**: If `Result` is `NOT COMPLIANT` or `Failed` is greater than `0`, follow the **Remediation** instructions shown below the summary and run Verify again after correcting the problem.
+   * **Ready to continue**: `Result` is `COMPLIANT` and `Failed` is `0`.
+   * **Warnings**: Review any warning and its recommended action. A warning does not by itself make the course IDE noncompliant.
+   * **Problem found**: If `Result` is `NOT COMPLIANT` or `Failed` is greater than `0`, follow the **Remediation** instructions shown below the summary and run Verify again after correcting the problem.
 
    ![Successful IT 140 macOS Verification summary showing COMPLIANT and zero failed checks](./assets/Screenshot%202026-08-10%20120706.png)
 
@@ -439,9 +439,9 @@ Run the IT 140 Update script when your course instructions ask you to update the
 
 5. Wait for the Update script to finish. Review the final **IT 140 macOS UPDATE SUMMARY** and make sure:
 
-   - **Result**: `PASS`
-   - **Failures**: `0`
-   - **Exit code**: `0`
+   * **Result**: `PASS`
+   * **Failures**: `0`
+   * **Exit code**: `0`
 
    ![Successful IT 140 macOS Update summary](./assets/Screenshot%202026-08-10%20121722.png)
 
@@ -458,13 +458,13 @@ Run the IT 140 Update script when your course instructions ask you to update the
 
 Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start the Module Two assignment. However, we recommend that you also configure the course IDE in Codio, if you have not done so already.
 
-- **[Configure the course IDE on Codio](../../codio/README.md)**
+* **[Configure the course IDE on Codio](../../codio/README.md)**
 
 Optionally, if you have another local computer, you can also set up the course IDE on that machine:
 
-- **Set up the course IDE on another local computer**
-  - [Windows](../windows/README.md)
-  - [Linux](../linux/README.md)
+* **Set up the course IDE on another local computer**
+  * [Windows](../windows/README.md)
+  * [Linux](../linux/README.md)
 
 ## Troubleshooting
 

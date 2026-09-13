@@ -17,13 +17,13 @@ This document provides step-by-step instructions for installing the IT 140 devel
 ## Activity Metadata
 
 * **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks | Local Setup | Windows
-- **Activity Type**: Optional, non-graded, no submission
-- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local Windows computer.
-- **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a publisher-supported version of Windows. These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
-- **Artifact Version**: 1.0.4
-- **Artifact Date-Time Group**: 2026-09-07-14-30
-- **Development Status**: Pilot — Active Development
+* **Activity Title**: 1-1 Setup Tasks | Local Setup | Windows
+* **Activity Type**: Optional, non-graded, no submission
+* **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on your local Windows computer.
+* **Activity Description**: This activity provides step-by-step instructions for installing the IT 140 development environment (course IDE) on a publisher-supported version of Windows. These local installation files and automation scripts are designed exclusively for students who have access to an administrator account on their computer. Following these steps will configure all the necessary programming software and developer tools required to complete your course activities.
+* **Artifact Version**: 1.0.4
+* **Artifact Date-Time Group**: 2026-09-07-14-30
+* **Development Status**: Pilot — Active Development
 
 ## 0. Check System Compatibility
 
@@ -35,14 +35,14 @@ Before setting up the course IDE on Windows, we must verify that your computer's
 
 3. Observe what happens on your screen:
 
-   - **GO**: A terminal window opens and shows a blinking cursor after the command prompt. Your computer's operating system likely allows local command-line tools.
+   * **GO**: A terminal window opens and shows a blinking cursor after the command prompt. Your computer's operating system likely allows local command-line tools.
    **Recommendation**: Continue with local setup of the course IDE.
 
    > *Note*. This test only confirms that command-line tools can open. **Step 4: Install the Course IDE** also requires an administrator account. If you cannot approve an administrator prompt when you reach Step 4, use the CVD instead.
 
    <!--SME TODO: Add screenshots for GO.-->
 
-   - **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.
+   * **NO GO**: An error popup appears, or the window immediately closes. Your computer's operating system or employer-managed security policy blocks local command-line tools. You will not be able to install or run the course IDE locally unless you resolve these issues.
    **Recommendation**: Use just the CVD. Go to the [Codio README.md](../../codio/README.md) to configure the CVD, if you have not done so already. Otherwise, return to the main [README.md](../../README.md) to complete any outstanding tasks.
 
    <!--SME TODO: Add screenshots for NOGO.-->
@@ -176,8 +176,8 @@ The Install script adds or repairs the system-level software required for the co
 
 5. Wait for the Install script to finish. This may take several minutes. Review the final **SETUP SUMMARY** and follow its **Next step** instructions. Make sure:
 
-   - **Result**: `PASS`
-   - **Failures**: `0`
+   * **Result**: `PASS`
+   * **Failures**: `0`
 
    ![Review install script summary](./assets/45_win_install5.png)
 
@@ -217,8 +217,8 @@ The Configure script sets up the course IDE for your Windows user account. It ma
 
 6. When the script finishes, review the final **CONFIGURATION SUMMARY** and follow its **Next step** instructions. Make sure:
 
-   - **Result**: `PASS`
-   - **Failures**: `0`
+   * **Result**: `PASS`
+   * **Failures**: `0`
 
    ![Review configure script summary](./assets/56_win_configure6.png)
 
@@ -263,10 +263,10 @@ The Verify script checks that the required course software and settings are read
 1. Press the **Windows** (⊞) key, type **Visual Studio Code**, and open **Visual Studio Code** from the search results.
 
 2. Sign into VS Code using one of the following methods:
-   - **Continue with GitHub** (highly recommended)
-   - **Sign in with Google** (click on the **G** icon)
-   - **Sign in with Apple** (click on the Apple icon)
-   - **Continue without Signing in**
+   * **Continue with GitHub** (highly recommended)
+   * **Sign in with Google** (click on the **G** icon)
+   * **Sign in with Apple** (click on the Apple icon)
+   * **Continue without Signing in**
 
    > *Note*. If you do not see the Welcome page, click the blue **Sign in** button on the VS Code menu bar.
 
@@ -314,13 +314,13 @@ Run the IT 140 Update script when your course instructions ask you to update the
 
 Once you have completed setting up the course IDE on one local computer, you may stop here until you are ready to start on the Module Two assignment. However, we recommend you also configure the course IDE on Codio, if you have not done so already.
 
-- **[Configure the course IDE on Codio](../../codio/README.md)**
+* **[Configure the course IDE on Codio](../../codio/README.md)**
 
 Optionally, if you have another local computer, you can also set up the course IDE on that machine. See the following links for instructions:
 
-- **Set up the course IDE on another local computer**
-  - [macOS](../macOS/README.md)
-  - [Linux](../linux/README.md)
+* **Set up the course IDE on another local computer**
+  * [macOS](../macOS/README.md)
+  * [Linux](../linux/README.md)
 
 ## Troubleshooting
 

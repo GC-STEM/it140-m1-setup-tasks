@@ -7,6 +7,8 @@
 > [!NOTE]
 > **🆕 New for 2026 C-5:** IT 140 now uses GitHub repositories to provide assignment starter files, development resources, and supporting documentation.
 >
+> If you have a question, check [GitHub Discussions](https://github.com/GC-STEM/it140-m1-setup-tasks/discussions) to see whether it has already been answered or ask a new question.
+>
 > If you find a problem with this GitHub repository or its instructions, or have a suggestion for improvement, please open [GitHub Issues](https://github.com/GC-STEM/it140-m1-setup-tasks/issues) to review existing issues or create a new issue.
 
 ---

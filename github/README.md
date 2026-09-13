@@ -5,29 +5,29 @@
 <!-- omit from toc -->
 ## Table of Contents
 
-- [Set Up a GitHub Account](#set-up-a-github-account)
-  - [Table of Contents](#table-of-contents)
-  - [Activity Metadata](#activity-metadata)
-  - [What You Will Do](#what-you-will-do)
-  - [How IT 140 Uses GitHub](#how-it-140-uses-github)
-  - [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
-  - [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
-  - [2. Secure Your GitHub Account](#2-secure-your-github-account)
-  - [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
-  - [GitHub Account Ready Check](#github-account-ready-check)
-  - [Continue to Step 2: Set Up Codio](#continue-to-step-2-set-up-codio)
-  - [Learn More or Get Help](#learn-more-or-get-help)
+* [Set Up a GitHub Account](#set-up-a-github-account)
+  * [Table of Contents](#table-of-contents)
+  * [Activity Metadata](#activity-metadata)
+  * [What You Will Do](#what-you-will-do)
+  * [How IT 140 Uses GitHub](#how-it-140-uses-github)
+  * [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
+  * [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
+  * [2. Secure Your GitHub Account](#2-secure-your-github-account)
+  * [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
+  * [GitHub Account Ready Check](#github-account-ready-check)
+  * [Continue to Step 2: Set Up Codio](#continue-to-step-2-set-up-codio)
+  * [Learn More or Get Help](#learn-more-or-get-help)
 
 ## Activity Metadata
 
 * **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks | GitHub Account Setup
-- **Activity Type**: Recommended, non-graded, no submission
-- **Activity Purpose**: Set up a GitHub account for use in the IT 140 course.
-- **Activity Description**: This activity guides students through creating or configuring a GitHub account, verifying email addresses, enabling two-factor authentication, and identifying the account information used by the course IDE. Course instructions beginning in Module Two assume that students can access GitHub for assignment and project repositories.
-- **Artifact Version**: 1.0.4
-- **Artifact Date-Time Group**: 2026-09-07-14-30
-- **Development Status**: Pilot — Active Development
+* **Activity Title**: 1-1 Setup Tasks | GitHub Account Setup
+* **Activity Type**: Recommended, non-graded, no submission
+* **Activity Purpose**: Set up a GitHub account for use in the IT 140 course.
+* **Activity Description**: This activity guides students through creating or configuring a GitHub account, verifying email addresses, enabling two-factor authentication, and identifying the account information used by the course IDE. Course instructions beginning in Module Two assume that students can access GitHub for assignment and project repositories.
+* **Artifact Version**: 1.0.4
+* **Artifact Date-Time Group**: 2026-09-07-14-30
+* **Development Status**: Pilot — Active Development
 
 ## What You Will Do
 
@@ -61,8 +61,8 @@ If you already have a GitHub account that you want to use for this course, skip 
 1. Go to [https://github.com/signup](https://github.com/signup).
 
 2. Enter your email address and password:
-   - **Students**: Continue with Google or Apple or manually enter another personal email address. Do **NOT** use your SNHU email or password here.
-   - **Faculty and Staff**: Use your SNHU email address. Do **NOT** use your SNHU password here.
+   * **Students**: Continue with Google or Apple or manually enter another personal email address. Do **NOT** use your SNHU email or password here.
+   * **Faculty and Staff**: Use your SNHU email address. Do **NOT** use your SNHU password here.
 
 3. Enter a professional username that you are comfortable sharing publicly. For guidance on selecting a professional username, see [github_username.md](github_username.md).
 
@@ -83,8 +83,8 @@ If you already have a GitHub account that you want to use for this course, skip 
 2. Sign in using the method you used when creating your GitHub account.
 
 3. In the **Add email address** field, enter at least one other email address and click **Add**.
-   - **Students**: Add your SNHU email address to your GitHub account.
-   - **Faculty & Staff**: Add a personal address to your GitHub account.
+   * **Students**: Add your SNHU email address to your GitHub account.
+   * **Faculty & Staff**: Add a personal address to your GitHub account.
    - *Optional*. Add other email addresses as backups, if desired.
 
    ![GitHub Email settings page](./assets/13_github_email_add.png)
@@ -176,12 +176,12 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 
 Before continuing to the course IDE setup, confirm that the account information used by IT 140 is ready:
 
-- [ ] You can sign in to your GitHub account.
-- [ ] The email addresses you added for this activity show as verified.
-- [ ] **Keep my email addresses private** is turned on.
-- [ ] You know your GitHub username.
-- [ ] You have recorded your GitHub-provided `@users.noreply.github.com` email address.
-- [ ] Two-factor authentication (2FA) is configured and your recovery codes are stored securely.
+* [ ] You can sign in to your GitHub account.
+* [ ] The email addresses you added for this activity show as verified.
+* [ ] **Keep my email addresses private** is turned on.
+* [ ] You know your GitHub username.
+* [ ] You have recorded your GitHub-provided `@users.noreply.github.com` email address.
+* [ ] Two-factor authentication (2FA) is configured and your recovery codes are stored securely.
 
 If all of these checks are complete, the GitHub account information needed to configure the course IDE is ready.
 

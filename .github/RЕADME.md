@@ -32,8 +32,8 @@ The leading period is significant. On Unix-like operating systems, a name that b
 
 Also, do not confuse `.github/` with `.git/`:
 
-- **`.github/`** is a project directory that may be committed to the repository. GitHub recognizes certain files stored there.
-- **`.git/`** is Git's internal repository database on a local computer. It stores objects, references, configuration, and other information Git needs to manage the local repository. It is not a normal project folder that you commit to GitHub.
+* **`.github/`** is a project directory that may be committed to the repository. GitHub recognizes certain files stored there.
+* **`.git/`** is Git's internal repository database on a local computer. It stores objects, references, configuration, and other information Git needs to manage the local repository. It is not a normal project folder that you commit to GitHub.
 
 ## Why Repositories Use `.github/`
 
@@ -331,10 +331,10 @@ If you arrived here while trying to complete the IT 140 GitHub account setup, re
 
 For students who want to explore these topics further:
 
-- [GitHub Docs: Workflows](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows)
-- [GitHub Docs: About issue and pull request templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates)
-- [GitHub Docs: About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
-- [GitHub Docs: About the `dependabot.yml` file](https://docs.github.com/en/code-security/concepts/supply-chain-security/about-the-dependabot-yml-file)
-- [GitHub Docs: Creating a default community health file](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
-- [GitHub Docs: Automatically generated release notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes)
-- [IEEE Computer Society: Guide to the Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering)
+* [GitHub Docs: Workflows](https://docs.github.com/en/actions/concepts/workflows-and-actions/workflows)
+* [GitHub Docs: About issue and pull request templates](https://docs.github.com/en/communities/using-templates-to-encourage-useful-issues-and-pull-requests/about-issue-and-pull-request-templates)
+* [GitHub Docs: About code owners](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners)
+* [GitHub Docs: About the `dependabot.yml` file](https://docs.github.com/en/code-security/concepts/supply-chain-security/about-the-dependabot-yml-file)
+* [GitHub Docs: Creating a default community health file](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+* [GitHub Docs: Automatically generated release notes](https://docs.github.com/en/repositories/releasing-projects-on-github/automatically-generated-release-notes)
+* [IEEE Computer Society: Guide to the Software Engineering Body of Knowledge (SWEBOK)](https://www.computer.org/education/bodies-of-knowledge/software-engineering)

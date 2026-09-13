@@ -3,48 +3,48 @@
 ## Project Information
 
 * **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks
-- **Activity Type**: Required, non-graded, no submission
-- **Design Subject**: IT 140 Development Environment, also called the course IDE
-- **Design Purpose**: Define the software design for the IT 140 Development Environment (course IDE) setup process, including the target architecture, supported environments, setup workflow, verification process, support artifacts, and design decisions needed to implement and maintain the course IDE across Codio and supported local desktop environments.
+* **Activity Title**: 1-1 Setup Tasks
+* **Activity Type**: Required, non-graded, no submission
+* **Design Subject**: IT 140 Development Environment, also called the course IDE
+* **Design Purpose**: Define the software design for the IT 140 Development Environment (course IDE) setup process, including the target architecture, supported environments, setup workflow, verification process, support artifacts, and design decisions needed to implement and maintain the course IDE across Codio and supported local desktop environments.
 
 <!-- omit from toc -->
 ## Table of Contents
 
-- [IT 140 Development Environment Software Design Document](#it-140-development-environment-software-design-document)
-  - [Project Information](#project-information)
-  - [Table of Contents](#table-of-contents)
-  - [0. Design Overview](#0-design-overview)
-    - [0.1. Design Scope](#01-design-scope)
-    - [0.2. Design Goals](#02-design-goals)
-    - [0.3. Design Assumptions](#03-design-assumptions)
-    - [0.4. Design Constraints](#04-design-constraints)
-  - [1. Architectural Design](#1-architectural-design)
-    - [1.1. Architecture Summary](#11-architecture-summary)
-    - [1.2. Primary Design Components](#12-primary-design-components)
-    - [1.3. External Interfaces](#13-external-interfaces)
-  - [2. Mid-Level Design](#2-mid-level-design)
-    - [2.1. Setup Process Flowchart](#21-setup-process-flowchart)
-    - [2.2. Setup Workflow Summary](#22-setup-workflow-summary)
-  - [3. Low-Level Design](#3-low-level-design)
-    - [3.1. Setup Process Pseudocode](#31-setup-process-pseudocode)
-  - [4. Data and Artifact Design](#4-data-and-artifact-design)
-    - [4.1. Inputs](#41-inputs)
-    - [4.2. Outputs](#42-outputs)
-    - [4.3. Student-Facing Artifacts](#43-student-facing-artifacts)
-    - [4.4. Support Artifacts](#44-support-artifacts)
-  - [5. Component Design](#5-component-design)
-    - [5.1. Codio Virtual Desktop Component](#51-codio-virtual-desktop-component)
-    - [5.2. Local Desktop Setup Component](#52-local-desktop-setup-component)
-    - [5.3. Verification Component](#53-verification-component)
-    - [5.4. Documentation Component](#54-documentation-component)
-    - [5.5. Support and Troubleshooting Component](#55-support-and-troubleshooting-component)
-  - [6. Error Handling and Recovery Design](#6-error-handling-and-recovery-design)
-  - [7. Security and Privacy Design](#7-security-and-privacy-design)
-  - [8. Maintainability Design](#8-maintainability-design)
-  - [9. Design Traceability](#9-design-traceability)
-  - [10. Design Verification](#10-design-verification)
-  - [Appendix A: Preliminary Course IDE Software Stack](#appendix-a-preliminary-course-ide-software-stack)
+* [IT 140 Development Environment Software Design Document](#it-140-development-environment-software-design-document)
+  * [Project Information](#project-information)
+  * [Table of Contents](#table-of-contents)
+  * [0. Design Overview](#0-design-overview)
+    * [0.1. Design Scope](#01-design-scope)
+    * [0.2. Design Goals](#02-design-goals)
+    * [0.3. Design Assumptions](#03-design-assumptions)
+    * [0.4. Design Constraints](#04-design-constraints)
+  * [1. Architectural Design](#1-architectural-design)
+    * [1.1. Architecture Summary](#11-architecture-summary)
+    * [1.2. Primary Design Components](#12-primary-design-components)
+    * [1.3. External Interfaces](#13-external-interfaces)
+  * [2. Mid-Level Design](#2-mid-level-design)
+    * [2.1. Setup Process Flowchart](#21-setup-process-flowchart)
+    * [2.2. Setup Workflow Summary](#22-setup-workflow-summary)
+  * [3. Low-Level Design](#3-low-level-design)
+    * [3.1. Setup Process Pseudocode](#31-setup-process-pseudocode)
+  * [4. Data and Artifact Design](#4-data-and-artifact-design)
+    * [4.1. Inputs](#41-inputs)
+    * [4.2. Outputs](#42-outputs)
+    * [4.3. Student-Facing Artifacts](#43-student-facing-artifacts)
+    * [4.4. Support Artifacts](#44-support-artifacts)
+  * [5. Component Design](#5-component-design)
+    * [5.1. Codio Virtual Desktop Component](#51-codio-virtual-desktop-component)
+    * [5.2. Local Desktop Setup Component](#52-local-desktop-setup-component)
+    * [5.3. Verification Component](#53-verification-component)
+    * [5.4. Documentation Component](#54-documentation-component)
+    * [5.5. Support and Troubleshooting Component](#55-support-and-troubleshooting-component)
+  * [6. Error Handling and Recovery Design](#6-error-handling-and-recovery-design)
+  * [7. Security and Privacy Design](#7-security-and-privacy-design)
+  * [8. Maintainability Design](#8-maintainability-design)
+  * [9. Design Traceability](#9-design-traceability)
+  * [10. Design Verification](#10-design-verification)
+  * [Appendix A: Preliminary Course IDE Software Stack](#appendix-a-preliminary-course-ide-software-stack)
 
 ## 0. Design Overview
 
@@ -105,26 +105,26 @@ The setup process contains both manual and automated elements. Manual elements g
 
 The course IDE design includes the following primary components:
 
-- **Reference Environment Component**: The Codio Virtual Desktop (CVD) baseline used to define the expected course IDE stack, workflows, commands, and tool behavior.
-- **Local Setup Component**: Platform-specific setup instructions and commands for supported Windows, macOS, and Debian/Ubuntu-based Linux environments.
-- **Verification Component**: Commands or scripts that confirm required tools are installed, available, and reporting expected versions.
-- **Documentation Component**: Student-facing README.md instructions, screenshots, notes, warnings, and troubleshooting guidance.
-- **Support Component**: Setup logs, verification output, and diagnostic information that students can share with instructors or technical support staff.
-- **Maintenance Component**: Version review, platform review, clean-environment testing, and update process for future course terms.
+* **Reference Environment Component**: The Codio Virtual Desktop (CVD) baseline used to define the expected course IDE stack, workflows, commands, and tool behavior.
+* **Local Setup Component**: Platform-specific setup instructions and commands for supported Windows, macOS, and Debian/Ubuntu-based Linux environments.
+* **Verification Component**: Commands or scripts that confirm required tools are installed, available, and reporting expected versions.
+* **Documentation Component**: Student-facing README.md instructions, screenshots, notes, warnings, and troubleshooting guidance.
+* **Support Component**: Setup logs, verification output, and diagnostic information that students can share with instructors or technical support staff.
+* **Maintenance Component**: Version review, platform review, clean-environment testing, and update process for future course terms.
 
 ### 1.3. External Interfaces
 
 The course IDE setup process interacts with the following external interfaces:
 
-- **Student User Interface**: README.md instructions, screenshots, terminal commands, code editor interface, and verification output.
-- **Operating System Interface**: Windows, macOS, or Debian/Ubuntu-based Linux environment, including system permissions and shell behavior.
-- **Package Manager or Installer Interface**: Operating system package managers, official installers, or supported software distribution channels.
-- **Code Editor Interface**: Visual Studio Code interface, command-line launcher, and extension management.
-- **Programming Language Interface**: Required course programming language runtime and package-management tooling.
-- **Version Control Interface**: Git and GitHub CLI or equivalent repository-access tooling.
-- **Testing Interface**: Test runner used to execute instructor-provided test programs or test files.
-- **Filesystem Interface**: Course repository folders, downloaded files, setup logs, screenshots, and student-created files.
-- **Support Interface**: Setup logs, verification output, and student-provided error messages used for troubleshooting.
+* **Student User Interface**: README.md instructions, screenshots, terminal commands, code editor interface, and verification output.
+* **Operating System Interface**: Windows, macOS, or Debian/Ubuntu-based Linux environment, including system permissions and shell behavior.
+* **Package Manager or Installer Interface**: Operating system package managers, official installers, or supported software distribution channels.
+* **Code Editor Interface**: Visual Studio Code interface, command-line launcher, and extension management.
+* **Programming Language Interface**: Required course programming language runtime and package-management tooling.
+* **Version Control Interface**: Git and GitHub CLI or equivalent repository-access tooling.
+* **Testing Interface**: Test runner used to execute instructor-provided test programs or test files.
+* **Filesystem Interface**: Course repository folders, downloaded files, setup logs, screenshots, and student-created files.
+* **Support Interface**: Setup logs, verification output, and student-provided error messages used for troubleshooting.
 
 ## 2. Mid-Level Design
 

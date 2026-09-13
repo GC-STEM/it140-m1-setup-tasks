@@ -21,34 +21,34 @@ If you choose to work through the Module One setup and encounter an issue or hav
 <!-- omit from toc -->
 ## Table of Contents
 
-- [IT 140 Faculty Setup Instructions](#it-140-faculty-setup-instructions)
-  - [🧪 Beta Testing](#-beta-testing)
-  - [Table of Contents](#table-of-contents)
-  - [Activity Metadata](#activity-metadata)
-  - [Overview of the Course IDE](#overview-of-the-course-ide)
-  - [Course Platforms and Student Workflow](#course-platforms-and-student-workflow)
-  - [1. Set Up A GitHub Account](#1-set-up-a-github-account)
-  - [2. Set Up the Course IDE on Codio](#2-set-up-the-course-ide-on-codio)
-  - [3. Review the Optional Local Course IDE](#3-review-the-optional-local-course-ide)
-    - [Students on Unsupported Systems](#students-on-unsupported-systems)
-  - [Guiding Students Through Setup](#guiding-students-through-setup)
-    - [Start With the Student README](#start-with-the-student-readme)
-    - [Keep the CVD as the Reference](#keep-the-cvd-as-the-reference)
-    - [Keep Coursework Moving](#keep-coursework-moving)
-    - [Follow Automation Results](#follow-automation-results)
-    - [Use the Correct Support Channel](#use-the-correct-support-channel)
-  - [Questions, Concerns, and Issues](#questions-concerns-and-issues)
+* [IT 140 Faculty Setup Instructions](#it-140-faculty-setup-instructions)
+  * [🧪 Beta Testing](#-beta-testing)
+  * [Table of Contents](#table-of-contents)
+  * [Activity Metadata](#activity-metadata)
+  * [Overview of the Course IDE](#overview-of-the-course-ide)
+  * [Course Platforms and Student Workflow](#course-platforms-and-student-workflow)
+  * [1. Set Up A GitHub Account](#1-set-up-a-github-account)
+  * [2. Set Up the Course IDE on Codio](#2-set-up-the-course-ide-on-codio)
+  * [3. Review the Optional Local Course IDE](#3-review-the-optional-local-course-ide)
+    * [Students on Unsupported Systems](#students-on-unsupported-systems)
+  * [Guiding Students Through Setup](#guiding-students-through-setup)
+    * [Start With the Student README](#start-with-the-student-readme)
+    * [Keep the CVD as the Reference](#keep-the-cvd-as-the-reference)
+    * [Keep Coursework Moving](#keep-coursework-moving)
+    * [Follow Automation Results](#follow-automation-results)
+    * [Use the Correct Support Channel](#use-the-correct-support-channel)
+  * [Questions, Concerns, and Issues](#questions-concerns-and-issues)
 
 ## Activity Metadata
 
 * **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks | Faculty & Staff Setup
-- **Activity Type**: Recommended
-- **Activity Purpose**: Prepare faculty and staff to understand and use the IT 140 course IDE and GitHub repositories and to guide students through the Module One setup process.
-- **Activity Description**: This activity provides faculty and staff with instructions for setting up a GitHub account, accessing and configuring the Codio Virtual Desktop (CVD), reviewing optional local setup, and understanding how the course development environment relates to D2L Brightspace.
-- **Artifact Version**: 0.10.1-beta.1
-- **Artifact Date**: 2026-08-11
-- **Development Status**: Pilot — Active Development
+* **Activity Title**: 1-1 Setup Tasks | Faculty & Staff Setup
+* **Activity Type**: Recommended
+* **Activity Purpose**: Prepare faculty and staff to understand and use the IT 140 course IDE and GitHub repositories and to guide students through the Module One setup process.
+* **Activity Description**: This activity provides faculty and staff with instructions for setting up a GitHub account, accessing and configuring the Codio Virtual Desktop (CVD), reviewing optional local setup, and understanding how the course development environment relates to D2L Brightspace.
+* **Artifact Version**: 0.10.1-beta.1
+* **Artifact Date**: 2026-08-11
+* **Development Status**: Pilot — Active Development
 
 ## Overview of the Course IDE
 
@@ -183,9 +183,9 @@ Start with the student-facing [Local Computer Setup](../local/README.md) page. I
 
 The currently supported automated setup guides are:
 
-- [Windows](../local/windows/README.md)
-- [macOS](../local/macOS/README.md)
-- [Linux](../local/linux/README.md)
+* [Windows](../local/windows/README.md)
+* [macOS](../local/macOS/README.md)
+* [Linux](../local/linux/README.md)
 
 If desired, you can install the course IDE on a local virtual machine (VM) instead of your host machine directly.
 

@@ -6,21 +6,21 @@
 
 ## Table of Contents
 
-- [IT 140 Module One: Setup Tasks | Codio Virtual Desktop](#it-140-module-one-setup-tasks--codio-virtual-desktop)
-  - [Table of Contents](#table-of-contents)
-  - [What You Will Do](#what-you-will-do)
-  - [What is a Codio Virtual Desktop?](#what-is-a-codio-virtual-desktop)
-  - [0. Prerequisites](#0-prerequisites)
-  - [1. Launch the CVD](#1-launch-the-cvd)
-  - [2. Download the Automation Scripts to the CVD](#2-download-the-automation-scripts-to-the-cvd)
-  - [3. Update the CVD](#3-update-the-cvd)
-  - [4. Sign into Cloud Storage Services](#4-sign-into-cloud-storage-services)
-  - [5. Configure the CVD](#5-configure-the-cvd)
-  - [6. Configure Visual Studio Code](#6-configure-visual-studio-code)
-  - [7. Verify the CVD](#7-verify-the-cvd)
-  - [Your Course IDE Is Ready](#your-course-ide-is-ready)
-  - [If Something Goes Wrong](#if-something-goes-wrong)
-  - [Activity Metadata](#activity-metadata)
+* [IT 140 Module One: Setup Tasks | Codio Virtual Desktop](#it-140-module-one-setup-tasks--codio-virtual-desktop)
+  * [Table of Contents](#table-of-contents)
+  * [What You Will Do](#what-you-will-do)
+  * [What is a Codio Virtual Desktop?](#what-is-a-codio-virtual-desktop)
+  * [0. Prerequisites](#0-prerequisites)
+  * [1. Launch the CVD](#1-launch-the-cvd)
+  * [2. Download the Automation Scripts to the CVD](#2-download-the-automation-scripts-to-the-cvd)
+  * [3. Update the CVD](#3-update-the-cvd)
+  * [4. Sign into Cloud Storage Services](#4-sign-into-cloud-storage-services)
+  * [5. Configure the CVD](#5-configure-the-cvd)
+  * [6. Configure Visual Studio Code](#6-configure-visual-studio-code)
+  * [7. Verify the CVD](#7-verify-the-cvd)
+  * [Your Course IDE Is Ready](#your-course-ide-is-ready)
+  * [If Something Goes Wrong](#if-something-goes-wrong)
+  * [Activity Metadata](#activity-metadata)
 
 ## What You Will Do
 
@@ -36,9 +36,9 @@ In this guide, you will:
 
 You are finished when the final **Verification Summary** reports:
 
-- **Result**: `COMPLIANT`
-- **Failed**: `0`
-- **Exit code**: `0`
+* **Result**: `COMPLIANT`
+* **Failed**: `0`
+* **Exit code**: `0`
 
 > [!IMPORTANT]
 > **These results mean SUCCESS.**
@@ -70,13 +70,13 @@ For help choosing between the CVD and a local environment, see **[Setup Options]
 
 To complete CVD configuration, you will need the following:
 
-- [ ] Access to an IT 140 course in D2L Brightspace.
+* [ ] Access to an IT 140 course in D2L Brightspace.
 
-- [ ] GitHub credentials (username or email, password, GitHub noreply email address).
+* [ ] GitHub credentials (username or email, password, GitHub noreply email address).
 
-- [ ] Google credentials (email, password), if using Google Workspace for sync and persistent storage.
+* [ ] Google credentials (email, password), if using Google Workspace for sync and persistent storage.
 
-- [ ] Microsoft credentials (email, password), if using OneDrive for persistent storage. You can use:
+* [ ] Microsoft credentials (email, password), if using OneDrive for persistent storage. You can use:
 
   - Your SNHU email address and password, or
   - Your personal Microsoft email address and password.
@@ -250,9 +250,9 @@ To complete CVD configuration, you will need the following:
 
 3. Review the final Update summary before continuing. Read the first three lines in this order:
 
-   - **Result** tells you whether Update completed. A successful update reports `PASS`.
-   - **Action required** tells you whether you must do something before continuing, such as `RESTART VM`.
-   - **Next step** tells you exactly what to do after the action is complete.
+   * **Result** tells you whether Update completed. A successful update reports `PASS`.
+   * **Action required** tells you whether you must do something before continuing, such as `RESTART VM`.
+   * **Next step** tells you exactly what to do after the action is complete.
 
    A successful update that requires a VM restart looks like this. **`PASS` means the Update succeeded.**
 
@@ -266,9 +266,9 @@ To complete CVD configuration, you will need the following:
 
    The **Support Details** section provides technical information if you need help. For a successful restart-required Update, it may show:
 
-   - **Failures**: `0`
-   - **Restart required**: `Yes`
-   - **Exit code**: `0`
+   * **Failures**: `0`
+   * **Restart required**: `Yes`
+   * **Exit code**: `0`
 
    In this example, `Failures: 0` and `Exit code: 0` confirm that Update succeeded. `Restart required: Yes` only means that the VM must be restarted before you continue.
 
@@ -384,11 +384,11 @@ You should have access to at least one cloud storage service to be able to share
 
 12. Review the final output of the configuration script. **The following summary means Configuration succeeded:**
 
-    - **Result**: `PASS`
-    - **Warnings**: `0`
-    - **Failures**: `0`
-    - **Exit code**: `0`
-    - **Next step**: open a fresh Terminal and run `verify_it140.sh`.
+    * **Result**: `PASS`
+    * **Warnings**: `0`
+    * **Failures**: `0`
+    * **Exit code**: `0`
+    * **Next step**: open a fresh Terminal and run `verify_it140.sh`.
 
     ![Configure IDE Script in CVD Terminal](./assets/49f_cvd_terminal_git_commit_name.png)
 
@@ -482,9 +482,9 @@ You should have access to at least one cloud storage service to be able to share
 
 3. Review the **Verification Summary**. **Verification succeeded if the summary reports all three of the following:**
 
-   - **Result**: `COMPLIANT`
-   - **Failed**: `0`
-   - **Exit code**: `0`
+   * **Result**: `COMPLIANT`
+   * **Failed**: `0`
+   * **Exit code**: `0`
 
    **`COMPLIANT` means SUCCESS.** It means the CVD passed the required verification checks; it does **not** mean a complaint or error. `Exit code: 0` also indicates that Verify completed successfully.
 
@@ -509,9 +509,9 @@ You can now return to your IT 140 course in [D2L Brightspace](https://learn.snhu
 
 If you also want the course IDE on your own computer, choose the setup guide for the supported computer you want to use:
 
-- [Windows](../local/windows/README.md)
-- [macOS](../local/macOS/README.md)
-- [Linux](../local/linux/README.md)
+* [Windows](../local/windows/README.md)
+* [macOS](../local/macOS/README.md)
+* [Linux](../local/linux/README.md)
 
 > [!NOTE]
 > Enabling VS Code Settings Sync can synchronize supported editor settings, but it does not automatically synchronize assignment files. Follow the Git/GitHub workflow in each assignment or project when moving repository work between environments.
@@ -531,10 +531,10 @@ When asking for help with a CVD automation problem, include the step that failed
 ## Activity Metadata
 
 * **Course**: IT 140 - *Introduction to Scripting*
-- **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD) Setup
-- **Activity Type**: Recommended, non-graded, no submission
-- **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).
-- **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. The CVD is a cloud-based environment that you access through an internet connection and web browser, so the course software runs in a consistent remote environment rather than depending on software installed on your own computer.
-- **Artifact Version**: 0.10.1-beta.1
-- **Artifact Date**: 2026-08-11
-- **Development Status**: Pilot — Active Development
+* **Activity Title**: 1-1 Setup Tasks | Codio Virtual Desktop (CVD) Setup
+* **Activity Type**: Recommended, non-graded, no submission
+* **Activity Purpose**: Prepare the IT 140 development environment for completing course assignments on the Codio Virtual Desktop (CVD).
+* **Activity Description**: This activity provides instructions for launching, configuring, and verifying the IT 140 development environment (course IDE) on the Codio Virtual Desktop (CVD). The course IDE is a pre-configured development environment that includes all the tools, libraries, and settings needed to complete course assignments. The CVD is a cloud-based environment that you access through an internet connection and web browser, so the course software runs in a consistent remote environment rather than depending on software installed on your own computer.
+* **Artifact Version**: 0.10.1-beta.1
+* **Artifact Date**: 2026-08-11
+* **Development Status**: Pilot — Active Development
