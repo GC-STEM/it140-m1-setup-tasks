@@ -32,8 +32,8 @@ You will complete most tasks inside the CVD. You do not need to learn or use mos
 
 The **Guide** tab appears on the right and displays these instructions.
 
-- Collapse or expand the Guide as needed.
-- Read the complete Guide at least once.
+* Collapse or expand the Guide as needed.
+* Read the complete Guide at least once.
 * **Mark as Complete** is optional and does not affect your grade.
 
 ### VM Tab
@@ -69,9 +69,9 @@ Use **RESTART VM** only when the CVD remains frozen or unresponsive after you re
 
 Restarting the VM:
 
-- closes all open CVD applications;
-- restarts the operating system; and
-- keeps files and configuration changes that were already saved.
+* closes all open CVD applications;
+* restarts the operating system; and
+* keeps files and configuration changes that were already saved.
 
 Save your work before restarting.
 

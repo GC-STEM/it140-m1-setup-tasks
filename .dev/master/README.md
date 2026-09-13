@@ -8,7 +8,7 @@ This folder is for Codio administrators. It is not for faculty or student use. T
 
 To set up the IT 140 master CVD, do one of the following. Either method will install the required software and configure the CVD for IT 140. It will take approximately 4 minutes to complete, depending on system load and Internet speeds.:
 
-- Run the [`it140_cvd_setup.sh`](./it140_setup.sh) script
+* Run the [`it140_cvd_setup.sh`](./it140_setup.sh) script
 
 ```bash
 chmod +x it140_cvd_setup.sh
@@ -16,7 +16,7 @@ chmod +x it140_cvd_setup.sh
 
 ```
 
-- Copy the code block below into a terminal window on a fresh CVD instance.
+* Copy the code block below into a terminal window on a fresh CVD instance.
 
 ```bash
 bash <<'IT140_SETUP'

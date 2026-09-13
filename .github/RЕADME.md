@@ -69,13 +69,13 @@ A workflow can contain one or more **jobs**. Each job runs on a **runner**, whic
 
 Common workflow tasks include:
 
-- Running automated tests
-- Checking Python syntax or code style
-- Building software
-- Validating documentation
-- Scanning for security problems
-- Packaging a release
-- Deploying software or documentation
+* Running automated tests
+* Checking Python syntax or code style
+* Building software
+* Validating documentation
+* Scanning for security problems
+* Packaging a release
+* Deploying software or documentation
 
 You may hear the term **continuous integration (CI)** when workflows automatically verify changes as developers integrate them into a shared codebase. Workflows may also support **continuous delivery or deployment (CD)** by automating preparation or deployment of releasable software. Not every GitHub Actions workflow is a CI/CD workflow.
 
@@ -89,9 +89,9 @@ An issue is a repository work item used to report a problem, request an improvem
 
 An `ISSUE_TEMPLATE/` directory may contain:
 
-- Markdown (`.md`) issue templates
-- YAML (`.yml`) **issue forms**, which create structured forms with fields
-- `config.yml`, which configures the issue-template chooser
+* Markdown (`.md`) issue templates
+* YAML (`.yml`) **issue forms**, which create structured forms with fields
+* `config.yml`, which configures the issue-template chooser
 
 For example:
 
@@ -146,9 +146,9 @@ A `CODEOWNERS` file identifies people or teams responsible for particular files 
 
 For example, a repository might assign:
 
-- Documentation files to a documentation team
-- Security-sensitive files to a security team
-- Build or deployment files to repository maintainers
+* Documentation files to a documentation team
+* Security-sensitive files to a security team
+* Build or deployment files to repository maintainers
 
 When a pull request changes files covered by `CODEOWNERS`, GitHub can automatically request review from the appropriate code owners. Repository rules can also require code-owner approval before changes are merged.
 
@@ -164,12 +164,12 @@ A **dependency** is software that another program or project relies on, such as 
 
 A `.github/dependabot.yml` file can specify:
 
-- Which package ecosystems to monitor
-- Which directories contain dependency files
-- How often to check for updates
-- How update pull requests should be grouped or labeled
-- Which dependencies should be ignored
-- How private package registries should be accessed
+* Which package ecosystems to monitor
+* Which directories contain dependency files
+* How often to check for updates
+* How update pull requests should be grouped or labeled
+* Which dependencies should be ignored
+* How private package registries should be accessed
 
 Dependabot can help maintain the software **supply chain**, meaning the external packages, tools, and services used to build or run software.
 
@@ -187,10 +187,10 @@ Defines the project's **security policy**, especially how security vulnerabiliti
 
 A security policy may explain:
 
-- Which versions are currently supported
-- How to report a suspected vulnerability
-- Which communication channel should be used
-- What information a security report should contain
+* Which versions are currently supported
+* How to report a suspected vulnerability
+* Which communication channel should be used
+* What information a security report should contain
 
 Security vulnerabilities should often be reported privately rather than through a public issue.
 
@@ -200,11 +200,11 @@ Explains how users should obtain help with the project.
 
 For example, it may direct users to:
 
-- Documentation
-- A discussion forum
-- An issue tracker
-- A support organization
-- Another appropriate support channel
+* Documentation
+* A discussion forum
+* An issue tracker
+* A support organization
+* Another appropriate support channel
 
 Separating support questions from defect reports can make the issue tracker easier to maintain.
 
@@ -214,12 +214,12 @@ Provides **contribution guidelines** for people who want to propose changes to t
 
 It may describe:
 
-- How to set up a development environment
-- Branch and naming conventions
-- Coding or documentation standards
-- Required tests
-- How to submit a pull request
-- Review expectations
+* How to set up a development environment
+* Branch and naming conventions
+* Coding or documentation standards
+* Required tests
+* How to submit a pull request
+* Review expectations
 
 ### `CODE_OF_CONDUCT.md`
 
@@ -233,10 +233,10 @@ May explain how an open-source project is governed.
 
 For example, it might document:
 
-- Project roles
-- Maintainer responsibilities
-- Decision-making processes
-- How contributors become maintainers
+* Project roles
+* Maintainer responsibilities
+* Decision-making processes
+* How contributors become maintainers
 
 ### `FUNDING.yml`
 
@@ -277,12 +277,12 @@ The `.github/` directory is not a secure storage location.
 
 Do **not** commit:
 
-- Passwords
-- Personal access tokens
-- API keys
-- Private cryptographic keys
-- Authentication codes
-- Other secrets or private information
+* Passwords
+* Personal access tokens
+* API keys
+* Private cryptographic keys
+* Authentication codes
+* Other secrets or private information
 
 GitHub Actions can use **secrets**, but the secret values are normally stored in GitHub's encrypted repository, environment, or organization settings and referenced by workflows. They should not be written directly into workflow files.
 

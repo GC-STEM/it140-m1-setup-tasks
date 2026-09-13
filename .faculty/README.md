@@ -56,14 +56,14 @@ This README supplements the course-wide [IT 140 Faculty Guide](https://github.co
 
 The **IT 140 Faculty Guide** is the primary reference for:
 
-- The purpose and components of the course IDE
-- Why the CVD is the reference environment
-- How course automation handles software installation and configuration
-- The IT 140 GitHub repository model and student GitHub workflow
-- How GitHub, Codio, the local course IDE, and D2L Brightspace fit together
-- Activity-repository release status and scheduling
-- Common faculty questions
-- Course-wide questions, concerns, technical issues, and feature requests
+* The purpose and components of the course IDE
+* Why the CVD is the reference environment
+* How course automation handles software installation and configuration
+* The IT 140 GitHub repository model and student GitHub workflow
+* How GitHub, Codio, the local course IDE, and D2L Brightspace fit together
+* Activity-repository release status and scheduling
+* Common faculty questions
+* Course-wide questions, concerns, technical issues, and feature requests
 
 This README is the primary reference for **faculty-specific Module One setup and access instructions**.
 
@@ -116,12 +116,12 @@ The CVD is the **reference and preferred student development environment**. Facu
 
 The CVD is important because:
 
-- Course instructions, screenshots, and instructional videos use it as their reference.
-- Each CVD begins from a more standardized environment than a typical personal computer.
-- Faculty and technical support can more easily reproduce problems in it.
-- It provides students with a supported environment without requiring installation of the full course IDE on their own computer.
-- It provides a fallback when a student's local environment stops working.
-- It is the recommended environment for students using unsupported operating systems or devices.
+* Course instructions, screenshots, and instructional videos use it as their reference.
+* Each CVD begins from a more standardized environment than a typical personal computer.
+* Faculty and technical support can more easily reproduce problems in it.
+* It provides students with a supported environment without requiring installation of the full course IDE on their own computer.
+* It provides a fallback when a student's local environment stops working.
+* It is the recommended environment for students using unsupported operating systems or devices.
 
 Although the Brightspace page is named **Optional Codio Virtual Desktop**, students should still be encouraged to configure and verify the CVD at least once. "Optional" means students do not have to perform all programming work in Codio; the CVD remains the course reference environment.
 
@@ -174,10 +174,10 @@ Local installation is **optional for students**. Students can complete IT 140 us
 
 Faculty do not need a local installation to teach the course, but setting up the course IDE on a supported local computer can be useful for:
 
-- Understanding the experience of students who choose local setup
-- Beta Testing local automation on real-world computers
-- Reviewing assignments and projects outside the CVD
-- Comparing local behavior with the CVD reference environment
+* Understanding the experience of students who choose local setup
+* Beta Testing local automation on real-world computers
+* Reviewing assignments and projects outside the CVD
+* Comparing local behavior with the CVD reference environment
 
 Start with the student-facing [Local Computer Setup](../local/README.md) page. It explains the supported options and the generic manual setup alternative.
 

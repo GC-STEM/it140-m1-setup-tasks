@@ -197,5 +197,5 @@ The CVD is the course reference environment. Configuring it gives you an environ
 
 ## Learn More or Get Help
 
-- Learn more about Git and GitHub: **[GitHub in IT 140](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/GitHub-in-IT-140)**
-- Get help with account or setup problems: **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)**
+* Learn more about Git and GitHub: **[GitHub in IT 140](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/GitHub-in-IT-140)**
+* Get help with account or setup problems: **[Setup Problems and Support](https://github.com/GC-STEM/it140-m1-setup-tasks/wiki/Setup-Problems-and-Support)**

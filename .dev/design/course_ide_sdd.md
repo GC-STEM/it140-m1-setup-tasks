@@ -50,8 +50,8 @@
 
 The IT 140 Development Environment, also called the course IDE, is designed to provide students with a consistent programming environment for completing course software development assignments and projects. The design supports two major usage paths:
 
-- A preconfigured Codio Virtual Desktop (CVD), which is the primary supported and reference environment.
-- An optional local desktop setup for students who choose to work on supported Windows, macOS, or Debian/Ubuntu-based Linux systems.
+* A preconfigured Codio Virtual Desktop (CVD), which is the primary supported and reference environment.
+* An optional local desktop setup for students who choose to work on supported Windows, macOS, or Debian/Ubuntu-based Linux systems.
 
 The design emphasizes consistency, low cognitive load, supportability, verifiability, and maintainability. The Codio environment provides the baseline student experience. The local desktop setup process is designed to reproduce that experience as closely as practical using the same or comparable tools.
 
@@ -67,13 +67,13 @@ This SDD does not apply to course activities completed entirely in other course 
 
 The course IDE design should:
 
-- Provide a consistent student experience across Codio and supported local desktop environments.
-- Reduce setup-related frustration for students with little or no prior command-line experience.
-- Support completion of IT 140 software development assignments and projects.
-- Align the local setup environment with the Codio reference environment where practical.
-- Use industry-standard tools that are free to students and the university during the course term.
-- Provide verification output that helps students, instructors, instructional designers, technical support staff, and academic leadership confirm that the setup works as intended.
-- Remain maintainable across course terms and platform changes.
+* Provide a consistent student experience across Codio and supported local desktop environments.
+* Reduce setup-related frustration for students with little or no prior command-line experience.
+* Support completion of IT 140 software development assignments and projects.
+* Align the local setup environment with the Codio reference environment where practical.
+* Use industry-standard tools that are free to students and the university during the course term.
+* Provide verification output that helps students, instructors, instructional designers, technical support staff, and academic leadership confirm that the setup works as intended.
+* Remain maintainable across course terms and platform changes.
 
 ### 0.3. Design Assumptions
 
@@ -140,16 +140,16 @@ The flowchart represents the combined manual and automated setup process, includ
 
 The setup workflow follows this general sequence:
 
-- Identify whether the student will use the CVD or an optional local desktop environment.
+* Identify whether the student will use the CVD or an optional local desktop environment.
 * If the student uses the CVD, verify that the preconfigured course IDE tools are available.
 * If the student chooses local setup, confirm that the operating system is supported and receiving security updates.
-- Confirm that the student’s computer meets the applicable university minimum hardware baseline.
-- Run the platform-specific setup commands or guide the student through required manual installation steps.
-- Install or verify the required course IDE software stack.
-- Install or verify supported IDE extensions.
-- Run the verification command set.
-- Review verification output for expected tool availability and versions.
-- Direct students to troubleshooting guidance or CVD fallback if setup cannot be completed.
+* Confirm that the student’s computer meets the applicable university minimum hardware baseline.
+* Run the platform-specific setup commands or guide the student through required manual installation steps.
+* Install or verify the required course IDE software stack.
+* Install or verify supported IDE extensions.
+* Run the verification command set.
+* Review verification output for expected tool availability and versions.
+* Direct students to troubleshooting guidance or CVD fallback if setup cannot be completed.
 
 ## 3. Low-Level Design
 
@@ -167,50 +167,50 @@ TODO: Paste low-level OS-agnostic pseudocode from ./course_ide_setup.pseudo here
 
 The setup process uses the following inputs:
 
-- Student-selected environment path: CVD or local desktop setup.
-- Student operating system: Windows, macOS, or Debian/Ubuntu-based Linux.
-- Supported software stack definition.
-- Platform-specific setup commands.
-- Platform-specific screenshots and instructions.
-- Required course programming language version.
-- Required IDE extensions.
-- Course repository access requirements.
-- Verification command set.
+* Student-selected environment path: CVD or local desktop setup.
+* Student operating system: Windows, macOS, or Debian/Ubuntu-based Linux.
+* Supported software stack definition.
+* Platform-specific setup commands.
+* Platform-specific screenshots and instructions.
+* Required course programming language version.
+* Required IDE extensions.
+* Course repository access requirements.
+* Verification command set.
 
 ### 4.2. Outputs
 
 The setup process produces the following outputs:
 
-- Installed or verified course IDE software stack.
-- Installed or verified IDE extensions.
-- Setup log where practical.
-- Verification output showing required tool availability and versions.
-- Student-facing confirmation that the course IDE is ready for use.
-- Error messages, diagnostic output, or support artifacts when setup fails.
+* Installed or verified course IDE software stack.
+* Installed or verified IDE extensions.
+* Setup log where practical.
+* Verification output showing required tool availability and versions.
+* Student-facing confirmation that the course IDE is ready for use.
+* Error messages, diagnostic output, or support artifacts when setup fails.
 
 ### 4.3. Student-Facing Artifacts
 
 Student-facing artifacts include:
 
-- README.md setup instructions.
-- OS-specific setup sections or files.
-- Screenshots showing expected setup steps.
-- Copy-ready commands.
-- Notes distinguishing required tools from optional tools.
-- Troubleshooting guidance.
-- Verification instructions.
-- CVD fallback guidance.
+* README.md setup instructions.
+* OS-specific setup sections or files.
+* Screenshots showing expected setup steps.
+* Copy-ready commands.
+* Notes distinguishing required tools from optional tools.
+* Troubleshooting guidance.
+* Verification instructions.
+* CVD fallback guidance.
 
 ### 4.4. Support Artifacts
 
 Support artifacts include:
 
-- Setup logs where practical.
-- Verification output.
-- Common failure indicators.
-- Expected version output.
-- Screenshots of expected successful setup states.
-- Notes for instructors and technical support staff about where setup failures are most likely to occur.
+* Setup logs where practical.
+* Verification output.
+* Common failure indicators.
+* Expected version output.
+* Screenshots of expected successful setup states.
+* Notes for instructors and technical support staff about where setup failures are most likely to occur.
 
 ## 5. Component Design
 
@@ -258,24 +258,24 @@ The setup process should help students identify and recover from common setup fa
 
 Common failure categories include:
 
-- Unsupported operating system.
-- Operating system not receiving security updates.
-- Missing package manager or installer support.
-- Failed software installation.
-- Missing command-line path configuration.
-- Incorrect required course programming language version.
-- Missing IDE extension.
-- Permission or administrator-rights issue.
-- Network or download failure.
-- Repository access or authentication issue.
+* Unsupported operating system.
+* Operating system not receiving security updates.
+* Missing package manager or installer support.
+* Failed software installation.
+* Missing command-line path configuration.
+* Incorrect required course programming language version.
+* Missing IDE extension.
+* Permission or administrator-rights issue.
+* Network or download failure.
+* Repository access or authentication issue.
 
 The recovery design should provide:
 
-- Clear error indicators.
-- Verification output that identifies the likely failing tool or step.
-- Troubleshooting guidance written for beginning students.
-- Instructions to retry only the failed step where practical.
-- Guidance to use the CVD fallback path when local setup cannot be completed.
+* Clear error indicators.
+* Verification output that identifies the likely failing tool or step.
+* Troubleshooting guidance written for beginning students.
+* Instructions to retry only the failed step where practical.
+* Guidance to use the CVD fallback path when local setup cannot be completed.
 
 ## 7. Security and Privacy Design
 
@@ -293,14 +293,14 @@ The course IDE design should be maintainable across course terms.
 
 Maintainability activities should include:
 
-- Reviewing supported software versions before each major course refresh or platform change.
-- Confirming that the CVD stack still matches the documented software stack.
-- Confirming that the required course programming language version still matches zyBooks Lab Activities.
-- Reviewing Windows, macOS, and Debian/Ubuntu-based Linux setup instructions.
-- Retesting setup commands from clean baseline environments.
-- Updating screenshots when platform user interfaces change.
-- Updating troubleshooting guidance based on student and support feedback.
-- Reviewing whether optional extensions remain useful and supported.
+* Reviewing supported software versions before each major course refresh or platform change.
+* Confirming that the CVD stack still matches the documented software stack.
+* Confirming that the required course programming language version still matches zyBooks Lab Activities.
+* Reviewing Windows, macOS, and Debian/Ubuntu-based Linux setup instructions.
+* Retesting setup commands from clean baseline environments.
+* Updating screenshots when platform user interfaces change.
+* Updating troubleshooting guidance based on student and support feedback.
+* Reviewing whether optional extensions remain useful and supported.
 
 ## 9. Design Traceability
 
@@ -324,14 +324,14 @@ The design should be verified through inspection, demonstration, clean-environme
 
 Design verification should confirm that:
 
-- The CVD provides the expected reference environment.
-- Local setup procedures work on supported Windows, macOS, and Debian/Ubuntu-based Linux environments.
-- Verification commands confirm required tools and versions.
-- Setup logs or diagnostic output support troubleshooting where practical.
-- Student-facing instructions can be followed by users with limited command-line experience.
-- The local desktop setup matches the CVD environment as closely as practical.
-- Representative course software development assignments and projects can be completed using the configured course IDE.
-- The design remains aligned with the requirements in the IT 140 Development Environment Specifications.
+* The CVD provides the expected reference environment.
+* Local setup procedures work on supported Windows, macOS, and Debian/Ubuntu-based Linux environments.
+* Verification commands confirm required tools and versions.
+* Setup logs or diagnostic output support troubleshooting where practical.
+* Student-facing instructions can be followed by users with limited command-line experience.
+* The local desktop setup matches the CVD environment as closely as practical.
+* Representative course software development assignments and projects can be completed using the configured course IDE.
+* The design remains aligned with the requirements in the IT 140 Development Environment Specifications.
 
 ## Appendix A: Preliminary Course IDE Software Stack
 
