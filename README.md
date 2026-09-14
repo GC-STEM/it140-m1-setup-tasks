@@ -2,7 +2,7 @@
 
 # IT 140 Module One | Setup Tasks
 
-<!-- [![IT 140 Office Hours Now Open](https://raw.githubusercontent.com/GC-STEM/it140/main/.github/assets/it140_office_hours.png)](https://teams.microsoft.com/meet/251893230823370?p=dm9ZYMvwmK3hCoqbnt)
+<!-* [![IT 140 Office Hours Now Open](https://raw.githubusercontent.com/GC-STEM/it140/main/.github/assets/it140_office_hours.png)](https://teams.microsoft.com/meet/251893230823370?p=dm9ZYMvwmK3hCoqbnt)
 -->
 
 ---

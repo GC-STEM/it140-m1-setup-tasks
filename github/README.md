@@ -1,3 +1,4 @@
+<!-- omit from toc -->
 # Set Up a GitHub Account
 
 **Setup progress:** [0 Start Here](../README.md) → **1 GitHub** → [2 Codio](../codio/README.md) → [3 Local Computer](../local/README.md) → **Done**
@@ -5,18 +6,16 @@
 <!-- omit from toc -->
 ## Table of Contents
 
-* [Set Up a GitHub Account](#set-up-a-github-account)
-  * [Table of Contents](#table-of-contents)
-  * [Activity Metadata](#activity-metadata)
-  * [What You Will Do](#what-you-will-do)
-  * [How IT 140 Uses GitHub](#how-it-140-uses-github)
-  * [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
-  * [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
-  * [2. Secure Your GitHub Account](#2-secure-your-github-account)
-  * [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
-  * [GitHub Account Ready Check](#github-account-ready-check)
-  * [Continue to Step 2: Set Up Codio](#continue-to-step-2-set-up-codio)
-  * [Learn More or Get Help](#learn-more-or-get-help)
+* [Activity Metadata](#activity-metadata)
+* [What You Will Do](#what-you-will-do)
+* [How IT 140 Uses GitHub](#how-it-140-uses-github)
+* [0. Sign Up for a New GitHub Account](#0-sign-up-for-a-new-github-account)
+* [1. Configure Your GitHub Email Addresses](#1-configure-your-github-email-addresses)
+* [2. Secure Your GitHub Account](#2-secure-your-github-account)
+* [3. Customize Your GitHub Profile](#3-customize-your-github-profile)
+* [GitHub Account Ready Check](#github-account-ready-check)
+* [Continue to Step 2: Set Up Codio](#continue-to-step-2-set-up-codio)
+* [Learn More or Get Help](#learn-more-or-get-help)
 
 ## Activity Metadata
 
@@ -85,14 +84,14 @@ If you already have a GitHub account that you want to use for this course, skip 
 3. In the **Add email address** field, enter at least one other email address and click **Add**.
    * **Students**: Add your SNHU email address to your GitHub account.
    * **Faculty & Staff**: Add a personal address to your GitHub account.
-   - *Optional*. Add other email addresses as backups, if desired.
+   * *Optional*. Add other email addresses as backups, if desired.
 
    ![GitHub Email settings page](./assets/13_github_email_add.png)
 
 4. Check your email inbox for a verification message from GitHub.
    * If you do not see a message for each email address added, check your Junk or Spam folder.
    * Click the **Verify email address** button in the message to confirm that you own the email address, or copy and paste the URL into your browser.
-   - Repeat this step for each email address you added to your GitHub account.
+   * Repeat this step for each email address you added to your GitHub account.
 
 5. Back in [GitHub > Settings > Emails](https://github.com/settings/emails), refresh the page to confirm that all email addresses are listed as verified.
 
@@ -148,10 +147,10 @@ You may use the same 2FA method that you use for your SNHU account, such as [Mic
 2. Sign in to GitHub, if prompted.
 
 3. **Optional**. Add or change profile information that you wish to share publicly. Remove any information you do not want to be public. For example, you can:
-   - Add an avatar image;
-   - Include a brief bio;
-   - Add links to social media;
-   - Add a [profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme) (advanced);
+   * Add an avatar image;
+   * Include a brief bio;
+   * Add links to social media;
+   * Add a [profile README](https://docs.github.com/en/account-and-profile/how-tos/profile-customization/managing-your-profile-readme) (advanced);
    * Click the **Update profile** button to save your changes.
 
    For an example user profile with custom README, see [Petey Penmen's profile](https://github.com/petey-penmen).
