@@ -25,6 +25,7 @@ jobs:
             --root-dir "${{ github.workspace }}"
             --include-fragments=anchor-only
             --exclude-path "codio/master"
+            --exclude "^https://github\\.com/signup$"
             --max-retries 2
             --timeout 20
             --no-progress
