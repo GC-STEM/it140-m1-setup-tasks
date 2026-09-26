@@ -1,15 +1,13 @@
 {
     "recommendations": [
-        "charliermarsh.ruff",
         "ms-python.vscode-python-envs",
         "ms-python.debugpy",
-        "ms-python.vscode-pylance",
-        "cweijan.vscode-office",
-        "davidanson.vscode-markdownlint",
-        "bierner.markdown-preview-github-styles",
+        "streetsidesoftware.code-spell-checker",
+        "bierner.github-markdown-preview",
         "yzhang.markdown-all-in-one",
-        "i2p-hub.i2p-pseudo",
-        "hediet.vscode-drawio",
-        "streetsidesoftware.code-spell-checker"
+        "davidanson.vscode-markdownlint",
+        "ms-vscode.powershell",
+        "ms-python.python",
+        "ms-python.vscode-pylance"
     ]
 }
